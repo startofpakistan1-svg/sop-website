@@ -1,69 +1,159 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const platforms = ["Amazon", "eBay", "Walmart", "Etsy", "Shopify", "Custom Dev"];
+
+const services = [
+  {
+    title: "Marketplace & ecommerce",
+    body: "We set up and manage your stores on Amazon, eBay, Walmart, Etsy and Shopify — listings, pricing, and orders handled end to end.",
+  },
+  {
+    title: "Web development",
+    body: "Business websites and web apps coded from scratch. Clean, responsive, and search-ready so customers actually find you.",
+  },
+  {
+    title: "AI bots & agents",
+    body: "Chatbots and AI assistants that answer customers, qualify leads, and handle support 24/7 — trained on your own business.",
+  },
+  {
+    title: "Digital solutions",
+    body: "Branding, SEO, Google Maps setup, and ongoing maintenance. One team to get you online and keep you growing.",
+  },
+];
+
+const work = [
+  { name: "AWEX Motorsport", type: "Shopify store", from: "#12296B", to: "#2563EB" },
+  { name: "Your project here", type: "Web app", from: "#0E1A38", to: "#1B45A8" },
+  { name: "Your project here", type: "AI assistant", from: "#B4560C", to: "#F5871F" },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.js
-            </code>{" "}
-            file.
+    <>
+      {/* HERO */}
+      <section className="hero" style={{ padding: 0 }}>
+        <div className="wrap hero-inner">
+          <span className="eyebrow">eCommerce &amp; Digital Solutions · Jhelum, PK</span>
+          <h1>
+            Build, grow, and <span className="accent">scale</span> your business online.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p>
+            SOP is a digital studio helping brands sell on Amazon, eBay, Walmart, Etsy
+            and Shopify — plus custom websites and AI assistants that convert.
           </p>
+          <div className="hero-actions">
+            <Link className="btn-orange" href="/contact">Get a free quote</Link>
+            <Link className="btn-ghost" href="/portfolio">See our work</Link>
+          </div>
+          <div className="hero-meta">
+            <span><b>5+</b> years building</span>
+            <span><b>Local</b> payments set up</span>
+            <span><b>Worldwide</b> clients served</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* PLATFORMS */}
+      <div className="platforms">
+        <div className="wrap platforms-inner">
+          <span className="lead">We build and manage on</span>
+          {platforms.map((p) => (
+            <span className="chip" key={p}>{p}</span>
+          ))}
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* SERVICES */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>What we build</h2>
+            <p>From your first marketplace listing to an AI assistant that never sleeps — one team for the whole journey.</p>
+          </div>
+          <div className="svc-grid">
+            {services.map((s) => (
+              <div className="svc" key={s.title}>
+                <h3>{s.title}</h3>
+                <p>{s.body}</p>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 30 }}>
+            <Link className="btn-outline" href="/services">See all services</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WORK */}
+      <section className="work-band">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Recent work</h2>
+            <p>A few projects we&apos;ve shipped. Swap these for your own screenshots as they go live.</p>
+          </div>
+          <div className="work-grid">
+            {work.map((w, i) => (
+              <div className="work-card" key={i}>
+                <div className="work-thumb" style={{ background: `linear-gradient(135deg, ${w.from}, ${w.to})` }}>
+                  {w.name === "Your project here" ? "Add screenshot" : w.name}
+                </div>
+                <div className="work-info">
+                  <div className="t">{w.name}</div>
+                  <div className="k">{w.type}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 30 }}>
+            <Link className="btn-outline" href="/portfolio">View full portfolio</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHY */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Why brands pick SOP</h2>
+          </div>
+          <div className="why-grid">
+            <div className="why-item">
+              <h3>Pakistan pricing, global quality</h3>
+              <p>You get international-standard work without the international agency bill.</p>
+            </div>
+            <div className="why-item">
+              <h3>AI-forward from day one</h3>
+              <p>We don&apos;t just build stores — we add smart bots and automation that save you hours.</p>
+            </div>
+            <div className="why-item">
+              <h3>One point of contact</h3>
+              <p>No middlemen. You talk to the person actually building your project.</p>
+            </div>
+            <div className="why-item">
+              <h3>Built to be found</h3>
+              <p>Fast, SEO-ready code and Google Maps setup so customers reach you first.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section>
+        <div className="wrap">
+          <div className="contact">
+            <div>
+              <h2>Let&apos;s start your project.</h2>
+              <p>Tell us what you&apos;re building. We&apos;ll reply with a plan and a quote — usually the same day.</p>
+            </div>
+            <div className="contact-actions">
+              <a className="c-wa" href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+                Message on WhatsApp
+              </a>
+              <Link className="c-mail" href="/contact">Send an enquiry</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
