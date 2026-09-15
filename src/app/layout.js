@@ -2,6 +2,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Ticker from "@/components/Ticker";
+import Script from "next/script";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
@@ -45,6 +46,18 @@ export default function RootLayout({ children }) {
         <Ticker />
         <main>{children}</main>
         <Footer />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-23QJE9T2F2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-23QJE9T2F2');
+          `}
+        </Script>
       </body>
     </html>
   );
