@@ -25,6 +25,9 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
+  verification: {
+    google: "6qLJJ2E1ccPbBCQ5bwrXxsroJhwN4HD4rlCpoFDFNtE",
+  },
   twitter: {
     card: "summary_large_image",
     title: "SOP — eCommerce & Digital Solutions",
