@@ -595,3 +595,21 @@ button.btn-orange:disabled {
   .member { padding: 22px; gap: 16px; }
   .member-avatar { width: 62px; height: 62px; font-size: 20px; }
 }
+
+.member-li {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-top: 14px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0A66C2;
+  transition: background .2s, border-color .2s;
+}
+.member-li:hover {
+  background: #EFF6FF;
+  border-color: #BFDBFE;
+}
