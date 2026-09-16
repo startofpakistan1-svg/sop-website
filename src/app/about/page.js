@@ -1,8 +1,35 @@
 import Link from "next/link";
 
+const team = [
+  {
+    name: "Shahzaib Ali",
+    role: "Chief Executive Officer",
+    bio: "Leads SOP's direction, client relationships and growth across the marketplaces we operate on.",
+    initials: "SA",
+    from: "#12296B",
+    to: "#2563EB",
+  },
+  {
+    name: "Khurram Shahzad",
+    role: "Founder",
+    bio: "Builds the stores, systems and AI agents behind the work — five years of development experience with a focus on automation.",
+    initials: "KS",
+    from: "#B4560C",
+    to: "#F5871F",
+  },
+];
+
+const stats = [
+  { n: "2", label: "years building" },
+  { n: "12", label: "clients served" },
+  { n: "3", label: "countries" },
+  { n: "5", label: "marketplaces" },
+];
+
 export const metadata = {
   title: "About — SOP | Start of Pakistan",
-  description: "SOP is an eCommerce and digital solutions studio based in Jhelum, Pakistan, serving clients worldwide.",
+  description:
+    "Start of Pakistan is an eCommerce and AI automation studio in Jhelum, serving clients across Pakistan, India, the UK and the US.",
 };
 
 export default function About() {
@@ -11,40 +38,112 @@ export default function About() {
       <section className="page-head" style={{ padding: "64px 0 70px" }}>
         <div className="wrap">
           <h1>About SOP</h1>
-          <p>Start of Pakistan — built in Jhelum, working with clients everywhere.</p>
+          <p>Two people, twelve clients, three countries — and a lot of automation.</p>
         </div>
       </section>
 
+      {/* STATS */}
+      <div className="stats-band">
+        <div className="wrap stats-grid">
+          {stats.map((s) => (
+            <div className="stat" key={s.label}>
+              <div className="stat-n">{s.n}</div>
+              <div className="stat-l">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* STORY */}
       <section>
         <div className="wrap prose">
+          <h2>Why we started</h2>
           <p>
-            SOP stands for Start of Pakistan. We&apos;re an eCommerce and digital
-            solutions studio helping businesses sell online — whether that means a
-            Shopify store, an Amazon seller account, a custom website, or an AI
-            assistant handling customer questions around the clock.
+            Plenty of agencies in Pakistan will build you a store. Far fewer will
+            build you the systems that run it once it&apos;s live — the agents
+            that answer customers at 2am, the automations that keep listings
+            updated, the workflows that stop you doing the same task every
+            Monday morning.
           </p>
           <p>
-            We work from Jhelum, Pakistan, with clients locally and overseas. That
-            means you get international-standard work at prices that actually make
-            sense for a growing business.
+            That gap is why SOP exists. We started two years ago doing
+            marketplace and store work, and launched officially this year once
+            the AI side of what we do was solid enough to put our name on.
+          </p>
+          <p>
+            The name means what it says. We think Pakistan can be where this kind
+            of work starts, not just where it gets outsourced to.
+          </p>
+
+          <h2>What we actually do</h2>
+          <p>
+            We run Amazon seller accounts for nine international clients, build
+            and maintain Shopify and custom stores, and design AI agent systems
+            that handle content and customer operations. Our clients are in
+            Pakistan, India, the UK and the US.
+          </p>
+          <p>
+            Small enough that you talk to the person building your project. Not
+            so small that things fall over when work piles up.
           </p>
 
           <h2>How we work</h2>
           <p>
-            One point of contact, start to finish. You talk to the person actually
-            building your project — no account managers, no middlemen, no guessing
-            what&apos;s happening with your build.
+            One point of contact, start to finish. No account managers relaying
+            messages, no guessing what stage your build is at. You tell us the
+            problem, we come back with a plan and a price, and then we build it.
           </p>
-
-          <h2>What we believe</h2>
           <p>
-            A website that looks good but doesn&apos;t bring customers is just a
-            brochure. Everything we build is aimed at one thing: helping you build,
-            grow, and scale.
+            Anything we&apos;re given access to — sales data, customer lists,
+            account credentials — stays confidential, and nothing goes in our
+            portfolio without your permission.
           </p>
+        </div>
+      </section>
 
-          <div style={{ marginTop: 34 }}>
-            <Link className="btn-orange" href="/contact">Work with us</Link>
+      {/* TEAM */}
+      <section className="team-band">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>The team</h2>
+            <p>Two of us. You&apos;ll deal with both.</p>
+          </div>
+
+          <div className="team-grid">
+            {team.map((m) => (
+              <div className="member" key={m.name}>
+                <div
+                  className="member-avatar"
+                  style={{ background: `linear-gradient(135deg, ${m.from}, ${m.to})` }}
+                >
+                  {m.initials}
+                </div>
+                <div className="member-info">
+                  <h3>{m.name}</h3>
+                  <div className="member-role">{m.role}</div>
+                  <p>{m.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section>
+        <div className="wrap">
+          <div className="contact">
+            <div>
+              <h2>Work with us.</h2>
+              <p>
+                Tell us what you&apos;re building and we&apos;ll come back with
+                a plan — usually the same day.
+              </p>
+            </div>
+            <div className="contact-actions">
+              <Link className="c-wa" href="/contact">Start a project</Link>
+              <Link className="c-mail" href="/portfolio">See our work</Link>
+            </div>
           </div>
         </div>
       </section>
