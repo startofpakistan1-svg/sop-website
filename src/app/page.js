@@ -27,6 +27,21 @@ const work = [
   { name: "Amazon seller accounts", type: "Marketplace management", from: "#0E1A38", to: "#1B45A8" },
 ];
 
+// ---- CLIENT REVIEWS ----
+// Add a review here as soon as a client sends one.
+// The whole section stays hidden while this list is empty,
+// so nothing fake or half-finished ever shows on the site.
+//
+// Example of a filled-in entry:
+// {
+//   quote: "They built our store in two weeks and it just worked.",
+//   name: "Muhammad Haider Ali",
+//   role: "Owner",
+//   company: "AWEX Motorsport",
+//   initials: "MH",
+// },
+const testimonials = [];
+
 export default function Home() {
   return (
     <>
@@ -136,6 +151,37 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* TESTIMONIALS */}
+      {testimonials.length > 0 && (
+        <section className="quotes-band">
+          <div className="wrap">
+            <div className="sec-head">
+              <h2>What clients say</h2>
+              <p>In their words, not ours.</p>
+            </div>
+
+            <div className="quotes">
+              {testimonials.map((t, i) => (
+                <figure className="quote" key={i}>
+                  <span className="quote-mark" aria-hidden="true">&ldquo;</span>
+                  <blockquote>{t.quote}</blockquote>
+                  <figcaption>
+                    <span className="quote-avatar">{t.initials}</span>
+                    <span>
+                      <strong>{t.name}</strong>
+                      <em>
+                        {t.role}
+                        {t.company ? `, ${t.company}` : ""}
+                      </em>
+                    </span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* CTA */}
       <section>
