@@ -23,7 +23,7 @@ const projects = [
     body:
       "A custom-coded storefront built from scratch in HTML, CSS and JavaScript — no theme, no page builder. Full control over the design, fast load times, and a layout shaped entirely around the products rather than a template.",
     stack: ["HTML", "CSS", "JavaScript", "Custom build"],
-    link: null,
+    link: "https://khurmistore.es/",
     images: ["/work/khurmistore.png"],
     from: "#123a5e",
     to: "#2b6cb0",
