@@ -10,6 +10,7 @@ const team = [
     bio: "Leads SOP's direction, client relationships and growth across the marketplaces we operate on.",
     photo: "/team/shahzaib.jpg",
     initials: "SA",
+    linkedin: null,
     from: "#12296B",
     to: "#2563EB",
   },
@@ -19,6 +20,7 @@ const team = [
     bio: "Builds the stores, systems and AI agents behind the work — five years of development experience with a focus on automation.",
     photo: "/team/qamar.jpg",
     initials: "QS",
+    linkedin: "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
     from: "#B4560C",
     to: "#F5871F",
   },
@@ -137,6 +139,24 @@ export default function About() {
                   <h3>{m.name}</h3>
                   <div className="member-role">{m.role}</div>
                   <p>{m.bio}</p>
+
+                  {m.linkedin && (
+                    <a
+                      className="member-li"
+                      href={m.linkedin}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`${m.name} on LinkedIn`}
+                    >
+                      <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
+                        <path
+                          fill="currentColor"
+                          d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zm1.78 13.02H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"
+                        />
+                      </svg>
+                      LinkedIn
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
