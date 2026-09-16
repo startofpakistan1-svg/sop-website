@@ -393,3 +393,36 @@ footer { padding: 54px 0 40px; border-top: 1px solid var(--line); }
   .wa-float:hover { padding-right: 0; }
   .wa-label { display: none; }
 }
+
+/* ---------- FORM STATES ---------- */
+.form-error {
+  background: #FEF2F2;
+  border-left: 3px solid #DC2626;
+  color: #991B1B;
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.form-success {
+  background: var(--soft);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 36px 32px;
+}
+.form-success h3 {
+  font-size: 23px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+.form-success p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-bottom: 24px;
+}
+
+button.btn-orange:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+}
