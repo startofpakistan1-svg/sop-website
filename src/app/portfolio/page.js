@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const projects = [
   {
@@ -9,41 +12,89 @@ const projects = [
       "A full Shopify store for a motorsport gear brand selling karting suits and gloves. We handled the store build, product catalogue and checkout, then supported the launch — the store went on to generate consistent sales for the client.",
     stack: ["Shopify", "Store design", "Product catalogue", "Checkout setup"],
     link: "https://awex.shop",
+    images: ["/work/awex.png"],
     from: "#12296B",
     to: "#2563EB",
-    img: "/work/awex.png",
+  },
+  {
+    name: "Khurmi Store",
+    type: "Custom online store",
+    tag: "Web development",
+    body:
+      "A custom-coded storefront built from scratch in HTML, CSS and JavaScript — no theme, no page builder. Full control over the design, fast load times, and a layout shaped entirely around the products rather than a template.",
+    stack: ["HTML", "CSS", "JavaScript", "Custom build"],
+    link: null,
+    images: ["/work/khurmistore.png"],
+    from: "#123a5e",
+    to: "#2b6cb0",
   },
   {
     name: "AI content ecosystem for accounting firms",
     type: "AI agents & automation",
     tag: "AI",
     body:
-      "A system of AI agents built for CA firms that plans, prepares and publishes social media content automatically. What used to take hours of manual posting each week now runs on its own, keeping the firms visible online without adding headcount.",
+      "A system of AI agents built for an international client serving CA firms. The agents plan, prepare and publish social media content automatically — what used to take hours of manual posting each week now runs on its own, keeping the firms visible online without adding headcount.",
     stack: ["AI agents", "Content automation", "Social publishing", "Scheduling"],
     link: null,
+    images: ["/work/ai-agents.png", "/work/ai-agents-2.jpeg"],
     from: "#B4560C",
     to: "#F5871F",
-    img: "/work/ai-agents.png",
   },
   {
     name: "Amazon seller account management",
     type: "Marketplace management",
     tag: "Marketplace",
     body:
-      "End-to-end Amazon account management for international clients — listings, optimisation and day-to-day operations. We've grown seller accounts to seven figures in sales for brands selling into the US and UK markets.",
+      "End-to-end Amazon account management for international clients — listings, optimisation and day-to-day operations for brands selling into the UK and US markets.",
     stack: ["Amazon Seller Central", "Listing optimisation", "Account operations"],
+    result: "\u00a332,928 in sales across 607 orders on one UK seller account",
     link: null,
+    images: ["/work/amazon.jpeg", "/work/amazon-2.jpeg"],
     from: "#0E1A38",
     to: "#1B45A8",
-    img: "/work/amazon.png",
   },
 ];
 
-export const metadata = {
-  title: "Portfolio — SOP | Shopify stores, AI agents & Amazon management",
-  description:
-    "Shopify stores, AI automation systems and Amazon seller accounts built and managed by SOP for clients in Pakistan and worldwide.",
-};
+function CaseVisual({ project }) {
+  const [active, setActive] = useState(0);
+  const [broken, setBroken] = useState({});
+
+  const shots = project.images.filter((_, i) => !broken[i]);
+
+  return (
+    <div
+      className="case-visual"
+      style={{ background: `linear-gradient(135deg, ${project.from}, ${project.to})` }}
+    >
+      {project.images.map((src, i) => (
+        <img
+          key={src}
+          src={src}
+          alt={`${project.name} screenshot ${i + 1}`}
+          className={i === active ? "shot active" : "shot"}
+          onError={() => setBroken((b) => ({ ...b, [i]: true }))}
+        />
+      ))}
+
+      <span className="case-tag">{project.tag}</span>
+
+      {shots.length > 1 && (
+        <div className="shot-dots">
+          {project.images.map((_, i) =>
+            broken[i] ? null : (
+              <button
+                key={i}
+                aria-label={`Show screenshot ${i + 1}`}
+                className={i === active ? "dot on" : "dot"}
+                onClick={() => setActive(i)}
+              />
+            )
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export default function Portfolio() {
   return (
@@ -63,22 +114,14 @@ export default function Portfolio() {
           <div className="case-list">
             {projects.map((p, i) => (
               <article className="case" key={i}>
-                <div
-                  className="case-visual"
-                  style={{ background: `linear-gradient(135deg, ${p.from}, ${p.to})` }}
-                >
-                  <img
-                    src={p.img}
-                    alt={`${p.name} screenshot`}
-                    onError={(e) => { e.currentTarget.style.display = "none"; }}
-                  />
-                  <span className="case-tag">{p.tag}</span>
-                </div>
+                <CaseVisual project={p} />
 
                 <div className="case-body">
                   <div className="case-type">{p.type}</div>
                   <h2>{p.name}</h2>
                   <p>{p.body}</p>
+
+                  {p.result && <div className="case-result">{p.result}</div>}
 
                   <ul className="case-stack">
                     {p.stack.map((s) => (
