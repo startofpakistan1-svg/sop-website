@@ -100,9 +100,10 @@ export default function About() {
           <h2>What we actually do</h2>
           <p>
             We run Amazon seller accounts for nine international clients, build
-            and maintain Shopify and custom stores, and design AI agent systems
-            that handle content and customer operations. Our clients are in
-            Pakistan, India, the UK and the US.
+            and maintain Shopify, WordPress and custom-coded stores, and design
+            AI agent systems that handle content and customer operations. Our
+            clients are in Pakistan, India, the UK and the US \u2014 some we\u0027ve
+            worked with for years.
           </p>
           <p>
             Small enough that you talk to the person building your project. Not

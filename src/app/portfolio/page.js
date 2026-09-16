@@ -23,10 +23,23 @@ const projects = [
     body:
       "A custom-coded storefront built from scratch in HTML, CSS and JavaScript — no theme, no page builder. Full control over the design, fast load times, and a layout shaped entirely around the products rather than a template.",
     stack: ["HTML", "CSS", "JavaScript", "Custom build"],
-    link:  "https://khurmistore.es",
+    link: null,
     images: ["/work/khurmistore.png"],
     from: "#123a5e",
     to: "#2b6cb0",
+  },
+  {
+    name: "Standard Medical Store",
+    type: "WordPress store",
+    tag: "eCommerce",
+    body:
+      "A full WordPress store built from the ground up for a Pakistani medical supplies retailer \u2014 product catalogue, categories, and ordering. We\u0027ve maintained and run it for four years since launch, through every update, redesign and product expansion.",
+    stack: ["WordPress", "WooCommerce", "Store build", "Ongoing maintenance"],
+    result: "Four years of continuous management since launch",
+    link: "https://standardmedicalstore.pk/",
+    images: ["/work/standard-medical.png"],
+    from: "#0d4f4a",
+    to: "#17a398",
   },
   {
     name: "AI content ecosystem for accounting firms",
@@ -36,7 +49,7 @@ const projects = [
       "A system of AI agents built for an international client serving CA firms. The agents plan, prepare and publish social media content automatically — what used to take hours of manual posting each week now runs on its own, keeping the firms visible online without adding headcount.",
     stack: ["AI agents", "Content automation", "Social publishing", "Scheduling"],
     link: null,
-        images: ["/work/ai-agent-1.jpeg", "/work/ai-agent-2.png"],
+    images: ["/work/ai-agents.png", "/work/ai-agents-2.jpeg"],
     from: "#B4560C",
     to: "#F5871F",
   },
