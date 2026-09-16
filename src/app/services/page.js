@@ -76,6 +76,41 @@ const steps = [
   },
 ];
 
+const faqs = [
+  {
+    q: "How much does a project cost?",
+    a: "It depends on what you need — a simple store is very different from a full marketplace setup or a custom AI system. Tell us what you're building and we'll send a fixed price with the plan, usually within a day. No hourly billing, no surprises halfway through.",
+  },
+  {
+    q: "How long does it take?",
+    a: "A Shopify or WordPress store typically takes one to three weeks depending on how many products and how much custom work is involved. Amazon account setup is faster. AI agent systems take longer because they need testing against real cases. You'll get a timeline in writing before we start.",
+  },
+  {
+    q: "Do you work with clients outside Pakistan?",
+    a: "Most of our work is international. We run Amazon seller accounts for clients in the UK and US, and we've built systems for clients in India. Time zones haven't been a problem — we work around yours.",
+  },
+  {
+    q: "Can you manage my Amazon account, not just set it up?",
+    a: "Yes. Ongoing account management is a large part of what we do — listings, optimisation and day-to-day operations. Some clients hand over the whole account, others keep control and bring us in for specific parts.",
+  },
+  {
+    q: "Who owns the store and the accounts?",
+    a: "You do, completely. Every account is created in your name, and at handover you get every login and credential. We don't hold anything hostage — if you ever want to move on, you take the whole thing with you.",
+  },
+  {
+    q: "What happens after launch?",
+    a: "We stay available for questions. If something breaks or you need a change, message us. Many clients keep us on to maintain the store or run the account — Standard Medical Store has been with us for four years.",
+  },
+  {
+    q: "Do I need to buy my own domain and hosting?",
+    a: "You can, and we'd recommend it — they should be in your name. If you'd rather not deal with it, we'll set it all up for you and hand over the access afterwards.",
+  },
+  {
+    q: "Will my business data stay private?",
+    a: "Yes. Sales figures, customer lists, account credentials — all of it stays confidential, and nothing goes in our portfolio without your written permission.",
+  },
+];
+
 export const metadata = {
   title: "Services — SOP | eCommerce, Web & AI",
   description:
@@ -135,6 +170,31 @@ export default function Services() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Common questions</h2>
+            <p>
+              The things clients usually ask before getting started. If
+              yours isn&apos;t here, just ask us.
+            </p>
+          </div>
+
+          <div className="faq">
+            {faqs.map((f, i) => (
+              <details className="faq-item" key={i}>
+                <summary>
+                  {f.q}
+                  <span className="faq-icon" aria-hidden="true" />
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
