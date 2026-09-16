@@ -36,7 +36,7 @@ const projects = [
       "A system of AI agents built for an international client serving CA firms. The agents plan, prepare and publish social media content automatically — what used to take hours of manual posting each week now runs on its own, keeping the firms visible online without adding headcount.",
     stack: ["AI agents", "Content automation", "Social publishing", "Scheduling"],
     link: null,
-    images: ["/work/Ai-agents.png", "/work/ai-agents-2.jpeg"],
+        images: ["/work/ai-agent-1.jpeg", "/work/ai-agent-2.png"],
     from: "#B4560C",
     to: "#F5871F",
   },
