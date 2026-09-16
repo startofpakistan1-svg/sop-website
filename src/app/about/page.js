@@ -8,7 +8,7 @@ const team = [
     name: "Shahzaib Ali",
     role: "Chief Executive Officer",
     bio: "Leads SOP's direction, client relationships and growth across the marketplaces we operate on.",
-    photo: "/team/shahzaib.jpg",
+        photo: "/team/shahzaib.jpeg",
     initials: "SA",
     linkedin: null,
     from: "#12296B",
