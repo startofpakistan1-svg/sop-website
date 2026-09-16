@@ -23,8 +23,8 @@ const services = [
 
 const work = [
   { name: "AWEX Motorsport", type: "Shopify store", from: "#12296B", to: "#2563EB" },
-  { name: "Your project here", type: "Web app", from: "#0E1A38", to: "#1B45A8" },
-  { name: "Your project here", type: "AI assistant", from: "#B4560C", to: "#F5871F" },
+  { name: "AI content agents", type: "Automation for CA firms", from: "#B4560C", to: "#F5871F" },
+  { name: "Amazon seller accounts", type: "Marketplace management", from: "#0E1A38", to: "#1B45A8" },
 ];
 
 export default function Home() {
@@ -89,13 +89,13 @@ export default function Home() {
         <div className="wrap">
           <div className="sec-head">
             <h2>Recent work</h2>
-            <p>A few projects we&apos;ve shipped. Swap these for your own screenshots as they go live.</p>
+            <p>Stores we&apos;ve built, agents we&apos;ve trained, and accounts we run.</p>
           </div>
           <div className="work-grid">
             {work.map((w, i) => (
               <div className="work-card" key={i}>
                 <div className="work-thumb" style={{ background: `linear-gradient(135deg, ${w.from}, ${w.to})` }}>
-                  {w.name === "Your project here" ? "Add screenshot" : w.name}
+                  {w.name}
                 </div>
                 <div className="work-info">
                   <div className="t">{w.name}</div>

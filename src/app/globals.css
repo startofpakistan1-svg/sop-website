@@ -239,3 +239,59 @@ footer { padding: 54px 0 40px; border-top: 1px solid var(--line); }
   .ticker-dot { margin: 0 18px; }
   .ticker::before, .ticker::after { width: 40px; }
 }
+
+/* ---------- CASE STUDIES (portfolio) ---------- */
+.case-list { display: flex; flex-direction: column; gap: 34px; }
+
+.case {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 0;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.case-visual {
+  position: relative;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.case-visual img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.case-tag {
+  position: absolute; top: 16px; left: 16px;
+  background: rgba(255,255,255,.92); color: var(--navy);
+  font-family: 'Space Grotesk', sans-serif; font-size: 12.5px; font-weight: 600;
+  letter-spacing: .04em; text-transform: uppercase;
+  padding: 6px 12px; border-radius: 999px;
+}
+
+.case-body { padding: 36px 38px; }
+.case-type {
+  font-size: 13px; color: var(--muted); font-weight: 600;
+  letter-spacing: .06em; text-transform: uppercase; margin-bottom: 8px;
+}
+.case-body h2 { font-size: 26px; font-weight: 700; margin-bottom: 14px; }
+.case-body p { color: var(--muted); font-size: 16px; }
+
+.case-stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; padding: 0; }
+.case-stack li {
+  border: 1px solid var(--line); background: var(--soft); color: var(--navy);
+  font-size: 13.5px; font-weight: 500; padding: 6px 13px; border-radius: 999px;
+}
+
+.case-link {
+  display: inline-block; margin-top: 22px;
+  color: var(--blue-2); font-weight: 600; font-size: 15.5px;
+}
+.case-link:hover { color: var(--navy); }
+
+@media (max-width: 860px) {
+  .case { grid-template-columns: 1fr; }
+  .case-visual { min-height: 200px; }
+  .case-body { padding: 28px 24px; }
+  .case-body h2 { font-size: 22px; }
+}
