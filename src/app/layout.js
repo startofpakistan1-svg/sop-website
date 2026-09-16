@@ -1,8 +1,9 @@
 import "./globals.css";
+import Script from "next/script";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Ticker from "@/components/Ticker";
-import Script from "next/script";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
@@ -42,15 +43,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Navbar />
-        <Ticker />
-        <main>{children}</main>
-        <Footer />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-23QJE9T2F2"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="ga4" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -58,6 +55,11 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-23QJE9T2F2');
           `}
         </Script>
+        <Navbar />
+        <Ticker />
+        <main>{children}</main>
+        <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
