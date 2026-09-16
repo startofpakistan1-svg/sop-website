@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Ticker from "@/components/Ticker";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import Schema from "@/components/Schema";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
@@ -43,6 +44,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Schema />
+      </head>
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-23QJE9T2F2"
