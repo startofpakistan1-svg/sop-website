@@ -677,3 +677,64 @@ button.btn-orange:disabled {
   .step-body h3 { font-size: 18px; }
   .step-body p { font-size: 15.5px; }
 }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity .6s cubic-bezier(.22,.61,.36,1) var(--reveal-delay, 0ms),
+    transform .6s cubic-bezier(.22,.61,.36,1) var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.reveal.in-view {
+  opacity: 1;
+  transform: none;
+}
+
+/* cards lift slightly on hover, so the page feels alive */
+.work-card,
+.member,
+.case,
+.info-card {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.work-card:hover,
+.member:hover,
+.case:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14,26,56,.09);
+}
+
+/* service rows get a subtle slide on the marker */
+.svc h3::before { transition: transform .25s ease, width .25s ease; }
+.svc:hover h3::before { transform: translateY(-2px) scale(1.25); }
+
+/* step circles pop as they arrive */
+.step-n { transition: transform .3s ease, background .25s ease; }
+.step:hover .step-n {
+  transform: scale(1.08);
+  background: var(--orange);
+  color: #fff;
+}
+
+/* primary buttons get a small press feel */
+.btn-orange, .nav-cta, .c-wa {
+  transition: background .2s ease, transform .15s ease, box-shadow .2s ease;
+}
+.btn-orange:hover, .nav-cta:hover, .c-wa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(245,135,31,.32);
+}
+.btn-orange:active, .nav-cta:active, .c-wa:active {
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .work-card:hover, .member:hover, .case:hover,
+  .btn-orange:hover, .nav-cta:hover, .c-wa:hover,
+  .step:hover .step-n, .svc:hover h3::before {
+    transform: none;
+  }
+}
