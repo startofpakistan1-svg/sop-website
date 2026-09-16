@@ -613,3 +613,67 @@ button.btn-orange:disabled {
   background: #EFF6FF;
   border-color: #BFDBFE;
 }
+
+/* ---------- PROCESS STEPS ---------- */
+.process-band {
+  background: var(--soft);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.steps::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 14px;
+  bottom: 40px;
+  width: 2px;
+  background: var(--line);
+}
+
+.step {
+  display: flex;
+  gap: 26px;
+  position: relative;
+  padding-bottom: 34px;
+}
+.step:last-child { padding-bottom: 0; }
+
+.step-n {
+  flex: none;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--orange);
+  color: var(--navy);
+  display: grid;
+  place-items: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+.step-body { padding-top: 6px; max-width: 640px; }
+.step-body h3 { font-size: 20px; font-weight: 600; }
+.step-body p {
+  color: var(--muted);
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+@media (max-width: 860px) {
+  .steps::before { left: 22px; }
+  .step { gap: 18px; padding-bottom: 28px; }
+  .step-n { width: 46px; height: 46px; font-size: 14px; }
+  .step-body h3 { font-size: 18px; }
+  .step-body p { font-size: 15.5px; }
+}
