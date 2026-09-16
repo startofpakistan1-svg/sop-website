@@ -555,16 +555,23 @@ button.btn-orange:disabled {
 }
 .member-avatar {
   flex: none;
-  width: 68px;
-  height: 68px;
+  width: 78px;
+  height: 78px;
   border-radius: 14px;
   display: grid;
   place-items: center;
+  overflow: hidden;
   color: #fff;
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: .02em;
+}
+.member-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .member-info h3 { font-size: 20px; font-weight: 600; }
 .member-role {
@@ -586,5 +593,5 @@ button.btn-orange:disabled {
   .stat-n { font-size: 32px; }
   .team-grid { grid-template-columns: 1fr; }
   .member { padding: 22px; gap: 16px; }
-  .member-avatar { width: 56px; height: 56px; font-size: 19px; }
+  .member-avatar { width: 62px; height: 62px; font-size: 20px; }
 }

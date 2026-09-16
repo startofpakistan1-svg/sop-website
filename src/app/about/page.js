@@ -1,19 +1,24 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
 
 const team = [
   {
     name: "Shahzaib Ali",
     role: "Chief Executive Officer",
     bio: "Leads SOP's direction, client relationships and growth across the marketplaces we operate on.",
+    photo: "/team/shahzaib.jpg",
     initials: "SA",
     from: "#12296B",
     to: "#2563EB",
   },
   {
-    name: "Khurram Shahzad",
+    name: "Qamar Shahzad",
     role: "Founder",
     bio: "Builds the stores, systems and AI agents behind the work — five years of development experience with a focus on automation.",
-    initials: "KS",
+    photo: "/team/qamar.jpg",
+    initials: "QS",
     from: "#B4560C",
     to: "#F5871F",
   },
@@ -26,11 +31,26 @@ const stats = [
   { n: "5", label: "marketplaces" },
 ];
 
-export const metadata = {
-  title: "About — SOP | Start of Pakistan",
-  description:
-    "Start of Pakistan is an eCommerce and AI automation studio in Jhelum, serving clients across Pakistan, India, the UK and the US.",
-};
+function Avatar({ member }) {
+  const [failed, setFailed] = useState(false);
+
+  return (
+    <div
+      className="member-avatar"
+      style={{ background: `linear-gradient(135deg, ${member.from}, ${member.to})` }}
+    >
+      {!failed && member.photo ? (
+        <img
+          src={member.photo}
+          alt={member.name}
+          onError={() => setFailed(true)}
+        />
+      ) : (
+        member.initials
+      )}
+    </div>
+  );
+}
 
 export default function About() {
   return (
@@ -112,12 +132,7 @@ export default function About() {
           <div className="team-grid">
             {team.map((m) => (
               <div className="member" key={m.name}>
-                <div
-                  className="member-avatar"
-                  style={{ background: `linear-gradient(135deg, ${m.from}, ${m.to})` }}
-                >
-                  {m.initials}
-                </div>
+                <Avatar member={m} />
                 <div className="member-info">
                   <h3>{m.name}</h3>
                   <div className="member-role">{m.role}</div>
