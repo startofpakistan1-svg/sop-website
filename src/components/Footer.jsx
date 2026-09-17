@@ -52,23 +52,20 @@ export default function Footer() {
 
           <div className="foot-col">
             <h4>Follow</h4>
-            <div className="foot-socials">
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  className="soc"
-                  href={s.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  aria-label={`SOP on ${s.label}`}
-                  title={s.label}
-                >
-                  <svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true">
-                    <path fill="currentColor" d={s.path} />
-                  </svg>
-                </a>
-              ))}
-            </div>
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                className="foot-social"
+                href={s.href}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true">
+                  <path fill="currentColor" d={s.path} />
+                </svg>
+                {s.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>
