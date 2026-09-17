@@ -18,10 +18,20 @@ export default function Schema() {
     foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
+      streetAddress:
+        "First Floor, Office No. 7, Rizwan Heights, Citi Town B Block, Street C1, Satellite Town",
       addressLocality: "Jhelum",
       addressRegion: "Punjab",
+      postalCode: "49600",
       addressCountry: "PK",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 32.9914231,
+      longitude: 73.6653876,
+    },
+    hasMap:
+      "https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876",
     areaServed: [
       { "@type": "Country", name: "Pakistan" },
       { "@type": "Country", name: "United Kingdom" },

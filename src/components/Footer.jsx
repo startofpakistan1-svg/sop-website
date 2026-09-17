@@ -47,7 +47,14 @@ export default function Footer() {
             <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">WhatsApp</a>
             <a href="mailto:support@startofpakistan.com">support@startofpakistan.com</a>
             <a href="tel:+92544584447">0544-584447</a>
-            <span>Jhelum, Pakistan</span>
+            <span>Rizwan Heights, Satellite Town<br />Jhelum 49600, Pakistan</span>
+            <a
+              href="https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Get directions
+            </a>
           </div>
 
           <div className="foot-col">

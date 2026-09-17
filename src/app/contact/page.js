@@ -237,10 +237,56 @@ export default function Contact() {
             </div>
 
             <div className="info-row">
-              <div className="lbl">Location</div>
-              <span>Jhelum, Punjab, Pakistan</span>
+              <div className="lbl">Office</div>
+              <span className="addr">
+                First Floor, Office No. 7<br />
+                Rizwan Heights, Citi Town B Block<br />
+                Street C1, beside HBL Bank<br />
+                Satellite Town, Jhelum 49600
+              </span>
+              <a
+                className="dir-link"
+                href="https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Get directions
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* MAP */}
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Find us</h2>
+            <p>
+              First floor of Rizwan Heights, right beside HBL Bank on Street C1
+              in Satellite Town. Parking outside.
+            </p>
+          </div>
+
+          <div className="map-frame">
+            <iframe
+              title="SOP office location on Google Maps"
+              src="https://maps.google.com/maps?q=32.9914231,73.6653876&z=17&output=embed"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+
+          <a
+            className="btn-outline"
+            style={{ marginTop: 20 }}
+            href="https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Open in Google Maps
+          </a>
         </div>
       </section>
     </>
