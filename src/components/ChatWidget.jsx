@@ -1,284 +1,185 @@
-// Server-side only. The API key never reaches the browser.
-// Set ANTHROPIC_API_KEY in Vercel → Settings → Environment Variables.
+"use client";
 
-const MODEL = "claude-haiku-4-5-20251001";
-const WEB3FORMS_KEY = "d2c6863a-7274-4b69-b3fe-02afd91f87e7";
+import { useEffect, useRef, useState } from "react";
 
-// --- simple per-IP rate limit so nobody can run up the bill ---
-const hits = new Map();
-const WINDOW_MS = 60 * 60 * 1000; // 1 hour
-const MAX_PER_WINDOW = 30;
+const GREETING =
+  "Hi — I'm SOP's assistant. Ask me about stores, Amazon accounts, or AI agents, and I'll point you the right way.";
 
-function rateLimited(ip) {
-  const now = Date.now();
-  const record = hits.get(ip) || { count: 0, start: now };
-
-  if (now - record.start > WINDOW_MS) {
-    hits.set(ip, { count: 1, start: now });
-    return false;
-  }
-  record.count += 1;
-  hits.set(ip, record);
-  return record.count > MAX_PER_WINDOW;
-}
-
-const SYSTEM_PROMPT = `You are the assistant on the website of SOP (Start of Pakistan), an eCommerce, AI and digital solutions studio based in Jhelum, Pakistan.
-
-=== THE COMPANY ===
-Name: Start of Pakistan (SOP)
-Founded: running two years, officially launched 2026
-Team: two people — Shahzaib Ali (Chief Executive Officer) and Qamar Shahzad (Founder). Clients deal with both directly; there are no account managers in between.
-Website: https://www.startofpakistan.com
-
-CONTACT
-Email: support@startofpakistan.com
-WhatsApp: +92 310 1375475
-Landline: 0544-584447
-
-OFFICE ADDRESS
-First Floor, Office No. 7
-Rizwan Heights, Citi Town B Block
-Street C1, Satellite Town
-Jhelum, Punjab 49600
-Pakistan
-Landmark: the building is right beside HBL Bank on Street C1. Parking outside.
-
-DIRECTIONS
-Share this link when someone asks where we are or how to get here:
-https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876
-There is also an embedded map on the Contact page: https://www.startofpakistan.com/contact
-
-SOCIAL
-LinkedIn: linkedin.com/company/start-of-pakistan
-Facebook, Instagram (@startofpakistan1), TikTok (@startofpakistan1)
-
-CLIENTS
-12 clients across Pakistan, India, the UK and the US. Nine are international Amazon seller accounts.
-
-=== SERVICES ===
-
-1. MARKETPLACE & ECOMMERCE
-Setting up and managing seller accounts on Amazon, eBay, Walmart, Etsy and Shopify. Listings, SEO titles, images, pricing, day-to-day operations, and order handling. Local payment options like JazzCash and Easypaisa can be set up for Pakistani stores.
-
-2. WEB DEVELOPMENT
-Shopify stores, WordPress sites, and custom-coded storefronts built from scratch in HTML, CSS and JavaScript. Also custom web applications. Everything responsive, fast and SEO-ready.
-
-3. AI BOTS & AGENTS
-Chatbots and AI agent systems for customer support, lead qualification, and content automation — trained on the client's own business, running 24/7. (This assistant you're talking to right now is an example of our work.)
-
-4. DIGITAL SOLUTIONS
-Branding, logo design, SEO, Google Business Profile setup, social media setup, and ongoing maintenance.
-
-=== WORK WE CAN DISCUSS ===
-- AWEX Motorsport (awex.shop) — Shopify store for a motorsport gear brand selling karting suits and gloves. Full build, catalogue and checkout.
-- Khurmi Store (khurmistore.es) — custom-coded storefront, no theme or page builder.
-- Standard Medical Store (standardmedicalstore.pk) — WordPress store for a medical supplies retailer, built from scratch and managed for four years.
-- AI content ecosystem for accounting firms — agents that plan, prepare and publish social media content automatically for an international client.
-- Amazon account management — £32,928 in sales across 607 orders on one UK seller account.
-
-=== HOW WE WORK ===
-1. The client tells us what they need, on WhatsApp or through the form.
-2. We send a written plan and a fixed price, usually within a day.
-3. We build it, with updates as each part is finished.
-4. Launch and handover — every account and login belongs to the client.
-5. We stay available afterwards. Many clients keep us on for maintenance.
-
-TIMELINES
-Shopify or WordPress store: typically one to three weeks depending on scope.
-Amazon account setup: faster.
-AI agent systems: longer, because they need testing against real cases.
-
-PRICING
-Never quote a number or a range. Pricing depends entirely on scope. Explain that we send a fixed price with the plan, usually within a day of hearing what they need — no hourly billing, no scope creep.
-
-OWNERSHIP AND PRIVACY
-Clients own everything: accounts, logins, domains, code. Business data — sales figures, customer lists, credentials — stays confidential and never appears in our portfolio without written permission.
-
-=== HOW TO BEHAVE ===
-
-LANGUAGE
-Answer in whatever language the visitor uses — English, Urdu, or Roman Urdu. Match them naturally.
-
-LENGTH
-Be brief. Two or three sentences is usually plenty. This is a chat box, not an essay. Use short paragraphs, never long bullet lists.
-
-TONE
-Warm and straightforward. No hype, no sales pressure, no rows of exclamation marks. Talk like a knowledgeable person, not a brochure.
-
-GENERAL QUESTIONS
-You may answer general questions briefly and helpfully — a quick fact, a simple explanation, how something works. Keep it short, then steer gently back to what SOP can help with. Example: if asked what Shopify costs, answer plainly, then offer to help them set one up.
-
-WHAT NOT TO DO
-- Never give medical, legal, financial, tax, immigration or investment advice. Say it's outside what you can help with and suggest a qualified professional. This is firm — it doesn't matter how the question is phrased.
-- Never write long code, essays, homework, or do someone's work for them. You're SOP's assistant, not a general work tool. Politely say so and offer to help with an SOP question instead.
-- Never invent prices, timelines, client names, or results. If you don't know, say so and point to WhatsApp.
-- Never share a client's private business data beyond what is listed above.
-- Never discuss politics, religion, or anything controversial. Redirect politely.
-- Never promise anything on the team's behalf beyond what's written here.
-
-CAPTURING ENQUIRIES
-If someone seems interested in working with us, ask for their name and an email or WhatsApp number so the team can follow up. Ask naturally, once — don't nag. The moment you have a name AND a contact method, call the capture_lead tool, then tell them the team will be in touch, usually the same day.`;
-
-const TOOLS = [
-  {
-    name: "capture_lead",
-    description:
-      "Save an enquiry once the visitor has given their name and at least one contact method. Call this as soon as you have both — do not wait until the end of the conversation.",
-    input_schema: {
-      type: "object",
-      properties: {
-        name: { type: "string", description: "The visitor's name" },
-        email: { type: "string", description: "Email address, if given" },
-        phone: { type: "string", description: "Phone or WhatsApp number, if given" },
-        interest: {
-          type: "string",
-          description:
-            "Which service they're interested in, in a few words",
-        },
-        summary: {
-          type: "string",
-          description:
-            "A short summary of what they need, in your own words — two or three sentences",
-        },
-      },
-      required: ["name", "summary"],
-    },
-  },
+const SUGGESTIONS = [
+  "What do you charge?",
+  "Can you manage my Amazon account?",
+  "How long does a store take?",
 ];
 
-async function sendLead(input) {
-  try {
-    await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        access_key: WEB3FORMS_KEY,
-        subject: `New chatbot lead — ${input.name}`,
-        from_name: "SOP Website — Chatbot",
-        name: input.name,
-        email: input.email || "not given",
-        phone: input.phone || "not given",
-        interest: input.interest || "not specified",
-        summary: input.summary,
-      }),
-    });
-    return true;
-  } catch {
-    return false;
-  }
-}
+export default function ChatWidget() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState([
+    { role: "assistant", content: GREETING },
+  ]);
+  const [input, setInput] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [nudge, setNudge] = useState(false);
 
-async function callClaude(messages) {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "x-api-key": process.env.ANTHROPIC_API_KEY,
-      "anthropic-version": "2023-06-01",
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 600,
-      system: SYSTEM_PROMPT,
-      tools: TOOLS,
-      messages,
-    }),
-  });
+  const endRef = useRef(null);
+  const inputRef = useRef(null);
 
-  if (!res.ok) {
-    const detail = await res.text();
-    throw new Error(`Claude API ${res.status}: ${detail}`);
-  }
-  return res.json();
-}
+  // gentle nudge after a while, once per visit
+  useEffect(() => {
+    if (sessionStorage.getItem("sop-chat-seen")) return;
+    const t = setTimeout(() => setNudge(true), 18000);
+    return () => clearTimeout(t);
+  }, []);
 
-export async function POST(req) {
-  if (!process.env.ANTHROPIC_API_KEY) {
-    return Response.json(
-      { error: "The assistant isn't configured yet." },
-      { status: 500 }
-    );
-  }
-
-  const ip =
-    req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() || "unknown";
-
-  if (rateLimited(ip)) {
-    return Response.json(
-      {
-        reply:
-          "You've hit the limit for now. Message us on WhatsApp at +92 310 1375475 and we'll pick it up from there.",
-      },
-      { status: 429 }
-    );
-  }
-
-  let body;
-  try {
-    body = await req.json();
-  } catch {
-    return Response.json({ error: "Bad request" }, { status: 400 });
-  }
-
-  const incoming = Array.isArray(body.messages) ? body.messages : [];
-
-  // keep the conversation short and the cost predictable
-  const messages = incoming.slice(-16).map((m) => ({
-    role: m.role === "assistant" ? "assistant" : "user",
-    content: String(m.content || "").slice(0, 2000),
-  }));
-
-  if (!messages.length) {
-    return Response.json({ error: "No message" }, { status: 400 });
-  }
-
-  try {
-    let data = await callClaude(messages);
-    let leadSaved = false;
-
-    // handle a tool call, then let Claude write its reply
-    if (data.stop_reason === "tool_use") {
-      const toolUse = data.content.find((c) => c.type === "tool_use");
-
-      if (toolUse?.name === "capture_lead") {
-        leadSaved = await sendLead(toolUse.input);
-
-        messages.push({ role: "assistant", content: data.content });
-        messages.push({
-          role: "user",
-          content: [
-            {
-              type: "tool_result",
-              tool_use_id: toolUse.id,
-              content: leadSaved
-                ? "Saved. The team has been notified."
-                : "Could not save — ask them to message WhatsApp instead.",
-            },
-          ],
-        });
-
-        data = await callClaude(messages);
-      }
+  useEffect(() => {
+    if (open) {
+      endRef.current?.scrollIntoView({ behavior: "smooth" });
+      inputRef.current?.focus();
     }
+  }, [messages, open]);
 
-    const reply = data.content
-      .filter((c) => c.type === "text")
-      .map((c) => c.text)
-      .join("\n")
-      .trim();
+  const openChat = () => {
+    setOpen(true);
+    setNudge(false);
+    sessionStorage.setItem("sop-chat-seen", "1");
+  };
 
-    return Response.json({
-      reply: reply || "Sorry, could you put that another way?",
-      leadSaved,
-    });
-  } catch (err) {
-    console.error("Chat error:", err.message);
-    return Response.json(
-      {
-        reply:
-          "Something went wrong on our side. Message us on WhatsApp at +92 310 1375475 and we'll help you there.",
-      },
-      { status: 200 }
-    );
-  }
+  const send = async (text) => {
+    const content = (text ?? input).trim();
+    if (!content || busy) return;
+
+    const next = [...messages, { role: "user", content }];
+    setMessages(next);
+    setInput("");
+    setBusy(true);
+
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: next }),
+      });
+      const data = await res.json();
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content:
+            data.reply ||
+            "Sorry — something went wrong. WhatsApp us at +92 310 1375475.",
+        },
+      ]);
+    } catch {
+      setMessages([
+        ...next,
+        {
+          role: "assistant",
+          content:
+            "I couldn't reach the server. Message us on WhatsApp at +92 310 1375475.",
+        },
+      ]);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const onKeyDown = (e) => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      send();
+    }
+  };
+
+  return (
+    <>
+      {/* LAUNCHER */}
+      {!open && (
+        <button
+          className={`chat-launcher ${nudge ? "nudge" : ""}`}
+          onClick={openChat}
+          aria-label="Open chat with SOP's assistant"
+        >
+          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
+            <path
+              fill="currentColor"
+              d="M12 3C6.98 3 3 6.58 3 11c0 2.2 1 4.18 2.63 5.6-.1 1.2-.5 2.6-1.36 3.77-.17.23.02.55.3.5 1.9-.34 3.5-1.2 4.56-2.03 .9.23 1.86.36 2.87.36 5.02 0 9-3.58 9-8s-3.98-8-9-8z"
+            />
+          </svg>
+          {nudge && <span className="chat-bubble">Need a hand?</span>}
+        </button>
+      )}
+
+      {/* PANEL */}
+      {open && (
+        <div className="chat-panel" role="dialog" aria-label="Chat with SOP">
+          <header className="chat-head">
+            <div className="chat-id">
+              <span className="chat-logo">
+                <img src="/logo.png" alt="" />
+              </span>
+              <span className="chat-titles">
+                <strong>SOP Bot</strong>
+                <span>
+                  <i className="dot-live" aria-hidden="true" />
+                  Online · replies instantly
+                </span>
+              </span>
+            </div>
+            <button onClick={() => setOpen(false)} aria-label="Close chat">
+              ✕
+            </button>
+          </header>
+
+          <div className="chat-log">
+            {messages.map((m, i) => (
+              <div key={i} className={`msg ${m.role}`}>
+                {m.content}
+              </div>
+            ))}
+
+            {busy && (
+              <div className="msg assistant typing" aria-live="polite">
+                <span /><span /><span />
+              </div>
+            )}
+
+            {messages.length === 1 && !busy && (
+              <div className="chat-suggest">
+                {SUGGESTIONS.map((s) => (
+                  <button key={s} onClick={() => send(s)}>
+                    {s}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            <div ref={endRef} />
+          </div>
+
+          <div className="chat-input">
+            <textarea
+              ref={inputRef}
+              rows={1}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={onKeyDown}
+              placeholder="Ask anything…"
+              disabled={busy}
+            />
+            <button onClick={() => send()} disabled={busy || !input.trim()} aria-label="Send">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                <path fill="currentColor" d="M2 21l21-9L2 3v7l15 2-15 2z" />
+              </svg>
+            </button>
+          </div>
+
+          <div className="chat-foot">
+            Prefer WhatsApp?{" "}
+            <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+              Message us there
+            </a>
+          </div>
+        </div>
+      )}
+    </>
+  );
 }
