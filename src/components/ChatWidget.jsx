@@ -30,6 +30,17 @@ export default function ChatWidget() {
     return () => clearTimeout(t);
   }, []);
 
+  // any button on the site can open the chat by firing this event
+  useEffect(() => {
+    const handler = () => {
+      setOpen(true);
+      setNudge(false);
+      sessionStorage.setItem("sop-chat-seen", "1");
+    };
+    window.addEventListener("sop:open-chat", handler);
+    return () => window.removeEventListener("sop:open-chat", handler);
+  }, []);
+
   useEffect(() => {
     if (open) {
       endRef.current?.scrollIntoView({ behavior: "smooth" });

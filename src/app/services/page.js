@@ -1,4 +1,5 @@
 import Link from "next/link";
+import OpenChatButton from "@/components/OpenChatButton";
 
 const services = [
   {
@@ -144,6 +145,37 @@ export default function Services() {
                 </ul>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LIVE DEMO */}
+      <section className="demo-band">
+        <div className="wrap demo">
+          <div className="demo-copy">
+            <span className="demo-tag">Live demo</span>
+            <h2>The bot in the corner is ours.</h2>
+            <p>
+              That chat button isn&apos;t a plugin we installed. We built it —
+              the same way we&apos;d build one for you. It knows our services,
+              answers in English or Urdu, and passes real enquiries straight to
+              our inbox while we&apos;re asleep.
+            </p>
+            <p>
+              Yours would know your products, your prices and your policies.
+              Ask it something and see how it handles it.
+            </p>
+            <OpenChatButton />
+          </div>
+
+          <div className="demo-visual" aria-hidden="true">
+            <div className="demo-chat">
+              <div className="demo-msg bot">How long does a Shopify store take?</div>
+              <div className="demo-msg you">Usually one to three weeks, depending on how many products you have.</div>
+              <div className="demo-msg bot">Aap Amazon account bhi manage karte hain?</div>
+              <div className="demo-msg you">Ji haan — abhi nine international accounts chala rahe hain.</div>
+              <div className="demo-msg typing"><span /><span /><span /></div>
+            </div>
           </div>
         </div>
       </section>

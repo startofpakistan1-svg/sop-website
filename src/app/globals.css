@@ -1276,3 +1276,104 @@ button.btn-orange:disabled {
 @media (max-width: 860px) {
   .map-frame { height: 280px; }
 }
+
+/* ---------- LIVE DEMO SECTION ---------- */
+.demo-band {
+  background: linear-gradient(135deg, #0E1F52 0%, var(--navy) 50%, var(--blue) 100%);
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.demo-band::after {
+  content: "";
+  position: absolute;
+  left: -120px;
+  bottom: -160px;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%, rgba(245,135,31,.32), transparent 62%);
+}
+
+.demo {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.demo-tag {
+  display: inline-block;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(251,176,22,.4);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 18px;
+}
+.demo-copy h2 { font-size: 33px; font-weight: 700; }
+.demo-copy p {
+  color: #d4ddf2;
+  font-size: 16.5px;
+  margin-top: 16px;
+  max-width: 480px;
+}
+
+.demo-chat {
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  backdrop-filter: blur(6px);
+}
+.demo-msg {
+  max-width: 88%;
+  padding: 10px 14px;
+  border-radius: 13px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.demo-msg.bot {
+  align-self: flex-end;
+  background: rgba(255,255,255,.16);
+  color: #fff;
+  border-bottom-right-radius: 4px;
+}
+.demo-msg.you {
+  align-self: flex-start;
+  background: #fff;
+  color: var(--ink);
+  border-bottom-left-radius: 4px;
+}
+.demo-msg.typing {
+  align-self: flex-start;
+  background: #fff;
+  display: flex;
+  gap: 4px;
+  padding: 14px;
+}
+.demo-msg.typing span {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--muted);
+  animation: dot 1.2s infinite ease-in-out;
+}
+.demo-msg.typing span:nth-child(2) { animation-delay: .15s; }
+.demo-msg.typing span:nth-child(3) { animation-delay: .3s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-msg.typing span { animation: none; }
+}
+
+@media (max-width: 860px) {
+  .demo { grid-template-columns: 1fr; gap: 32px; }
+  .demo-copy h2 { font-size: 26px; }
+  .demo-visual { order: 2; }
+}
