@@ -18,11 +18,8 @@ export default function Schema() {
     foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
-      streetAddress:
-        "First Floor, Office No. 7, Rizwan Heights, Citi Town B Block, Street C1, Satellite Town",
       addressLocality: "Jhelum",
       addressRegion: "Punjab",
-      postalCode: "49600",
       addressCountry: "PK",
     },
     areaServed: [
@@ -32,7 +29,10 @@ export default function Schema() {
       { "@type": "Country", name: "India" },
     ],
     priceRange: "$$",
-    sameAs: ["https://www.linkedin.com/in/qamar-shahzad-37b566132/"],
+    sameAs: [
+      "https://www.linkedin.com/company/start-of-pakistan/",
+      "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
+    ],
     founder: {
       "@type": "Person",
       name: "Qamar Shahzad",
