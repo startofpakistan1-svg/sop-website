@@ -6,6 +6,7 @@ import Ticker from "@/components/Ticker";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import Schema from "@/components/Schema";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
@@ -66,6 +67,7 @@ export default function RootLayout({ children }) {
         <Footer />
         <WhatsAppButton />
         <ScrollReveal />
+        <ChatWidget />
       </body>
     </html>
   );
