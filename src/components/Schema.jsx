@@ -31,6 +31,9 @@ export default function Schema() {
     priceRange: "$$",
     sameAs: [
       "https://www.linkedin.com/company/start-of-pakistan/",
+      "https://www.facebook.com/profile.php?id=61594490571515",
+      "https://www.instagram.com/startofpakistan1/",
+      "https://www.tiktok.com/@startofpakistan1",
       "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
     ],
     founder: {
