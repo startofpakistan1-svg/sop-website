@@ -41,6 +41,7 @@ export default function Footer() {
             <Link href="/contact">Contact</Link>
             <Link href="/review">Leave a review</Link>
             <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
           </div>
           <div className="foot-col">
             <h4>Contact</h4>

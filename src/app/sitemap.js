@@ -10,5 +10,6 @@ export default function sitemap() {
     { url: `${base}/contact`,    lastModified: now, changeFrequency: "yearly",  priority: 0.9 },
     { url: `${base}/review`,     lastModified: now, changeFrequency: "yearly",  priority: 0.4 },
     { url: `${base}/privacy`,    lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
+    { url: `${base}/terms`,      lastModified: now, changeFrequency: "yearly",  priority: 0.3 },
   ];
 }
