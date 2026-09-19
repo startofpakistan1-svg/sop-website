@@ -1,5 +1,13 @@
 import "./globals.css";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-jakarta",
+});
 import Navbar from "@/components/Navbar";
 import Ticker from "@/components/Ticker";
 import Footer from "@/components/Footer";
@@ -44,7 +52,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={jakarta.variable}>
       <head>
         <Schema />
       </head>
@@ -71,4 +79,4 @@ export default function RootLayout({ children }) {
       </body>
     </html>
   );
-} 
+}
