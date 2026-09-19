@@ -9,7 +9,7 @@ export const metadata = {
 export default function Terms() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/legal.svg)" }}>
         <div className="wrap">
           <h1>Terms of Service</h1>
           <p>The rules that apply when you use this site or work with us.</p>

@@ -11,27 +11,25 @@ const services = [
     title: "Marketplace accounts",
     body: "Seller accounts set up and run end to end — listings, pricing, optimisation and the daily work nobody wants to do themselves.",
     chips: ["Amazon", "eBay", "Walmart", "Etsy"],
-    icon: (
-      <path d="M3 6h18l-2 12H5L3 6zM3 6L2 3M9 21a1 1 0 100-2 1 1 0 000 2zM17 21a1 1 0 100-2 1 1 0 000 2z" />
-    ),
+    img: "/icons/marketplace.svg",
   },
   {
     title: "Stores that sell",
     body: "Shopify, WordPress, or hand-coded from scratch. Fast to load, clear on a phone, and built to be found in search.",
     chips: ["Shopify", "WordPress", "Custom build"],
-    icon: <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM2 9h20M6 6.5h.01M9 6.5h.01" />,
+    img: "/icons/web.svg",
   },
   {
     title: "AI agents",
     body: "Assistants that answer customers at 2am, qualify leads while you sleep, and publish content without being asked twice.",
     chips: ["Chatbots", "Automation", "Content"],
-    icon: <path d="M4 10a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H7a3 3 0 01-3-3v-7zM12 7V3M9 13h.01M15 13h.01" />,
+    img: "/icons/ai.svg",
   },
   {
     title: "Everything around it",
     body: "Branding, SEO, Google Business, and the maintenance that keeps all of the above still working six months from now.",
     chips: ["Branding", "SEO", "Maintenance"],
-    icon: <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M15.5 12a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />,
+    img: "/icons/digital.svg",
   },
 ];
 
@@ -119,10 +117,7 @@ export default function Home() {
             {services.map((s) => (
               <div className="card" key={s.title}>
                 <div className="ic">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                       stroke="#12296B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                    {s.icon}
-                  </svg>
+                  <img src={s.img} alt="" />
                 </div>
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>

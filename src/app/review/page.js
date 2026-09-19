@@ -87,7 +87,7 @@ export default function Review() {
   if (status === "sent") {
     return (
       <>
-        <section className="page-head">
+        <section className="page-head" style={{ "--cover": "url(/covers/review.svg)" }}>
           <div className="wrap">
             <h1>Thank you</h1>
             <p>That means a lot to us.</p>
@@ -112,7 +112,7 @@ export default function Review() {
 
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/review.svg)" }}>
         <div className="wrap">
           <h1>Leave a review</h1>
           <p>

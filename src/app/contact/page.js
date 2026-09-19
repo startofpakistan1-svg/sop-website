@@ -79,7 +79,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/contact.svg)" }}>
         <div className="wrap">
           <h1>Let&apos;s talk</h1>
           <p>Tell us what you&apos;re building. We usually reply the same day.</p>

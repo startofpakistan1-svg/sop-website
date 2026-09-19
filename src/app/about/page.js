@@ -38,7 +38,7 @@ function Avatar({ member }) {
 export default function About() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/about.svg)" }}>
         <div className="wrap">
           <h1>About SOP</h1>
           <p>Two people, twelve clients, four countries — and a lot of automation.</p>

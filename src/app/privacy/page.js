@@ -9,7 +9,7 @@ export const metadata = {
 export default function Privacy() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/legal.svg)" }}>
         <div className="wrap">
           <h1>Privacy Policy</h1>
           <p>How we handle the information you share with us.</p>
