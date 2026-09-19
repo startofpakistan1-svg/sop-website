@@ -47,10 +47,10 @@ export default function About() {
 
       <div className="stats">
         <div className="wrap stats-in">
-          <div className="st"><b data-count="2">0</b><span>years building</span></div>
-          <div className="st"><b data-count="12">0</b><span>clients served</span></div>
-          <div className="st"><b data-count="4">0</b><span>countries</span></div>
-          <div className="st"><b data-count="5">0</b><span>marketplaces</span></div>
+          <div className="st"><b data-count="2">2</b><span>years building</span></div>
+          <div className="st"><b data-count="12">12</b><span>clients served</span></div>
+          <div className="st"><b data-count="4">4</b><span>countries</span></div>
+          <div className="st"><b data-count="5">5</b><span>marketplaces</span></div>
         </div>
       </div>
 

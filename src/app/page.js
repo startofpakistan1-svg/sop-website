@@ -144,10 +144,10 @@ export default function Home() {
       {/* STATS */}
       <div className="stats">
         <div className="wrap stats-in">
-          <div className="st"><b data-count="12">0</b><span>clients served</span></div>
-          <div className="st"><b data-count="9">0</b><span>Amazon accounts run</span></div>
-          <div className="st"><b data-count="4">0</b><span>countries</span></div>
-          <div className="st"><b data-count="607">0</b><span>orders shipped</span></div>
+          <div className="st"><b data-count="12">12</b><span>clients served</span></div>
+          <div className="st"><b data-count="9">9</b><span>Amazon accounts run</span></div>
+          <div className="st"><b data-count="4">4</b><span>countries</span></div>
+          <div className="st"><b data-count="607">607</b><span>orders shipped</span></div>
         </div>
       </div>
 

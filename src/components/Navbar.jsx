@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
+  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
   { label: "Work", href: "/portfolio" },
   { label: "About", href: "/about" },
@@ -44,7 +45,6 @@ export default function Navbar() {
       </div>
 
       <div className={`mobile-menu ${open ? "open" : ""}`}>
-        <Link href="/" onClick={() => setOpen(false)}>Home</Link>
         {links.map((l) => (
           <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
         ))}
