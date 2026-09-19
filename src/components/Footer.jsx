@@ -29,20 +29,22 @@ export default function Footer() {
       <div className="wrap foot">
         <div>
           <img className="logo-img" src="/logo.png" alt="SOP logo" />
-          <p>Start of Pakistan — eCommerce &amp; digital solutions from Jhelum for clients everywhere.</p>
+          <p>
+            Start of Pakistan — eCommerce, web and AI solutions from Jhelum for
+            clients everywhere.
+          </p>
         </div>
 
         <div className="foot-links">
           <div className="foot-col">
             <h4>Company</h4>
             <Link href="/services">Services</Link>
-            <Link href="/portfolio">Portfolio</Link>
+            <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/review">Leave a review</Link>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
           </div>
+
           <div className="foot-col">
             <h4>Contact</h4>
             <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">WhatsApp</a>
@@ -74,6 +76,12 @@ export default function Footer() {
                 {s.label}
               </a>
             ))}
+          </div>
+
+          <div className="foot-col">
+            <h4>Legal</h4>
+            <Link href="/privacy">Privacy Policy</Link>
+            <Link href="/terms">Terms of Service</Link>
           </div>
         </div>
       </div>

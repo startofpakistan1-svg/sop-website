@@ -24,9 +24,9 @@ export default function NotFound() {
         </div>
 
         <div className="nf-actions">
-          <Link className="btn-orange" href="/">Back to home</Link>
+          <Link className="btn btn-acc" href="/">Back to home</Link>
           <a
-            className="btn-outline"
+            className="btn btn-line"
             href="https://wa.me/923101375475"
             target="_blank"
             rel="noreferrer"

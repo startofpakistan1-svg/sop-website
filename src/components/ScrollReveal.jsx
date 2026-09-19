@@ -2,82 +2,74 @@
 
 import { useEffect } from "react";
 
-// Animates content as it scrolls into view, and counts the About page stats up.
-// Mounted once in layout.js — no other file needs to change.
-
 const TARGETS = [
-  ".sec-head",
-  ".svc",
-  ".case",
-  ".step",
-  ".member",
-  ".work-card",
-  ".why-item",
-  ".contact",
-  ".info-card",
-  ".stat",
-  ".prose h2",
-  ".prose p",
+  ".sec-head", ".card", ".case", ".step", ".member", ".quote",
+  ".st", ".cta", ".info-card", ".faq", ".prose h2", ".prose p",
+  ".demo-copy", ".demo-visual", ".map-frame",
 ];
 
 export default function ScrollReveal() {
   useEffect(() => {
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduced) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    const els = document.querySelectorAll(TARGETS.join(","));
+    const els = Array.from(document.querySelectorAll(TARGETS.join(",")));
     els.forEach((el, i) => {
-      el.classList.add("reveal");
-      // stagger items inside the same row/group slightly
-      el.style.setProperty("--reveal-delay", `${(i % 4) * 70}ms`);
+      el.classList.add("sr");
+      el.style.transitionDelay = `${(i % 4) * 85}ms`;
     });
 
     const io = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("in-view");
-            io.unobserve(entry.target);
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add("in");
+            io.unobserve(e.target);
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -50px 0px" }
     );
-
     els.forEach((el) => io.observe(el));
 
-    // ---- count-up for the About page stats ----
-    const nums = document.querySelectorAll(".stat-n");
-    const countIO = new IntersectionObserver(
+    // count-up numbers
+    const nums = document.querySelectorAll("[data-count]");
+    const cio = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const el = entry.target;
-          const target = parseInt(el.textContent, 10);
-          if (Number.isNaN(target)) return;
-
-          const duration = 900;
-          const start = performance.now();
-
-          const tick = (now) => {
-            const p = Math.min((now - start) / duration, 1);
-            const eased = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(target * eased);
-            if (p < 1) requestAnimationFrame(tick);
+        entries.forEach((e) => {
+          if (!e.isIntersecting) return;
+          const el = e.target;
+          const to = parseInt(el.dataset.count, 10);
+          const suffix = el.dataset.suffix || "";
+          if (Number.isNaN(to)) return;
+          const t0 = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - t0) / 1100, 1);
+            const k = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(to * k).toLocaleString() + suffix;
+            if (p < 1) requestAnimationFrame(step);
           };
-
-          requestAnimationFrame(tick);
-          countIO.unobserve(el);
+          requestAnimationFrame(step);
+          cio.unobserve(el);
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.6 }
     );
+    nums.forEach((el) => cio.observe(el));
 
-    nums.forEach((el) => countIO.observe(el));
+    // cursor spotlight on cards
+    const cards = document.querySelectorAll(".card");
+    const move = (ev) => {
+      const c = ev.currentTarget;
+      const r = c.getBoundingClientRect();
+      c.style.setProperty("--mx", `${ev.clientX - r.left}px`);
+      c.style.setProperty("--my", `${ev.clientY - r.top}px`);
+    };
+    cards.forEach((c) => c.addEventListener("mousemove", move));
 
     return () => {
       io.disconnect();
-      countIO.disconnect();
+      cio.disconnect();
+      cards.forEach((c) => c.removeEventListener("mousemove", move));
     };
   }, []);
 

@@ -79,7 +79,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="page-head" style={{ padding: "64px 0 70px" }}>
+      <section className="page-head">
         <div className="wrap">
           <h1>Let&apos;s talk</h1>
           <p>Tell us what you&apos;re building. We usually reply the same day.</p>
@@ -99,7 +99,7 @@ export default function Contact() {
                   day. If it&apos;s urgent, message us on WhatsApp.
                 </p>
                 <a
-                  className="btn-orange"
+                  className="btn btn-acc"
                   href="https://wa.me/923101375475"
                   target="_blank"
                   rel="noreferrer"
@@ -186,7 +186,7 @@ export default function Contact() {
 
                 <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                   <button
-                    className="btn-orange"
+                    className="btn btn-acc"
                     style={{ border: "none", cursor: "pointer" }}
                     onClick={sendForm}
                     disabled={status === "sending"}
@@ -194,7 +194,7 @@ export default function Contact() {
                     {status === "sending" ? "Sending…" : "Send enquiry"}
                   </button>
                   <button
-                    className="btn-outline"
+                    className="btn btn-ghost"
                     style={{ background: "#fff", cursor: "pointer" }}
                     onClick={sendWhatsApp}
                   >
@@ -279,7 +279,7 @@ export default function Contact() {
           </div>
 
           <a
-            className="btn-outline"
+            className="btn btn-ghost"
             style={{ marginTop: 20 }}
             href="https://www.google.com/maps/dir/?api=1&destination=32.9914231,73.6653876"
             target="_blank"

@@ -11,6 +11,7 @@ const services = [
       "Product listings, SEO titles, images",
       "Local payments — JazzCash, Easypaisa, bank transfer",
     ],
+    icon: <path d="M3 6h18l-2 12H5L3 6zM3 6L2 3M9 21a1 1 0 100-2 1 1 0 000 2zM17 21a1 1 0 100-2 1 1 0 000 2z" />,
   },
   {
     title: "Web development",
@@ -21,16 +22,18 @@ const services = [
       "WordPress design and fixes",
       "Speed and mobile optimisation",
     ],
+    icon: <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM2 9h20M6 6.5h.01M9 6.5h.01" />,
   },
   {
     title: "AI bots & agents",
-    body: "Smart assistants that handle the work you'd otherwise do by hand, 24 hours a day.",
+    body: "Smart assistants that handle the work you'd otherwise do by hand, around the clock.",
     points: [
       "Website and WhatsApp chatbots",
       "Lead qualification and auto-replies",
       "Customer support automation",
       "Trained on your own products and FAQs",
     ],
+    icon: <path d="M4 10a3 3 0 013-3h10a3 3 0 013 3v7a3 3 0 01-3 3H7a3 3 0 01-3-3v-7zM12 7V3M9 13h.01M15 13h.01" />,
   },
   {
     title: "Digital solutions",
@@ -41,75 +44,27 @@ const services = [
       "Social media setup",
       "Ongoing maintenance and support",
     ],
+    icon: <path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1M15.5 12a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z" />,
   },
 ];
 
 const steps = [
-  {
-    n: "01",
-    title: "Tell us what you need",
-    body:
-      "Message us on WhatsApp or send the form. We'll ask what you're selling, where you're stuck, and what you've already tried — usually a short conversation, not a sales pitch.",
-  },
-  {
-    n: "02",
-    title: "We come back with a plan",
-    body:
-      "Within a day you get a written plan: what we'd build, how long it takes, and a fixed price. No hourly surprises, no scope that grows halfway through.",
-  },
-  {
-    n: "03",
-    title: "We build it",
-    body:
-      "Work starts once you approve the plan. You get updates as each part is finished, and you can see progress along the way rather than waiting for a reveal at the end.",
-  },
-  {
-    n: "04",
-    title: "Launch and handover",
-    body:
-      "We take it live, walk you through how everything works, and hand over every account and login. It's your store and your systems — you own all of it.",
-  },
-  {
-    n: "05",
-    title: "We stay available",
-    body:
-      "Questions after launch don't go unanswered. If you want us to keep running the account or maintaining the store, we can do that too.",
-  },
+  { n: "01", title: "Tell us what you need", body: "Message us on WhatsApp or send the form. We'll ask what you're selling, where you're stuck, and what you've already tried — a short conversation, not a sales pitch." },
+  { n: "02", title: "We come back with a plan", body: "Within a day you get a written plan: what we'd build, how long it takes, and a fixed price. No hourly surprises, no scope that grows halfway through." },
+  { n: "03", title: "We build it", body: "Work starts once you approve the plan. You get updates as each part is finished, so you can see progress rather than waiting for a reveal at the end." },
+  { n: "04", title: "Launch and handover", body: "We take it live, walk you through how everything works, and hand over every account and login. It's your store and your systems — you own all of it." },
+  { n: "05", title: "We stay available", body: "Questions after launch don't go unanswered. If you want us to keep running the account or maintaining the store, we can do that too." },
 ];
 
 const faqs = [
-  {
-    q: "How much does a project cost?",
-    a: "It depends on what you need — a simple store is very different from a full marketplace setup or a custom AI system. Tell us what you're building and we'll send a fixed price with the plan, usually within a day. No hourly billing, no surprises halfway through.",
-  },
-  {
-    q: "How long does it take?",
-    a: "A Shopify or WordPress store typically takes one to three weeks depending on how many products and how much custom work is involved. Amazon account setup is faster. AI agent systems take longer because they need testing against real cases. You'll get a timeline in writing before we start.",
-  },
-  {
-    q: "Do you work with clients outside Pakistan?",
-    a: "Most of our work is international. We run Amazon seller accounts for clients in the UK and US, and we've built systems for clients in India. Time zones haven't been a problem — we work around yours.",
-  },
-  {
-    q: "Can you manage my Amazon account, not just set it up?",
-    a: "Yes. Ongoing account management is a large part of what we do — listings, optimisation and day-to-day operations. Some clients hand over the whole account, others keep control and bring us in for specific parts.",
-  },
-  {
-    q: "Who owns the store and the accounts?",
-    a: "You do, completely. Every account is created in your name, and at handover you get every login and credential. We don't hold anything hostage — if you ever want to move on, you take the whole thing with you.",
-  },
-  {
-    q: "What happens after launch?",
-    a: "We stay available for questions. If something breaks or you need a change, message us. Many clients keep us on to maintain the store or run the account — Standard Medical Store has been with us for four years.",
-  },
-  {
-    q: "Do I need to buy my own domain and hosting?",
-    a: "You can, and we'd recommend it — they should be in your name. If you'd rather not deal with it, we'll set it all up for you and hand over the access afterwards.",
-  },
-  {
-    q: "Will my business data stay private?",
-    a: "Yes. Sales figures, customer lists, account credentials — all of it stays confidential, and nothing goes in our portfolio without your written permission.",
-  },
+  { q: "How much does a project cost?", a: "It depends on what you need — a simple store is very different from a full marketplace setup or a custom AI system. Tell us what you're building and we'll send a fixed price with the plan, usually within a day. No hourly billing, no surprises halfway through." },
+  { q: "How long does it take?", a: "A Shopify or WordPress store typically takes one to three weeks depending on how many products and how much custom work is involved. Amazon account setup is faster. AI agent systems take longer because they need testing against real cases. You'll get a timeline in writing before we start." },
+  { q: "Do you work with clients outside Pakistan?", a: "Most of our work is international. We run Amazon seller accounts for clients in the UK and US, and we've built systems for clients in India. Time zones haven't been a problem — we work around yours." },
+  { q: "Can you manage my Amazon account, not just set it up?", a: "Yes. Ongoing account management is a large part of what we do — listings, optimisation and day-to-day operations. Some clients hand over the whole account, others keep control and bring us in for specific parts." },
+  { q: "Who owns the store and the accounts?", a: "You do, completely. Every account is created in your name, and at handover you get every login and credential. We don't hold anything hostage — if you ever want to move on, you take the whole thing with you." },
+  { q: "What happens after launch?", a: "We stay available for questions. If something breaks or you need a change, message us. Many clients keep us on to maintain the store or run the account — Standard Medical Store has been with us for four years." },
+  { q: "Do I need to buy my own domain and hosting?", a: "You can, and we'd recommend it — they should be in your name. If you'd rather not deal with it, we'll set it all up for you and hand over the access afterwards." },
+  { q: "Will my business data stay private?", a: "Yes. Sales figures, customer lists, account credentials — all of it stays confidential, and nothing goes in our portfolio without your written permission." },
 ];
 
 export const metadata = {
@@ -121,28 +76,27 @@ export const metadata = {
 export default function Services() {
   return (
     <>
-      <section className="page-head" style={{ padding: "64px 0 70px" }}>
+      <section className="page-head">
         <div className="wrap">
           <h1>What we do</h1>
-          <p>
-            Four services, one team. Pick what you need today — we can handle the rest
-            as you grow.
-          </p>
+          <p>Four services, one team. Pick what you need today — we can handle the rest as you grow.</p>
         </div>
       </section>
 
       <section>
         <div className="wrap">
-          <div className="svc-grid">
+          <div className="cards">
             {services.map((s) => (
-              <div className="svc" key={s.title}>
+              <div className="card" key={s.title}>
+                <div className="ic">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                       stroke="#12296B" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                    {s.icon}
+                  </svg>
+                </div>
                 <h3>{s.title}</h3>
                 <p>{s.body}</p>
-                <ul>
-                  {s.points.map((p) => (
-                    <li key={p}>{p}</li>
-                  ))}
-                </ul>
+                <ul>{s.points.map((p) => <li key={p}>{p}</li>)}</ul>
               </div>
             ))}
           </div>
@@ -162,8 +116,8 @@ export default function Services() {
               our inbox while we&apos;re asleep.
             </p>
             <p>
-              Yours would know your products, your prices and your policies.
-              Ask it something and see how it handles it.
+              Yours would know your products, your prices and your policies. Ask
+              it something and see how it handles it.
             </p>
             <OpenChatButton />
           </div>
@@ -185,12 +139,8 @@ export default function Services() {
         <div className="wrap">
           <div className="sec-head">
             <h2>How we work</h2>
-            <p>
-              No long onboarding, no account managers in between. Here&apos;s
-              what happens from your first message to launch.
-            </p>
+            <p>No long onboarding, no account managers in between. Here&apos;s what happens from your first message to launch.</p>
           </div>
-
           <ol className="steps">
             {steps.map((st) => (
               <li className="step" key={st.n}>
@@ -210,12 +160,8 @@ export default function Services() {
         <div className="wrap">
           <div className="sec-head">
             <h2>Common questions</h2>
-            <p>
-              The things clients usually ask before getting started. If
-              yours isn&apos;t here, just ask us.
-            </p>
+            <p>The things clients usually ask before getting started. If yours isn&apos;t here, just ask us.</p>
           </div>
-
           <div className="faq">
             {faqs.map((f, i) => (
               <details className="faq-item" key={i}>
@@ -232,16 +178,18 @@ export default function Services() {
 
       <section style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="contact">
-            <div>
+          <div className="cta">
+            <div className="cta-in">
               <h2>Not sure what you need?</h2>
               <p>Tell us about your business and we&apos;ll suggest the right starting point — no charge.</p>
             </div>
-            <div className="contact-actions">
-              <a className="c-wa" href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
-                Message on WhatsApp
+            <div className="cta-actions">
+              <Link className="btn btn-acc" href="/contact">
+                <span className="t">Send an enquiry</span> <span className="a">→</span>
+              </Link>
+              <a className="btn btn-line" href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+                <span className="t">Message on WhatsApp</span>
               </a>
-              <Link className="c-mail" href="/contact">Send an enquiry</Link>
             </div>
           </div>
         </div>

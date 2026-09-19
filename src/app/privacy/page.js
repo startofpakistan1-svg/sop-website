@@ -9,7 +9,7 @@ export const metadata = {
 export default function Privacy() {
   return (
     <>
-      <section className="page-head" style={{ padding: "64px 0 70px" }}>
+      <section className="page-head">
         <div className="wrap">
           <h1>Privacy Policy</h1>
           <p>How we handle the information you share with us.</p>
@@ -147,7 +147,7 @@ export default function Privacy() {
           </p>
 
           <div style={{ marginTop: 40 }}>
-            <Link className="btn-outline" href="/contact">
+            <Link className="btn btn-ghost" href="/contact">
               Get in touch
             </Link>
           </div>

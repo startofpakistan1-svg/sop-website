@@ -87,7 +87,7 @@ export default function Review() {
   if (status === "sent") {
     return (
       <>
-        <section className="page-head" style={{ padding: "64px 0 70px" }}>
+        <section className="page-head">
           <div className="wrap">
             <h1>Thank you</h1>
             <p>That means a lot to us.</p>
@@ -102,9 +102,7 @@ export default function Review() {
                 We read every one. If we publish it on the site, it&apos;ll
                 appear with your name and company exactly as you wrote them.
               </p>
-              <Link className="btn-orange" href="/">
-                Back to home
-              </Link>
+              <Link className="btn btn-acc" href="/"><span className="t">Back to home</span></Link>
             </div>
           </div>
         </section>
@@ -114,7 +112,7 @@ export default function Review() {
 
   return (
     <>
-      <section className="page-head" style={{ padding: "64px 0 70px" }}>
+      <section className="page-head">
         <div className="wrap">
           <h1>Leave a review</h1>
           <p>
@@ -240,7 +238,7 @@ export default function Review() {
             {error && <div className="form-error">{error}</div>}
 
             <button
-              className="btn-orange"
+              className="btn btn-acc"
               style={{ border: "none", cursor: "pointer" }}
               onClick={submit}
               disabled={status === "sending"}

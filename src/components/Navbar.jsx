@@ -5,9 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const links = [
-  { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Work", href: "/portfolio" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
 ];
@@ -18,22 +17,20 @@ export default function Navbar() {
 
   return (
     <header className="nav">
-      <div className="wrap nav-inner">
+      <div className="wrap nav-in">
         <Link href="/" aria-label="SOP home">
           <img className="logo-img" src="/logo.png" alt="SOP — eCommerce & Digital Solutions" />
         </Link>
 
         <nav className="nav-links">
           {links.map((l) => (
-            <Link
-              key={l.href}
-              href={l.href}
-              className={path === l.href ? "active" : ""}
-            >
+            <Link key={l.href} href={l.href} className={path === l.href ? "active" : ""}>
               {l.label}
             </Link>
           ))}
-          <Link className="nav-cta" href="/contact">Get a quote</Link>
+          <Link className="btn btn-dark nav-cta" href="/contact">
+            <span className="t">Start a project</span>
+          </Link>
         </nav>
 
         <button
@@ -47,12 +44,11 @@ export default function Navbar() {
       </div>
 
       <div className={`mobile-menu ${open ? "open" : ""}`}>
+        <Link href="/" onClick={() => setOpen(false)}>Home</Link>
         {links.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>
-            {l.label}
-          </Link>
+          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
         ))}
-        <Link href="/contact" onClick={() => setOpen(false)}>Get a quote</Link>
+        <Link href="/contact" onClick={() => setOpen(false)}>Start a project</Link>
       </div>
     </header>
   );

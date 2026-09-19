@@ -9,7 +9,7 @@ export const metadata = {
 export default function Terms() {
   return (
     <>
-      <section className="page-head" style={{ padding: "64px 0 70px" }}>
+      <section className="page-head">
         <div className="wrap">
           <h1>Terms of Service</h1>
           <p>The rules that apply when you use this site or work with us.</p>
@@ -183,7 +183,7 @@ export default function Terms() {
           </p>
 
           <div style={{ marginTop: 40 }}>
-            <Link className="btn-outline" href="/contact">
+            <Link className="btn btn-ghost" href="/contact">
               Start a project
             </Link>
           </div>

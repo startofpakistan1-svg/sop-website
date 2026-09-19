@@ -1,8 +1,6 @@
 export default function Ticker() {
   const line =
     "Pakistan's first AI-powered eCommerce company — we don't follow the market, we automate it.";
-
-  // repeated so the scroll never shows a gap
   const items = [line, line, line, line];
 
   return (

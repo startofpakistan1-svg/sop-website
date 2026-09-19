@@ -1,8 +1,8 @@
 import "./globals.css";
 import Script from "next/script";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import Ticker from "@/components/Ticker";
+import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import Schema from "@/components/Schema";
@@ -10,13 +10,16 @@ import ChatWidget from "@/components/ChatWidget";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
-  title: "SOP — eCommerce & Digital Solutions | Start of Pakistan",
+  title: "SOP — eCommerce, Web & AI Solutions | Start of Pakistan",
   description:
-    "SOP helps brands sell on Amazon, eBay, Walmart, Etsy and Shopify — plus custom websites and AI assistants. Based in Jhelum, Pakistan.",
+    "SOP builds Shopify and WordPress stores, manages Amazon seller accounts, and designs AI agents — for clients across Pakistan, India, the UK and the US.",
+  verification: {
+    google: "6qLJJ2E1ccPbBCQ5bwrXxsroJhwN4HD4rlCpoFDFNtE",
+  },
   openGraph: {
-    title: "SOP — eCommerce & Digital Solutions",
+    title: "SOP — eCommerce, Web & AI Solutions",
     description:
-      "Pakistan's first AI-powered eCommerce company. Marketplace setup, custom websites and AI assistants that scale your business.",
+      "Pakistan's first AI-powered eCommerce company. Marketplace accounts, custom stores and AI agents that scale your business.",
     url: "https://www.startofpakistan.com",
     siteName: "Start of Pakistan",
     images: [
@@ -30,14 +33,11 @@ export const metadata = {
     locale: "en_US",
     type: "website",
   },
-  verification: {
-    google: "6qLJJ2E1ccPbBCQ5bwrXxsroJhwN4HD4rlCpoFDFNtE",
-  },
   twitter: {
     card: "summary_large_image",
-    title: "SOP — eCommerce & Digital Solutions",
+    title: "SOP — eCommerce, Web & AI Solutions",
     description:
-      "Pakistan's first AI-powered eCommerce company. Marketplace setup, custom websites and AI assistants.",
+      "Pakistan's first AI-powered eCommerce company. Marketplace accounts, custom stores and AI agents.",
     images: ["/og-image.png"],
   },
 };
@@ -66,9 +66,9 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
-        <ScrollReveal />
         <ChatWidget />
+        <ScrollReveal />
       </body>
     </html>
   );
-}
+} 
