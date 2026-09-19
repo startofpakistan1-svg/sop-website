@@ -42,7 +42,7 @@ const projects = [
     stack: ["AI agents", "Content automation", "Social publishing", "Scheduling"],
     result: null,
     link: null,
-    images: ["/work/ai-agents-1.png", "/work/ai-agents-2.jpeg"],
+    images: ["/work/ai-agent-1.jpeg", "/work/ai-agent-2.png"],
   },
   {
     name: "Khurmi Store",
