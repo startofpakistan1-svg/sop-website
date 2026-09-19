@@ -1,4 +1,4 @@
-"use client";<section className="page-head" style={{ "--cover": "url(/covers/portfolio.svg)" }}></section>
+"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -96,7 +96,7 @@ function CaseVisual({ project }) {
 export default function Portfolio() {
   return (
     <>
-      <section className="page-head">
+      <section className="page-head" style={{ "--cover": "url(/covers/portfolio.svg)" }}>
         <div className="wrap">
           <h1>Our work</h1>
           <p>Stores we&apos;ve built, agents we&apos;ve trained, and accounts we run — for clients in Pakistan, India, the UK and the US.</p>
@@ -110,6 +110,7 @@ export default function Portfolio() {
               <article className="case" key={i}>
                 <CaseVisual project={p} />
                 <div className="case-body">
+                  <div className="case-no">{String(i + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}</div>
                   <div className="case-type">{p.type}</div>
                   <h2>{p.name}</h2>
                   <p>{p.body}</p>

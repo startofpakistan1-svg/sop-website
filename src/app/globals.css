@@ -274,12 +274,25 @@ section{padding:104px 0}
 /* ============ CASE STUDIES ============ */
 .case-list{display:flex;flex-direction:column;gap:26px}
 .case{
-  display:grid;grid-template-columns:440px 1fr;
+  display:grid;grid-template-columns:480px 1fr;
   border:1px solid var(--hair);border-radius:19px;overflow:hidden;background:#fff;
   transition:transform .6s var(--e),box-shadow .6s var(--e);
 }
 .case:hover{transform:translateY(-6px);box-shadow:var(--sh-3)}
-.case-visual{position:relative;min-height:300px;overflow:hidden}
+
+/* alternate sides so the page reads editorially, not as a stack of cards */
+.case:nth-child(even){grid-template-columns:1fr 480px}
+.case:nth-child(even) .case-visual{order:2}
+.case:nth-child(even) .case-body{order:1}
+
+.case-visual{
+  position:relative;min-height:340px;overflow:hidden;
+  background:linear-gradient(140deg,var(--navy),var(--blue));
+}
+.case:nth-child(2) .case-visual{background:linear-gradient(140deg,#0F3F3A,#17A398)}
+.case:nth-child(3) .case-visual{background:linear-gradient(140deg,#8A3D08,#F5871F)}
+.case:nth-child(4) .case-visual{background:linear-gradient(140deg,#123A5E,#2B6CB0)}
+.case:nth-child(5) .case-visual{background:linear-gradient(140deg,#3B1E6E,#7C4DCC)}
 .case-visual .shot{
   position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
   opacity:0;transition:opacity .5s ease,transform .9s var(--e);
@@ -299,9 +312,12 @@ section{padding:104px 0}
 }
 .shot-dots .dot.on{background:#fff;transform:scale(1.2)}
 
-.case-body{padding:38px 40px}
+.case-body{padding:44px 46px;display:flex;flex-direction:column;justify-content:center}
+.case-no{
+  font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--amber);margin-bottom:14px;
+}
 .case-type{font-size:13px;color:var(--ash);font-weight:700;letter-spacing:.04em;margin-bottom:9px}
-.case-body h2{font-size:26px;margin-bottom:13px}
+.case-body h2{font-size:29px;margin-bottom:13px}
 .case-body p{color:var(--ash);font-size:16px}
 .case-result{
   margin-top:20px;padding:15px 19px;background:var(--mist);
@@ -575,7 +591,10 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
   .stats-in{grid-template-columns:1fr 1fr;gap:34px 20px;padding:42px 0}
   .st b{font-size:34px}
   .case{grid-template-columns:1fr}
-  .case-visual{min-height:210px}
+  .case:nth-child(even){grid-template-columns:1fr}
+  .case:nth-child(even) .case-visual{order:0}
+  .case:nth-child(even) .case-body{order:0}
+  .case-visual{min-height:230px}
   .case-body{padding:28px 24px}
   .team-grid{grid-template-columns:1fr}
   .demo{grid-template-columns:1fr;gap:32px}
