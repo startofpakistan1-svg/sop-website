@@ -1,4 +1,4 @@
-"use client";
+"use client";<section className="page-head" style={{ "--cover": "url(/covers/portfolio.svg)" }}></section>
 
 import Link from "next/link";
 import { useState } from "react";

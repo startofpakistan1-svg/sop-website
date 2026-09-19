@@ -1,14 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none" font-family="Plus Jakarta Sans, system-ui, sans-serif">
 <defs>
 <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#12296B"/></linearGradient>
-<linearGradient id="c" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17A398"/><stop offset="1" stop-color="#0F3F3A"/></linearGradient>
-<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#17A398"/><stop offset="1" stop-color="#0F3F3A"/></linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<filter id="s" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="7" stdDeviation="11" flood-color="#0B1226" flood-opacity=".18"/></filter>
 </defs>
-<rect x="46" y="40" width="230" height="160" rx="14" fill="url(#a)"/>
-<rect x="46" y="40" width="230" height="26" rx="14" fill="#fff" opacity=".18"/>
-<rect x="230" y="118" width="230" height="160" rx="14" fill="url(#c)"/>
-<rect x="230" y="118" width="230" height="26" rx="14" fill="#fff" opacity=".18"/>
-<rect x="120" y="222" width="180" height="112" rx="14" fill="url(#b)"/>
-<circle cx="62" cy="53" r="4" fill="#fff" opacity=".6"/><circle cx="76" cy="53" r="4" fill="#fff" opacity=".4"/>
-<circle cx="246" cy="131" r="4" fill="#fff" opacity=".6"/><circle cx="260" cy="131" r="4" fill="#fff" opacity=".4"/>
+
+<!-- window 1 -->
+<g filter="url(#s)">
+<rect x="34" y="34" width="238" height="148" rx="13" fill="url(#a)"/>
+<rect x="34" y="34" width="238" height="26" rx="13" fill="#0B1226" opacity=".25"/>
+<rect x="34" y="50" width="238" height="10" fill="#0B1226" opacity=".25"/>
+<circle cx="50" cy="47" r="3.6" fill="#fff" opacity=".55"/><circle cx="62" cy="47" r="3.6" fill="#fff" opacity=".35"/>
+<text x="90" y="51" fill="#fff" font-size="10.5" font-weight="600" opacity=".7">awex.shop</text>
+<text x="54" y="98" fill="#fff" font-size="16" font-weight="700">AWEX Motorsport</text>
+<text x="54" y="118" fill="#fff" font-size="11.5" font-weight="500" opacity=".72">Shopify · karting suits &amp; gloves</text>
+<rect x="54" y="136" width="64" height="22" rx="7" fill="#F5871F"/>
+<text x="68" y="151" fill="#fff" font-size="10.5" font-weight="700">Live</text>
+</g>
+
+<!-- window 2 -->
+<g filter="url(#s)">
+<rect x="220" y="122" width="248" height="152" rx="13" fill="url(#t)"/>
+<rect x="220" y="122" width="248" height="26" rx="13" fill="#0B1226" opacity=".25"/>
+<rect x="220" y="138" width="248" height="10" fill="#0B1226" opacity=".25"/>
+<circle cx="236" cy="135" r="3.6" fill="#fff" opacity=".55"/><circle cx="248" cy="135" r="3.6" fill="#fff" opacity=".35"/>
+<text x="276" y="139" fill="#fff" font-size="10.5" font-weight="600" opacity=".7">standardmedicalstore.pk</text>
+<text x="240" y="188" fill="#fff" font-size="16" font-weight="700">Standard Medical</text>
+<text x="240" y="208" fill="#fff" font-size="11.5" font-weight="500" opacity=".72">WordPress · built &amp; managed</text>
+<text x="240" y="248" fill="#fff" font-size="27" font-weight="800">4 yrs</text>
+<text x="240" y="266" fill="#fff" font-size="11.5" font-weight="500" opacity=".72">and still running</text>
+</g>
+
+<!-- amazon result card -->
+<g filter="url(#s)">
+<rect x="52" y="216" width="176" height="106" rx="13" fill="#fff" stroke="#E4EAF5"/>
+<text x="72" y="244" fill="#667089" font-size="11" font-weight="600">AMAZON UK ACCOUNT</text>
+<text x="72" y="276" fill="#0B1226" font-size="26" font-weight="800">£32,928</text>
+<text x="72" y="298" fill="#667089" font-size="12" font-weight="500">across 607 orders</text>
+<rect x="72" y="306" width="120" height="5" rx="2.5" fill="#EEF3FD"/>
+<rect x="72" y="306" width="88" height="5" rx="2.5" fill="url(#o)"/>
+</g>
 </svg>

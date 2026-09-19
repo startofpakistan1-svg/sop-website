@@ -1,19 +1,31 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none" font-family="Plus Jakarta Sans, system-ui, sans-serif">
 <defs>
 <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#12296B"/></linearGradient>
-<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<filter id="s" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="7" stdDeviation="11" flood-color="#0B1226" flood-opacity=".15"/></filter>
 </defs>
-<rect x="70" y="70" width="270" height="170" rx="18" fill="url(#a)"/>
-<path d="M112 240l0 44 46-44z" fill="#12296B"/>
-<rect x="100" y="110" width="150" height="9" rx="4.5" fill="#fff" opacity=".55"/>
-<rect x="100" y="132" width="200" height="9" rx="4.5" fill="#fff" opacity=".32"/>
-<rect x="100" y="154" width="120" height="9" rx="4.5" fill="#fff" opacity=".32"/>
-<g fill="url(#b)">
-<path d="M104 190l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8-10.6-5.6-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z"/>
-<path d="M146 190l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8-10.6-5.6-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z"/>
-<path d="M188 190l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8-10.6-5.6-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z"/>
-<path d="M230 190l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8-10.6-5.6-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z"/>
-<path d="M272 190l5.3 10.8 11.9 1.7-8.6 8.4 2 11.8-10.6-5.6-10.6 5.6 2-11.8-8.6-8.4 11.9-1.7z"/>
+
+<g filter="url(#s)">
+<rect x="50" y="48" width="330" height="168" rx="17" fill="#fff" stroke="#E4EAF5"/>
+<g fill="url(#o)">
+<path d="M84 86l4.4 9 9.9 1.4-7.2 7 1.7 9.8-8.8-4.6-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z"/>
+<path d="M120 86l4.4 9 9.9 1.4-7.2 7 1.7 9.8-8.8-4.6-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z"/>
+<path d="M156 86l4.4 9 9.9 1.4-7.2 7 1.7 9.8-8.8-4.6-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z"/>
+<path d="M192 86l4.4 9 9.9 1.4-7.2 7 1.7 9.8-8.8-4.6-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z"/>
+<path d="M228 86l4.4 9 9.9 1.4-7.2 7 1.7 9.8-8.8-4.6-8.8 4.6 1.7-9.8-7.2-7 9.9-1.4z"/>
 </g>
-<circle cx="418" cy="140" r="52" fill="url(#b)" opacity=".28"/>
+<text x="266" y="102" fill="#667089" font-size="13" font-weight="700">5 / 5</text>
+<rect x="76" y="132" width="260" height="9" rx="4.5" fill="#EEF3FD"/>
+<rect x="76" y="152" width="284" height="9" rx="4.5" fill="#EEF3FD"/>
+<rect x="76" y="172" width="180" height="9" rx="4.5" fill="#EEF3FD"/>
+<path d="M84 216v34l36-34z" fill="#fff"/>
+</g>
+
+<g filter="url(#s)">
+<rect x="190" y="230" width="272" height="88" rx="16" fill="url(#a)"/>
+<text x="216" y="264" fill="#fff" font-size="14" font-weight="700">Worked with us?</text>
+<text x="216" y="286" fill="#B7C4E0" font-size="12" font-weight="500">Leave a few honest lines —</text>
+<text x="216" y="303" fill="#B7C4E0" font-size="12" font-weight="500">good or bad.</text>
+</g>
+<circle cx="440" cy="88" r="34" fill="url(#o)" opacity=".18"/>
 </svg>

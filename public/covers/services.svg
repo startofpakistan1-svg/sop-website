@@ -1,15 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none" font-family="Plus Jakarta Sans, system-ui, sans-serif">
 <defs>
 <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#12296B"/></linearGradient>
-<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#0B1226" flood-opacity=".14"/></filter>
 </defs>
-<rect x="60" y="54" width="180" height="128" rx="16" fill="url(#a)" opacity=".92"/>
-<rect x="262" y="88" width="180" height="128" rx="16" fill="url(#b)" opacity=".9"/>
-<rect x="150" y="196" width="180" height="128" rx="16" fill="url(#a)" opacity=".55"/>
-<rect x="80" y="76" width="70" height="8" rx="4" fill="#fff" opacity=".5"/>
-<rect x="80" y="94" width="110" height="8" rx="4" fill="#fff" opacity=".28"/>
-<rect x="282" y="110" width="70" height="8" rx="4" fill="#fff" opacity=".6"/>
-<rect x="282" y="128" width="110" height="8" rx="4" fill="#fff" opacity=".34"/>
-<circle cx="440" cy="60" r="18" fill="#F5871F" opacity=".7"/>
-<circle cx="46" cy="296" r="12" fill="#2B5CE6" opacity=".5"/>
+
+<!-- main panel -->
+<g filter="url(#s)">
+<rect x="58" y="44" width="330" height="272" rx="18" fill="#fff" stroke="#E4EAF5"/>
+<rect x="58" y="44" width="330" height="46" rx="18" fill="url(#a)"/>
+<rect x="58" y="76" width="330" height="14" fill="url(#a)"/>
+<text x="80" y="74" fill="#fff" font-size="15" font-weight="700">What we run for you</text>
+</g>
+
+<!-- rows -->
+<g font-size="13.5" font-weight="600" fill="#0B1226">
+  <rect x="76" y="106" width="34" height="34" rx="10" fill="#EEF3FD"/>
+  <path d="M85 121h16l-2 10H87l-2-10z" stroke="#2B5CE6" stroke-width="2" fill="none" stroke-linejoin="round"/>
+  <text x="122" y="122">Marketplace accounts</text>
+  <text x="122" y="137" font-size="11.5" font-weight="500" fill="#667089">Amazon · eBay · Walmart · Etsy</text>
+
+  <rect x="76" y="156" width="34" height="34" rx="10" fill="#EEF3FD"/>
+  <rect x="85" y="165" width="16" height="12" rx="2.5" stroke="#2B5CE6" stroke-width="2" fill="none"/>
+  <path d="M85 169h16" stroke="#2B5CE6" stroke-width="1.6"/>
+  <text x="122" y="172">Stores that sell</text>
+  <text x="122" y="187" font-size="11.5" font-weight="500" fill="#667089">Shopify · WordPress · custom</text>
+
+  <rect x="76" y="206" width="34" height="34" rx="10" fill="#FFF2E3"/>
+  <rect x="85" y="216" width="16" height="13" rx="4" stroke="#F5871F" stroke-width="2" fill="none"/>
+  <path d="M93 216v-4" stroke="#F5871F" stroke-width="2" stroke-linecap="round"/>
+  <text x="122" y="222">AI agents</text>
+  <text x="122" y="237" font-size="11.5" font-weight="500" fill="#667089">Chatbots · automation · content</text>
+
+  <rect x="76" y="256" width="34" height="34" rx="10" fill="#EEF3FD"/>
+  <circle cx="93" cy="273" r="7" stroke="#2B5CE6" stroke-width="2" fill="none"/>
+  <circle cx="93" cy="273" r="2.4" fill="#2B5CE6"/>
+  <text x="122" y="272">Everything around it</text>
+  <text x="122" y="287" font-size="11.5" font-weight="500" fill="#667089">Branding · SEO · maintenance</text>
+</g>
+
+<!-- floating badge -->
+<g filter="url(#s)">
+<rect x="320" y="238" width="156" height="72" rx="15" fill="url(#o)"/>
+<text x="340" y="266" fill="#fff" font-size="12" font-weight="600" opacity=".92">Fixed price, sent in</text>
+<text x="340" y="292" fill="#fff" font-size="23" font-weight="800">1 day</text>
+</g>
+<circle cx="452" cy="70" r="15" fill="#2B5CE6" opacity=".22"/>
 </svg>

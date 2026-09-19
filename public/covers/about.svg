@@ -1,13 +1,41 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none" font-family="Plus Jakarta Sans, system-ui, sans-serif">
 <defs>
 <linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#12296B"/></linearGradient>
-<linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<filter id="s" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="7" stdDeviation="11" flood-color="#0B1226" flood-opacity=".15"/></filter>
 </defs>
-<circle cx="180" cy="150" r="76" fill="url(#a)" opacity=".92"/>
-<circle cx="316" cy="196" r="76" fill="url(#b)" opacity=".88"/>
-<circle cx="180" cy="150" r="30" fill="#fff" opacity=".25"/>
-<circle cx="316" cy="196" r="30" fill="#fff" opacity=".3"/>
-<path d="M246 168h6M256 168h6M266 168h6" stroke="#0B1226" stroke-width="3" stroke-linecap="round" opacity=".3"/>
-<circle cx="430" cy="74" r="14" fill="#2B5CE6" opacity=".5"/>
-<circle cx="64" cy="278" r="10" fill="#F5871F" opacity=".6"/>
+
+<!-- team card -->
+<g filter="url(#s)">
+<rect x="48" y="46" width="300" height="116" rx="16" fill="#fff" stroke="#E4EAF5"/>
+<circle cx="90" cy="104" r="26" fill="url(#a)"/>
+<text x="90" y="111" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">SA</text>
+<text x="130" y="97" fill="#0B1226" font-size="14.5" font-weight="700">Shahzaib Ali</text>
+<text x="130" y="116" fill="#F5871F" font-size="11" font-weight="700">CHIEF EXECUTIVE OFFICER</text>
+</g>
+
+<g filter="url(#s)">
+<rect x="168" y="176" width="300" height="116" rx="16" fill="#fff" stroke="#E4EAF5"/>
+<circle cx="210" cy="234" r="26" fill="url(#o)"/>
+<text x="210" y="241" fill="#fff" font-size="16" font-weight="800" text-anchor="middle">QS</text>
+<text x="250" y="227" fill="#0B1226" font-size="14.5" font-weight="700">Qamar Shahzad</text>
+<text x="250" y="246" fill="#F5871F" font-size="11" font-weight="700">FOUNDER</text>
+</g>
+
+<!-- stat pills -->
+<g>
+<rect x="48" y="186" width="98" height="52" rx="13" fill="#EEF3FD"/>
+<text x="97" y="212" fill="#12296B" font-size="21" font-weight="800" text-anchor="middle">12</text>
+<text x="97" y="228" fill="#667089" font-size="10.5" font-weight="600" text-anchor="middle">clients</text>
+
+<rect x="48" y="250" width="98" height="52" rx="13" fill="#EEF3FD"/>
+<text x="97" y="276" fill="#12296B" font-size="21" font-weight="800" text-anchor="middle">4</text>
+<text x="97" y="292" fill="#667089" font-size="10.5" font-weight="600" text-anchor="middle">countries</text>
+
+<rect x="370" y="46" width="98" height="52" rx="13" fill="#FFF2E3"/>
+<text x="419" y="72" fill="#F5871F" font-size="21" font-weight="800" text-anchor="middle">2</text>
+<text x="419" y="88" fill="#667089" font-size="10.5" font-weight="600" text-anchor="middle">years</text>
+</g>
+
+<text x="48" y="330" fill="#667089" font-size="12" font-weight="600">Jhelum, Pakistan — working worldwide</text>
 </svg>
