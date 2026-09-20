@@ -138,10 +138,18 @@ select:focus-visible,textarea:focus-visible{
 .flow{position:relative;height:430px}
 .stage{position:absolute;inset:0}
 .node{
-  position:absolute;background:#fff;border:1px solid var(--hair);border-radius:12px;
-  padding:9px 14px;font-size:13.5px;font-weight:700;color:var(--navy);
+  position:absolute;background:#fff;border:1px solid var(--hair);border-radius:13px;
+  padding:12px 16px;font-size:13.5px;font-weight:700;color:var(--navy);
   box-shadow:0 4px 18px rgba(11,18,38,.08);white-space:nowrap;
+  display:flex;align-items:center;justify-content:center;
+  min-width:104px;height:50px;
   animation:bob 5s ease-in-out infinite;
+  transition:transform .5s var(--e),box-shadow .5s var(--e);
+}
+.node:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 10px 26px rgba(11,18,38,.14)}
+.node img{
+  max-width:76px;max-height:26px;width:auto;height:auto;
+  object-fit:contain;display:block;
 }
 .n1{left:0;top:6%}.n2{left:6%;top:34%;animation-delay:.6s}
 .n3{left:0;top:62%;animation-delay:1.2s}.n4{left:10%;top:88%;animation-delay:1.8s}
@@ -578,7 +586,8 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .flow{height:330px}
   .hub{width:96px;height:96px;right:22%;padding:18px}
-  .node{font-size:12px;padding:7px 11px}
+  .node{font-size:12px;padding:9px 12px;min-width:84px;height:42px}
+  .node img{max-width:60px;max-height:21px}
   .ticker-card{padding:14px 16px;min-width:0}
   .ticker-card .val{font-size:23px}
   section{padding:66px 0}

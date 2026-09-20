@@ -2,6 +2,31 @@
 
 import { useEffect, useState } from "react";
 
+const NODES = [
+  { name: "Amazon", logo: "/platforms/amazon.svg", cls: "n1" },
+  { name: "Shopify", logo: "/platforms/shopify.svg", cls: "n2" },
+  { name: "eBay", logo: "/platforms/ebay.svg", cls: "n3" },
+  { name: "Etsy", logo: "/platforms/etsy.svg", cls: "n4" },
+];
+
+function Node({ node }) {
+  const [broken, setBroken] = useState(false);
+
+  return (
+    <div className={`node ${node.cls}`}>
+      {broken ? (
+        node.name
+      ) : (
+        <img
+          src={node.logo}
+          alt={node.name}
+          onError={() => setBroken(true)}
+        />
+      )}
+    </div>
+  );
+}
+
 export default function HeroFlow() {
   const [sales, setSales] = useState(32928);
   const [order, setOrder] = useState(607);
@@ -29,10 +54,9 @@ export default function HeroFlow() {
           <path className="live l4" d="M140,392 C260,392 260,225 350,215" />
         </svg>
 
-        <div className="node n1">Amazon</div>
-        <div className="node n2">Shopify</div>
-        <div className="node n3">eBay</div>
-        <div className="node n4">Etsy</div>
+        {NODES.map((n) => (
+          <Node key={n.name} node={n} />
+        ))}
 
         <div className="hub" aria-hidden="true">
           <img src="/logo.png" alt="" />
