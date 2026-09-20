@@ -3,28 +3,14 @@
 import { useEffect, useState } from "react";
 
 const NODES = [
-  { name: "Amazon", logo: "/platforms/amazon.svg", cls: "n1" },
-  { name: "Shopify", logo: "/platforms/shopify.svg", cls: "n2" },
-  { name: "eBay", logo: "/platforms/ebay.svg", cls: "n3" },
-  { name: "Etsy", logo: "/platforms/etsy.svg", cls: "n4" },
+  { name: "Amazon", cls: "n1" },
+  { name: "Shopify", cls: "n2" },
+  { name: "eBay", cls: "n3" },
+  { name: "Etsy", cls: "n4" },
 ];
 
 function Node({ node }) {
-  const [broken, setBroken] = useState(false);
-
-  return (
-    <div className={`node ${node.cls}`}>
-      {broken ? (
-        node.name
-      ) : (
-        <img
-          src={node.logo}
-          alt={node.name}
-          onError={() => setBroken(true)}
-        />
-      )}
-    </div>
-  );
+  return <div className={`node ${node.cls}`}>{node.name}</div>;
 }
 
 export default function HeroFlow() {
