@@ -3,7 +3,7 @@ export default function sitemap() {
   const now = new Date();
 
   return [
-    { url: `${base}`,            lastModified: now, changeFrequency: "monthly", priority: 1 },
+    { url: `${base}/`,           lastModified: now, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/services`,   lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/amazon-account-management`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
     { url: `${base}/amazon-ppc-management`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
