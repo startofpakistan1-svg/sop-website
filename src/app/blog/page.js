@@ -54,8 +54,41 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* ABOUT THE GUIDES */}
       <section className="process-band">
+        <div className="wrap prose">
+          <h2>What these guides cover</h2>
+          <p>
+            Everything here comes from the questions sellers ask us before and
+            after they hire us: what a good ACoS actually is, how to write a
+            listing that ranks and converts, what Amazon account management
+            should cost, and whether a Shopify theme or a custom-coded site is
+            the better choice. The AI guides explain what agents are and where
+            they genuinely save time, without the hype.
+          </p>
+          <p>
+            We write for owners of businesses selling in the UK and US, in
+            plain English, and we do not quote statistics or prices we cannot
+            stand behind. New guides are added as the questions come in. If
+            there is something you would like covered, tell us.
+          </p>
+          <p>
+            Not sure where to begin? If you already advertise on Amazon, start
+            with <Link href="/blog/what-is-a-good-acos">what a good ACoS looks like</Link> and
+            work out your break-even figure before changing anything. If your
+            listings are the problem, the{" "}
+            <Link href="/blog/how-to-optimize-amazon-listing">listing optimization guide</Link>{" "}
+            goes through the page section by section. And if you are about to
+            hire help, <Link href="/blog/how-to-choose-an-amazon-agency">the ten questions to ask an agency</Link>{" "}
+            will save you a bad contract. Shopify and custom-site owners should
+            read the two build guides together, because the right answer is
+            often a mix of both.
+          </p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section>
         <div className="wrap">
           <div className="cta">
             <div className="cta-in">

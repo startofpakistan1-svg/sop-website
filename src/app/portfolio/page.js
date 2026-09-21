@@ -130,7 +130,28 @@ export default function Portfolio() {
         </div>
       </section>
 
-      <section style={{ paddingTop: 0 }}>
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>What these projects have in common</h2>
+          <p>
+            None of them were one-off builds. Every store, account and AI
+            system on this page was either built by us and then run by us, or
+            handed over with the client trained to run it. That is deliberate:
+            a Shopify store that nobody maintains, or an Amazon account that
+            nobody checks daily, stops earning within months.
+          </p>
+          <p>
+            Only work we have permission to show is listed here. Screenshots
+            are of the live projects, and where a client would rather not be
+            named the entry describes the work without identifying them. If
+            you are weighing up a similar project, ask us about it and we will
+            walk you through what was involved, including the parts that took
+            longer than planned.
+          </p>
+        </div>
+      </section>
+
+      <section>
         <div className="wrap">
           <div className="cta">
             <div className="cta-in">

@@ -4,6 +4,29 @@ import { useState } from "react";
 
 const ACCESS_KEY = "d2c6863a-7274-4b69-b3fe-02afd91f87e7";
 
+const faqs = [
+  {
+    q: "How quickly will you reply?",
+    a: "The same working day, usually within a few hours. Your message goes to the person who would work on your account, not a shared sales inbox. If you write in the evening UK or US time, you will normally have a reply waiting when you start work, because we are four to five hours ahead of the UK.",
+  },
+  {
+    q: "Can we talk about pricing before a call?",
+    a: "Yes. Tell us what you sell, which platforms you are on and roughly how many products you have, and we will explain how we would charge for it. Amazon account management and PPC are a fixed monthly fee. Store builds and AI systems are a fixed project price. We do not take a percentage of your sales or ad spend, and there are no long contracts.",
+  },
+  {
+    q: "What hours do you work, and how does the time zone work for UK and US clients?",
+    a: "We are based in Jhelum, Pakistan, four to five hours ahead of the UK and nine to ten hours ahead of the US East Coast depending on the season. In practice that means the daily work on your account is usually done before your morning, and we overlap with UK afternoons and US mornings for calls and messages. WhatsApp and email are answered throughout our working day.",
+  },
+  {
+    q: "What should I have ready before a call?",
+    a: "Nothing formal. It helps to know what you sell and where, what is working and what is not, and what you would like to hand over. If you already have an Amazon account or a store, having access to your reports open during the call lets us give you specific answers rather than general ones. If you are starting from nothing, that is fine too.",
+  },
+  {
+    q: "Do I have to give you my passwords?",
+    a: "No. For Amazon you add us as a user in Seller Central with only the permissions the work needs, and you can remove that access yourself at any time. For Shopify and other platforms we use staff or collaborator accounts in the same way. We never ask for your main login.",
+  },
+];
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
@@ -351,6 +374,26 @@ export default function Contact() {
               </div>
             </li>
           </ol>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Questions people ask before getting in touch</h2>
+          </div>
+          <div className="faq">
+            {faqs.map((f, i) => (
+              <details className="faq-item" key={i}>
+                <summary>
+                  {f.q}
+                  <span className="faq-icon" aria-hidden="true" />
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
     </>

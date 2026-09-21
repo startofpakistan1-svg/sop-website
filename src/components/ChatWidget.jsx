@@ -109,12 +109,7 @@ export default function ChatWidget() {
           onClick={openChat}
           aria-label="Open chat with SOP's assistant"
         >
-          <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true">
-            <path
-              fill="currentColor"
-              d="M12 3C6.98 3 3 6.58 3 11c0 2.2 1 4.18 2.63 5.6-.1 1.2-.5 2.6-1.36 3.77-.17.23.02.55.3.5 1.9-.34 3.5-1.2 4.56-2.03 .9.23 1.86.36 2.87.36 5.02 0 9-3.58 9-8s-3.98-8-9-8z"
-            />
-          </svg>
+          <img src="/icons/chat.svg" width="24" height="24" alt="" aria-hidden="true" />
           {nudge && <span className="chat-bubble">Need a hand?</span>}
         </button>
       )}

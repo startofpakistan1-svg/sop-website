@@ -13,7 +13,6 @@ import Ticker from "@/components/Ticker";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
-import Schema from "@/components/Schema";
 import ChatWidget from "@/components/ChatWidget";
 
 export const metadata = {
@@ -53,9 +52,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={jakarta.variable}>
-      <head>
-        <Schema />
-      </head>
       <body>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-23QJE9T2F2"

@@ -55,7 +55,6 @@ select:focus-visible,textarea:focus-visible{
   transition:background .3s ease;
 }
 .burger:hover{background:var(--mist)}
-.mobile-menu{display:none}
 
 /* ============ BUTTONS ============ */
 .btn{
@@ -443,6 +442,8 @@ section{padding:104px 0}
 .prose{max-width:720px}
 .prose p{color:var(--ash);font-size:17px;margin-bottom:18px}
 .prose h2{font-size:27px;margin:38px 0 14px}
+.prose p a{color:var(--blue);font-weight:600}
+.prose p a:hover{text-decoration:underline}
 .legal h2{font-size:22px;margin:34px 0 12px;color:var(--navy)}
 .legal p{font-size:16.5px}
 .legal ul{color:var(--ash);font-size:16.5px;margin:0 0 18px;padding-left:22px}
@@ -565,8 +566,8 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
 .foot-col a,.foot-col span{display:block;color:var(--ash);font-size:14.5px;margin-bottom:9px;transition:color .3s ease,transform .35s var(--e)}
 .foot-col a:hover{color:var(--ink);transform:translateX(3px)}
 .foot-col a.foot-social{display:flex;align-items:center;gap:9px}
-.foot-col a.foot-social svg{flex:none;opacity:.65;transition:opacity .3s ease}
-.foot-col a.foot-social:hover svg{opacity:1}
+.foot-col a.foot-social .ico{opacity:.65;transition:opacity .3s ease}
+.foot-col a.foot-social:hover .ico{opacity:1}
 .copy{margin-top:46px;padding-top:26px;border-top:1px solid var(--hair);color:var(--ash);font-size:13.5px}
 
 /* ============ REDUCED MOTION ============ */
@@ -580,8 +581,15 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
   .wrap{padding:0 20px}
   .nav-links{display:none}
   .burger{display:block}
-  .mobile-menu.open{display:block;background:#fff;border-bottom:1px solid var(--hair)}
-  .mobile-menu.open a{display:block;padding:15px 20px;border-top:1px solid var(--hair);color:var(--ash);font-weight:600}
+  /* the same nav becomes the dropdown panel */
+  .nav-links.open{
+    display:block;position:absolute;left:0;right:0;top:100%;
+    background:#fff;border-bottom:1px solid var(--hair);
+  }
+  .nav-links.open a,.nav-links.open a.active,.nav-links.open .nav-cta{
+    display:block;padding:15px 20px;margin:0;border-radius:0;border-top:1px solid var(--hair);
+    background:none;color:var(--ash);font-weight:600;font-size:15px;box-shadow:none;transform:none;
+  }
   .hero{padding:44px 0 0}
   .hero-grid{grid-template-columns:1fr;gap:40px}
   .flow{height:330px}
@@ -627,7 +635,7 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
   transition:padding .4s var(--e),background .3s ease,box-shadow .4s var(--e),transform .4s var(--e);
 }
 .wa-float:hover{background:#1eb955;padding-right:22px;transform:translateY(-2px);box-shadow:0 12px 30px rgba(0,0,0,.26)}
-.wa-float svg{flex:none}
+.wa-float img{flex:none;display:block}
 .wa-label{
   max-width:0;opacity:0;white-space:nowrap;font-size:15px;font-weight:700;
   transition:max-width .4s var(--e),opacity .3s ease,margin-left .4s var(--e);
@@ -1263,3 +1271,15 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
 
 /* "From our blog" links on service pages */
 .blog-links{margin:0}
+
+/* Icon glyphs loaded from /public/icons via CSS mask — colour follows the
+   parent's currentColor, so hover states behave exactly as inline SVG did. */
+.ico{
+  flex:none;display:inline-block;width:15px;height:15px;background:currentColor;
+  -webkit-mask:var(--ico) center/contain no-repeat;mask:var(--ico) center/contain no-repeat;
+}
+.ico-linkedin{--ico:url(/icons/linkedin.svg)}
+.ico-facebook{--ico:url(/icons/facebook.svg)}
+.ico-instagram{--ico:url(/icons/instagram.svg)}
+.ico-tiktok{--ico:url(/icons/tiktok.svg)}
+.member-li .ico{width:16px;height:16px}

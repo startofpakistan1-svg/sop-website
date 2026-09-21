@@ -24,13 +24,19 @@ export default function Navbar() {
           <img className="logo-img" src="/logo.png" alt="SOP — eCommerce & Digital Solutions" />
         </Link>
 
-        <nav className="nav-links">
+        {/* One nav for every width: a row on desktop, a dropdown panel on mobile (CSS) */}
+        <nav className={`nav-links ${open ? "open" : ""}`}>
           {links.map((l) => (
-            <Link key={l.href} href={l.href} className={path === l.href ? "active" : ""}>
+            <Link
+              key={l.href}
+              href={l.href}
+              className={path === l.href ? "active" : ""}
+              onClick={() => setOpen(false)}
+            >
               {l.label}
             </Link>
           ))}
-          <Link className="btn btn-dark nav-cta" href="/contact">
+          <Link className="btn btn-dark nav-cta" href="/contact" onClick={() => setOpen(false)}>
             <span className="t">Start a project</span>
           </Link>
         </nav>
@@ -43,13 +49,6 @@ export default function Navbar() {
         >
           {open ? "\u2715" : "\u2630"}
         </button>
-      </div>
-
-      <div className={`mobile-menu ${open ? "open" : ""}`}>
-        {links.map((l) => (
-          <Link key={l.href} href={l.href} onClick={() => setOpen(false)}>{l.label}</Link>
-        ))}
-        <Link href="/contact" onClick={() => setOpen(false)}>Start a project</Link>
       </div>
     </header>
   );

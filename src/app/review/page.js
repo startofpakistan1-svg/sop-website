@@ -302,6 +302,23 @@ export default function Review() {
                 should have, or communication slipped, saying so helps the next
                 client set expectations &mdash; and helps us fix it.
               </p>
+
+              <h3>How your review is used</h3>
+              <p>
+                With your permission, it appears on this website alongside the
+                work it relates to, whether that is Amazon account management,
+                a Shopify build or an AI system. We show your name and company
+                only if you tick the consent box. If you would rather stay
+                anonymous, say so and we will use your first name or your role
+                instead.
+              </p>
+              <p>
+                We do not edit what you write. It is published as it is, or
+                not at all, and we will not publish anything that names a
+                third party or shares figures you did not intend to make
+                public. If you change your mind later, one message is enough
+                and it comes down.
+              </p>
             </div>
             <div>
               <h3>What to include</h3>

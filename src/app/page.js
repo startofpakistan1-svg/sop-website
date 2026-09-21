@@ -1,5 +1,6 @@
 import Link from "next/link";
 import HeroFlow from "@/components/HeroFlow";
+import Schema from "@/components/Schema";
 
 export const metadata = {
   title: "SOP | Amazon, Shopify & AI Automation for UK & US Sellers",
@@ -67,9 +68,36 @@ const work = [
 // },
 const testimonials = [];
 
+const faqs = [
+  {
+    q: "How do you charge?",
+    a: "A fixed monthly fee for Amazon account management and PPC, and a fixed project price for store builds and AI systems, agreed in writing before we start. We do not take a percentage of your sales or ad spend, and there is no long contract.",
+  },
+  {
+    q: "Do you work with sellers outside Pakistan?",
+    a: "Most of our clients are in the UK and US, with others in Pakistan and India. We are four to five hours ahead of the UK, so the daily work on your account is usually finished before your morning, and we are available for calls during UK afternoons and US mornings.",
+  },
+  {
+    q: "Will you need my Amazon or Shopify password?",
+    a: "No. On Amazon you add us as a user in Seller Central with only the permissions the work needs. On Shopify we use a collaborator or staff account. You control the access and can remove it whenever you like.",
+  },
+  {
+    q: "Can you take over an account or store that already exists?",
+    a: "Yes, and that is how most engagements start. We audit what is there first: campaign structure and wasted spend on Amazon, theme, apps and speed on Shopify, or the manual process an AI system would replace. You get the findings in writing whether or not you hire us, and if you do, the first weeks are spent fixing what the audit found before anything new is added.",
+  },
+  {
+    q: "What happens after I get in touch?",
+    a: "We reply the same working day, usually within a few hours. If it makes sense we have a short call, then you get a written plan and a price. If it is a fit, we start when you are ready; if not, you keep the plan.",
+  },
+];
+
 export default function Home() {
   return (
     <>
+      {/* Organisation + WebSite structured data. Google reads this from the
+          home page; it does not need repeating on every route. */}
+      <Schema />
+
       {/* HERO */}
       <section className="hero">
         <span className="blob b1" aria-hidden="true" />
@@ -185,6 +213,56 @@ export default function Home() {
             <Link className="btn btn-ghost" href="/portfolio">
               <span className="t">View all work</span> <span className="a">→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE WORK WITH */}
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>Built for sellers in the UK and US, run from Pakistan</h2>
+          <p>
+            Most of our clients sell on Amazon.co.uk or Amazon.com, run a
+            Shopify or WordPress store alongside it, and have reached the point
+            where the daily work of listings, advertising, stock and customer
+            messages is eating the time they should be spending on the
+            business. We take that work on, on a fixed monthly fee, with one
+            person as your point of contact.
+          </p>
+          <p>
+            Being four to five hours ahead of the UK works in your favour: the
+            day&apos;s optimisation is usually done before you log in, and we
+            overlap with UK afternoons and US mornings for calls. Everything we
+            build, from store code to ad campaigns, stays yours, and you can
+            remove our access at any time.
+          </p>
+          <p>
+            A typical first month looks like this: an audit of what you have,
+            a written plan with a fixed price, then the unglamorous fixes
+            first &mdash; wasted ad spend, broken listings, slow pages, missing
+            stock alerts &mdash; before anything new is built. Reporting is in
+            plain English, weekly for advertising and monthly for everything
+            else, so you always know what changed and why.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Common questions</h2>
+          </div>
+          <div className="faq">
+            {faqs.map((f, i) => (
+              <details className="faq-item" key={i}>
+                <summary>
+                  {f.q}
+                  <span className="faq-icon" aria-hidden="true" />
+                </summary>
+                <p>{f.a}</p>
+              </details>
+            ))}
           </div>
         </div>
       </section>
