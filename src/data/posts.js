@@ -526,6 +526,241 @@ You do not need an agency to score perfectly on all ten. You need honest answers
 If you want to run these questions past us, our [Amazon account management](/amazon-account-management) service is for UK and US sellers, on a fixed monthly fee with a written scope and month-to-month terms. Ask us any of the ten. We would rather answer them now than have you find out later.
 `,
   },
+  {
+    slug: "shopify-store-cost",
+    title: "How Much Does a Shopify Store Cost to Build?",
+    description:
+      "Shopify store cost explained: plan fees vs build costs, theme vs custom design, apps, product setup, checkout, and what actually drives the price.",
+    date: "2026-09-17",
+    excerpt:
+      "The Shopify plan fee is the easy part. The real cost of a store is in the build, the apps and the ongoing work. Here is what actually drives it.",
+    content: `
+The first thing most people learn about Shopify store cost is the monthly plan fee, because it is printed on Shopify's pricing page. The second thing they learn, usually a few weeks in, is that the plan fee is the smallest part of what a store costs.
+
+This guide does not quote figures, because a store for five products and a store for five hundred are different jobs. Instead it breaks the cost into its parts, explains what pushes each one up or down, and helps you decide whether to build it yourself or hire a Shopify developer.
+
+## Plan fees vs build costs
+
+There are two separate things to pay for, and it helps to keep them apart.
+
+**Plan fees** go to Shopify every month for as long as the store exists. They cover hosting, security, the checkout, and the admin you run the store from. Higher tiers add lower transaction rates, more staff accounts and more reporting. For most new stores the entry tier is enough to launch.
+
+**Build costs** are what it takes to turn an empty Shopify account into a store that is ready to sell: design, product setup, payments, shipping, apps and testing. This is a one-off cost, paid either in your own time or to whoever builds it.
+
+People compare plan fees across platforms and forget the build, which is where the real money and time go.
+
+## Theme vs custom design
+
+Every Shopify store runs on a theme. The choice is between using one as it comes, customising it, or having something designed from scratch.
+
+**A free or paid theme, used as designed.** The cheapest route. You pick a theme, add your logo and colours, and fill in the sections it provides. It works well for stores with a small, simple range and no strong brand identity yet.
+
+**A customised theme.** The same starting point, with sections rebuilt, layouts changed and custom code added where the theme does not do what you need. This is where most professional builds land. Cost depends on how far from the original theme you want to go.
+
+**A custom design.** A layout designed around your products and brand, then built as a theme. It is the most expensive option and rarely necessary for a first store, but it is the right choice for brands where the look is the product.
+
+The general rule: the further from the theme's defaults you want to be, the more it costs.
+
+## Apps
+
+Shopify's app store fills the gaps in the platform: reviews, subscriptions, bundles, email marketing, advanced shipping rules, size charts, and much more. Most apps charge monthly, and the total adds up quickly.
+
+Before adding an app, ask whether the theme or Shopify itself already does the job. Every app you avoid is a monthly cost saved and one less thing that can break the store.
+
+## Product setup
+
+This is the part that is most often underestimated. Every product needs a title, description, images, price, variants, inventory, weight, and often SEO fields and category tags. For a store with a handful of products it is an afternoon. For a catalogue of hundreds, with sizes and colours, it is the largest single task in the build.
+
+If your products are already in a spreadsheet or another platform, a bulk import saves a lot of time, but the data still needs cleaning. If they are not, the cost of writing and photographing every product is a real part of the Shopify store cost that no platform fee will show you.
+
+## Payment and checkout setup
+
+Shopify's own payment processing is the simplest route where it is available. In the UK and US it usually is. If you need other gateways, such as PayPal alongside card payments or local methods for a specific market, each one needs setting up and testing.
+
+Then there is shipping: rates by weight, by zone, free-shipping thresholds, local pickup. And tax: VAT for UK stores, sales tax by state for US stores, with the right settings for where you are registered. None of this is difficult, but all of it has to be right before the first order.
+
+## Ongoing costs
+
+A store is never quite finished. After launch, expect:
+
+- The plan fee and any app subscriptions, every month
+- Payment processing fees on each sale
+- Theme updates when Shopify changes the platform
+- New products, seasonal changes and promotions
+- Occasional fixes when an app update breaks something
+
+Budget for this as a running cost rather than treating launch as the finish line.
+
+## DIY vs hiring a Shopify developer
+
+You can build a Shopify store yourself. The platform is designed for it, and for a small catalogue with a standard theme it is a reasonable weekend project if you are comfortable with software.
+
+Hiring makes sense when the catalogue is large, when the theme needs real changes, when you have specific requirements for shipping, tax or integrations, or when your own time is better spent on the products and the marketing. A good Shopify developer will also make decisions you do not know you need to make, about structure, speed and what to leave out.
+
+We handled the full Shopify store setup for a motorsport gear brand selling karting suits and gloves: the store build, product catalogue and checkout, then supported the launch. You can see it, along with our other work, on the [portfolio page](/portfolio).
+
+## Getting a number
+
+The honest way to get a Shopify store cost is to list what you need: how many products, what the theme needs to do, which payments and shipping you need, and what apps are essential. Then ask for a fixed price against that list.
+
+That is how we quote. Our [Shopify and ecommerce services](/services) cover the full build for UK and US brands, with a written plan and a fixed price before any work starts. Tell us what you sell and we will come back with both.
+`,
+  },
+  {
+    slug: "custom-website-vs-shopify",
+    title: "Custom Website vs Shopify Theme: Which Is Right for You?",
+    description:
+      "Custom website vs Shopify theme: what each gives you on design, speed, cost and maintenance, and how to decide which one fits your business.",
+    date: "2026-09-16",
+    excerpt:
+      "A Shopify theme gets you selling fast. A custom-coded site gives you full control. Here is what each one actually gives you, and when each makes sense.",
+    content: `
+The custom website vs Shopify question comes up with almost every business about to build or rebuild an online store. The two options are not really competing on the same thing. A Shopify theme is a fast, reliable way to get a working shop. A custom-coded website is a way to get exactly the site you want. Which is right depends on what you are optimising for.
+
+## What a Shopify theme gives you
+
+A theme is a pre-built design that you configure rather than code. You choose it, add your branding, fill in the sections, and Shopify handles everything underneath.
+
+That "everything underneath" is the real value:
+
+- **Hosting, security and updates** are done for you.
+- **The checkout** is proven, fast and trusted by shoppers.
+- **Payments, shipping and tax** are built in and configured from the admin.
+- **The app ecosystem** adds features without code.
+- **Speed to launch.** A simple store can be live in days.
+
+The trade-off is that you are working inside someone else's design decisions. You can change colours, fonts, section order and a fair amount of layout, but the structure is the theme's. Going further means custom code inside the theme, which is possible but starts to erode the simplicity you chose Shopify for.
+
+## What a custom-coded website gives you
+
+A custom coded website is built from the ground up in HTML, CSS and JavaScript, or on a framework on top of them. There is no theme and no page builder. Every element on the page is there because someone decided it should be.
+
+What that buys you:
+
+- **Full design control.** The layout is shaped around your products and brand rather than fitted into a template. If you want a page that no theme offers, you can have it.
+- **Website speed.** Themes and page builders load code for features you may never use. A custom site loads only what it needs, which is why hand-built sites are often noticeably faster. Speed matters for search ranking and for conversion.
+- **No page builder.** The site is not dependent on a builder's roadmap, pricing or continued existence.
+- **Ownership.** The code is yours. You can host it anywhere and have any developer work on it.
+
+The trade-off is that the things Shopify does for you now have to be done by you or your developer: hosting, updates, security, and if you sell online, a checkout and payment integration.
+
+We built a custom-coded storefront in exactly this way for a retail client: HTML, CSS and JavaScript, no theme, no page builder, with a layout shaped entirely around the products. It is on our [portfolio page](/portfolio) alongside the Shopify builds, so you can compare the two approaches side by side.
+
+## Costs
+
+The two models spend money in different places.
+
+**A Shopify theme** has a lower build cost and a predictable monthly cost: the plan fee, any paid apps, and transaction fees. Over years, the monthly costs add up, and they rise as you add apps.
+
+**A custom website** has a higher build cost, because everything is made rather than configured. After that, the running costs are usually lower: hosting is cheap, there are no app subscriptions, and there is no platform fee. But changes need a developer, and that is where the ongoing spend goes.
+
+Neither is cheaper in every case. A small store with standard features is usually cheaper on Shopify. A content-led or brand site with a small, stable range is often cheaper custom-built over a few years.
+
+## Maintenance
+
+**On Shopify**, maintenance is mostly keeping the theme and apps up to date and checking nothing has broken after an update. Shopify handles the platform. You or your developer handle the store.
+
+**On a custom site**, maintenance is yours. That means keeping the hosting running, keeping any dependencies patched, making backups, and fixing anything that breaks. For a simple static site this is very little work. For a site with a custom checkout, accounts and integrations, it is a real job that needs a developer on call.
+
+The question to ask is not "which is less work?" but "who is going to do the work?" If the answer is nobody, choose Shopify.
+
+## When a Shopify theme makes sense
+
+- You want to be selling in weeks, not months.
+- Your product range is standard: physical goods, straightforward variants, normal shipping.
+- You want to add features through apps rather than development.
+- You do not have a developer on hand and do not want to need one.
+- The design needs to be good, but it does not need to be unique.
+
+## When a custom website makes sense
+
+- Design is part of what you sell, and a template will visibly undercut it.
+- Speed is a priority, either for search ranking or for a demanding audience.
+- You need pages or functionality no theme provides.
+- The site is mainly content, portfolio or lead generation, with a small or no product catalogue.
+- You want to own the code and avoid platform fees for the long term.
+
+## The middle ground
+
+It is not always one or the other. A common arrangement is a custom-coded brand site for the pages that need to be fast and distinctive, with Shopify handling the checkout behind it. It costs more than either option alone, but for some brands it is the right shape.
+
+## Deciding
+
+Start with the honest questions. How unique does the design need to be? How fast does the site need to be? Who will maintain it? How often will it change? Answer those and the choice usually makes itself.
+
+We build both. Our [web development services](/services) cover Shopify stores, WordPress, and custom-coded sites for businesses in the UK and US, and we will tell you which one fits before quoting rather than steering you to whichever is easier for us. Tell us what the site needs to do and we will come back with a recommendation and a fixed price.
+`,
+  },
+  {
+    slug: "ai-social-media-automation",
+    title: "How AI Agents Automate Social Media Content for Businesses",
+    description:
+      "AI social media automation in plain English: what AI agents are, how they plan, write and schedule posts, where people still check, and how to start.",
+    date: "2026-09-14",
+    excerpt:
+      "AI agents can plan, write and schedule a business's social media with very little manual work. Here is how it works, where humans stay involved, and how to start.",
+    content: `
+For most small and mid-sized businesses, social media is a job nobody wants. It needs doing every week, it needs ideas, and it always loses to the work that actually pays. AI social media automation is the attempt to take that job off a person's desk, and with the current generation of AI agents it has become practical rather than theoretical.
+
+This guide explains what AI agents are in plain terms, how they handle content from planning through to posting, where people still need to be involved, and how to start without wasting money.
+
+## What AI agents are, in simple terms
+
+An AI model on its own answers questions. You type something, it replies. It does not do anything unless you are sitting there asking.
+
+An AI agent is a model that has been given a job, a set of tools, and permission to work through the job on its own. The tools might be a calendar, a document store, your website, a social media scheduler, or another agent. The agent decides what to do next, uses a tool, looks at the result, and carries on until the job is done or it needs a person.
+
+For content automation, that means an agent can be told "keep this company's LinkedIn active with two useful posts a week about topics its customers care about", and it can go and do that, step by step, without someone prompting each post.
+
+## How agents plan content
+
+A content system usually starts with a planning agent. It is given the context that a human marketer would have: what the business does, who the customers are, what tone to use, which topics are on-brand and which are off-limits, and any events coming up.
+
+From that it produces a content calendar: a list of post ideas spread over the coming weeks, each with a topic, an angle, a format and a platform. It can pull ideas from the company's website, industry news or seasonal dates. The plan is the first thing a person reviews, and it is far quicker to approve a list of ideas than to come up with them.
+
+## How agents create posts
+
+Once the plan is approved, a writing agent turns each idea into a draft. It writes in the tone it was given, keeps to the platform's length and style, and can produce variations for different channels from one idea. Some systems also generate or select images, or produce short scripts for video.
+
+The important word is draft. A good system does not post straight from the writing agent. It writes into a queue.
+
+## How agents schedule and publish
+
+A publishing agent takes approved posts and schedules them through the platforms' own tools or a scheduling service. It handles timing, spacing across channels, and the tedious parts such as resizing images and formatting links. After posting, it can collect basic engagement data and feed it back to the planning agent so future plans lean towards what worked.
+
+This is the part that saves the most visible time. Logging into three platforms every morning becomes something that simply happens.
+
+## Where people still review
+
+AI agents are good at volume and consistency. They are not good at judgement about your specific business. So the sensible design keeps people at three points:
+
+**Approving the plan.** A person checks the calendar before anything is written, catching topics that are wrong for the business or badly timed.
+
+**Approving drafts.** Someone reads posts before they go out, or at least samples them. This catches factual errors, awkward tone and anything that could embarrass the business. Over time, as trust builds, the review can become lighter, but it should not disappear for anything public-facing.
+
+**Handling replies.** Comments and messages from real customers should reach a real person. An agent can flag and summarise them, but it should not answer on the company's behalf without oversight.
+
+## Benefits and limits
+
+The benefits are straightforward: consistency, because posts go out whether or not anyone is busy; speed, because a month of content can be drafted in an afternoon; and cost, because the work no longer needs a person's week.
+
+The limits are just as real. Agents do not know what happened in your business this morning unless something tells them. They can be confidently wrong about facts, which is why review matters. They produce competent content more easily than remarkable content, and they can drift in tone if nobody is watching. AI automation for business works best as a system that people supervise, not a system people forget about.
+
+## What this looks like in practice
+
+We built a system of AI agents for an international client serving accounting firms. The agents plan, prepare and publish social media content for those firms, with review built into the process. What used to take hours of manual posting each week now runs on its own, keeping the firms visible online without adding staff. The project is on our [portfolio page](/portfolio) if you want to see the shape of it.
+
+## How to start
+
+1. **Pick one channel and one job.** LinkedIn posts twice a week, say. Narrow scope makes the results easy to judge.
+2. **Write down the brief a human would need.** Who you are, who you serve, what tone, what topics, what to avoid. This becomes the agent's instructions.
+3. **Start with planning and drafting only.** Keep publishing manual until you trust the output.
+4. **Review everything for the first month.** Note what you change, and feed it back into the brief.
+5. **Add scheduling once the drafts need few edits.** Then consider a second channel.
+
+If you would rather have the system designed and built for you, our [AI agents and automation services](/services) cover content systems like the one above for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
+`,
+  },
 ];
 
 export default posts;
