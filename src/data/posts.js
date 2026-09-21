@@ -4,6 +4,8 @@
 //   title       — page <title> and H1 (keep under 60 characters)
 //   description — meta description (keep under 155 characters)
 //   date        — ISO date, YYYY-MM-DD
+//   topic       — "amazon" or "web"; used to pick related posts (Amazon guides
+//                 link to Amazon guides, Shopify / custom-dev / AI guides to each other)
 //   excerpt     — one or two sentences shown on the blog index card
 //   content     — the article body, in a small markdown-style format:
 //                   "## Heading"          → <h2>
@@ -18,6 +20,7 @@
 const posts = [
   {
     slug: "what-is-a-good-acos",
+    topic: "amazon",
     title: "What Is a Good ACoS on Amazon? (And How to Lower It)",
     description:
       "ACoS explained in plain English: how to calculate it, why a good ACoS depends on your margins, and practical ways to bring it down.",
@@ -107,6 +110,7 @@ If you would rather have someone do that weekly work for you, our [Amazon PPC ma
   },
   {
     slug: "how-to-optimize-amazon-listing",
+    topic: "amazon",
     title: "How to Optimize an Amazon Listing: Step-by-Step Guide",
     description:
       "A step-by-step guide to Amazon listing optimization: keywords, title, bullets, description, backend terms, images, A+ content and reviews.",
@@ -204,6 +208,7 @@ If you would rather hand the whole thing over, listing optimization and Amazon S
   },
   {
     slug: "amazon-a-plus-content-examples",
+    topic: "amazon",
     title: "Amazon A+ Content Examples That Help Listings Sell",
     description:
       "What Amazon A+ Content is, who can use it, the common module types, example layouts that work and the mistakes to avoid.",
@@ -295,6 +300,7 @@ A+ Content is one part of a complete listing. If you want the whole page looked 
   },
   {
     slug: "amazon-account-management-cost",
+    topic: "amazon",
     title: "How Much Does Amazon Account Management Cost in the UK?",
     description:
       "Amazon account management cost explained: the common pricing models, what is usually included, what moves the price, and what to ask before signing.",
@@ -375,6 +381,7 @@ We offer Amazon account management for UK and US sellers on a fixed monthly fee,
   },
   {
     slug: "amazon-ppc-agency-vs-diy",
+    topic: "amazon",
     title: "Amazon PPC Agency vs Managing Ads Yourself",
     description:
       "Should you hire an Amazon PPC agency or run ads yourself? What DIY involves, when an agency makes sense, what to expect and how to judge results.",
@@ -457,6 +464,7 @@ Our [Amazon PPC management service](/amazon-ppc-management) covers the full week
   },
   {
     slug: "how-to-choose-an-amazon-agency",
+    topic: "amazon",
     title: "How to Choose an Amazon Agency: 10 Questions to Ask",
     description:
       "How to choose an Amazon agency: ten questions on reporting, contracts, account access, experience and communication, plus the red flags to watch for.",
@@ -528,6 +536,7 @@ If you want to run these questions past us, our [Amazon account management](/ama
   },
   {
     slug: "shopify-store-cost",
+    topic: "web",
     title: "How Much Does a Shopify Store Cost to Build?",
     description:
       "Shopify store cost explained: plan fees vs build costs, theme vs custom design, apps, product setup, checkout, and what actually drives the price.",
@@ -608,6 +617,7 @@ That is how we quote. Our [Shopify and ecommerce services](/services) cover the 
   },
   {
     slug: "custom-website-vs-shopify",
+    topic: "web",
     title: "Custom Website vs Shopify Theme: Which Is Right for You?",
     description:
       "Custom website vs Shopify theme: what each gives you on design, speed, cost and maintenance, and how to decide which one fits your business.",
@@ -693,6 +703,7 @@ We build both. Our [web development services](/services) cover Shopify stores, W
   },
   {
     slug: "ai-social-media-automation",
+    topic: "web",
     title: "How AI Agents Automate Social Media Content for Businesses",
     description:
       "AI social media automation in plain English: what AI agents are, how they plan, write and schedule posts, where people still check, and how to start.",
@@ -767,4 +778,15 @@ export default posts;
 
 export function getPost(slug) {
   return posts.find((p) => p.slug === slug);
+}
+
+// Up to `n` other posts: same topic first (newest first), then the newest of the rest.
+export function getRelated(slug, n = 3) {
+  const current = getPost(slug);
+  const others = posts
+    .filter((p) => p.slug !== slug)
+    .sort((a, b) => (a.date < b.date ? 1 : -1));
+  const same = others.filter((p) => current && p.topic === current.topic);
+  const rest = others.filter((p) => !same.includes(p));
+  return [...same, ...rest].slice(0, n);
 }

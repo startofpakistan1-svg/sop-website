@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlogLinks from "@/components/BlogLinks";
 
 export const metadata = {
   title: "Amazon PPC Agency for UK & US Sellers | SOP",
@@ -303,6 +304,11 @@ export default function AmazonPPC() {
           </div>
         </div>
       </section>
+
+      <BlogLinks
+        slugs={["what-is-a-good-acos", "amazon-ppc-agency-vs-diy"]}
+        intro="Plain-English guides on Amazon advertising for UK and US sellers."
+      />
 
       {/* CTA */}
       <section>

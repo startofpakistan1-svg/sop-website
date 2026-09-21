@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BlogLinks from "@/components/BlogLinks";
 
 export const metadata = {
   title: "Amazon Account Management Services | SOP",
@@ -462,6 +463,11 @@ export default function AmazonAccountManagement() {
           </div>
         </div>
       </section>
+
+      <BlogLinks
+        slugs={["amazon-account-management-cost", "how-to-choose-an-amazon-agency"]}
+        intro="What to expect, what it costs and what to ask before you hand over an account."
+      />
 
       {/* CTA */}
       <section>

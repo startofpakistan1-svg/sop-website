@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import posts, { getPost } from "@/data/posts";
+import posts, { getPost, getRelated } from "@/data/posts";
 
 const SITE = "https://www.startofpakistan.com";
 
@@ -91,6 +91,8 @@ export default async function Post({ params }) {
   const post = getPost(slug);
   if (!post) notFound();
 
+  const related = getRelated(slug, 3);
+
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -146,6 +148,30 @@ export default async function Post({ params }) {
           </div>
         </div>
       </section>
+
+      {/* RELATED */}
+      {related.length > 0 && (
+        <section className="process-band">
+          <div className="wrap">
+            <div className="sec-head">
+              <h2>Related guides</h2>
+            </div>
+            <div className="post-grid">
+              {related.map((p) => (
+                <article className="card post-card" key={p.slug}>
+                  <time className="post-date" dateTime={p.date}>{formatDate(p.date)}</time>
+                  <h3>
+                    <Link href={`/blog/${p.slug}`}>{p.title}</Link>
+                  </h3>
+                  <Link className="case-link" href={`/blog/${p.slug}`}>
+                    Read more <span aria-hidden="true">→</span>
+                  </Link>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import OpenChatButton from "@/components/OpenChatButton";
+import BlogLinks from "@/components/BlogLinks";
 
 const categories = [
   {
@@ -327,6 +328,17 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+      <BlogLinks
+        slugs={[
+          "how-to-optimize-amazon-listing",
+          "amazon-a-plus-content-examples",
+          "shopify-store-cost",
+          "custom-website-vs-shopify",
+          "ai-social-media-automation",
+        ]}
+        intro="Guides on the things we get asked about most."
+      />
 
       <section>
         <div className="wrap">
