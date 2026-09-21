@@ -402,6 +402,8 @@ section{padding:104px 0}
 .faq-icon::after{left:7px;top:0;width:2px;height:16px}
 .faq-item[open] .faq-icon::after{transform:rotate(90deg);opacity:0}
 .faq-item p{color:var(--ash);font-size:16.5px;padding:0 40px 24px 0;margin:0;animation:faqOpen .35s var(--e) both}
+.faq-item p a{color:var(--blue);font-weight:600}
+.faq-item p a:hover{text-decoration:underline}
 @keyframes faqOpen{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
 
 /* ============ TESTIMONIALS ============ */

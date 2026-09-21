@@ -68,28 +68,54 @@ const work = [
 // },
 const testimonials = [];
 
+// Answers may contain [text](/path) links. They render as <Link>s and are
+// stripped to plain text for the FAQPage schema below.
 const faqs = [
   {
-    q: "How do you charge?",
-    a: "A fixed monthly fee for Amazon account management and PPC, and a fixed project price for store builds and AI systems, agreed in writing before we start. We do not take a percentage of your sales or ad spend, and there is no long contract.",
+    q: "What does SOP do?",
+    a: "We run Amazon seller accounts and PPC campaigns, build and maintain Shopify, WordPress and custom-coded stores, and design AI agent systems that handle content and customer operations. Most clients hand us one of those and end up handing us two. Everything is on a fixed fee, with one person as your point of contact. See the full list on our [services page](/services).",
   },
   {
-    q: "Do you work with sellers outside Pakistan?",
-    a: "Most of our clients are in the UK and US, with others in Pakistan and India. We are four to five hours ahead of the UK, so the daily work on your account is usually finished before your morning, and we are available for calls during UK afternoons and US mornings.",
+    q: "Do you work with sellers in the UK and US?",
+    a: "Yes. Most of our clients sell on Amazon.co.uk or Amazon.com, and we also work with businesses in Pakistan and India. We are four to five hours ahead of the UK, so the daily work on your account is usually finished before your morning, and we overlap with UK afternoons and US mornings for calls and messages.",
   },
   {
-    q: "Will you need my Amazon or Shopify password?",
-    a: "No. On Amazon you add us as a user in Seller Central with only the permissions the work needs. On Shopify we use a collaborator or staff account. You control the access and can remove it whenever you like.",
+    q: "What is included in Amazon account management?",
+    a: "Listings and optimisation, Sponsored ads, inventory planning and FBA shipments, account health, customer messages and returns, and monthly reporting, all handled by one team. You add us as a user in Seller Central with only the permissions the work needs, and you can remove that access at any time. Details are on the [Amazon account management page](/amazon-account-management).",
   },
   {
-    q: "Can you take over an account or store that already exists?",
-    a: "Yes, and that is how most engagements start. We audit what is there first: campaign structure and wasted spend on Amazon, theme, apps and speed on Shopify, or the manual process an AI system would replace. You get the findings in writing whether or not you hire us, and if you do, the first weeks are spent fixing what the audit found before anything new is added.",
+    q: "How does Amazon PPC management work with you?",
+    a: "It starts with a free audit of your current campaigns, which you keep whether or not you hire us. Then a written plan with a target ACoS and a fixed monthly fee. Each week we add negative keywords, adjust bids, restructure where needed and send a plain-English report. Read more on the [Amazon PPC management page](/amazon-ppc-management).",
   },
   {
-    q: "What happens after I get in touch?",
-    a: "We reply the same working day, usually within a few hours. If it makes sense we have a short call, then you get a written plan and a price. If it is a fit, we start when you are ready; if not, you keep the plan.",
+    q: "Do you build Shopify stores and custom websites?",
+    a: "Both. Shopify when you want a proven checkout and fast launch, WordPress or WooCommerce when that fits better, and hand-coded HTML, CSS and JavaScript when design control and speed matter most. Product setup, payments, shipping and tax are part of every build. We will tell you which one fits before quoting. See [web development on our services page](/services).",
+  },
+  {
+    q: "How do we get started?",
+    a: "Send a message through the [contact page](/contact) or on WhatsApp with what you sell and where you are stuck. We reply the same working day, usually within a few hours. If it makes sense we have a short call, then you get a written plan and a fixed price. If it is a fit we start when you are ready; if not, you keep the plan.",
   },
 ];
+
+// [label](/href) → <Link>; everything else is plain text.
+const LINK = /(\[[^\]]+\]\([^)]+\))/g;
+function withLinks(text) {
+  return text.split(LINK).filter(Boolean).map((part, i) => {
+    const m = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
+    return m ? <Link key={i} href={m[2]}>{m[1]}</Link> : part;
+  });
+}
+const plain = (text) => text.replace(/\[([^\]]+)\]\([^)]+\)/g, "$1");
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: plain(f.a) },
+  })),
+};
 
 export default function Home() {
   return (
@@ -97,6 +123,12 @@ export default function Home() {
       {/* Organisation + WebSite structured data. Google reads this from the
           home page; it does not need repeating on every route. */}
       <Schema />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema).replace(/</g, "\\u003c"),
+        }}
+      />
 
       {/* HERO */}
       <section className="hero">
@@ -260,7 +292,7 @@ export default function Home() {
                   {f.q}
                   <span className="faq-icon" aria-hidden="true" />
                 </summary>
-                <p>{f.a}</p>
+                <p>{withLinks(f.a)}</p>
               </details>
             ))}
           </div>
