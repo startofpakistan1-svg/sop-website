@@ -11,26 +11,38 @@ const scope = [
   {
     t: "Listings & catalogue",
     d: "New listings written and built properly, existing ones cleaned up — titles, bullets, backend keywords, images and A+ content that actually convert.",
+    items: ["Titles, bullets and backend keywords", "Images and A+ content", "Suppressed-listing fixes"],
+    icon: "list",
   },
   {
     t: "Advertising",
     d: "Sponsored Products, Brands and Display run alongside the rest of the account, so ads and listings pull in the same direction instead of fighting each other.",
+    items: ["Sponsored Products, Brands and Display", "Weekly bid and negative reviews", "Fixed fee — no percentage of spend"],
+    icon: "target",
   },
   {
     t: "Inventory & pricing",
     d: "FBA shipments planned before you run out, FBM orders kept moving, and prices adjusted against competitors so you win the Buy Box without racing to the bottom.",
+    items: ["FBA shipment planning", "FBM order handling", "Buy Box pricing and repricing"],
+    icon: "box",
   },
   {
     t: "Customer service",
     d: "Buyer messages answered within Amazon's 24-hour window, returns processed, and negative feedback handled before it dents your rating.",
+    items: ["Buyer messages inside 24 hours", "Returns and refunds", "Feedback and review handling"],
+    icon: "chat",
   },
   {
     t: "Account health",
     d: "Performance notifications watched daily, policy issues fixed before they escalate, and suspension appeals written and filed if the worst happens.",
+    items: ["Daily performance checks", "Policy and IP complaints", "Suspension appeals and reinstatement"],
+    icon: "shield",
   },
   {
     t: "Brand & growth",
     d: "Brand Registry, brand store, new-market launches and product expansion — the work that turns a seller account into a business.",
+    items: ["Brand Registry and brand store", "New marketplace launches", "Product expansion planning"],
+    icon: "star",
   },
 ];
 
@@ -52,37 +64,95 @@ const faqs = [
   { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. Buyer messages and overnight issues are usually dealt with before your working day starts, and we overlap with your afternoon for calls." },
 ];
 
+/* Hub diagram: SOP in the centre, six areas around it. viewBox 480x400, centre (240,200). */
+const HUB_NODES = [
+  { label: "Listings", x: 240, y: 48 },
+  { label: "Advertising", x: 372, y: 124 },
+  { label: "Inventory", x: 372, y: 276 },
+  { label: "Customer service", x: 240, y: 352 },
+  { label: "Account health", x: 108, y: 276 },
+  { label: "Brand", x: 108, y: 124 },
+];
+
+function HubDiagram() {
+  return (
+    <svg className="hub-svg" viewBox="0 0 480 400" role="img" aria-label="SOP at the centre, connected to Listings, Advertising, Inventory, Customer service, Account health and Brand">
+      <defs>
+        <linearGradient id="hubG" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#FBB016" />
+          <stop offset="1" stopColor="#F5871F" />
+        </linearGradient>
+      </defs>
+      <circle className="hub-ring" cx="240" cy="200" r="152" />
+      {HUB_NODES.map((n) => (
+        <line key={`l-${n.label}`} className="hub-link" x1="240" y1="200" x2={n.x} y2={n.y} />
+      ))}
+      {HUB_NODES.map((n, i) => (
+        <line key={`p-${n.label}`} className="hub-pulse" style={{ animationDelay: `${i * 0.45}s` }} x1="240" y1="200" x2={n.x} y2={n.y} />
+      ))}
+      <rect x="192" y="152" width="96" height="96" rx="26" fill="url(#hubG)" />
+      <text x="240" y="200" className="hub-core" textAnchor="middle" dominantBaseline="central">SOP</text>
+      {HUB_NODES.map((n) => (
+        <g key={n.label} className="hn">
+          <rect x={n.x - 66} y={n.y - 21} width="132" height="42" rx="13" />
+          <text x={n.x} y={n.y} textAnchor="middle" dominantBaseline="central">{n.label}</text>
+        </g>
+      ))}
+    </svg>
+  );
+}
+
+function Icon({ name }) {
+  const p = { fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" };
+  switch (name) {
+    case "list":
+      return <svg viewBox="0 0 24 24" {...p}><path d="M8 6h13M8 12h13M8 18h13" /><circle cx="3.5" cy="6" r="1.2" fill="currentColor" stroke="none" /><circle cx="3.5" cy="12" r="1.2" fill="currentColor" stroke="none" /><circle cx="3.5" cy="18" r="1.2" fill="currentColor" stroke="none" /></svg>;
+    case "target":
+      return <svg viewBox="0 0 24 24" {...p}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" /></svg>;
+    case "box":
+      return <svg viewBox="0 0 24 24" {...p}><path d="M3 8l9-4 9 4-9 4-9-4z" /><path d="M3 8v8l9 4 9-4V8" /><path d="M12 12v8" /></svg>;
+    case "chat":
+      return <svg viewBox="0 0 24 24" {...p}><path d="M4 5h16v11H9l-5 4V5z" /><path d="M8 10h8" /></svg>;
+    case "shield":
+      return <svg viewBox="0 0 24 24" {...p}><path d="M12 3l8 3v6c0 4.5-3.5 7.8-8 9-4.5-1.2-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.3 2.3L15.5 9.6" /></svg>;
+    case "star":
+    default:
+      return <svg viewBox="0 0 24 24" {...p}><path d="M12 3.5l2.7 5.6 6.1.8-4.5 4.2 1.2 6.1L12 17.3l-5.5 2.9 1.2-6.1L3.2 9.9l6.1-.8L12 3.5z" /></svg>;
+  }
+}
+
 export default function AmazonAccountManagement() {
   return (
     <>
-      {/* HERO */}
-      <section className="page-head" style={{ "--cover": "url(/covers/services.svg)" }}>
+      {/* HERO — dark band with hub diagram */}
+      <section className="am-hero">
         <div className="wrap">
-          <div className="svc-kicker">Amazon · UK &amp; US</div>
-          <h1>Amazon account management, handled end to end.</h1>
-          <p>
-            Listings, advertising, inventory, customer service and account
-            health for Amazon sellers in the UK and US. One team running the
-            whole account. Fixed monthly fee. No long contracts. Or take{" "}
-            <Link href="/amazon-ppc-management" style={{ color: "var(--blue)", fontWeight: 600 }}>
-              PPC management
-            </Link>{" "}
-            on its own.
-          </p>
-          <div className="acts" style={{ marginTop: 28 }}>
-            <Link className="btn btn-acc" href="/contact">
-              <span className="t">Get a free account audit</span> <span className="a">→</span>
-            </Link>
-            <a className="btn btn-ghost" href="#how">
-              <span className="t">How it works</span>
-            </a>
+          <div>
+            <div className="svc-kicker">Amazon · UK &amp; US</div>
+            <h1>Amazon account management, handled end to end.</h1>
+            <p>
+              Listings, advertising, inventory, customer service and account
+              health for Amazon sellers in the UK and US. One team running the
+              whole account. Fixed monthly fee. No long contracts. Or take{" "}
+              <Link href="/amazon-ppc-management">PPC management</Link>{" "}
+              on its own.
+            </p>
+            <div className="acts">
+              <Link className="btn btn-acc" href="/contact">
+                <span className="t">Get a free account audit</span> <span className="a">→</span>
+              </Link>
+              <a className="btn btn-line" href="#scope">
+                <span className="t">What we manage</span>
+              </a>
+            </div>
           </div>
+          <HubDiagram />
         </div>
       </section>
 
       {/* PROBLEM */}
       <section>
-        <div className="wrap svc-split">
+        <div className="wrap am-intro">
           <div>
             <h2>An Amazon account is a full-time job. Most sellers have another one.</h2>
             <p>
@@ -97,49 +167,53 @@ export default function AmazonAccountManagement() {
               building it.
             </p>
           </div>
-          <div className="leak-card">
-            <div className="leak-row"><span>Late buyer replies</span><b className="bad">rating hit</b></div>
-            <div className="leak-row"><span>Stock-outs on best sellers</span><b className="bad">lost rank</b></div>
-            <div className="leak-row"><span>Suppressed or thin listings</span><b className="bad">missed sales</b></div>
-            <div className="leak-row"><span>Health warnings left unread</span><b className="bad">account risk</b></div>
-            <div className="leak-row good"><span>What we take off your plate</span><b>all of it</b></div>
+          <div className="plate">
+            <div className="plate-lbl">What we take off your plate</div>
+            <ul>
+              <li><span>Late buyer replies</span><b>rating hit</b></li>
+              <li><span>Stock-outs on best sellers</span><b>lost rank</b></li>
+              <li><span>Suppressed or thin listings</span><b>missed sales</b></li>
+              <li><span>Health warnings left unread</span><b>account risk</b></li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* SCOPE */}
-      <section className="process-band">
+      {/* SCOPE — 3x2 grid */}
+      <section className="process-band" id="scope">
         <div className="wrap">
           <div className="sec-head">
             <h2>What we manage</h2>
             <p>The whole account, not just the parts that are easy to outsource.</p>
           </div>
-          <div className="cards">
+          <div className="am-grid">
             {scope.map((s) => (
-              <div className="card" key={s.t}>
+              <div className="am-card" key={s.t}>
+                <div className="am-ic"><Icon name={s.icon} /></div>
                 <h3>{s.t}</h3>
                 <p>{s.d}</p>
+                <ul>
+                  {s.items.map((it) => <li key={it}>{it}</li>)}
+                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* HOW */}
+      {/* HOW — horizontal timeline */}
       <section id="how">
         <div className="wrap">
           <div className="sec-head">
             <h2>How it works</h2>
             <p>From first look to running the account day to day.</p>
           </div>
-          <ol className="steps">
+          <ol className="tl">
             {steps.map((s) => (
-              <li className="step" key={s.n}>
-                <div className="step-n">{s.n}</div>
-                <div className="step-body">
-                  <h3>{s.t}</h3>
-                  <p>{s.d}</p>
-                </div>
+              <li className="tl-step" key={s.n}>
+                <div className="tl-n">{s.n}</div>
+                <h3>{s.t}</h3>
+                <p>{s.d}</p>
               </li>
             ))}
           </ol>

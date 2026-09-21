@@ -42,6 +42,14 @@ const steps = [
   { n: "05", t: "Report and repeat", d: "A short weekly update and a fuller monthly review. You always know what your ad spend is doing." },
 ];
 
+const terms = [
+  { k: "ACoS", n: "Advertising cost of sales", d: "Ad spend divided by the sales those ads produced. £20 spent for £100 of ad sales is a 20% ACoS — lower is more efficient." },
+  { k: "TACoS", n: "Total advertising cost of sales", d: "Ad spend divided by all your sales, organic included. Shows whether ads are lifting the whole business or just paying for themselves." },
+  { k: "ROAS", n: "Return on ad spend", d: "Sales divided by ad spend — the inverse of ACoS. A 20% ACoS is a 5× ROAS." },
+  { k: "CTR", n: "Click-through rate", d: "Clicks divided by impressions. A low CTR usually means the wrong keywords or a weak main image and title." },
+  { k: "CPC", n: "Cost per click", d: "What you pay each time a shopper clicks your ad. Set by auction, so bids and competition decide it." },
+];
+
 const faqs = [
   { q: "How do you charge for Amazon PPC management?", a: "A fixed monthly fee, agreed before we start and based on how many products and campaigns you run. We don't take a percentage of your ad spend — that model rewards an agency for spending more of your money, which is the wrong incentive." },
   { q: "Do I need to give you my Seller Central password?", a: "No. Amazon lets you add us as a user with only the permissions we need — advertising access, not your payments or account settings. You stay the owner and can remove us in one click." },
@@ -52,34 +60,103 @@ const faqs = [
   { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. That means optimisation work is usually done before your working day starts, and we overlap with your afternoon for calls." },
 ];
 
+/* Mock dashboard. All figures are illustrative — not client data. */
+const BARS = [42, 50, 58, 70, 82, 92, 102, 110];
+const ACOS_LINE = "M27 30 L75 34 L123 38 L171 54 L219 64 L267 72 L315 78 L363 82";
+
+function Dashboard() {
+  return (
+    <div className="dash" aria-label="Illustrative Amazon PPC dashboard">
+      <div className="dash-top">
+        <div className="dash-title">
+          Sponsored Products
+          <span>Last 8 weeks · illustrative</span>
+        </div>
+        <div className="dash-pill">Weekly review</div>
+      </div>
+
+      <div className="kpis">
+        <div className="kpi">
+          <div className="kpi-l">Ad spend</div>
+          <div className="kpi-v">£1,240</div>
+          <div className="kpi-d good">▼ 18%</div>
+        </div>
+        <div className="kpi">
+          <div className="kpi-l">Sales</div>
+          <div className="kpi-v">£6,180</div>
+          <div className="kpi-d good">▲ 31%</div>
+        </div>
+        <div className="kpi">
+          <div className="kpi-l">ACoS</div>
+          <div className="kpi-v">20.1%</div>
+          <div className="kpi-d good">▼ from 34%</div>
+        </div>
+      </div>
+
+      <div className="chart">
+        <svg viewBox="0 0 400 130" role="img" aria-label="Bar chart of weekly sales rising while the ACoS line falls">
+          <g className="grid">
+            <path d="M12 30H388" /><path d="M12 60H388" /><path d="M12 90H388" />
+          </g>
+          {BARS.map((h, i) => (
+            <rect
+              key={i}
+              className={i < 3 ? "bar dim" : "bar"}
+              x={12 + i * 48}
+              y={118 - h}
+              width="30"
+              height={h}
+              rx="6"
+              style={{ animationDelay: `${i * 0.08}s` }}
+            />
+          ))}
+          <path className="line" d={ACOS_LINE} />
+          <path d="M12 118H388" className="axis" />
+        </svg>
+        <div className="chart-legend">
+          <span><i className="sw sw-sales" />Sales</span>
+          <span><i className="sw sw-acos" />ACoS</span>
+          <span><i className="sw sw-before" />Before we started</span>
+        </div>
+      </div>
+      <div className="dash-note">Illustrative figures to show the layout — not a real client account.</div>
+    </div>
+  );
+}
+
 export default function AmazonPPC() {
   return (
     <>
-      {/* HERO */}
-      <section className="page-head" style={{ "--cover": "url(/covers/services.svg)" }}>
+      {/* HERO — light, with dashboard */}
+      <section className="ppc-hero">
         <div className="wrap">
-          <div className="svc-kicker">Amazon · UK &amp; US</div>
-          <h1>Amazon PPC management that stops the waste first.</h1>
-          <p>
-            Campaign setup, keyword research, bid management and weekly
-            reporting for Amazon sellers in the UK and US. Fixed monthly fee.
-            No long contracts.
-          </p>
-          <div className="acts" style={{ marginTop: 28 }}>
-            <Link className="btn btn-acc" href="/contact">
-              <span className="t">Get a free PPC audit</span> <span className="a">→</span>
-            </Link>
-            <a className="btn btn-ghost" href="#how">
-              <span className="t">How it works</span>
-            </a>
+          <div>
+            <div className="svc-kicker">Amazon · UK &amp; US</div>
+            <h1>Amazon PPC management that stops the waste first.</h1>
+            <p>
+              Campaign setup, keyword research, bid management and weekly
+              reporting for Amazon sellers in the UK and US. Fixed monthly fee.
+              No long contracts. Part of our{" "}
+              <Link href="/amazon-account-management">full Amazon account management</Link>
+              , or on its own.
+            </p>
+            <div className="acts">
+              <Link className="btn btn-acc" href="/contact">
+                <span className="t">Get a free PPC audit</span> <span className="a">→</span>
+              </Link>
+              <a className="btn btn-ghost" href="#how">
+                <span className="t">How it works</span>
+              </a>
+            </div>
           </div>
+          <Dashboard />
         </div>
       </section>
 
-      {/* PROBLEM */}
+      {/* PROBLEM — before vs after */}
       <section>
-        <div className="wrap svc-split">
-          <div>
+        <div className="wrap">
+          <div className="sec-head">
             <h2>Most Amazon ad budgets leak before they sell.</h2>
             <p>
               Broad-match keywords that pull in the wrong searches. Bids that
@@ -93,36 +170,71 @@ export default function AmazonPPC() {
               rather than an engine.
             </p>
           </div>
-          <div className="leak-card">
-            <div className="leak-row"><span>Clicks on irrelevant searches</span><b className="bad">wasted</b></div>
-            <div className="leak-row"><span>Stale bids on dead keywords</span><b className="bad">wasted</b></div>
-            <div className="leak-row"><span>Budget gone by day 20</span><b className="bad">missed sales</b></div>
-            <div className="leak-row"><span>No negative keyword list</span><b className="bad">wasted</b></div>
-            <div className="leak-row good"><span>What we fix first</span><b>all four</b></div>
+          <div className="ba">
+            <div className="ba-col before">
+              <div className="ba-h">Before</div>
+              <ul>
+                <li>Clicks on irrelevant searches — wasted spend</li>
+                <li>Stale bids on keywords that stopped converting</li>
+                <li>No negative keyword list at all</li>
+                <li>Budget gone by day 20, best-selling days missed</li>
+              </ul>
+            </div>
+            <div className="ba-arrow" aria-hidden="true">→</div>
+            <div className="ba-col after">
+              <div className="ba-h">After the first month</div>
+              <ul>
+                <li>Irrelevant search terms cut, spend back on buyers</li>
+                <li>Bids reviewed weekly against real performance</li>
+                <li>Negatives added every week, automatically reviewed</li>
+                <li>Budget paced across the whole month</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* WHAT WE DO */}
+      {/* WHAT WE DO — numbered list */}
       <section className="process-band">
         <div className="wrap">
           <div className="sec-head">
             <h2>What&apos;s included</h2>
             <p>Everything it takes to run Amazon advertising properly — not just the setup.</p>
           </div>
-          <div className="cards">
-            {whatWeDo.map((w) => (
-              <div className="card" key={w.t}>
-                <h3>{w.t}</h3>
-                <p>{w.d}</p>
-              </div>
+          <ol className="numlist">
+            {whatWeDo.map((w, i) => (
+              <li className="num-item" key={w.t}>
+                <div className="num">{String(i + 1).padStart(2, "0")}</div>
+                <div>
+                  <h3>{w.t}</h3>
+                  <p>{w.d}</p>
+                </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       </section>
 
-      {/* HOW */}
-      <section id="how">
+      {/* PPC TERMS */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>PPC terms explained</h2>
+            <p>The five numbers you&apos;ll see in every report, in plain English.</p>
+          </div>
+          <dl className="terms">
+            {terms.map((t) => (
+              <div className="term" key={t.k}>
+                <dt>{t.k}<small>{t.n}</small></dt>
+                <dd>{t.d}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* HOW — vertical steps */}
+      <section className="process-band" id="how">
         <div className="wrap">
           <div className="sec-head">
             <h2>How it works</h2>
@@ -142,40 +254,18 @@ export default function AmazonPPC() {
         </div>
       </section>
 
-      {/* SAFETY */}
-      <section className="process-band">
+      {/* WHY */}
+      <section>
         <div className="wrap">
           <div className="sec-head">
-            <h2>Your account stays yours</h2>
-            <p>Handing an agency access to Seller Central is a big step. Here&apos;s how we make it a safe one.</p>
-          </div>
-          <div className="safe-grid">
-            <div className="safe"><b>No password sharing</b><span>You add us as a user with advertising-only permissions. Payments and account settings stay locked.</span></div>
-            <div className="safe"><b>Remove us in one click</b><span>You stay the account owner. Revoke access any time, no notice needed.</span></div>
-            <div className="safe"><b>Nothing outside ads</b><span>We never touch listings, pricing or inventory without asking first.</span></div>
-            <div className="safe"><b>Policy-safe changes</b><span>Every change follows Amazon&apos;s advertising policies. Nothing that risks your account health.</span></div>
-          </div>
-        </div>
-      </section>
-
-      {/* PROOF + WHY */}
-      <section>
-        <div className="wrap svc-split">
-          <div>
             <h2>Why sellers pick us</h2>
-            <ul className="why-list">
-              <li><b>One point of contact.</b> You talk to the person running your campaigns, not an account manager relaying messages.</li>
-              <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK, so optimisation is usually finished by the time you log in.</li>
-              <li><b>Fixed fee, not a cut of your spend.</b> We&apos;re paid to make your ads profitable, not to make them bigger.</li>
-              <li><b>Same standard, lower overhead.</b> UK-agency quality without UK-agency office costs.</li>
-            </ul>
           </div>
-          <div className="proof-card">
-            <div className="proof-lbl">Amazon UK seller account</div>
-            <div className="proof-num">£32,928</div>
-            <div className="proof-sub">in sales across 607 orders on one account we manage</div>
-            <Link className="case-link" href="/portfolio">See the work <span aria-hidden="true">→</span></Link>
-          </div>
+          <ul className="why-list why-wide">
+            <li><b>One point of contact.</b> You talk to the person running your campaigns, not an account manager relaying messages.</li>
+            <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK, so optimisation is usually finished by the time you log in.</li>
+            <li><b>Fixed fee, not a cut of your spend.</b> We&apos;re paid to make your ads profitable, not to make them bigger.</li>
+            <li><b>Same standard, lower overhead.</b> UK-agency quality without UK-agency office costs.</li>
+          </ul>
         </div>
       </section>
 
