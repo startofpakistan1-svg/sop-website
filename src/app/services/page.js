@@ -229,9 +229,14 @@ export default function Services() {
             </div>
 
             {c.id === "marketplace" && (
-              <Link className="cat-link" href="/amazon-ppc-management">
-                Amazon PPC management — full details <span aria-hidden="true">→</span>
-              </Link>
+              <div className="cat-links">
+                <Link className="cat-link" href="/amazon-account-management">
+                  Amazon account management <span aria-hidden="true">→</span>
+                </Link>
+                <Link className="cat-link" href="/amazon-ppc-management">
+                  Amazon PPC management <span aria-hidden="true">→</span>
+                </Link>
+              </div>
             )}
 
             <div className="cat-groups">
