@@ -3,197 +3,326 @@ import Link from "next/link";
 export const metadata = {
   title: "Amazon Account Management Services for UK & US Sellers | SOP",
   description:
-    "Full-service Amazon account management for UK and US sellers — listings, advertising, inventory, customer service, account health and brand growth. Fixed monthly fee, no long contracts.",
+    "Full-service Amazon seller account management for UK and US brands. Listings, optimisation, PPC, inventory, customer service, Brand Registry and account health — handled A to Z by one team.",
   alternates: { canonical: "/amazon-account-management" },
 };
 
-const scope = [
+/* ---------------------------------------------------------------- */
+/*  THE WHOLE ACCOUNT — grouped into four phases                     */
+/* ---------------------------------------------------------------- */
+const phases = [
   {
-    t: "Listings & catalogue",
-    d: "New listings written and built properly, existing ones cleaned up — titles, bullets, backend keywords, images and A+ content that actually convert.",
-    items: ["Titles, bullets and backend keywords", "Images and A+ content", "Suppressed-listing fixes"],
-    icon: "list",
+    no: "01",
+    name: "Set up & foundations",
+    lead: "Getting the account right before anything is sold — the part most problems trace back to.",
+    areas: [
+      {
+        t: "Seller Central setup",
+        items: [
+          "Professional seller account registration",
+          "Identity and business verification support",
+          "Tax, VAT and shipping settings",
+          "Multi-marketplace setup — UK, US, EU",
+          "User permissions and access control",
+        ],
+      },
+      {
+        t: "Brand Registry",
+        items: [
+          "Amazon Brand Registry application",
+          "Trademark requirements guidance",
+          "Brand Store design and build",
+          "Brand protection and IP reporting",
+        ],
+      },
+    ],
   },
   {
-    t: "Advertising",
-    d: "Sponsored Products, Brands and Display run alongside the rest of the account, so ads and listings pull in the same direction instead of fighting each other.",
-    items: ["Sponsored Products, Brands and Display", "Weekly bid and negative reviews", "Fixed fee — no percentage of spend"],
-    icon: "target",
+    no: "02",
+    name: "Listings that sell",
+    lead: "Product pages built to rank in Amazon search and convert the people who land on them.",
+    areas: [
+      {
+        t: "Listing creation",
+        items: [
+          "New product listings and ASIN setup",
+          "Parent–child variations",
+          "Category and browse node selection",
+          "Bulk listing uploads by flat file",
+        ],
+      },
+      {
+        t: "Amazon listing optimisation",
+        items: [
+          "Keyword research from real search data",
+          "Titles written for search and clicks",
+          "Bullet points that answer buyer objections",
+          "Backend search terms",
+          "Listing audits and suppressed-listing fixes",
+        ],
+      },
+      {
+        t: "Images & A+ content",
+        items: [
+          "Image requirements and main-image compliance",
+          "Infographic and lifestyle image briefs",
+          "A+ / Enhanced Brand Content",
+          "Premium A+ where eligible",
+        ],
+      },
+    ],
   },
   {
-    t: "Inventory & pricing",
-    d: "FBA shipments planned before you run out, FBM orders kept moving, and prices adjusted against competitors so you win the Buy Box without racing to the bottom.",
-    items: ["FBA shipment planning", "FBM order handling", "Buy Box pricing and repricing"],
-    icon: "box",
+    no: "03",
+    name: "Daily operations",
+    lead: "The day-to-day running that keeps an account healthy and selling — the work that never stops.",
+    areas: [
+      {
+        t: "Advertising",
+        items: [
+          "Sponsored Products, Brands and Display",
+          "Keyword and competitor ASIN targeting",
+          "Weekly bid and budget management",
+          "Negative keyword control",
+        ],
+        link: { href: "/amazon-ppc-management", label: "Full Amazon PPC management" },
+      },
+      {
+        t: "Inventory & FBA",
+        items: [
+          "Stock level monitoring",
+          "Reorder alerts before you run out",
+          "FBA shipment creation and planning",
+          "Stranded and excess inventory fixes",
+          "FBM order handling",
+        ],
+      },
+      {
+        t: "Pricing & Buy Box",
+        items: [
+          "Competitive pricing strategy",
+          "Buy Box monitoring",
+          "Promotions, coupons and deals",
+          "Lightning Deal and event planning",
+        ],
+      },
+      {
+        t: "Customer service",
+        items: [
+          "Buyer messages inside the 24-hour window",
+          "Returns and refund handling",
+          "A-to-z claim responses",
+          "Order problem resolution",
+        ],
+      },
+    ],
   },
   {
-    t: "Customer service",
-    d: "Buyer messages answered within Amazon's 24-hour window, returns processed, and negative feedback handled before it dents your rating.",
-    items: ["Buyer messages inside 24 hours", "Returns and refunds", "Feedback and review handling"],
-    icon: "chat",
+    no: "04",
+    name: "Protect & grow",
+    lead: "Keeping the account safe, and pushing it forward month after month.",
+    areas: [
+      {
+        t: "Account health",
+        items: [
+          "Account Health dashboard monitoring",
+          "Order defect rate and late shipment tracking",
+          "Policy compliance checks",
+          "Performance notification responses",
+          "Early warning before metrics turn red",
+        ],
+      },
+      {
+        t: "Reviews & feedback",
+        items: [
+          "Seller feedback monitoring",
+          "Product review tracking",
+          "Amazon Vine enrolment where eligible",
+          "Review-policy compliant follow-up",
+        ],
+      },
+      {
+        t: "Reporting & growth",
+        items: [
+          "Monthly performance report",
+          "Sales, ad spend, ACoS and TACoS",
+          "Business report and traffic analysis",
+          "New product and marketplace planning",
+        ],
+      },
+    ],
+  },
+];
+
+/* ---------------------------------------------------------------- */
+/*  WHAT AN ACCOUNT MANAGER DOES — by rhythm                          */
+/* ---------------------------------------------------------------- */
+const rhythm = [
+  {
+    when: "Every day",
+    items: [
+      "Answer buyer messages within Amazon's time limit",
+      "Check Account Health for new warnings",
+      "Watch stock on your best sellers",
+      "Catch suppressed or broken listings",
+      "Monitor Buy Box and pricing",
+    ],
   },
   {
-    t: "Account health",
-    d: "Performance notifications watched daily, policy issues fixed before they escalate, and suspension appeals written and filed if the worst happens.",
-    items: ["Daily performance checks", "Policy and IP complaints", "Suspension appeals and reinstatement"],
-    icon: "shield",
+    when: "Every week",
+    items: [
+      "Optimise PPC bids, budgets and negatives",
+      "Review search terms for new keywords",
+      "Plan and send FBA shipments",
+      "Handle returns and refunds",
+      "Check competitor listings and prices",
+    ],
   },
   {
-    t: "Brand & growth",
-    d: "Brand Registry, brand store, new-market launches and product expansion — the work that turns a seller account into a business.",
-    items: ["Brand Registry and brand store", "New marketplace launches", "Product expansion planning"],
-    icon: "star",
+    when: "Every month",
+    items: [
+      "Full performance report",
+      "Listing optimisation on underperformers",
+      "Promotion and deal planning",
+      "Review of ad strategy and targets",
+      "Next month's growth plan",
+    ],
   },
+];
+
+/* ---------------------------------------------------------------- */
+/*  COMPARISON                                                        */
+/* ---------------------------------------------------------------- */
+const compare = [
+  { row: "Covers the whole account",         diy: "You",       va: "Tasks only",    uk: "Yes",       sop: "Yes" },
+  { row: "Listing optimisation",             diy: "If time",   va: "Rarely",        uk: "Yes",       sop: "Yes" },
+  { row: "PPC management",                   diy: "Guesswork", va: "Rarely",        uk: "Yes",       sop: "Yes" },
+  { row: "Account health monitoring",        diy: "Reactive",  va: "Sometimes",     uk: "Yes",       sop: "Daily" },
+  { row: "Strategy and planning",            diy: "You",       va: "No",            uk: "Yes",       sop: "Yes" },
+  { row: "One point of contact",             diy: "—",         va: "Yes",           uk: "Account mgr", sop: "Yes" },
+  { row: "Work done before UK morning",      diy: "—",         va: "Depends",       uk: "No",        sop: "Yes" },
+  { row: "Cost",                             diy: "Your time", va: "Low",           uk: "High",      sop: "Mid" },
 ];
 
 const steps = [
-  { n: "01", t: "Account audit", d: "We go through your whole account — listings, ads, inventory, health, feedback — and show you what's costing sales. Free, and yours to keep whether you hire us or not." },
-  { n: "02", t: "Plan and fixed price", d: "A written plan covering what we'll take on, in what order, and a fixed monthly fee. No percentage-of-sales surprises." },
-  { n: "03", t: "Handover", d: "You add us to Seller Central with only the permissions we need. We pick up the daily work from day one." },
-  { n: "04", t: "Fix, then build", d: "The first month is about stopping the leaks — health issues, broken listings, wasted ad spend. After that, growth." },
-  { n: "05", t: "Report and repeat", d: "A short weekly update and a fuller monthly review. You always know what's happening in your account without logging in." },
+  { n: "01", t: "Account review", d: "We walk through your listings, ads and Account Health — or your product plans if you're launching — and tell you plainly what's working and what isn't." },
+  { n: "02", t: "Plan and fixed price", d: "A written plan of what we'll take on and a fixed monthly price, usually within a day. Nothing starts until you've agreed it." },
+  { n: "03", t: "Access and first fixes", d: "You add us as a user in Seller Central. The first two weeks go on the obvious gaps — broken listings, wasted ad spend, health warnings." },
+  { n: "04", t: "We run it", d: "Daily, weekly and monthly work handled continuously. You focus on product and suppliers." },
+  { n: "05", t: "Monthly review", d: "A plain-English report: sales, ad spend, what changed, and what we're doing next month." },
 ];
 
 const faqs = [
-  { q: "How do you charge for Amazon account management?", a: "A fixed monthly fee, agreed before we start and based on the size of your catalogue and how much of the account you want us to run. We don't take a percentage of your sales — you should keep the upside of your own growth." },
-  { q: "Do I need to give you my Seller Central password?", a: "No. Amazon lets you add us as a secondary user with only the permissions the work needs. Payments, bank details and account ownership stay with you, and you can remove us in one click." },
-  { q: "Can you take over an account that's already in trouble?", a: "Yes — that's a lot of what we do. Suspended listings, account health warnings, stranded inventory, a catalogue that's been neglected. We start with the problems that block sales, then work back to growth." },
-  { q: "Do you handle advertising too, or just the account?", a: "Both. Advertising is part of full account management. If you only want ads run, we offer Amazon PPC management on its own." },
-  { q: "Is there a minimum contract?", a: "No long contract. Month to month, with notice at the end of any month. We'd rather keep you because it's working." },
-  { q: "Which marketplaces do you cover?", a: "Amazon UK and Amazon US most often, and the wider EU marketplaces too. We work to your time zone, not ours." },
-  { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. Buyer messages and overnight issues are usually dealt with before your working day starts, and we overlap with your afternoon for calls." },
+  { q: "What do Amazon account management services include?", a: "Everything it takes to run a seller account: Seller Central setup, listings, listing optimisation, images and A+ content, PPC, inventory and FBA, pricing and the Buy Box, customer service, reviews, account health and monthly reporting. We handle it A to Z, so you're not stitching together a listings freelancer, a PPC specialist and a VA who never talk to each other." },
+  { q: "What does an Amazon account manager actually do?", a: "Day to day, an Amazon account manager answers buyer messages, watches Account Health, keeps stock from running out and fixes broken listings. Weekly, they optimise advertising and plan FBA shipments. Monthly, they report on performance and plan what's next. The rhythm section above shows it in full." },
+  { q: "Is an agency better than an Amazon virtual assistant?", a: "It depends on what you need. A virtual assistant is good for set tasks you define — uploading listings, answering messages. An agency brings the strategy as well: deciding what to optimise, how to spend on ads, and how to grow. We sit in between on cost, with the full scope of an agency." },
+  { q: "Do I have to give you my Seller Central password?", a: "No. Amazon lets you add us as a user with only the permissions we need. You stay the account owner, your payment details stay locked, and you can remove our access in one click." },
+  { q: "Can you help with Seller Central problems?", a: "Yes — suppressed listings, stranded inventory, listing errors, category approvals and performance notifications are routine work for us. If something unusual comes up, we'll tell you honestly what we can do about it." },
+  { q: "Do you help with Amazon Brand Registry?", a: "Yes. We guide you through the trademark requirements, handle the Brand Registry application, and once you're approved we build your Brand Store and A+ content." },
+  { q: "How much does Amazon account management cost?", a: "A fixed monthly fee based on how many products and marketplaces you run. We send the exact figure with the plan, usually within a day of looking at your account — no percentage of your sales and no hourly billing." },
+  { q: "Which Amazon marketplaces do you manage?", a: "Amazon UK and Amazon US most often. Tell us where else you sell and we'll say honestly whether we can take it on." },
+  { q: "How much of my time will it take?", a: "Very little once we're set up. We'll need you for product decisions, supplier questions and approving major changes. Everything else we handle." },
+  { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. Most day-to-day work is finished before your morning, and we overlap with your afternoon for calls." },
 ];
-
-/* Hub diagram: SOP in the centre, six areas around it. viewBox 480x400, centre (240,200). */
-const HUB_NODES = [
-  { label: "Listings", x: 240, y: 48 },
-  { label: "Advertising", x: 372, y: 124 },
-  { label: "Inventory", x: 372, y: 276 },
-  { label: "Customer service", x: 240, y: 352 },
-  { label: "Account health", x: 108, y: 276 },
-  { label: "Brand", x: 108, y: 124 },
-];
-
-function HubDiagram() {
-  return (
-    <svg className="hub-svg" viewBox="0 0 480 400" role="img" aria-label="SOP at the centre, connected to Listings, Advertising, Inventory, Customer service, Account health and Brand">
-      <defs>
-        <linearGradient id="hubG" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#FBB016" />
-          <stop offset="1" stopColor="#F5871F" />
-        </linearGradient>
-      </defs>
-      <circle className="hub-ring" cx="240" cy="200" r="152" />
-      {HUB_NODES.map((n) => (
-        <line key={`l-${n.label}`} className="hub-link" x1="240" y1="200" x2={n.x} y2={n.y} />
-      ))}
-      {HUB_NODES.map((n, i) => (
-        <line key={`p-${n.label}`} className="hub-pulse" style={{ animationDelay: `${i * 0.45}s` }} x1="240" y1="200" x2={n.x} y2={n.y} />
-      ))}
-      <rect x="192" y="152" width="96" height="96" rx="26" fill="url(#hubG)" />
-      <text x="240" y="200" className="hub-core" textAnchor="middle" dominantBaseline="central">SOP</text>
-      {HUB_NODES.map((n) => (
-        <g key={n.label} className="hn">
-          <rect x={n.x - 66} y={n.y - 21} width="132" height="42" rx="13" />
-          <text x={n.x} y={n.y} textAnchor="middle" dominantBaseline="central">{n.label}</text>
-        </g>
-      ))}
-    </svg>
-  );
-}
-
-function Icon({ name }) {
-  const p = { fill: "none", stroke: "currentColor", strokeWidth: 2, strokeLinecap: "round", strokeLinejoin: "round" };
-  switch (name) {
-    case "list":
-      return <svg viewBox="0 0 24 24" {...p}><path d="M8 6h13M8 12h13M8 18h13" /><circle cx="3.5" cy="6" r="1.2" fill="currentColor" stroke="none" /><circle cx="3.5" cy="12" r="1.2" fill="currentColor" stroke="none" /><circle cx="3.5" cy="18" r="1.2" fill="currentColor" stroke="none" /></svg>;
-    case "target":
-      return <svg viewBox="0 0 24 24" {...p}><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="5" /><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none" /></svg>;
-    case "box":
-      return <svg viewBox="0 0 24 24" {...p}><path d="M3 8l9-4 9 4-9 4-9-4z" /><path d="M3 8v8l9 4 9-4V8" /><path d="M12 12v8" /></svg>;
-    case "chat":
-      return <svg viewBox="0 0 24 24" {...p}><path d="M4 5h16v11H9l-5 4V5z" /><path d="M8 10h8" /></svg>;
-    case "shield":
-      return <svg viewBox="0 0 24 24" {...p}><path d="M12 3l8 3v6c0 4.5-3.5 7.8-8 9-4.5-1.2-8-4.5-8-9V6l8-3z" /><path d="M8.5 12l2.3 2.3L15.5 9.6" /></svg>;
-    case "star":
-    default:
-      return <svg viewBox="0 0 24 24" {...p}><path d="M12 3.5l2.7 5.6 6.1.8-4.5 4.2 1.2 6.1L12 17.3l-5.5 2.9 1.2-6.1L3.2 9.9l6.1-.8L12 3.5z" /></svg>;
-  }
-}
 
 export default function AmazonAccountManagement() {
   return (
     <>
-      {/* HERO — dark band with hub diagram */}
-      <section className="am-hero">
+      {/* HERO */}
+      <section className="page-head" style={{ "--cover": "url(/covers/account.svg)" }}>
         <div className="wrap">
+          <div className="svc-kicker">Amazon · UK &amp; US</div>
+          <h1>Amazon account management services, handled A to Z.</h1>
+          <p>
+            Full-service Amazon seller account management for UK and US brands —
+            from Seller Central setup and listing optimisation to PPC, inventory,
+            customer service and account health. One team running the whole
+            account.
+          </p>
+          <div className="acts" style={{ marginTop: 28 }}>
+            <Link className="btn btn-acc" href="/contact">
+              <span className="t">Talk to us about your account</span> <span className="a">→</span>
+            </Link>
+            <a className="btn btn-ghost" href="#everything">
+              <span className="t">See everything we cover</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section>
+        <div className="wrap svc-split">
           <div>
-            <div className="svc-kicker">Amazon · UK &amp; US</div>
-            <h1>Amazon account management, handled end to end.</h1>
+            <h2>An Amazon account is fifteen jobs pretending to be one.</h2>
             <p>
-              Listings, advertising, inventory, customer service and account
-              health for Amazon sellers in the UK and US. One team running the
-              whole account. Fixed monthly fee. No long contracts. Or take{" "}
-              <Link href="/amazon-ppc-management">PPC management</Link>{" "}
-              on its own.
+              Listings that need rewriting. Ads that need watching every week.
+              Stock that runs out on your best seller. Buyer messages on a 24-hour
+              clock. Health metrics that can suspend you if one slips.
             </p>
-            <div className="acts">
-              <Link className="btn btn-acc" href="/contact">
-                <span className="t">Get a free account audit</span> <span className="a">→</span>
-              </Link>
-              <a className="btn btn-line" href="#scope">
-                <span className="t">What we manage</span>
-              </a>
+            <p>
+              Most sellers end up hiring a listings freelancer, a PPC person and
+              an Amazon virtual assistant — three people, three invoices, and
+              nobody seeing the whole account. Our Amazon seller account
+              management puts all of it with one team.
+            </p>
+          </div>
+          <div className="leak-card">
+            <div className="leak-row"><span>Listings written once, never revisited</span><b className="bad">lost sales</b></div>
+            <div className="leak-row"><span>Ads nobody is watching</span><b className="bad">wasted spend</b></div>
+            <div className="leak-row"><span>Best seller out of stock</span><b className="bad">lost ranking</b></div>
+            <div className="leak-row"><span>Late replies to buyers</span><b className="bad">health risk</b></div>
+            <div className="leak-row"><span>Nobody watching Account Health</span><b className="bad">suspension risk</b></div>
+            <div className="leak-row good"><span>One team on all of it</span><b>covered</b></div>
+          </div>
+        </div>
+      </section>
+
+      {/* EVERYTHING — by phase */}
+      <div id="everything" />
+      {phases.map((ph, pi) => (
+        <section key={ph.no} className={pi % 2 === 0 ? "process-band" : ""}>
+          <div className="wrap">
+            <div className="phase-head">
+              <span className="phase-no">{ph.no}</span>
+              <div>
+                <h2>{ph.name}</h2>
+                <p>{ph.lead}</p>
+              </div>
+            </div>
+
+            <div className="cat-groups">
+              {ph.areas.map((a) => (
+                <div className="group" key={a.t}>
+                  <h3>{a.t}</h3>
+                  <ul>
+                    {a.items.map((it) => <li key={it}>{it}</li>)}
+                  </ul>
+                  {a.link && (
+                    <Link className="case-link" href={a.link.href}>
+                      {a.link.label} <span aria-hidden="true">→</span>
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
-          <HubDiagram />
-        </div>
-      </section>
+        </section>
+      ))}
 
-      {/* PROBLEM */}
+      {/* RHYTHM */}
       <section>
-        <div className="wrap am-intro">
-          <div>
-            <h2>An Amazon account is a full-time job. Most sellers have another one.</h2>
-            <p>
-              Buyer messages that need answering inside 24 hours. FBA stock
-              that runs out on a Friday. A listing suppressed for a missing
-              attribute. An account health notification you don&apos;t have
-              time to read properly.
-            </p>
-            <p>
-              None of it is hard on its own. Together, it&apos;s the reason
-              growth stalls — you&apos;re maintaining the account instead of
-              building it.
-            </p>
-          </div>
-          <div className="plate">
-            <div className="plate-lbl">What we take off your plate</div>
-            <ul>
-              <li><span>Late buyer replies</span><b>rating hit</b></li>
-              <li><span>Stock-outs on best sellers</span><b>lost rank</b></li>
-              <li><span>Suppressed or thin listings</span><b>missed sales</b></li>
-              <li><span>Health warnings left unread</span><b>account risk</b></li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      {/* SCOPE — 3x2 grid */}
-      <section className="process-band" id="scope">
         <div className="wrap">
           <div className="sec-head">
-            <h2>What we manage</h2>
-            <p>The whole account, not just the parts that are easy to outsource.</p>
+            <h2>What an Amazon account manager actually does</h2>
+            <p>The work doesn&apos;t happen once. It happens on a rhythm — here&apos;s ours.</p>
           </div>
-          <div className="am-grid">
-            {scope.map((s) => (
-              <div className="am-card" key={s.t}>
-                <div className="am-ic"><Icon name={s.icon} /></div>
-                <h3>{s.t}</h3>
-                <p>{s.d}</p>
+          <div className="rhythm">
+            {rhythm.map((r) => (
+              <div className="rhythm-col" key={r.when}>
+                <div className="rhythm-when">{r.when}</div>
                 <ul>
-                  {s.items.map((it) => <li key={it}>{it}</li>)}
+                  {r.items.map((it) => <li key={it}>{it}</li>)}
                 </ul>
               </div>
             ))}
@@ -201,19 +330,55 @@ export default function AmazonAccountManagement() {
         </div>
       </section>
 
-      {/* HOW — horizontal timeline */}
-      <section id="how">
+      {/* COMPARISON */}
+      <section className="process-band">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Agency, virtual assistant, or do it yourself?</h2>
+            <p>An honest comparison of the ways sellers run their Amazon accounts.</p>
+          </div>
+          <div className="cmp-wrap">
+            <table className="cmp">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Do it yourself</th>
+                  <th>Amazon virtual assistant</th>
+                  <th>UK agency</th>
+                  <th className="cmp-us">SOP</th>
+                </tr>
+              </thead>
+              <tbody>
+                {compare.map((c) => (
+                  <tr key={c.row}>
+                    <th>{c.row}</th>
+                    <td>{c.diy}</td>
+                    <td>{c.va}</td>
+                    <td>{c.uk}</td>
+                    <td className="cmp-us">{c.sop}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* HOW */}
+      <section>
         <div className="wrap">
           <div className="sec-head">
             <h2>How it works</h2>
             <p>From first look to running the account day to day.</p>
           </div>
-          <ol className="tl">
+          <ol className="steps">
             {steps.map((s) => (
-              <li className="tl-step" key={s.n}>
-                <div className="tl-n">{s.n}</div>
-                <h3>{s.t}</h3>
-                <p>{s.d}</p>
+              <li className="step" key={s.n}>
+                <div className="step-n">{s.n}</div>
+                <div className="step-body">
+                  <h3>{s.t}</h3>
+                  <p>{s.d}</p>
+                </div>
               </li>
             ))}
           </ol>
@@ -225,27 +390,28 @@ export default function AmazonAccountManagement() {
         <div className="wrap">
           <div className="sec-head">
             <h2>Your account stays yours</h2>
-            <p>Handing an agency the keys to Seller Central is a big step. Here&apos;s how we make it a safe one.</p>
+            <p>Handing over Seller Central is a big step. Here&apos;s how we make it a safe one.</p>
           </div>
           <div className="safe-grid">
-            <div className="safe"><b>No password sharing</b><span>You add us as a user with only the permissions the work needs. Payments and bank details stay locked.</span></div>
-            <div className="safe"><b>Remove us in one click</b><span>You stay the account owner. Revoke access any time, no notice needed.</span></div>
-            <div className="safe"><b>Nothing irreversible without asking</b><span>Price changes, listing deletions and account settings are agreed with you first.</span></div>
-            <div className="safe"><b>Policy-safe changes</b><span>Every change follows Amazon&apos;s selling policies. Nothing that risks your account health.</span></div>
+            <div className="safe"><b>No password sharing</b><span>You add us as a user with only the permissions we need. Payments and account settings stay locked.</span></div>
+            <div className="safe"><b>You stay the owner</b><span>Remove our access in one click, any time, no notice needed.</span></div>
+            <div className="safe"><b>No surprises</b><span>Nothing significant changes without you knowing — pricing, listings or strategy.</span></div>
+            <div className="safe"><b>Health comes first</b><span>We work inside Amazon&apos;s policies and never take shortcuts that could trigger a review.</span></div>
           </div>
         </div>
       </section>
 
-      {/* PROOF + WHY */}
+      {/* WHY + PROOF */}
       <section>
         <div className="wrap svc-split">
           <div>
-            <h2>Why sellers pick us</h2>
+            <h2>Why sellers hand us the whole account</h2>
             <ul className="why-list">
-              <li><b>One point of contact.</b> You talk to the person running your account, not an account manager relaying messages.</li>
-              <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK, so overnight messages and issues are usually cleared by the time you log in.</li>
-              <li><b>Fixed fee, not a cut of your sales.</b> You keep the upside of your own growth.</li>
-              <li><b>Same standard, lower overhead.</b> UK-agency quality without UK-agency office costs.</li>
+              <li><b>One team, not three freelancers.</b> Listings, ads and service run by people who see the whole account.</li>
+              <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK.</li>
+              <li><b>One point of contact.</b> You talk to the person running your account, not someone relaying messages.</li>
+              <li><b>Agency scope, lower overhead.</b> What a UK Amazon agency covers, without UK office costs.</li>
+              <li><b>We stay.</b> One of our clients has been with us for four years.</li>
             </ul>
           </div>
           <div className="proof-card">
@@ -282,12 +448,12 @@ export default function AmazonAccountManagement() {
         <div className="wrap">
           <div className="cta">
             <div className="cta-in">
-              <h2>Start with a free audit.</h2>
-              <p>We&apos;ll go through your account and show you what&apos;s costing sales — whether or not you hire us.</p>
+              <h2>Hand us the account.</h2>
+              <p>Tell us what you sell and where. We&apos;ll come back with a plan and a fixed monthly price — usually the same day.</p>
             </div>
             <div className="cta-actions">
               <Link className="btn btn-acc" href="/contact">
-                <span className="t">Request the audit</span> <span className="a">→</span>
+                <span className="t">Start the conversation</span> <span className="a">→</span>
               </Link>
               <a className="btn btn-line" href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
                 <span className="t">Message on WhatsApp</span>

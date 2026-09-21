@@ -1160,3 +1160,75 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
   .hub-pulse{animation:none;opacity:0}
   .chart .bar{animation:none}
 }
+
+/* ============ ACCOUNT MANAGEMENT PAGE ============ */
+
+/* phase headings — the big numbered blocks */
+.phase-head{
+  display:flex;gap:26px;align-items:flex-start;
+  max-width:780px;margin-bottom:40px;
+}
+.phase-no{
+  flex:none;font-size:clamp(48px,6vw,68px);font-weight:800;line-height:.9;
+  letter-spacing:-.05em;
+  background:linear-gradient(140deg,var(--amber),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.phase-head h2{font-size:clamp(26px,3.3vw,36px)}
+.phase-head p{color:var(--ash);font-size:17px;margin-top:10px}
+
+/* daily / weekly / monthly rhythm */
+.rhythm{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rhythm-col{
+  background:#fff;border:1px solid var(--hair);border-radius:18px;
+  padding:28px 26px;position:relative;overflow:hidden;
+  transition:transform .55s var(--e),box-shadow .55s var(--e);
+}
+.rhythm-col:hover{transform:translateY(-5px);box-shadow:var(--sh-2)}
+.rhythm-col::before{
+  content:"";position:absolute;left:0;top:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--navy),var(--blue));
+}
+.rhythm-col:nth-child(2)::before{background:linear-gradient(90deg,var(--blue),var(--sky))}
+.rhythm-col:nth-child(3)::before{background:linear-gradient(90deg,var(--amber),var(--gold))}
+.rhythm-when{
+  font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--navy);margin-bottom:16px;
+}
+.rhythm-col ul{list-style:none;margin:0;padding:0}
+.rhythm-col li{
+  position:relative;padding-left:22px;margin-bottom:11px;
+  font-size:15.5px;color:var(--ash);line-height:1.5;
+}
+.rhythm-col li::before{
+  content:"";position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;
+  background:var(--amber);
+}
+
+/* comparison table */
+.cmp-wrap{
+  overflow-x:auto;border:1px solid var(--hair);border-radius:18px;background:#fff;
+  box-shadow:var(--sh-1);
+}
+.cmp{width:100%;border-collapse:collapse;min-width:720px;font-size:15px}
+.cmp th,.cmp td{padding:16px 18px;text-align:left;border-bottom:1px solid var(--hair)}
+.cmp thead th{
+  font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--ash);
+  background:var(--mist);
+}
+.cmp tbody th{font-weight:700;color:var(--ink)}
+.cmp td{color:var(--ash)}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:none}
+.cmp .cmp-us{
+  background:rgba(245,135,31,.07);color:var(--navy);font-weight:700;
+  border-left:2px solid var(--amber);
+}
+.cmp thead .cmp-us{background:var(--amber);color:#fff;border-left-color:var(--amber)}
+.cmp tbody tr:hover td,.cmp tbody tr:hover th{background:var(--mist)}
+.cmp tbody tr:hover .cmp-us{background:rgba(245,135,31,.12)}
+
+@media (max-width:980px){
+  .phase-head{flex-direction:column;gap:6px;margin-bottom:28px}
+  .rhythm{grid-template-columns:1fr}
+  .cmp th,.cmp td{padding:13px 14px;font-size:14px}
+}
