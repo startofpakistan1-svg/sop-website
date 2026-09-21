@@ -43,6 +43,7 @@ export default function Footer() {
             <Link href="/amazon-ppc-management">Amazon PPC</Link>
             <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
+            <Link href="/blog">Blog</Link>
             <Link href="/contact">Contact</Link>
             <Link href="/review">Leave a review</Link>
           </div>

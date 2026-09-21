@@ -264,8 +264,23 @@ export default function AmazonPPC() {
             <li><b>One point of contact.</b> You talk to the person running your campaigns, not an account manager relaying messages.</li>
             <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK, so optimisation is usually finished by the time you log in.</li>
             <li><b>Fixed fee, not a cut of your spend.</b> We&apos;re paid to make your ads profitable, not to make them bigger.</li>
-            <li><b>Same standard, lower overhead.</b> UK-agency quality without UK-agency office costs.</li>
+            <li><b>Same standard, lower overhead.</b> The quality you&apos;d expect from an Amazon PPC agency UK sellers already use, without UK office costs.</li>
           </ul>
+        </div>
+      </section>
+
+      {/* ACOS GUIDE */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Know your break-even ACoS before you spend</h2>
+            <p>
+              ACoS is the number most sellers judge their ads by, but a &quot;good&quot;
+              figure depends entirely on your margins. We&apos;ve written a plain-English
+              guide to <Link href="/blog/what-is-a-good-acos">what a good ACoS looks like</Link>,
+              how to calculate yours, and what actually brings it down.
+            </p>
+          </div>
         </div>
       </section>
 

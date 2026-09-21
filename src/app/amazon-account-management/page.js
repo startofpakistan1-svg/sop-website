@@ -364,6 +364,26 @@ export default function AmazonAccountManagement() {
         </div>
       </section>
 
+      {/* CONSULTANT */}
+      <section>
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Need an Amazon consultant UK sellers can actually reach?</h2>
+            <p>
+              If you sell on Amazon.co.uk, you can work with us as your Amazon
+              consultant and account manager in one: advice on strategy,
+              pricing and where to expand next, plus the day-to-day
+              work of running the account: listings, PPC, inventory, customer
+              messages and account health. We&apos;re a few hours ahead of the UK,
+              so most work is done before your day starts, you talk to the
+              person doing it, and you get a written plan and a fixed monthly
+              fee before anything begins. It suits new sellers finding their
+              feet and established brands that want a second pair of eyes.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* HOW */}
       <section>
         <div className="wrap">
