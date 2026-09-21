@@ -5,7 +5,7 @@ const categories = [
   {
     id: "marketplace",
     kicker: "01",
-    title: "Marketplace & eCommerce",
+    title: "Marketplace, Amazon SEO & eCommerce",
     img: "/icons/marketplace.svg",
     intro:
       "The bulk of what we do. We take a seller account from nothing to running, then keep it running — or step into one that's already live and clean it up.",
@@ -184,7 +184,7 @@ const faqs = [
 export const metadata = {
   title: "Services — SOP | eCommerce, Marketplaces, Web & AI",
   description:
-    "Amazon, eBay, Walmart, Etsy and Shopify account management, custom web development, AI agents, SEO and branding — from SOP in Jhelum, Pakistan.",
+    "Amazon SEO service and listing optimization, eBay, Walmart, Etsy and Shopify management, web development, AI agents and branding — SOP, Pakistan.",
 };
 
 export default function Services() {

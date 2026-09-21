@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Amazon Account Management Services for UK & US Sellers | SOP",
+  title: "Amazon Account Management Services | SOP",
   description:
-    "Full-service Amazon seller account management for UK and US brands. Listings, optimisation, PPC, inventory, customer service, Brand Registry and account health — handled A to Z by one team.",
+    "Full Amazon account management services for UK and US sellers: listings, Seller Central, account health, PPC and reporting.",
   alternates: { canonical: "/amazon-account-management" },
 };
 
@@ -232,12 +232,12 @@ export default function AmazonAccountManagement() {
       <section className="page-head" style={{ "--cover": "url(/covers/account.svg)" }}>
         <div className="wrap">
           <div className="svc-kicker">Amazon · UK &amp; US</div>
-          <h1>Amazon account management services, handled A to Z.</h1>
+          <h1>Amazon Account Management Services, handled A to Z.</h1>
           <p>
             Full-service Amazon seller account management for UK and US brands —
             from Seller Central setup and listing optimisation to PPC, inventory,
-            customer service and account health. One team running the whole
-            account.
+            customer service and account health. One dedicated Amazon account
+            manager running the whole account.
           </p>
           <div className="acts" style={{ marginTop: 28 }}>
             <Link className="btn btn-acc" href="/contact">

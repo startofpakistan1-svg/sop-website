@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Amazon PPC Management Services for UK & US Sellers | SOP",
+  title: "Amazon PPC Agency for UK & US Sellers | SOP",
   description:
-    "Amazon PPC management for UK and US sellers — campaign setup, keyword research, bid management and weekly reporting. Fixed monthly fee, no long contracts.",
+    "Amazon PPC management services for UK and US sellers. Campaign setup, bid management, keyword research and clear monthly reporting.",
   alternates: { canonical: "/amazon-ppc-management" },
 };
 
@@ -132,10 +132,10 @@ export default function AmazonPPC() {
         <div className="wrap">
           <div>
             <div className="svc-kicker">Amazon · UK &amp; US</div>
-            <h1>Amazon PPC management that stops the waste first.</h1>
+            <h1>The Amazon PPC Agency that stops the waste first.</h1>
             <p>
-              Campaign setup, keyword research, bid management and weekly
-              reporting for Amazon sellers in the UK and US. Fixed monthly fee.
+              Amazon PPC management for sellers in the UK and US: campaign
+              setup, keyword research, bid management and weekly reporting. Fixed monthly fee.
               No long contracts. Part of our{" "}
               <Link href="/amazon-account-management">full Amazon account management</Link>
               , or on its own.
