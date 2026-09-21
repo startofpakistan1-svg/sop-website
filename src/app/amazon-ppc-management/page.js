@@ -322,7 +322,7 @@ export default function AmazonPPC() {
               <Link className="btn btn-acc" href="/contact">
                 <span className="t">Request the audit</span> <span className="a">→</span>
               </Link>
-              <a className="btn btn-line" href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+              <a className="btn btn-line" href="https://api.whatsapp.com/send?phone=923101375475" target="_blank" rel="noreferrer">
                 <span className="t">Message on WhatsApp</span>
               </a>
             </div>

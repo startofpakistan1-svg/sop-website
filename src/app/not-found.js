@@ -27,7 +27,7 @@ export default function NotFound() {
           <Link className="btn btn-acc" href="/">Back to home</Link>
           <a
             className="btn btn-line"
-            href="https://wa.me/923101375475"
+            href="https://api.whatsapp.com/send?phone=923101375475"
             target="_blank"
             rel="noreferrer"
           >

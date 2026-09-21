@@ -176,7 +176,7 @@ export default function Terms() {
               support@startofpakistan.com
             </a>{" "}
             or WhatsApp{" "}
-            <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=923101375475" target="_blank" rel="noreferrer">
               +92 310 1375475
             </a>
             .

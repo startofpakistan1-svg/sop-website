@@ -185,7 +185,7 @@ export default function ChatWidget() {
 
           <div className="chat-foot">
             Prefer WhatsApp?{" "}
-            <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+            <a href="https://api.whatsapp.com/send?phone=923101375475" target="_blank" rel="noreferrer">
               Message us there
             </a>
           </div>

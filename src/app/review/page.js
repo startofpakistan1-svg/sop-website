@@ -261,7 +261,7 @@ export default function Review() {
 
             <div className="info-row">
               <div className="lbl">WhatsApp</div>
-              <a href="https://wa.me/923101375475" target="_blank" rel="noreferrer">
+              <a href="https://api.whatsapp.com/send?phone=923101375475" target="_blank" rel="noreferrer">
                 +92 310 1375475
               </a>
             </div>

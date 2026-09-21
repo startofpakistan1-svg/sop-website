@@ -74,7 +74,7 @@ export default function Contact() {
       `Phone: ${form.phone}%0A` +
       `Service: ${form.service}%0A%0A` +
       `${form.message}`;
-    window.open(`https://wa.me/923101375475?text=${text}`, "_blank");
+    window.open(`https://api.whatsapp.com/send?phone=923101375475&text=${text}`, "_blank");
   };
 
   return (
@@ -100,7 +100,7 @@ export default function Contact() {
                 </p>
                 <a
                   className="btn btn-acc"
-                  href="https://wa.me/923101375475"
+                  href="https://api.whatsapp.com/send?phone=923101375475"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -216,7 +216,7 @@ export default function Contact() {
             <div className="info-row">
               <div className="lbl">WhatsApp</div>
               <a
-                href="https://wa.me/923101375475"
+                href="https://api.whatsapp.com/send?phone=923101375475"
                 target="_blank"
                 rel="noreferrer"
               >

@@ -30,7 +30,7 @@ export default function Error({ error, reset }) {
           </Link>
           <a
             className="btn btn-ghost"
-            href="https://wa.me/923101375475"
+            href="https://api.whatsapp.com/send?phone=923101375475"
             target="_blank"
             rel="noreferrer"
           >
