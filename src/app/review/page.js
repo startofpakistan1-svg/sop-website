@@ -275,6 +275,46 @@ export default function Review() {
           </div>
         </div>
       </section>
+
+      {/* WHY REVIEWS MATTER */}
+      <section className="process-band">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>Why your review matters</h2>
+            <p>
+              Most Amazon and Shopify sellers find an agency the same way: they
+              search, they shortlist, and then they look for proof from someone
+              like them.
+            </p>
+          </div>
+          <div className="svc-split">
+            <div>
+              <h3>What it does for other sellers</h3>
+              <p>
+                A review from someone who has actually worked with us says more
+                than anything we could write about ourselves. It shows what the
+                work was, whether it delivered, and what we were like to deal
+                with along the way. For sellers in the UK and US weighing up an
+                agency in Pakistan, that reassurance matters even more.
+              </p>
+              <p>
+                Honest criticism helps too. If something took longer than it
+                should have, or communication slipped, saying so helps the next
+                client set expectations &mdash; and helps us fix it.
+              </p>
+            </div>
+            <div>
+              <h3>What to include</h3>
+              <ul className="why-list">
+                <li><b>What we built or managed.</b> An Amazon account, PPC campaigns, a Shopify store, an AI agent &mdash; and roughly how long we worked together.</li>
+                <li><b>What changed.</b> Sales, time saved, fewer headaches, a listing finally live. Specifics beat adjectives, but you don&apos;t need numbers if you&apos;d rather not share them.</li>
+                <li><b>What it was like to work with us.</b> Response times, how clear the reporting was, whether you always knew what was happening.</li>
+                <li><b>What we could do better.</b> One line is enough.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

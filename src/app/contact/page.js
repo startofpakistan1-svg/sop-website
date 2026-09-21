@@ -289,6 +289,70 @@ export default function Contact() {
           </a>
         </div>
       </section>
+
+      {/* WHAT HAPPENS NEXT */}
+      <section className="process-band">
+        <div className="wrap">
+          <div className="sec-head">
+            <h2>What happens after you get in touch</h2>
+            <p>
+              No sales funnel, no waiting list. Here&apos;s what to expect
+              once you&apos;ve sent a message.
+            </p>
+          </div>
+          <ol className="steps">
+            <li className="step">
+              <div className="step-n">01</div>
+              <div className="step-body">
+                <h3>We reply the same day</h3>
+                <p>
+                  Your enquiry goes to the person who would actually work on
+                  your account, not a sales inbox. We reply the same working
+                  day, usually within a few hours, by email or WhatsApp &mdash;
+                  whichever you used. If you&apos;re in the UK or US, that often
+                  means an answer waiting for you when you start work, since
+                  we&apos;re four to five hours ahead of the UK.
+                </p>
+              </div>
+            </li>
+            <li className="step">
+              <div className="step-n">02</div>
+              <div className="step-body">
+                <h3>A free call, if you want one</h3>
+                <p>
+                  Most sellers find a short call easiest. We&apos;ll ask what
+                  you sell, which marketplaces or platforms you&apos;re on, and
+                  where you&apos;re stuck. No slides and no pitch &mdash; just
+                  questions.
+                </p>
+              </div>
+            </li>
+            <li className="step">
+              <div className="step-n">03</div>
+              <div className="step-body">
+                <h3>A written plan and a fixed price</h3>
+                <p>
+                  Within a few days you get a short written plan: what we would
+                  do, in what order, and a fixed monthly fee or project price.
+                  No percentage of your sales or ad spend, and no long
+                  contract.
+                </p>
+              </div>
+            </li>
+            <li className="step">
+              <div className="step-n">04</div>
+              <div className="step-body">
+                <h3>You decide</h3>
+                <p>
+                  If it&apos;s a fit, we start when you&apos;re ready &mdash;
+                  usually within the week. If it isn&apos;t, no hard feelings,
+                  and you still have the plan.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
     </>
   );
 }
