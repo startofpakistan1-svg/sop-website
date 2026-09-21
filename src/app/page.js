@@ -1,6 +1,13 @@
 import Link from "next/link";
 import HeroFlow from "@/components/HeroFlow";
 
+export const metadata = {
+  title: "SOP | Amazon Account Management, Shopify & AI Automation for UK & US Sellers",
+  description:
+    "SOP runs Amazon seller accounts, PPC, Shopify stores and AI automation for brands in the UK and US. Based in Jhelum, Pakistan.",
+  alternates: { canonical: "/" },
+};
+
 const platforms = [
   "Amazon", "Shopify", "eBay", "Walmart", "Etsy",
   "WooCommerce", "WordPress", "AI agents",
