@@ -293,6 +293,239 @@ If you have never built A+ Content before, do not try to fill every slot. Start 
 A+ Content is one part of a complete listing. If you want the whole page looked at, from keywords and copy to images and A+ modules, listing optimization is part of our [Amazon and marketplace services](/services). Tell us the ASIN and we will tell you what we would change.
 `,
   },
+  {
+    slug: "amazon-account-management-cost",
+    title: "How Much Does Amazon Account Management Cost in the UK?",
+    description:
+      "Amazon account management cost explained: the common pricing models, what is usually included, what moves the price, and what to ask before signing.",
+    date: "2026-09-20",
+    excerpt:
+      "There is no single price for Amazon account management. Here are the pricing models you will be quoted, what they usually include, and what to ask before you sign.",
+    content: `
+If you have started asking agencies about Amazon account management cost, you have probably noticed that nobody gives a straight number on their website. That is partly sales tactics, but mostly it is because the price genuinely depends on what you sell, how many products you have, and how much of the work you want to hand over.
+
+This guide does not quote prices, because any figure would be wrong for most readers. Instead it explains how Amazon account management UK providers usually charge, what is normally included, what pushes the price up or down, and the questions worth asking before you sign anything.
+
+## The three common pricing models
+
+Most Amazon account management services charge in one of three ways.
+
+**A fixed monthly retainer.** You pay the same amount each month for an agreed scope of work. This is the most common model for full account management. It is predictable, easy to budget for, and it means the agency's income does not change when your sales do. The risk is that scope creeps: if you add products or marketplaces, expect the retainer to be reviewed.
+
+**A percentage of sales.** The agency takes a percentage of your monthly Amazon revenue, sometimes with a minimum fee. It looks attractive when you are small because the cost is low at the start. It gets expensive as you grow, and it rewards the agency for revenue rather than profit. A sale made at a loss still earns them their percentage.
+
+**A hybrid.** A lower fixed fee plus a smaller percentage of sales or ad spend. This splits the risk between you and the agency and is common for accounts with a lot of advertising. The detail matters: check exactly what the percentage is calculated on.
+
+There is no right answer, but a fixed fee is usually the simplest to compare between providers, because you can put two written scopes side by side.
+
+## What is usually included
+
+"Account management" means different things to different agencies, which is the main reason quotes are hard to compare. A full-service package normally covers:
+
+- Listing creation and optimisation, including keywords, copy and images
+- Sponsored ads management
+- Inventory planning and FBA shipment creation
+- Account health monitoring and dealing with policy notices
+- Customer messages, returns and feedback
+- Regular reporting on sales, spend and profit
+
+Some agencies split these into tiers, so advertising or customer service is a separate charge. Others include everything but cap the number of products or hours. Always ask for the scope in writing, with the exclusions listed as clearly as the inclusions.
+
+## What affects the Amazon account management cost
+
+Once you know the model, these are the things that move the number.
+
+**Number of products and variations.** More listings mean more copy, more images, more ads and more stock to plan. This is usually the biggest factor.
+
+**Number of marketplaces.** Selling on Amazon.co.uk alone is one job. Adding the US or the EU adds translation, VAT or tax considerations, separate ad accounts and separate inventory.
+
+**The state of the account.** An account with suspended listings, poor health metrics or a messy catalogue needs a clean-up before ongoing management can start. Expect that to be quoted separately.
+
+**Advertising spend.** Larger ad budgets need more frequent optimisation, so some agencies scale the fee with spend, either directly or through the hybrid model.
+
+**Where the agency is based.** A team in a lower-cost country can offer the same scope for less than a UK or US city agency, because their overheads are lower. That is a legitimate saving, as long as the time-zone overlap and communication are good.
+
+**Contract length.** Some providers discount for a longer commitment. Weigh that against the cost of being stuck if it does not work out.
+
+## Questions to ask before signing
+
+The cheapest quote is rarely the cheapest outcome. Before you commit, ask:
+
+1. **What exactly is included, and what costs extra?** Get it in writing.
+2. **Who will actually do the work?** The person on the sales call is not always the person in your Seller Central.
+3. **How is advertising charged?** Fixed, percentage of spend, or included in the retainer?
+4. **How do you access my account?** The right answer is as a user with limited permissions, never with your password.
+5. **What does reporting look like, and how often?** Ask to see a sample report.
+6. **What is the notice period?** Month to month is reasonable for most sellers. A twelve-month lock-in needs a good reason.
+7. **What happens to my listings, images and ad campaigns if I leave?** They should stay yours.
+8. **Do you have experience in my category?** Grocery, supplements and toys all have compliance rules that a generalist may not know.
+
+A good agency will answer all of these without hesitation. If any answer is vague, treat that as information.
+
+## How to think about value rather than price
+
+The useful question is not "what does it cost?" but "what does it cost compared with the alternatives?" The alternatives are your own time, a freelancer, or an in-house hire. Each has a real cost, even if it does not appear on an invoice.
+
+Work out roughly how many hours a week the account takes you now, and what those hours are worth to the rest of your business. Then compare the quotes against that, not against each other. An agency that costs more but frees you to develop new products or open a second channel may be the cheaper option overall.
+
+## Getting a quote from us
+
+We offer Amazon account management for UK and US sellers on a fixed monthly fee, scoped in writing before we start, with no long contract. If you want to see how that compares with what you have been quoted, tell us what you sell and where on our [Amazon account management page](/amazon-account-management) and we will come back with a plan and a price, usually the same day.
+`,
+  },
+  {
+    slug: "amazon-ppc-agency-vs-diy",
+    title: "Amazon PPC Agency vs Managing Ads Yourself",
+    description:
+      "Should you hire an Amazon PPC agency or run ads yourself? What DIY involves, when an agency makes sense, what to expect and how to judge results.",
+    date: "2026-09-19",
+    excerpt:
+      "Running your own Amazon ads is possible, and plenty of sellers do it well. The question is whether it is the best use of your time. Here is how to decide.",
+    content: `
+Every Amazon seller reaches the point where advertising stops being something you set up once and becomes a job. At that point you have two choices: keep doing it yourself, or hand it to an Amazon PPC agency. Neither is automatically right. This guide sets out what each involves so you can decide based on your situation rather than a sales pitch.
+
+## What managing ads yourself involves
+
+Amazon's campaign manager is free and you do not need special software to use it. What you need is time, on a regular schedule, and a working understanding of how the system behaves. A realistic weekly routine looks like this:
+
+- Download the search term report and add negative keywords for searches that spend without selling.
+- Review keyword bids against your target ACoS and adjust them in small steps.
+- Move converting search terms from automatic campaigns into manual exact-match campaigns.
+- Check budgets have not run out early in the day and adjust pacing.
+- Look at placement reports and adjust top-of-search modifiers where they pay.
+- Note what you changed so you can judge it next week.
+
+Then, less often: build campaigns for new products, review campaign structure as your catalogue grows, test Sponsored Brands and Sponsored Display, and reconcile ad spend against actual profit.
+
+None of this is difficult on its own. The difficulty is doing it every week, consistently, while also running the rest of the business.
+
+## The time and skill it takes
+
+For a small catalogue, a few products with modest spend, the weekly routine can be done in an hour or two once you know what you are looking at. Learning what you are looking at takes longer. Most sellers who manage their own ads well have spent months reading, testing and making mistakes with their own money.
+
+As the catalogue grows, the time grows faster than you expect. Twenty products in two marketplaces is not twice the work of ten in one; it is closer to four times, because every campaign type multiplies across products and countries.
+
+The honest test is this: look at your search term report right now. If you cannot remember the last time you added negative keywords, the routine is already slipping, and the ads are costing more than they should.
+
+## When an Amazon PPC agency makes sense
+
+An agency is worth considering when one or more of these is true:
+
+**Your ad spend is meaningful.** If advertising is a significant monthly cost, a small improvement in efficiency covers a management fee. If you spend very little, it may not.
+
+**You have run out of time.** The ads are being neglected, not because you cannot do it but because something else always comes first.
+
+**You are launching or expanding.** New products and new marketplaces need campaign structures built properly from the start. Fixing a bad structure later is slower than building it right.
+
+**You have plateaued.** You have done the basics, sales are flat, and you are not sure what to try next. A second pair of eyes with experience across many accounts often sees the obvious thing.
+
+**You want the number to be someone's job.** Accountability is worth something. If ACoS is your responsibility, it competes with everything else. If it is the agency's, they answer for it every month.
+
+## What to expect from an agency
+
+A good Amazon PPC agency UK or US sellers can rely on should do the weekly routine above, and do it better than you would, because they do it across many accounts and see patterns you cannot. Beyond that, expect:
+
+- **An audit before a proposal.** They should look at your campaigns before quoting.
+- **A written plan.** Campaign structure, target ACoS, and how success will be measured.
+- **Access through permissions, not passwords.** You add them as a user in Seller Central.
+- **Regular reporting in plain language.** Spend, sales, ACoS, what changed and why.
+- **Someone you can talk to.** Ideally the person actually managing the campaigns.
+- **A fair notice period.** Month to month is normal for Amazon PPC management.
+
+What you should not expect is guaranteed results. Anyone who promises a specific ACoS before seeing your account is guessing.
+
+## How to judge results
+
+Whether you run ads yourself or hire an agency, judge them the same way.
+
+**Know your break-even ACoS first.** It depends on your margin, and it is the only sensible target. We have a full guide to [what a good ACoS looks like](/blog/what-is-a-good-acos) if you have not worked yours out.
+
+**Watch TACoS, not just ACoS.** Total ad spend as a share of total sales tells you whether ads are lifting organic sales or just replacing them.
+
+**Give it time.** Amazon attribution takes days, and restructured campaigns need a few weeks of data before bids settle. Judging an agency after two weeks is unfair; judging them after three months is reasonable.
+
+**Look at profit, not revenue.** Higher sales at a worse margin is not a win. Ask for reporting that shows both.
+
+**Check the work is happening.** Change history in the campaign manager shows every edit. If nothing has changed in a fortnight, nobody is managing the account.
+
+## Making the decision
+
+If your spend is small and you have the time, manage the ads yourself and learn the system. If spend is meaningful and the weekly routine keeps slipping, an agency will usually pay for itself in reduced waste alone.
+
+Our [Amazon PPC management service](/amazon-ppc-management) covers the full weekly routine, campaign builds, and plain-English reporting for UK and US sellers on a fixed monthly fee. It starts with a free audit of your current campaigns, so you can see what we would change before deciding either way.
+`,
+  },
+  {
+    slug: "how-to-choose-an-amazon-agency",
+    title: "How to Choose an Amazon Agency: 10 Questions to Ask",
+    description:
+      "How to choose an Amazon agency: ten questions on reporting, contracts, account access, experience and communication, plus the red flags to watch for.",
+    date: "2026-09-18",
+    excerpt:
+      "Most Amazon agencies sound the same on a sales call. These ten questions separate the ones that will do the work from the ones that will send you a report.",
+    content: `
+Most agencies sound alike on a sales call. They all optimise listings, manage PPC and grow accounts. The differences show up later, in who does the work, how they report, and what happens when something goes wrong. Knowing how to choose an Amazon agency comes down to asking the right questions before you sign, and paying attention to how the answers are given.
+
+Here are the ten we think matter most, with what a good answer sounds like, followed by the red flags that should end the conversation.
+
+## 1. Who will actually do the work on my account?
+
+The person selling to you is often not the person who will log into your Seller Central. Ask who that is, what their experience is, and whether you can speak to them before signing. Ask how many other accounts they manage. There is no perfect number, but if they cannot answer, they do not know either.
+
+## 2. How will you access my account?
+
+The only acceptable answer is as a secondary user through Seller Central's user permissions, with only the permissions the work needs. An agency that asks for your login details is either inexperienced or careless, and either way you are handing over control of your business. You should be able to remove their access yourself, at any time, in one click.
+
+## 3. What does the reporting look like and how often will I get it?
+
+Ask to see a sample report. It should show sales, ad spend, ACoS, and ideally profit, in language you understand, with a note on what changed and why. Monthly is the minimum. Weekly is better for advertising. A report that is only screenshots of Amazon's own dashboards adds nothing you could not see yourself.
+
+## 4. What is the contract length and notice period?
+
+Month to month with a short notice period is normal for a confident agency. Longer commitments are sometimes justified for a large launch or a full catalogue rebuild, but ask why. An agency that insists on twelve months before it has done anything is protecting its income, not your results.
+
+## 5. Do you have experience in my category?
+
+Categories differ more than they look. Supplements, food, cosmetics, toys and electrical goods all have compliance requirements, restricted keywords and approval processes that a generalist can get wrong. Ask what they have sold in your category, and what the specific challenges were. A good Amazon seller consultant will talk about problems as readily as wins.
+
+## 6. What exactly is included, and what costs extra?
+
+Get the scope in writing. Listings, advertising, inventory, customer messages, account health, A+ Content, and reporting should each be either in or out. Ask about limits: number of products, number of marketplaces, hours per month. The exclusions matter more than the inclusions, because they are where surprise invoices come from.
+
+## 7. How do you charge, and what is the fee based on?
+
+Fixed monthly retainer, percentage of sales, percentage of ad spend, or a mix. Each is legitimate, but you need to know which one and what it is calculated on. Be careful with percentage of ad spend for PPC, because it pays the agency more when they spend more of your money.
+
+## 8. How will we communicate, and how quickly do you respond?
+
+Ask which channel, who replies, and what the expected turnaround is for a normal question and for an emergency such as a suspended listing. If the agency is in a different time zone, ask when your working hours overlap. Some of the best Amazon consultant UK sellers use are overseas; the ones that work well are clear about when you can reach them.
+
+## 9. What happens to my listings, images and campaigns if I leave?
+
+Everything created for your account should belong to you: copy, images, A+ Content, campaign structures. Ask for this in the contract. Some agencies build campaigns inside their own tools or accounts, which makes leaving painful. That is not an accident.
+
+## 10. What would you change first, and why?
+
+Any agency worth hiring will have looked at your account before the proposal. Ask what they saw. A specific answer, with reasons, tells you they have done the work and can think. A vague answer about "optimising everything" tells you they have not looked.
+
+## Red flags
+
+Some things should end the conversation regardless of how the other answers went.
+
+- **Guaranteed results.** Nobody can promise a rank, a sales figure or an ACoS before seeing your data. Anyone who does is guessing or lying.
+- **Asking for your password.** Covered above, but it bears repeating.
+- **Reviews or ranking "services".** Paid reviews, incentivised reviews and search manipulation all break Amazon's rules and can get your account suspended. The agency will not be the one that loses the business.
+- **No audit before the quote.** A price given without looking at your account is a price for a generic package, not for your business.
+- **Pressure to sign quickly.** Discounts that expire today exist to stop you asking the questions above.
+- **Vague answers about who does the work.** If they cannot name the person, the work is being passed to whoever is available.
+
+## Putting it together
+
+You do not need an agency to score perfectly on all ten. You need honest answers, a written scope, sensible access, reporting you can read, and a contract you can leave. If those five are in place, the rest is about whether you trust the people.
+
+If you want to run these questions past us, our [Amazon account management](/amazon-account-management) service is for UK and US sellers, on a fixed monthly fee with a written scope and month-to-month terms. Ask us any of the ten. We would rather answer them now than have you find out later.
+`,
+  },
 ];
 
 export default posts;
