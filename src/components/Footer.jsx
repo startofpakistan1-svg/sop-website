@@ -39,6 +39,7 @@ export default function Footer() {
           <div className="foot-col">
             <h4>Company</h4>
             <Link href="/services">Services</Link>
+            <Link href="/amazon-ppc-management">Amazon PPC</Link>
             <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>

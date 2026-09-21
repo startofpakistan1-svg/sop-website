@@ -228,6 +228,12 @@ export default function Services() {
               </div>
             </div>
 
+            {c.id === "marketplace" && (
+              <Link className="cat-link" href="/amazon-ppc-management">
+                Amazon PPC management — full details <span aria-hidden="true">→</span>
+              </Link>
+            )}
+
             <div className="cat-groups">
               {c.groups.map((g) => (
                 <div className="group" key={g.name}>
