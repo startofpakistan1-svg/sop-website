@@ -7,6 +7,7 @@ import { useState } from "react";
 const projects = [
   {
     name: "Standard Medical Store",
+    testimonial: "Standard Medical Store",
     type: "WordPress store",
     tag: "eCommerce",
     body: "A full WordPress store built from the ground up for a Pakistani medical supplies retailer — product catalogue, categories, and ordering. We've maintained and run it for four years since launch, through every update, redesign and product expansion.",

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import Testimonials from "@/components/Testimonials";
+import testimonials from "@/data/testimonials";
 
 export const metadata = {
   title: "Bespoke Ecommerce Website Development | SOP",
@@ -409,6 +411,12 @@ export default function EcommerceWebsiteDevelopment() {
           </div>
         </div>
       </section>
+
+      <Testimonials
+        heading="What web development clients say"
+        intro="From a site we built and still look after. In their words, not ours."
+        items={testimonials.filter((t) => t.service === "Web development")}
+      />
 
       <BlogLinks
         slugs={["custom-website-vs-shopify", "shopify-store-cost"]}

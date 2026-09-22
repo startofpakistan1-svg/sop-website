@@ -1,6 +1,7 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
 import Testimonials from "@/components/Testimonials";
+import testimonials from "@/data/testimonials";
 
 export const metadata = {
   title: "Shopify Development Agency for UK & US Brands | SOP",
@@ -417,6 +418,7 @@ export default function ShopifyDevelopment() {
       <Testimonials
         heading="What Shopify clients say"
         intro="From a store we built and launched. In their words, not ours."
+        items={testimonials.filter((t) => t.service === "Shopify store")}
       />
 
       <BlogLinks

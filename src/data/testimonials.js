@@ -19,6 +19,15 @@ const testimonials = [
     rating: 5,
     quote: "Build a shopify store . Excellent work with best communication and Skill.",
   },
+  {
+    name: "Standard Medical Store",
+    role: "Admin",
+    company: "Standard Medical Store",
+    country: "Pakistan",
+    service: "Web development",
+    rating: 5,
+    quote: "Great Team Quality service on Time delivery of product",
+  },
 ];
 
 export default testimonials;
