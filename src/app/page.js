@@ -1,6 +1,7 @@
 import Link from "next/link";
 import HeroFlow from "@/components/HeroFlow";
 import Schema from "@/components/Schema";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata = {
   title: "SOP | Amazon, Shopify & AI Automation for UK & US Sellers",
@@ -59,14 +60,6 @@ const work = [
     href: "/portfolio",
   },
 ];
-
-// ---- CLIENT REVIEWS ----
-// Add one here as soon as a client sends it. The section stays hidden while empty.
-// {
-//   quote: "They built our store in two weeks and it just worked.",
-//   name: "Client name", role: "Owner", company: "Company", initials: "CN",
-// },
-const testimonials = [];
 
 // Answers may contain [text](/path) links. They render as <Link>s and are
 // stripped to plain text for the FAQPage schema below.
@@ -300,34 +293,10 @@ export default function Home() {
       </section>
 
       {/* TESTIMONIALS */}
-      {testimonials.length > 0 && (
-        <section className="process-band">
-          <div className="wrap">
-            <div className="sec-head">
-              <h2>What clients say</h2>
-              <p>In their words, not ours.</p>
-            </div>
-            <div className="quotes">
-              {testimonials.map((t, i) => (
-                <figure className="quote" key={i}>
-                  <span className="quote-mark" aria-hidden="true">&ldquo;</span>
-                  <blockquote>{t.quote}</blockquote>
-                  <figcaption>
-                    <span className="quote-avatar">{t.initials}</span>
-                    <span>
-                      <strong>{t.name}</strong>
-                      <em>{t.role}{t.company ? `, ${t.company}` : ""}</em>
-                    </span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <Testimonials heading="What our clients say" band />
 
       {/* CTA */}
-      <section style={{ paddingTop: testimonials.length ? 104 : 0 }}>
+      <section>
         <div className="wrap">
           <div className="cta">
             <div className="cta-in">

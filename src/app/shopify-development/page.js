@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import Testimonials from "@/components/Testimonials";
 
 export const metadata = {
   title: "Shopify Development Agency for UK & US Brands | SOP",
@@ -412,6 +413,11 @@ export default function ShopifyDevelopment() {
           </div>
         </div>
       </section>
+
+      <Testimonials
+        heading="What Shopify clients say"
+        intro="From a store we built and launched. In their words, not ours."
+      />
 
       <BlogLinks
         slugs={["shopify-store-cost", "custom-website-vs-shopify"]}

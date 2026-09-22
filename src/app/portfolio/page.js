@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { TestimonialInline } from "@/components/Testimonials";
 import { useState } from "react";
 
 const projects = [
@@ -16,6 +17,7 @@ const projects = [
   },
   {
     name: "AWEX Motorsport",
+    testimonial: "Awex Intl",
     type: "Shopify store",
     tag: "eCommerce",
     body: "A full Shopify store for a motorsport gear brand selling karting suits and gloves. We handled the store build, product catalogue and checkout, then supported the launch — the store went on to generate consistent sales for the client.",
@@ -123,6 +125,7 @@ export default function Portfolio() {
                       Visit the store <span aria-hidden="true">→</span>
                     </a>
                   )}
+                  {p.testimonial && <TestimonialInline company={p.testimonial} />}
                 </div>
               </article>
             ))}
