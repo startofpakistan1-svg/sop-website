@@ -769,7 +769,7 @@ We built a system of AI agents for an international client serving accounting fi
 4. **Review everything for the first month.** Note what you change, and feed it back into the brief.
 5. **Add scheduling once the drafts need few edits.** Then consider a second channel.
 
-If you would rather have the system designed and built for you, our [AI agents and automation services](/services) cover content systems like the one above for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
+If you would rather have the system designed and built for you, our [AI automation services](/ai-automation) cover content systems like the one above, as well as customer replies, admin and reporting, for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
 `,
   },
   {
