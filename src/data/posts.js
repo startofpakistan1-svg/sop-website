@@ -612,7 +612,7 @@ We handled the full Shopify store setup for a motorsport gear brand selling kart
 
 The honest way to get a Shopify store cost is to list what you need: how many products, what the theme needs to do, which payments and shipping you need, and what apps are essential. Then ask for a fixed price against that list.
 
-That is how we quote. Our [Shopify and ecommerce services](/services) cover the full build for UK and US brands, with a written plan and a fixed price before any work starts. Tell us what you sell and we will come back with both.
+That is how we quote. Our [Shopify development services](/shopify-development) cover the full build for UK and US brands, with a written plan and a fixed price before any work starts. Tell us what you sell and we will come back with both.
 `,
   },
   {
@@ -698,7 +698,7 @@ It is not always one or the other. A common arrangement is a custom-coded brand 
 
 Start with the honest questions. How unique does the design need to be? How fast does the site need to be? Who will maintain it? How often will it change? Answer those and the choice usually makes itself.
 
-We build both. Our [web development services](/services) cover Shopify stores, WordPress, and custom-coded sites for businesses in the UK and US, and we will tell you which one fits before quoting rather than steering you to whichever is easier for us. Tell us what the site needs to do and we will come back with a recommendation and a fixed price.
+We build both: [Shopify stores](/shopify-development) when the platform fits, and [bespoke custom-coded ecommerce sites](/ecommerce-website-development) when design control and speed matter more. We will tell you which one fits before quoting rather than steering you to whichever is easier for us. Tell us what the site needs to do and we will come back with a recommendation and a fixed price.
 `,
   },
   {

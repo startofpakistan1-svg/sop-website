@@ -240,6 +240,17 @@ export default function Services() {
               </div>
             )}
 
+            {c.id === "web" && (
+              <div className="cat-links">
+                <Link className="cat-link" href="/shopify-development">
+                  Shopify development <span aria-hidden="true">→</span>
+                </Link>
+                <Link className="cat-link" href="/ecommerce-website-development">
+                  Bespoke ecommerce websites <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            )}
+
             <div className="cat-groups">
               {c.groups.map((g) => (
                 <div className="group" key={g.name}>

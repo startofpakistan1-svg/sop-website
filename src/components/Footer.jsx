@@ -25,6 +25,8 @@ export default function Footer() {
             <Link href="/services">Services</Link>
             <Link href="/amazon-account-management">Amazon Management</Link>
             <Link href="/amazon-ppc-management">Amazon PPC</Link>
+            <Link href="/shopify-development">Shopify Development</Link>
+            <Link href="/ecommerce-website-development">Ecommerce Websites</Link>
             <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/blog">Blog</Link>
