@@ -772,6 +772,360 @@ We built a system of AI agents for an international client serving accounting fi
 If you would rather have the system designed and built for you, our [AI agents and automation services](/services) cover content systems like the one above for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
 `,
   },
+  {
+    slug: "how-to-choose-shopify-development-partner",
+    topic: "web",
+    title: "How to Choose a Shopify Development Partner",
+    description:
+      "How to choose a Shopify development partner: what they should do, the questions to ask, UK and US time zones, contracts, ownership and red flags.",
+    date: "2026-09-22",
+    excerpt:
+      "Most Shopify agencies sound the same until the work starts. Here is what a good development partner actually does, what to ask, and the signs to walk away.",
+    content: `
+Choosing a Shopify development partner is harder than choosing a theme, because the differences do not show up in a demo. Two agencies can quote the same build and deliver very different stores: one fast, owned by you and easy to update, the other slow, held together by apps and awkward to leave.
+
+This guide sets out what a partner should actually do for you, the questions that separate the good ones, and the red flags that should end the conversation.
+
+## What a Shopify development partner does
+
+The word "partner" is used loosely, so it is worth being precise. A Shopify development agency that deserves the name does more than install a theme and upload products. Expect them to:
+
+- Ask what you sell, to whom, and how those people choose, before proposing anything.
+- Recommend a theme, a customised theme or a custom build based on your answers, not on what is easiest for them.
+- Set up payments, shipping, tax and checkout properly and test them on a phone.
+- Build search into the store from the start: titles, structure, speed, schema.
+- Hand over a store you own outright, with a walkthrough of how to run it.
+- Be available afterwards, whether on a retainer or for one-off changes.
+
+If a proposal covers only design and product upload, the rest is either extra or missing.
+
+## Questions to ask before you sign
+
+**Who will do the work?** The person on the sales call is often not the person in your store. Ask who that is and whether you can speak to them.
+
+**Theme or custom, and why?** A good answer references your products and your budget. A vague answer means they have a default they apply to everyone.
+
+**What exactly is in scope?** Products, payments, shipping, tax, SEO, migration, apps, training. Get the exclusions in writing as clearly as the inclusions.
+
+**How do you handle apps?** Every app is a monthly cost and a thing that can break. A careful partner uses as few as the store genuinely needs.
+
+**What does SEO mean in your proposal?** It should mean concrete things: titles and descriptions on every page, image alt text, clean URLs, redirects from any old site, speed checked before launch.
+
+**What happens after launch?** Who fixes things when a Shopify update changes a theme? Is there a retainer, and what does it cover?
+
+## Look at the portfolio properly
+
+A portfolio tells you more than a proposal, if you read it the right way. Open the stores on your phone, not just a laptop. Check how fast they load. Try the checkout as far as the payment step. Look at whether product pages have real titles and descriptions or placeholder text.
+
+Then ask what the agency actually did on each one. "We built it" can mean a full build or a theme install with a logo swapped in. Ask which parts were custom, which were the theme, and what the client needed after launch.
+
+## Communication and time zones
+
+For UK and US store owners, where the partner is based matters less than when you can reach them. Agencies in lower-cost countries can offer the same Shopify development services for less, and many do excellent work. The questions are practical: what are their working hours in your time zone, which channel do you use, and how quickly do they reply to a normal question and to an emergency?
+
+A partner a few hours ahead of the UK can be an advantage, because work is done before your day starts, as long as there is a clear overlap for calls. A partner with no overlap at all is a problem however good they are.
+
+## Contracts and ownership
+
+This is where the most expensive mistakes hide.
+
+- **The Shopify account** should be opened in your name, on your payment card. If the agency opens it under their account, you do not own your store.
+- **The domain** should be registered to you.
+- **The theme code** should live in your store, not in an app or system the agency controls. Ask whether another developer could pick it up without them.
+- **Access** should be through a collaborator account you can remove, never a shared password.
+- **The contract** should say what happens at the end. A fixed project price with a clear handover is normal. A retainer should be optional and cancellable with reasonable notice.
+
+Ask for all of this in writing. An agency that is comfortable with ownership will not hesitate.
+
+## Red flags
+
+Some things should end the conversation regardless of price.
+
+- **A quote before any questions.** They are quoting a package, not your store.
+- **Guaranteed rankings or sales.** Nobody can promise these.
+- **Asking for your Shopify password.** Collaborator access exists for a reason.
+- **Their account, their apps, their code.** Any structure that makes leaving painful is a choice they made.
+- **Pressure to sign today.** Discounts that expire tonight exist to stop you asking the questions above.
+- **No mention of mobile, speed or SEO.** These are not extras.
+
+## Making the decision
+
+You do not need the cheapest partner or the biggest. You need honest answers to the questions above, a written scope, ownership in your name, and someone you can reach during your working day. If those are in place, the rest is whether you trust them.
+
+If you would like to put these questions to us, our [Shopify development services](/shopify-development) for UK and US brands come with a written scope and fixed price, a store opened in your name, and collaborator access you can remove at any time. Ask us any of the above; we would rather answer now than have you find out later.
+`,
+  },
+  {
+    slug: "shopify-seo-checklist",
+    topic: "web",
+    title: "Shopify SEO Checklist for UK & US Stores",
+    description:
+      "A practical Shopify SEO checklist: store structure, product titles, meta titles, alt text, URLs, duplicates, speed, schema, blog posts and internal links.",
+    date: "2026-09-13",
+    excerpt:
+      "Shopify handles the basics, but a store that ranks needs more than the defaults. Work through this checklist section by section.",
+    content: `
+Shopify does a reasonable job of SEO out of the box: it generates a sitemap, handles canonical tags, and makes titles and descriptions editable. That is why so many stores stop there, and why so many stores rank for nothing but their own brand name.
+
+This Shopify SEO checklist goes through the parts that actually move a store up the results, in the order we work through them. You can do most of it yourself in the Shopify admin. The rest is theme work.
+
+## Store structure and collections
+
+Search engines understand a store through its structure. Get this right first, because everything else hangs off it.
+
+- One collection per real shopping category, named the way customers search, not the way your supplier labels things.
+- No more than two or three levels deep: home, collection, product. Sub-collections only where the range genuinely needs them.
+- Every collection reachable from the main navigation or a parent collection, so nothing is orphaned.
+- Collection pages with a short written introduction. A page that is only a grid of products gives search engines very little to work with.
+
+## Product titles and descriptions
+
+The product title is the heaviest signal on the page.
+
+- Lead with what the product is, in the words shoppers use, then the distinguishing detail: material, size, colour, use.
+- Keep it readable. A title that is a list of keywords looks untrustworthy and rarely ranks better.
+- Write a unique description for every product. Supplier copy pasted across a hundred products is duplicate content, and it does not sell.
+- Answer the questions a shopper would ask in a shop: what it does, what it is made of, who it is for, what is in the box.
+
+## Meta titles and descriptions
+
+These are separate from the product title and description, and they are what appears in the search results.
+
+- Set a meta title for every product, collection and page. Shopify will fall back to the product title, but the fallback is rarely ideal.
+- Keep meta titles under about 60 characters so they are not cut off.
+- Write meta descriptions as an invitation to click, under about 155 characters, with the main keyword included naturally.
+- Check the home page meta title. Many stores still show the theme's default.
+
+## Image alt text and image size
+
+Images are where Shopify stores most often leak both rankings and speed.
+
+- Add alt text to every product image: what the product is and, where useful, the variant. Alt text is indexed and it is read by screen readers.
+- Upload images at a sensible size. A phone photo straight from the camera can be several megabytes; the theme will display it at a fraction of that.
+- Use the theme's built-in responsive image handling rather than an app where possible.
+- Name files descriptively before uploading. "blue-linen-shirt-front.jpg" beats "IMG_4021.jpg".
+
+## URLs and duplicate content
+
+Shopify's URL structure creates duplicates that you need to know about.
+
+- A product reached through a collection gets a URL containing the collection path, as well as its own direct URL. Shopify sets a canonical tag pointing to the direct one, but check your theme has not overridden it.
+- Keep product and collection handles short, readable and stable. Changing a handle changes the URL; Shopify offers to create a redirect, and you should accept.
+- Do not let filtered or sorted collection views get indexed. Most themes handle this; check with a site search for your domain plus "sort_by".
+- If you sell on more than one marketplace, make sure the Shopify store is the canonical source of its own content.
+
+## Site speed
+
+Speed is a ranking factor and a conversion factor, and Shopify stores are slower than they need to be more often than not.
+
+- Audit your apps. Every installed app can inject scripts into every page, even ones you no longer use. Remove what you do not need.
+- Choose a lean theme, or have unused sections and scripts removed from the one you have.
+- Compress images and let the theme lazy-load them.
+- Check Core Web Vitals in Google Search Console and test on a real phone, not just a desktop.
+
+## Schema markup
+
+Structured data helps search engines show rich results: price, availability, ratings, breadcrumbs.
+
+- Most themes output basic Product schema. Check it is present and correct with a structured data testing tool.
+- Add Organization and WebSite schema to the home page.
+- If you use a review app, make sure it outputs review schema rather than just displaying stars.
+- Do not add schema for things the page does not actually show.
+
+## Blog content
+
+A blog is how a store ranks for searches that are not product names: how to choose, how to use, how to care for.
+
+- Write for questions your customers actually ask. Autocomplete in Google and in your own site search will tell you what those are.
+- Link from each post to the relevant collections and products, and from products back to the guides.
+- Publish on a rhythm you can keep. Four good posts a year beat twenty thin ones.
+
+## Internal links
+
+Internal links tell search engines which pages matter and help shoppers move through the store.
+
+- Link related products to each other and to their collection.
+- Link from blog posts to products and collections, and back.
+- Put the most important collections in the main navigation and the footer.
+- Fix broken links after any product or collection changes.
+
+## When to bring in help
+
+Most of this checklist is admin work anyone can do. The parts that need a developer are theme changes: removing unused scripts, fixing canonical tags, adding schema, and speed work inside the theme code. If you would rather have a Shopify SEO expert handle both, our [Shopify development and SEO services](/shopify-development) cover this checklist as part of every build, and as ongoing Shopify SEO services for stores that are already live. Tell us your store URL and we will say what we would change first.
+`,
+  },
+  {
+    slug: "woocommerce-to-shopify-migration",
+    topic: "web",
+    title: "WooCommerce to Shopify Migration: Step-by-Step Guide",
+    description:
+      "WooCommerce to Shopify migration, step by step: planning, moving products, customers and orders, 301 redirects to keep rankings, testing and launch.",
+    date: "2026-09-12",
+    excerpt:
+      "Moving a store from WooCommerce to Shopify is a project, not a plugin. Here is the order to do it in, what to protect, and the mistakes that cost rankings.",
+    content: `
+A WooCommerce to Shopify migration is one of the most common platform moves in ecommerce, and one of the most commonly botched. The products usually arrive. What gets lost is search rankings, order history, and the customer accounts that took years to build.
+
+This guide walks through the migration in the order it should happen, from the decision to the launch checklist, with the mistakes to avoid at each stage.
+
+## Why stores move from WooCommerce to Shopify
+
+WooCommerce is flexible and cheap to start. It also runs on WordPress, which means you are responsible for hosting, updates, security, backups and the plugin conflicts that come with all of them. As a store grows, that maintenance turns into real time and real risk.
+
+Shopify takes the hosting, security and checkout off your hands, and the admin is built for selling rather than publishing. The trade is less control and a monthly fee. For most stores past a certain size, that trade is worth making. If you are unsure, our guide to [custom websites vs Shopify themes](/blog/custom-website-vs-shopify) covers the wider decision.
+
+## Step 1: Plan before you touch anything
+
+Start with an inventory of what the current store contains and what needs to come across:
+
+- Products, variants, images, inventory and SKUs
+- Categories and tags, and how they map to Shopify collections
+- Customer accounts and their order history
+- Blog posts and static pages
+- Every URL that currently ranks or receives traffic
+- Plugins, and which Shopify apps or built-in features replace them
+
+Export a full list of URLs from your sitemap and from Google Search Console. This list is the basis of your redirects later, and it is the thing most migrations forget until it is too late.
+
+## Step 2: Move products
+
+Shopify's own importer and third-party migration tools handle the product export from WooCommerce. What they do not handle is cleaning.
+
+Before importing, tidy the WooCommerce data: remove discontinued products, fix inconsistent variant names, and make sure every product has a proper title and description. Migrating a mess just gives you a mess on a new platform.
+
+After importing, spot-check products across categories: images attached, variants correct, prices right, inventory matching. Check a handful in detail rather than assuming the tool got everything.
+
+## Step 3: Move customers and orders
+
+Customer accounts can be imported, but passwords cannot, because they are stored differently on each platform. Customers will need to reset their password on the new store. Plan an email telling them so, sent after launch, not before.
+
+Order history is worth bringing across so that customer service has context and customers can see past purchases. Most migration tools support it. Check that order numbers, totals and statuses came through correctly, because those records matter for accounting and returns.
+
+## Step 4: Keep your rankings with 301 redirects
+
+This is the step that separates a migration that keeps its traffic from one that loses it.
+
+WooCommerce and Shopify structure URLs differently. A product at /product/blue-linen-shirt/ will live at /products/blue-linen-shirt on Shopify, and categories become /collections/. Every old URL that search engines know about needs a 301 redirect to its new equivalent.
+
+- Map every URL from your Step 1 list to its new location: product to product, category to collection, page to page.
+- Import the redirects into Shopify under Navigation, or with a redirect app for large lists.
+- Do not redirect everything to the home page. Search engines treat that as a soft error and the rankings do not transfer.
+- Carry over meta titles and descriptions, so the new pages present the same way in results.
+- Keep the same domain. Changing platform and domain at once doubles the risk.
+
+## Step 5: Theme and apps
+
+Do not try to recreate the WooCommerce site exactly. Choose a Shopify theme that suits the products, customise it, and rebuild the navigation around Shopify collections.
+
+For every WooCommerce plugin, decide whether Shopify does the job natively, whether an app is needed, or whether the feature can be dropped. Fewer apps means a faster store and lower monthly costs. Payments, shipping and tax need to be set up fresh: Shopify Payments where available, shipping zones and rates, and VAT or sales tax settings for the UK or US.
+
+## Step 6: Test everything
+
+Before launch, on a password-protected Shopify store:
+
+- Place test orders through the full checkout on a phone and a desktop.
+- Check the redirects by visiting old URLs and confirming they land on the right new page.
+- Confirm meta titles and descriptions on key pages.
+- Test customer login and password reset.
+- Check email notifications: order confirmation, shipping, password reset.
+- Run a speed test and fix anything obvious.
+
+## Launch checklist
+
+- Point the domain at Shopify and remove the store password.
+- Submit the new sitemap in Google Search Console.
+- Verify redirects again on the live domain.
+- Send the customer email about password resets.
+- Keep the WooCommerce site accessible privately for a few weeks, in case something was missed.
+- Watch Search Console for crawl errors and 404s daily for the first fortnight.
+
+## Common mistakes
+
+- **Migrating without a URL list.** Redirects built from memory miss pages that rank.
+- **Redirecting everything to the home page.** Rankings do not follow.
+- **Changing domain at the same time.** One change at a time.
+- **Importing dirty data.** Clean it first.
+- **Forgetting customer passwords.** Tell people before they find out.
+- **Switching off the old site on launch day.** Keep it for reference.
+
+## Doing it yourself or with help
+
+A small store with clean data can be migrated by its owner with care and a free weekend. Larger catalogues, long order histories and stores with real search traffic are where a mistake costs more than the help. If you would rather hand it to a Shopify migration agency UK and US owners can reach during their working day, our [Shopify migration services](/shopify-development) cover the URL mapping, data move, redirects, theme and testing, with a written plan and fixed price before anything moves.
+`,
+  },
+  {
+    slug: "online-store-redesign-signs",
+    topic: "web",
+    title: "Does Your Online Store Need a Redesign? 7 Signs",
+    description:
+      "Seven signs your store needs website redesign services: slow speed, poor mobile experience, dated design, low conversions, weak SEO and platform limits.",
+    date: "2026-09-11",
+    excerpt:
+      "Stores rarely fail all at once. They slip. Here are seven signs that a redesign has stopped being optional, and what a good redesign actually involves.",
+    content: `
+Online stores rarely fail suddenly. They slip: a little slower each year, a little more awkward on a phone, a few more workarounds in the admin. By the time the owner is searching for website redesign services, the site has usually been costing sales for a while.
+
+Here are the seven signs we look for when a store owner asks whether a redesign is worth it, followed by what a good ecommerce website redesign actually involves.
+
+## 1. The site is slow
+
+Speed is the first thing to check, because it affects everything else: rankings, bounce rate, conversion. Open your store on a phone using mobile data, not office Wi-Fi, and count. If the product grid takes more than a few seconds to appear, visitors are leaving before they see it.
+
+Slowness usually comes from accumulation: a theme patched with apps, oversized images, scripts left behind by tools you stopped using. Sometimes it can be cleaned up in place. Often the cheaper fix is to rebuild without the weight.
+
+## 2. It is hard to use on a phone
+
+Most shoppers will see your store on a phone first. If the navigation needs a magnifying glass, the product images crop badly, the filters do not work, or the checkout asks for a pinch and zoom, you are losing the majority of your visitors at the point they were ready to buy.
+
+Test it yourself, honestly, on a small screen. Then ask someone who has never used the site to buy something while you watch.
+
+## 3. The design looks dated
+
+Design ages faster online than in print. A store built five or six years ago tends to show it: small photography, cluttered layouts, fonts and colours from a different era. Shoppers may not be able to say what is wrong, but they notice, and they read it as a signal about the business.
+
+The test is comparison. Open your store next to the two or three competitors your customers also consider. If yours looks like the older option, it is being judged that way.
+
+## 4. Conversions are low and falling
+
+Traffic without sales is a design problem more often than a product problem. If visitors arrive, browse and leave without adding to cart, something on the page is stopping them: unclear product information, missing trust signals, a confusing path to checkout, or a checkout that asks for too much.
+
+Look at where people leave. If it is the product page, the page is not answering their questions. If it is the cart or checkout, the process is losing them.
+
+## 5. It is hard to update
+
+If adding a product means calling a developer, if a seasonal banner takes a week, if you avoid changing anything because something else might break, the store is working against you. A well-built store lets you change products, prices, content and promotions yourself, and only needs a developer for design or feature changes.
+
+## 6. Search traffic is weak
+
+A store that only appears in search for its own brand name is invisible to new customers. Weak SEO often traces back to structure: thin collection pages, duplicate product descriptions, no blog, missing titles and alt text, and speed problems from sign one. A redesign is the natural moment to fix the structure, because it is far harder to bolt on afterwards.
+
+## 7. The platform is holding you back
+
+Sometimes the design is fine and the platform is the limit. You want a layout the theme cannot do. You need a feature no app provides. Monthly fees keep rising as apps pile up. Or the site is on a page builder that makes every change slow and every page heavy.
+
+At that point the question is not just "redesign?" but "redesign on what?" For some stores the answer is a better theme on the same platform. For others it is a bespoke ecommerce website, custom-coded around the products, with no builder and no theme underneath. Our guide to [custom websites vs Shopify themes](/blog/custom-website-vs-shopify) covers that decision.
+
+## What a redesign actually involves
+
+A redesign is not a new coat of paint. Done properly, it starts with measurement and ends with a site that keeps what worked.
+
+**Measure first.** Which pages rank, which convert, where visitors leave, how fast the site really is. This tells you what to keep and what to fix, and it gives you a baseline to judge the new site against.
+
+**Structure before design.** Collections, navigation and the path to checkout are decided before anything is drawn. Most conversion problems live here.
+
+**Design around the products.** Photography, layout and copy that suit what you sell, tested on a phone before a desktop.
+
+**Rebuild, with speed in mind.** Whether on a platform theme or custom-coded, the new site should carry only what it needs.
+
+**Protect the rankings.** Every old URL redirected to its new equivalent, titles and descriptions carried over, the sitemap resubmitted. A redesign that loses search traffic has failed, however good it looks.
+
+**Hand over properly.** You should be able to run the store day to day without a developer, and the code should be yours.
+
+## If you recognised more than two of these
+
+One sign can usually be fixed in place. Three or more, and the fixes start to cost more than a rebuild. If you would like an honest opinion on your store, our [bespoke ecommerce website development](/ecommerce-website-development) service starts with a review of what the current site does well and badly, and we will tell you whether it needs a redesign, a rebuild, or just a few fixes, before quoting anything.
+`,
+  },
 ];
 
 export default posts;
