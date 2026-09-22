@@ -6,11 +6,11 @@ import { useState } from "react";
 const team = [
   {
     name: "Shahzaib Ali",
-    role: "Chief Executive Officer",
+    role: "Chief Executive Officer & Co-Founder",
     bio: "Leads SOP's direction, client relationships and growth across the marketplaces we operate on.",
     photo: "/team/shahzaib.jpeg",
     initials: "SA",
-    linkedin: null,
+    linkedin: "https://www.linkedin.com/in/alidar-ecommerce",
   },
   {
     name: "Qamar Shahzad",

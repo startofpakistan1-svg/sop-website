@@ -55,7 +55,8 @@ export default function Schema() {
       {
         "@type": "Person",
         name: "Shahzaib Ali",
-        jobTitle: "Chief Executive Officer",
+        jobTitle: "Chief Executive Officer & Co-Founder",
+        sameAs: "https://www.linkedin.com/in/alidar-ecommerce",
       },
     ],
     contactPoint: {
