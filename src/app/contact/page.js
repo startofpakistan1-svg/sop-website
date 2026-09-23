@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@/lib/track";
 
 const ACCESS_KEY = "d2c6863a-7274-4b69-b3fe-02afd91f87e7";
 
@@ -79,6 +80,7 @@ export default function Contact() {
 
       if (data.success) {
         setStatus("sent");
+        track("contact_form_submit", { form: "contact" });
       } else {
         setStatus("error");
         setError("Something went wrong. Please WhatsApp us instead.");
@@ -97,6 +99,7 @@ export default function Contact() {
       `Phone: ${form.phone}%0A` +
       `Service: ${form.service}%0A%0A` +
       `${form.message}`;
+    track("whatsapp_click", { location: "contact_form", page: "/contact" });
     window.open(`https://api.whatsapp.com/send?phone=923101375475&text=${text}`, "_blank");
   };
 

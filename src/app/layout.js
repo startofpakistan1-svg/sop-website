@@ -13,6 +13,7 @@ import Ticker from "@/components/Ticker";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
+import LinkTracker from "@/components/LinkTracker";
 import ChatWidget from "@/components/ChatWidget";
 
 export const metadata = {
@@ -72,6 +73,7 @@ export default function RootLayout({ children }) {
         <WhatsAppButton />
         <ChatWidget />
         <ScrollReveal />
+        <LinkTracker />
       </body>
     </html>
   );

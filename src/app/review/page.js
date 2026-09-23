@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { track } from "@/lib/track";
 
 const ACCESS_KEY = "d2c6863a-7274-4b69-b3fe-02afd91f87e7";
 
@@ -73,8 +74,10 @@ export default function Review() {
       });
 
       const data = await res.json();
-      if (data.success) setStatus("sent");
-      else {
+      if (data.success) {
+        setStatus("sent");
+        track("review_submit", { form: "review" });
+      } else {
         setStatus("error");
         setError("Something went wrong. Please try again, or WhatsApp us.");
       }

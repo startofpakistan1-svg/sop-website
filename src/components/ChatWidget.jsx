@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { track } from "@/lib/track";
 
 const GREETING =
   "Hi — I'm SOP's assistant. Ask me about stores, Amazon accounts, or AI agents, and I'll point you the right way.";
@@ -70,6 +71,7 @@ export default function ChatWidget() {
         body: JSON.stringify({ messages: next }),
       });
       const data = await res.json();
+      if (data.leadSaved) track("chat_lead", { source: "chatbot" });
       setMessages([
         ...next,
         {
