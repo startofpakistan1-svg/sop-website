@@ -71,6 +71,13 @@ export default function Footer() {
             <h4>Legal</h4>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
+            <a
+              href="https://www.designrush.com/agency/website-design-development"
+              rel="nofollow noreferrer"
+              target="_blank"
+            >
+              As seen on DesignRush
+            </a>
           </div>
         </div>
       </div>
