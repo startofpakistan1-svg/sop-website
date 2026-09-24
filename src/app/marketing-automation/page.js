@@ -222,7 +222,11 @@ export default function MarketingAutomation() {
             <p>
               Marketing automation is the unglamorous fix: the follow-up
               happens whether or not anyone remembers, and it goes to the
-              people it suits. Done well, it means fewer emails, not more.
+              people it suits. Done well, it means fewer emails, not more. If
+              the repetitive work you want gone is admin, reporting or
+              customer replies rather than marketing, that is{" "}
+              <Link href="/ai-automation">AI and business automation</Link>{" "}
+              instead.
             </p>
           </div>
           <div className="leak-card">

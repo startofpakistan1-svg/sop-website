@@ -148,6 +148,20 @@ const categories = [
           "Connecting tools that don't talk to each other",
         ],
       },
+      {
+        name: "Marketing automation",
+        lead:
+          "The follow-up that happens whether or not anyone remembers — email sequences, a CRM you can trust, and segments built on what people actually did.",
+        items: [
+          "CRM setup, clean records and lifecycle stages",
+          "Website and enquiry forms wired into the CRM",
+          "Segmentation from behaviour, not assumptions",
+          "Welcome, nurture and re-engagement sequences",
+          "Triggered emails and internal alerts",
+          "Reporting on which sequences earn their place",
+        ],
+        link: { href: "/marketing-automation", label: "Marketing automation services" },
+      },
     ],
   },
   {
@@ -283,6 +297,9 @@ export default function Services() {
               <div className="cat-links">
                 <Link className="cat-link" href="/ai-automation">
                   AI automation for business <span aria-hidden="true">→</span>
+                </Link>
+                <Link className="cat-link" href="/marketing-automation">
+                  Marketing automation <span aria-hidden="true">→</span>
                 </Link>
               </div>
             )}

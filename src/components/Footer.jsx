@@ -28,6 +28,7 @@ export default function Footer() {
             <Link href="/shopify-development">Shopify Development</Link>
             <Link href="/ecommerce-website-development">Ecommerce Websites</Link>
             <Link href="/ai-automation">AI Automation</Link>
+            <Link href="/marketing-automation">Marketing Automation</Link>
             <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/blog">Blog</Link>

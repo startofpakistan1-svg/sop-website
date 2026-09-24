@@ -358,7 +358,9 @@ export default function AIAutomation() {
             runs on a schedule rather than on somebody&apos;s memory — moving
             information between tools, drafting documents from templates,
             sending reminders and chasers. Content is planned, drafted and
-            scheduled, with you approving the plan.
+            scheduled, with you approving the plan. Email sequences, CRM setup
+            and lead nurturing are a different job, and they live on our{" "}
+            <Link href="/marketing-automation">marketing automation</Link> page.
           </p>
           <p>
             Having an automation agency UK businesses can reach during their
