@@ -18,25 +18,25 @@ const platforms = [
 const services = [
   {
     title: "Marketplace accounts",
-    body: "Seller accounts set up and run end to end — listings, pricing, optimisation and the daily work nobody wants to do themselves.",
+    body: "Seller accounts set up and run end to end, so the daily work stops landing on you. We write and optimise the listings, manage Sponsored Products, Brands and Display campaigns, keep stock moving before it runs out and watch account health so problems surface before Amazon raises them. Hand over the whole account or only the advertising.",
     chips: ["Amazon", "eBay", "Walmart", "Etsy"],
     img: "/icons/marketplace.svg",
   },
   {
     title: "Stores that sell",
-    body: "Shopify, WordPress, or hand-coded from scratch. Fast to load, clear on a phone, and built to be found in search.",
+    body: "Shopify, WordPress, or hand-coded from scratch — fast to load, clear on a phone, and built to be found in search. Products, payments, shipping and tax settings are part of the build rather than an afterthought. We also move stores between platforms and redirect every old URL so the rankings come with you.",
     chips: ["Shopify", "WordPress", "Custom build"],
     img: "/icons/web.svg",
   },
   {
     title: "AI agents",
-    body: "Assistants that answer customers at 2am, qualify leads while you sleep, and publish content without being asked twice.",
+    body: "Assistants that answer customers at 2am, sort enquiries while you sleep, and publish content without being asked twice. Each system is built around a process you already have, with review steps so nothing reaches a customer unchecked. Most start with one job — an inbox, a weekly report, a content calendar — and widen once that one is behaving.",
     chips: ["Chatbots", "Automation", "Content"],
     img: "/icons/ai.svg",
   },
   {
     title: "Everything around it",
-    body: "Branding, SEO, Google Business, and the maintenance that keeps all of the above still working six months from now.",
+    body: "Branding, SEO, Google Business and the maintenance that keeps everything above still working six months from now. Search work covers the technical side and the writing, not a keyword list handed over as a deliverable. Maintenance means updates, fixes, and somebody to call when something breaks.",
     chips: ["Branding", "SEO", "Maintenance"],
     img: "/icons/digital.svg",
   },
@@ -69,7 +69,7 @@ const faqs = [
     a: "We run Amazon seller accounts and PPC campaigns, build and maintain Shopify, WordPress and custom-coded stores, and design AI agent systems that handle content and customer operations. Most clients hand us one of those and end up handing us two. Everything is on a fixed fee, with one person as your point of contact. See the full list on our [services page](/services).",
   },
   {
-    q: "Do you work with sellers in the UK and US?",
+    q: "Do you work with sellers outside Pakistan?",
     a: "Yes. Most of our clients sell on Amazon.co.uk or Amazon.com, and we also work with businesses in Pakistan and India. We are four to five hours ahead of the UK, so the daily work on your account is usually finished before your morning, and we overlap with UK afternoons and US mornings for calls and messages.",
   },
   {
@@ -85,7 +85,15 @@ const faqs = [
     a: "Both. Shopify when you want a proven checkout and fast launch, WordPress or WooCommerce when that fits better, and hand-coded HTML, CSS and JavaScript when design control and speed matter most. Product setup, payments, shipping and tax are part of every build. We will tell you which one fits before quoting. See [web development on our services page](/services).",
   },
   {
-    q: "How do we get started?",
+    q: "Which marketplaces do you work with?",
+    a: "Amazon UK and Amazon US most often, and the wider EU marketplaces where a brand already sells there. We also work on eBay, Walmart Marketplace and Etsy, and on own-store platforms including Shopify, WooCommerce and WordPress. If you sell somewhere we have not worked, we will say so plainly rather than learn on your account.",
+  },
+  {
+    q: "Do you handle both the store and the advertising side?",
+    a: "Yes, and it usually works better that way. Advertising sends the traffic, but the listing or product page decides whether that traffic buys, so treating the two separately is how budgets get wasted. You can hire us for only one — plenty of clients do — but if the ads are underperforming because the page is weak, we will tell you that before taking the advertising work.",
+  },
+  {
+    q: "How do projects usually start?",
     a: "Send a message through the [contact page](/contact) or on WhatsApp with what you sell and where you are stuck. We reply the same working day, usually within a few hours. If it makes sense we have a short call, then you get a written plan and a fixed price. If it is a fit we start when you are ready; if not, you keep the plan.",
   },
 ];
@@ -162,6 +170,35 @@ export default function Home() {
               <span key={i}>{p}</span>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* INTRO */}
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>What we do, and who we do it for</h2>
+          <p>
+            SOP is an ecommerce and automation studio. We run Amazon seller
+            accounts, build and look after online stores, and put automation
+            behind the repetitive work that quietly eats a week. Three things,
+            done by the same small team, because for most of our clients they
+            are the same problem wearing different clothes.
+          </p>
+          <p>
+            Most of the people we work with are Amazon sellers and online
+            retailers in the UK and US, usually at the point where the owner is
+            still writing the listings, watching the ads and answering the
+            customer messages personally, and has run out of hours to keep
+            doing it well.
+          </p>
+          <p>
+            That is the gap we fill. You keep the product decisions and the
+            supplier relationships; we take the daily running — listings that
+            need rewriting, campaigns that need watching, stock that needs
+            ordering, a store that needs to stay fast. One point of contact, a
+            written scope before anything starts, and every account in your
+            name.
+          </p>
         </div>
       </section>
 
@@ -243,6 +280,44 @@ export default function Home() {
       </section>
 
       {/* WHO WE WORK WITH */}
+      <section>
+        <div className="wrap prose">
+          <h2>Who we work with</h2>
+          <p>
+            Three kinds of business end up here, and they want different
+            things from us.
+          </p>
+          <p>
+            <strong>Amazon sellers.</strong> Brands on Amazon.co.uk or
+            Amazon.com that need the account run properly: listings written and
+            optimised, advertising reviewed every week, stock ordered before it
+            runs out, account health checked rather than discovered. Some hand
+            over the whole account; others keep the operations and give us the
+            advertising.
+          </p>
+          <p>
+            <strong>Shopify and online store owners.</strong> Retailers who
+            need a store built, moved off another platform, or rebuilt because
+            it has grown slow and dated. The work usually includes the parts
+            that get forgotten — payments, shipping and tax settings, product
+            data, and the search structure that decides whether anyone finds
+            the store at all.
+          </p>
+          <p>
+            <strong>Businesses automating admin.</strong> Companies in and
+            outside ecommerce where the same work repeats every week: customer
+            replies, reports assembled by hand, information retyped between
+            tools, content that never quite gets published.
+          </p>
+          <p>
+            What they have in common is wanting one team accountable rather
+            than three freelancers who never speak. If you need a large agency
+            with account directors between you and the work, we are not that.
+            If you would rather talk to the person doing it, we are.
+          </p>
+        </div>
+      </section>
+
       <section className="process-band">
         <div className="wrap prose">
           <h2>Built for sellers in the UK and US, run from Pakistan</h2>
