@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 360" width="520" height="360" fill="none" font-family="Plus Jakarta Sans, system-ui, sans-serif">
+<defs>
+<linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B5CE6"/><stop offset="1" stop-color="#12296B"/></linearGradient>
+<linearGradient id="o" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FBB016"/><stop offset="1" stop-color="#F5871F"/></linearGradient>
+<filter id="s" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="7" stdDeviation="11" flood-color="#0B1226" flood-opacity=".15"/></filter>
+</defs>
+
+<!-- a sequence: contact card, branching into two emails -->
+<path d="M212 116 C250 116 250 176 288 176" stroke="#E4EAF5" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M212 116 C250 116 250 252 288 252" stroke="#E4EAF5" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M212 116 C250 116 250 176 288 176" stroke="url(#a)" stroke-width="3" fill="none" stroke-linecap="round" stroke-dasharray="5 9"/>
+
+<g filter="url(#s)">
+<rect x="70" y="86" width="142" height="62" rx="14" fill="#fff" stroke="#E4EAF5"/>
+<circle cx="100" cy="117" r="14" fill="#EEF3FD"/>
+<circle cx="100" cy="112" r="5" fill="#2B5CE6"/>
+<path d="M92 126c2-5 5-7 8-7s6 2 8 7" fill="#2B5CE6"/>
+<rect x="124" y="106" width="64" height="8" rx="4" fill="#0B1226"/>
+<rect x="124" y="122" width="44" height="7" rx="3.5" fill="#EEF3FD"/>
+</g>
+
+<g filter="url(#s)">
+<rect x="288" y="146" width="150" height="60" rx="14" fill="#fff" stroke="#E4EAF5"/>
+<rect x="288" y="146" width="150" height="24" rx="14" fill="url(#a)"/>
+<rect x="288" y="158" width="150" height="12" fill="url(#a)"/>
+<text x="302" y="163" fill="#fff" font-size="10" font-weight="700">Welcome</text>
+<rect x="302" y="180" width="86" height="7" rx="3.5" fill="#0B1226"/>
+<rect x="302" y="192" width="110" height="6" rx="3" fill="#EEF3FD"/>
+</g>
+
+<g filter="url(#s)">
+<rect x="288" y="222" width="150" height="60" rx="14" fill="#fff" stroke="#E4EAF5"/>
+<rect x="288" y="222" width="150" height="24" rx="14" fill="#EEF3FD"/>
+<rect x="288" y="234" width="150" height="12" fill="#EEF3FD"/>
+<text x="302" y="239" fill="#12296B" font-size="10" font-weight="700">Follow-up</text>
+<rect x="302" y="256" width="72" height="7" rx="3.5" fill="#0B1226"/>
+<rect x="302" y="268" width="104" height="6" rx="3" fill="#EEF3FD"/>
+</g>
+
+<!-- envelope badge -->
+<g filter="url(#s)">
+<circle cx="120" cy="248" r="42" fill="url(#o)"/>
+<rect x="98" y="232" width="44" height="32" rx="5" stroke="#fff" stroke-width="4.5" fill="none"/>
+<path d="M99 236l21 15 21-15" stroke="#fff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
