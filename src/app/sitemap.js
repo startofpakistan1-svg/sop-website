@@ -12,6 +12,7 @@ export default function sitemap() {
     { url: `${base}/shopify-development`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/ecommerce-website-development`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/ai-automation`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${base}/marketing-automation`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${base}/portfolio`,  lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${base}/blog`,       lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     ...posts.map((p) => ({
