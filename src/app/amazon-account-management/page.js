@@ -4,7 +4,7 @@ import BlogLinks from "@/components/BlogLinks";
 export const metadata = {
   title: "Amazon Account Management Services | SOP",
   description:
-    "Full Amazon account management services for UK and US sellers: listings, Seller Central, account health, PPC and reporting.",
+    "Full service Amazon agency for UK and US sellers. Seller Central and Vendor Central account management, listings and catalogue support.",
   alternates: { canonical: "/amazon-account-management" },
 };
 
@@ -222,6 +222,8 @@ const faqs = [
   { q: "Do you help with Amazon Brand Registry?", a: "Yes. We guide you through the trademark requirements, handle the Brand Registry application, and once you're approved we build your Brand Store and A+ content." },
   { q: "How much does Amazon account management cost?", a: "A fixed monthly fee based on how many products and marketplaces you run. We send the exact figure with the plan, usually within a day of looking at your account — no percentage of your sales and no hourly billing." },
   { q: "Which Amazon marketplaces do you manage?", a: "Amazon UK and Amazon US most often. Tell us where else you sell and we'll say honestly whether we can take it on." },
+  { q: "Do you act as our Amazon account manager or work alongside our team?", a: "Either, and we will be clear about which. Some sellers hand over the account entirely and we act as the account manager, which is what most of this page describes. Others already have staff and want us on specific parts — advertising, listings, or a catalogue clean-up — reporting in to their own manager. We agree in writing which parts are ours and which stay with your team, so nothing falls between the two." },
+  { q: "Do you support Vendor Central as well as Seller Central?", a: "Yes, though most sellers we work with are on Seller Central, and that is where our daily routine sits. On Vendor Central we cover the catalogue and listing side and the reporting. The two consoles behave differently, so tell us which you are on and what you need covered, and we will say plainly what we would take on rather than working it out on your account." },
   { q: "How much of my time will it take?", a: "Very little once we're set up. We'll need you for product decisions, supplier questions and approving major changes. Everything else we handle." },
   { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. Most day-to-day work is finished before your morning, and we overlap with your afternoon for calls." },
 ];
@@ -382,6 +384,40 @@ export default function AmazonAccountManagement() {
               feet and established brands that want a second pair of eyes.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* FULL SERVICE */}
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>Working with a full service Amazon agency</h2>
+          <p>
+            &ldquo;Full service&rdquo; gets used loosely, so here is what it
+            means with us. As an Amazon account management agency we take on
+            the account as a whole rather than a list of tasks: listings and
+            catalogue, advertising, inventory, pricing, customer messages,
+            account health and reporting, run by one team that sees how each
+            part affects the others.
+          </p>
+          <p>
+            That is the difference from hiring piecemeal. A freelancer can
+            rewrite your pages but never sees what advertising is spending. A
+            virtual assistant can answer messages but is not deciding
+            strategy. An Amazon listing agency will improve the catalogue and
+            stop at the catalogue.
+          </p>
+          <p>
+            Some sellers want advice rather than hands on the account. Our
+            Amazon consultancy work covers that: an honest read of where the
+            account stands, what to fix first, and how to plan a launch or a
+            new marketplace, with your own team doing the work. Sellers on
+            Amazon.co.uk often want both, and use us as their Amazon
+            consultant UK alongside the team actually running the account.
+          </p>
+          <p>
+            Tell us which console you sell through and how much you want to
+            hand over, and we will scope it in writing before anything starts.
+          </p>
         </div>
       </section>
 

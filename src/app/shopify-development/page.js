@@ -4,9 +4,9 @@ import Testimonials from "@/components/Testimonials";
 import testimonials from "@/data/testimonials";
 
 export const metadata = {
-  title: "Shopify Development Agency for UK & US Brands | SOP",
+  title: "Shopify Development & SEO Agency | SOP",
   description:
-    "Shopify development services for UK and US brands: store builds, custom themes, Shopify SEO and migrations from WooCommerce, all on a fixed price.",
+    "Shopify store builds, migrations and Shopify SEO for UK and US brands. Work with a Shopify SEO consultant who handles theme, speed and structure.",
   alternates: { canonical: "/shopify-development" },
 };
 
@@ -181,6 +181,8 @@ const faqs = [
   { q: "Can you migrate my store from WooCommerce to Shopify?", a: "Yes. Our Shopify migration services move products, variants, images, customers and order history, redirect every old URL so you keep your search rankings, and reconnect payments, shipping, email and any marketplace integrations. The old store stays live until the new one is tested." },
   { q: "Do you handle Shopify SEO as well as the build?", a: "Yes, and we'd rather do it during the build than fix it afterwards. Titles, descriptions, URL structure, schema markup, image alt text and speed are part of every store we ship. Ongoing Shopify SEO services — content, collection pages, blog — are available separately if you want to keep growing search traffic." },
   { q: "How do you charge for Shopify web development?", a: "A fixed project price based on the scope we agree in writing: number of products, how far from the theme you want to go, which integrations you need. No hourly billing and no surprises halfway through. Ongoing support is a fixed monthly retainer if you want it." },
+  { q: "Do you offer Shopify SEO as a standalone service?", a: "Yes. We would rather build SEO into a store from the start, but plenty of stores are already live. Standalone work begins with an audit of structure, speed, indexing and content, and you get the findings in writing with what we would change and in what order. From there it can be a one-off round of fixes or ongoing work on collections, content and internal links, at a fixed price agreed before we start." },
+  { q: "What does a Shopify SEO consultant actually change on my store?", a: "Mostly things you cannot reach from the Shopify admin: canonical tags, schema markup, heading structure, image handling, and the unused scripts and apps slowing your pages down. Alongside that sits the content work — collection page copy, unique product descriptions, page titles and meta descriptions, and internal links between products, collections and guides. You see what we propose before anything changes, and we tell you what was changed and why." },
   { q: "Will I own the store when it's done?", a: "Completely. The Shopify account, the domain, the theme code and every app are in your name from day one. We work through a collaborator account that you can remove at any time." },
 ];
 
@@ -281,6 +283,45 @@ export default function ShopifyDevelopment() {
           </div>
         </section>
       ))}
+
+      {/* SHOPIFY SEO */}
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>Shopify SEO services</h2>
+          <p>
+            Most Shopify stores rank for their own brand name and very little
+            else. The reasons are usually structural rather than mysterious,
+            which is why it helps to have a Shopify SEO consultant look at the
+            store itself instead of working down a generic checklist.
+          </p>
+          <p>
+            We start with collection and product page structure. Collections
+            are named the way customers search and given a written
+            introduction, not left as a bare grid of products, and product
+            titles and descriptions are made unique instead of repeating
+            supplier copy across the range.
+          </p>
+          <p>
+            Then site speed. Every installed app can add scripts to every
+            page, including apps you no longer use, so the theme gets audited,
+            images are sized and lazy-loaded, and Core Web Vitals are checked
+            on a real phone rather than a fast desktop.
+          </p>
+          <p>
+            Variants are the quiet problem. Shopify can serve the same product
+            through several URLs, so canonical tags need to point at one
+            version and filtered collection views should stay out of the
+            index. Internal linking is the last piece: products linked to
+            their collections and to related products, guides linked to the
+            products they discuss, and the collections that matter reachable
+            from the main navigation.
+          </p>
+          <p>
+            Our SEO services for Shopify are part of every store we build, and
+            a Shopify SEO specialist can work on a store that is already live.
+          </p>
+        </div>
+      </section>
 
       {/* COMPARISON */}
       <section>

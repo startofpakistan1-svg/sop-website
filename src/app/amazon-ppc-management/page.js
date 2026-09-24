@@ -2,9 +2,9 @@ import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
 
 export const metadata = {
-  title: "Amazon PPC Agency for UK & US Sellers | SOP",
+  title: "Amazon Advertising Agency for UK & US Sellers | SOP",
   description:
-    "Amazon PPC management services for UK and US sellers. Campaign setup, bid management, keyword research and clear monthly reporting.",
+    "Amazon ads management for UK and US sellers: Sponsored Products, Brands and Display, managed by an Amazon PPC specialist.",
   alternates: { canonical: "/amazon-ppc-management" },
 };
 
@@ -58,6 +58,8 @@ const faqs = [
   { q: "How quickly will I see results?", a: "Wasted spend usually drops in the first two to three weeks, as negatives and bid cuts take effect. Sales growth takes longer — typically six to eight weeks for campaigns to gather enough data to scale properly." },
   { q: "Is there a minimum contract?", a: "No long contract. Month to month, with notice at the end of any month. We'd rather keep you because it's working." },
   { q: "Which marketplaces do you cover?", a: "Amazon UK and Amazon US most often, and the wider EU marketplaces too. We work to your time zone, not ours." },
+  { q: "Do you work with sellers on Amazon.co.uk as well as Amazon.com?", a: "Yes, and often both for the same brand. Each marketplace has its own advertising console, its own search terms and its own competitors, so campaigns are built and managed per marketplace rather than copied across and hoped for. We report on them separately too, so you can see which marketplace is carrying the account and where the next product should launch." },
+  { q: "What's the difference between an Amazon ads agency and a PPC specialist?", a: "Mostly scale, and who does the work. A specialist is one person running your campaigns, which is direct but limited to what one person can cover. An agency brings a team and a wider scope, with the risk that the person on the sales call isn't the person in your account. We sit deliberately in between: you talk to the person managing your campaigns, with campaign builds, weekly optimisation, reporting and the listing side behind them." },
   { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. That means optimisation work is usually done before your working day starts, and we overlap with your afternoon for calls." },
 ];
 
@@ -133,7 +135,7 @@ export default function AmazonPPC() {
         <div className="wrap">
           <div>
             <div className="svc-kicker">Amazon · UK &amp; US</div>
-            <h1>The Amazon PPC Agency that stops the waste first.</h1>
+            <h1>The Amazon Advertising Agency that stops the waste first.</h1>
             <p>
               Amazon PPC management for sellers in the UK and US: campaign
               setup, keyword research, bid management and weekly reporting. Fixed monthly fee.
@@ -213,6 +215,45 @@ export default function AmazonPPC() {
               </li>
             ))}
           </ol>
+        </div>
+      </section>
+
+      {/* ADS MANAGEMENT */}
+      <section>
+        <div className="wrap prose">
+          <h2>Amazon ads management</h2>
+          <p>
+            Amazon gives you three main ad types, and they do different jobs.
+            Run together with a plan for each, they support one another. Run as
+            one undifferentiated lump of spend, they compete with each other
+            for the same clicks.
+          </p>
+          <p>
+            <strong>Sponsored Products</strong> are the workhorse. They put
+            individual products into search results and onto competitor
+            listings, and most of the weekly work lives here: keyword and
+            competitor ASIN targeting, negative keywords, bid adjustments and
+            placement control.
+          </p>
+          <p>
+            <strong>Sponsored Brands</strong> put your logo, a headline and a
+            group of products at the top of search. They suit brands enrolled
+            in Brand Registry with a range worth showing, and they can send
+            shoppers to a Brand Store rather than a single listing.
+          </p>
+          <p>
+            <strong>Sponsored Display</strong> reaches shoppers on and off
+            Amazon, including people who viewed your product without buying
+            and audiences browsing similar categories.
+          </p>
+          <p>
+            Our Amazon PPC services cover all three, managed by the
+            Amazon PPC specialist who actually logs into your account, not
+            someone relaying messages. For the wider Amazon marketing services that
+            sit around advertising — listings, images and A+ content that
+            decide whether a click converts — see our{" "}
+            <Link href="/amazon-account-management">full Amazon account management</Link>.
+          </p>
         </div>
       </section>
 

@@ -17,9 +17,7 @@ const categories = [
           "Seller Central account setup",
           "Brand Registry and brand store",
           "Product listing creation",
-          "Listing optimisation and SEO titles",
           "A+ / Enhanced Brand Content",
-          "Keyword and competitor research",
           "PPC campaign setup and management",
           "FBA and FBM setup",
           "Inventory and order management",
@@ -27,6 +25,36 @@ const categories = [
           "Suspension appeals and reinstatement",
           "Returns and customer messaging",
         ],
+      },
+      {
+        name: "Amazon SEO services",
+        lead:
+          "Getting found inside Amazon search. As an Amazon SEO agency we work on the listing and the catalogue rather than chasing rank tricks, and you deal directly with the Amazon SEO expert doing the work.",
+        items: [
+          "Keyword research from real search-term data",
+          "Listing optimisation and SEO titles",
+          "Bullet points and description copy",
+          "Backend search terms",
+          "Category and browse node placement",
+          "A+ content written for search and conversion",
+          "Indexing and suppressed-listing checks",
+          "Competitor listing and keyword analysis",
+        ],
+        link: { href: "/amazon-ppc-management", label: "Amazon advertising alongside it" },
+      },
+      {
+        name: "Marketplace management",
+        lead:
+          "Ongoing ecommerce marketplace management for the channels you already sell on — Amazon, Shopify and Walmart — run by one team with one report, not three people who never speak to each other.",
+        items: [
+          "Amazon Seller Central — listings, stock, ads and account health",
+          "Shopify store — products, collections, pricing and promotions",
+          "Walmart Marketplace — listings, inventory and orders",
+          "Stock levels kept in step across the three",
+          "Pricing and promotion calendar per channel",
+          "One monthly report covering every channel",
+        ],
+        link: { href: "/amazon-account-management", label: "Full Amazon account management" },
       },
       {
         name: "Other marketplaces",
@@ -263,11 +291,17 @@ export default function Services() {
               {c.groups.map((g) => (
                 <div className="group" key={g.name}>
                   <h3>{g.name}</h3>
+                  {g.lead && <p className="group-lead">{g.lead}</p>}
                   <ul>
                     {g.items.map((it) => (
                       <li key={it}>{it}</li>
                     ))}
                   </ul>
+                  {g.link && (
+                    <Link className="case-link" href={g.link.href}>
+                      {g.link.label} <span aria-hidden="true">→</span>
+                    </Link>
+                  )}
                 </div>
               ))}
             </div>

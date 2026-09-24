@@ -6,7 +6,7 @@ import testimonials from "@/data/testimonials";
 export const metadata = {
   title: "Bespoke Ecommerce Website Development | SOP",
   description:
-    "An ecommerce web development company building bespoke, custom-coded stores for UK and US businesses: fast, designed around your products, yours to keep.",
+    "An ecommerce web development company building bespoke, custom-coded stores for UK and US businesses, with conversion rate optimisation built in.",
   alternates: { canonical: "/ecommerce-website-development" },
 };
 
@@ -160,6 +160,7 @@ const faqs = [
   { q: "Do you offer website redesign services for an existing store?", a: "Yes. A redesign starts with what the current site gets right and wrong: speed, structure, search rankings and where visitors leave. We keep what works, redirect every old URL so rankings carry over, and rebuild the rest. If the existing platform is the problem, we'll say so; if it isn't, we'll say that too." },
   { q: "Is a custom site right for a small business?", a: "Often, yes. Our web design services for small business are the same process at a smaller scope: fewer pages, a focused product range, and a build you can update yourself. The main question is who maintains it. If nobody will, a managed platform may suit you better, and we'll tell you." },
   { q: "How do you charge for custom ecommerce website design?", a: "A fixed project price based on a written scope: pages, features, integrations and content. No hourly billing and no scope growing halfway through. Hosting is yours and cheap; a maintenance retainer is optional." },
+  { q: "Can you improve conversion on our existing store without a rebuild?", a: "Usually, yes. We look at where visitors leave — the checkout, the product pages, or before the page has finished loading — and separate the fixes that work inside your current setup from the ones your platform or theme will not allow. A lot can be done without a new site: checkout steps, product page content, image sizes and mobile layout. If the honest answer is that the platform itself is the limit, we will tell you that instead of charging for work that cannot pay off." },
   { q: "Will I be able to update the site myself?", a: "Yes. Products, prices, stock and content are editable without touching code, and we walk you through it at handover. Design or feature changes need a developer, which can be us on a retainer or anyone else, because the code is yours and written to be readable." },
 ];
 
@@ -330,6 +331,44 @@ export default function EcommerceWebsiteDevelopment() {
               say so.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* CRO */}
+      <section>
+        <div className="wrap prose">
+          <h2>Conversion rate optimisation</h2>
+          <p>
+            Traffic that does not buy is the most expensive problem an online
+            store has, because you have already paid for it. So we start by
+            finding where visitors give up, rather than guessing at fixes and
+            calling it a redesign.
+          </p>
+          <p>
+            Checkout friction is usually first on the list. Every extra field,
+            forced account creation, delivery cost that only appears at the
+            last step, or returns policy nobody can find is a reason to close
+            the tab. We cut the steps to the minimum and make cost and
+            delivery clear well before the final page.
+          </p>
+          <p>
+            Product page layout comes next. The page has to answer what a
+            shopper would ask in a shop — size, material, what is in the box,
+            when it arrives — without making them hunt for it, with images
+            that show scale and a buy button that stays reachable.
+          </p>
+          <p>
+            Site speed and mobile are the same problem twice. Most visitors
+            arrive on a phone, often on mobile data, and a page whose images
+            take several seconds to appear loses people before they have read
+            anything.
+          </p>
+          <p>
+            Clients in the US tend to ask for a conversion rate optimization
+            service and clients in the UK for a conversion rate optimisation
+            service. It is the same work, and we offer ecommerce CRO services
+            on stores we built and on stores we did not.
+          </p>
         </div>
       </section>
 
