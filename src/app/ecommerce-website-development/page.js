@@ -328,7 +328,9 @@ export default function EcommerceWebsiteDevelopment() {
               you sell now, rebuild by hand, redirect every old URL, and launch
               with the rankings intact. If the honest answer is that the
               current platform is fine and only the design needs work, we
-              say so.
+              say so. If you are still deciding, our guide to the{" "}
+              <Link href="/blog/online-store-redesign-signs">seven signs a store needs a redesign</Link>{" "}
+              is a useful place to start.
             </p>
           </div>
         </div>

@@ -456,6 +456,16 @@ export default function ShopifyDevelopment() {
         </div>
       </section>
 
+      <BlogLinks
+        heading="Related reading"
+        slugs={[
+          "shopify-seo-checklist",
+          "woocommerce-to-shopify-migration",
+          "online-store-redesign-signs",
+        ]}
+        intro="Working guides on the three jobs we get asked about most: ranking a store, moving one, and knowing when to rebuild."
+      />
+
       <Testimonials
         heading="What Shopify clients say"
         intro="From a store we built and launched. In their words, not ours."

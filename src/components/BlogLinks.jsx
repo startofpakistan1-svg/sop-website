@@ -3,7 +3,7 @@ import { getPost } from "@/data/posts";
 
 // "From our blog" block for service pages. Pass the slugs to show;
 // titles come from src/data/posts.js so they stay in sync.
-export default function BlogLinks({ slugs, intro }) {
+export default function BlogLinks({ slugs, intro, heading = "From our blog" }) {
   const items = slugs.map(getPost).filter(Boolean);
   if (!items.length) return null;
 
@@ -11,7 +11,7 @@ export default function BlogLinks({ slugs, intro }) {
     <section>
       <div className="wrap">
         <div className="sec-head">
-          <h2>From our blog</h2>
+          <h2>{heading}</h2>
           {intro && <p>{intro}</p>}
         </div>
         <div className="cat-links blog-links">

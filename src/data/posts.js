@@ -910,7 +910,7 @@ Images are where Shopify stores most often leak both rankings and speed.
 Shopify's URL structure creates duplicates that you need to know about.
 
 - A product reached through a collection gets a URL containing the collection path, as well as its own direct URL. Shopify sets a canonical tag pointing to the direct one, but check your theme has not overridden it.
-- Keep product and collection handles short, readable and stable. Changing a handle changes the URL; Shopify offers to create a redirect, and you should accept.
+- Keep product and collection handles short, readable and stable. Changing a handle changes the URL; Shopify offers to create a redirect, and you should accept. The same applies at a larger scale after a platform move — see the [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration).
 - Do not let filtered or sorted collection views get indexed. Most themes handle this; check with a site search for your domain plus "sort_by".
 - If you sell on more than one marketplace, make sure the Shopify store is the canonical source of its own content.
 
@@ -1038,6 +1038,7 @@ Before launch, on a password-protected Shopify store:
 - Send the customer email about password resets.
 - Keep the WooCommerce site accessible privately for a few weeks, in case something was missed.
 - Watch Search Console for crawl errors and 404s daily for the first fortnight.
+- Work through the [Shopify SEO checklist](/blog/shopify-seo-checklist) once the store has settled, since a migration is a good moment to fix structure.
 
 ## Common mistakes
 
@@ -1097,13 +1098,13 @@ If adding a product means calling a developer, if a seasonal banner takes a week
 
 ## 6. Search traffic is weak
 
-A store that only appears in search for its own brand name is invisible to new customers. Weak SEO often traces back to structure: thin collection pages, duplicate product descriptions, no blog, missing titles and alt text, and speed problems from sign one. A redesign is the natural moment to fix the structure, because it is far harder to bolt on afterwards.
+A store that only appears in search for its own brand name is invisible to new customers. Weak SEO often traces back to structure: thin collection pages, duplicate product descriptions, no blog, missing titles and alt text, and speed problems from sign one. A redesign is the natural moment to fix the structure, because it is far harder to bolt on afterwards. If you are on Shopify, the [Shopify SEO checklist](/blog/shopify-seo-checklist) goes through those structural problems one by one.
 
 ## 7. The platform is holding you back
 
 Sometimes the design is fine and the platform is the limit. You want a layout the theme cannot do. You need a feature no app provides. Monthly fees keep rising as apps pile up. Or the site is on a page builder that makes every change slow and every page heavy.
 
-At that point the question is not just "redesign?" but "redesign on what?" For some stores the answer is a better theme on the same platform. For others it is a bespoke ecommerce website, custom-coded around the products, with no builder and no theme underneath. Our guide to [custom websites vs Shopify themes](/blog/custom-website-vs-shopify) covers that decision.
+At that point the question is not just "redesign?" but "redesign on what?" For some stores the answer is a better theme on the same platform. For others it is a bespoke ecommerce website, custom-coded around the products, with no builder and no theme underneath. Our guide to [custom websites vs Shopify themes](/blog/custom-website-vs-shopify) covers that decision, and if the move is off WooCommerce, the [WooCommerce to Shopify migration guide](/blog/woocommerce-to-shopify-migration) sets out what it involves.
 
 ## What a redesign actually involves
 
