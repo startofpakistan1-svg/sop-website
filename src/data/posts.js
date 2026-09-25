@@ -1127,6 +1127,100 @@ A redesign is not a new coat of paint. Done properly, it starts with measurement
 One sign can usually be fixed in place. Three or more, and the fixes start to cost more than a rebuild. If you would like an honest opinion on your store, our [bespoke ecommerce website development](/ecommerce-website-development) service starts with a review of what the current site does well and badly, and we will tell you whether it needs a redesign, a rebuild, or just a few fixes, before quoting anything.
 `,
   },
+  {
+    slug: "what-is-a-good-acos-on-amazon",
+    topic: "amazon",
+    title: "What Is a Good ACoS on Amazon? A Practical Guide for Sellers",
+    description:
+      "What ACoS measures, how to work out the right target from your own product margins, and when a high ACoS is worth accepting.",
+    date: "2026-09-25",
+    excerpt:
+      "A good ACoS depends on your product margin and what you are trying to achieve that month, not on a universal number somebody quotes at you.",
+    content: `
+If you have recently started running Sponsored Products campaigns, ACoS is the number you will end up staring at most. It also attracts the most confident bad advice, usually a single figure you are told to aim for.
+
+There is no such figure. The right ACoS depends on your margins and on what you are trying to achieve this month, and working out your own takes about ten minutes with a calculator.
+
+## What ACoS actually measures
+
+ACoS stands for Advertising Cost of Sales. The formula is:
+
+**ACoS = ad spend ÷ ad revenue × 100**
+
+As an illustration, if a campaign spends £200 and Amazon attributes £800 of sales to it, the ACoS is 25% — you paid 25p of advertising for every pound of advertised sales. That is an example to show the arithmetic, not a benchmark.
+
+Two things are worth knowing before you act on it. It counts only the sales Amazon attributes to an ad click inside the attribution window, so organic sales are excluded even when the ad helped cause them. And it says nothing about profit on its own, because it compares spend with revenue rather than with margin. That is why the question "what is a good ACoS" cannot be answered by anyone who does not know what is left on each sale after costs.
+
+## Why there is no single good ACoS
+
+The right target is a function of your product's margin, and margins differ enormously between categories and often between products in one catalogue.
+
+The idea that makes this concrete is break-even ACoS: the point at which an advertised sale leaves you neither better nor worse off. If your pre-advertising margin is 30%, an ACoS of 30% means advertising has consumed exactly the profit on that sale. Above it, each advertised sale costs you money. Below it, you keep the difference.
+
+An ACoS of 35% is therefore good for a product carrying a 50% margin and poor for one carrying 20%. When another seller quotes their ACoS, the useful follow-up is: compared with what margin? It also means your target should vary by product, so a catalogue holding thin-margin accessories alongside higher-margin bundles should not be run to one blanket goal.
+
+## Working out your break-even ACoS
+
+You need one figure: the percentage of the selling price that survives as profit before advertising. Work through it in order.
+
+1. **Start with the selling price** the customer pays, excluding VAT or sales tax where that is not your revenue.
+2. **Subtract the cost of goods** — what you pay your supplier per unit.
+3. **Subtract inbound shipping and duty** as a per-unit figure.
+4. **Subtract Amazon's referral fee**, a percentage of the sale price that varies by category.
+5. **Subtract fulfilment costs** — FBA fees, or your own pick, pack and postage.
+6. **Subtract storage and other per-unit costs**, with an allowance for returns where they are common.
+
+Whatever remains, as a percentage of the selling price, is your pre-advertising margin — and that percentage is your break-even ACoS.
+
+As an illustration only: a product sells for £30 and £21 goes on goods, fees and fulfilment. The £9 left is 30% of the price, so break-even ACoS is 30%. Use your own figures rather than these.
+
+Do this for your best sellers rather than the whole catalogue. A handful of products usually accounts for most of the spend.
+
+## When a high ACoS is fine
+
+Running above break-even is a decision rather than a failure, as long as it is deliberate and has an end date.
+
+**Product launches.** A new listing has no sales history and no ranking. Early advertised sales bring reviews and signal to Amazon that the page converts, which supports organic position later. Plenty of sellers accept a loss-making ACoS through a launch window as a cost of acquisition.
+
+**Testing new keywords.** You cannot know which search terms convert until they have data behind them. A testing phase looks expensive and buys information.
+
+**Clearing stock.** Ageing inventory costs storage fees and ties up cash. Moving it at a thin margin often beats holding it.
+
+**Defending a branded term.** Bidding on your own brand name is usually inexpensive, and leaving it undefended invites competitors above your listing.
+
+This is also where TACoS earns its place. Total Advertising Cost of Sales measures ad spend against total sales, organic and paid together. If ACoS is high but TACoS is falling, advertising is lifting organic sales and the account is moving the right way. If both climb together, you are buying revenue rather than building it.
+
+## When a low ACoS is a problem
+
+A very low ACoS looks like good news and frequently is not. It usually means bids are conservative enough that you are winning only the cheapest impressions — often the ones you would have won organically anyway.
+
+The symptoms are easy to recognise: impressions well below what the category can support, budgets that never run out, a large share of impressions lost to bid, and flat sales volume alongside a comfortable-looking ratio.
+
+If break-even is 30% and you are running at 8%, you have room. Raising bids on terms that already convert usually buys more volume at an ACoS still safely inside your margin. Profit is an amount of money, not a percentage, and protecting the ratio at the expense of volume is a common mistake.
+
+## How to bring ACoS down
+
+When ACoS genuinely does need to come down, the work is unglamorous and repetitive.
+
+**Read the search term report.** It shows the queries that actually triggered your ads, rather than the keywords you bid on. Wasted spend is visible here and almost nowhere else.
+
+**Add negative keywords every week.** Any search term with meaningful clicks and no sales is a candidate. This is the most reliable lever, and it compounds.
+
+**Adjust bids on evidence.** Lower bids on terms above target with enough clicks to judge; raise them on terms comfortably below it. Small, regular changes beat occasional large ones.
+
+**Restructure so winners are controllable.** Move converting search terms into their own exact-match campaigns, where their bid is not competing with dozens of others in one ad group.
+
+**Fix the listing.** The step most often skipped. ACoS is a function of conversion rate: if two sellers pay the same per click and one converts twice as often, their ACoS is half. Images, title, bullets, price, reviews and A+ content all decide what a click is worth, which is why ad performance depends on the listing as much as the campaign. Our guide to [optimising an Amazon listing](/blog/how-to-optimize-amazon-listing) works through the page section by section.
+
+**Give changes time.** Attribution lags by days. Judging a bid change after twenty-four hours leads to reversing decisions that were working.
+
+## The short version
+
+Work out your break-even ACoS product by product, set a target above or below it depending on whether you are launching or harvesting, and judge the account on profit rather than on the ratio.
+
+If you would rather not do the weekly search term and bid work yourself, our [Amazon PPC management service](/amazon-ppc-management) covers campaign structure, keyword research, negatives, bids and plain-English reporting for UK and US sellers. It starts with a free audit of your current campaigns, so you can see where the spend is going before you decide anything.
+`,
+  },
 ];
 
 export default posts;
