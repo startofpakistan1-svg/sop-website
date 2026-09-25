@@ -1312,6 +1312,95 @@ The same logic applies to the messages you send rather than receive. Order updat
 If you would like help working out which of the two you actually need, our [AI automation](/ai-automation) work starts by looking at what your team repeats each week and saying plainly where automation pays and where it does not. Sometimes the answer is a support agent. More often it is something smaller.
 `,
   },
+  {
+    slug: "tacos-vs-acos-amazon",
+    topic: "amazon",
+    title: "TACoS vs ACoS: Which One Should Amazon Sellers Track?",
+    description:
+      "The difference between ACoS and TACoS, what each number actually tells you about your advertising, and which one to use when.",
+    date: "2026-09-24",
+    excerpt:
+      "ACoS measures how efficient your advertising is, while TACoS shows what that advertising is doing to the whole business — you want both, for different decisions.",
+    content: `
+Sellers who have got comfortable with ACoS usually meet TACoS next, often mid-argument about which one matters. They measure different things, and you want both.
+
+ACoS tells you whether a campaign is efficient. TACoS tells you what advertising is doing to your business. Neither replaces the other, and a seller watching only one will eventually make a decision the other would have prevented.
+
+## A quick recap of ACoS
+
+ACoS — Advertising Cost of Sales — is ad spend divided by the revenue Amazon attributes to those ads.
+
+**ACoS = ad spend ÷ ad revenue × 100**
+
+It answers one question: how much did I pay in advertising for each pound of advertised sales? The denominator counts only sales Amazon traces to an ad click, so organic sales are invisible to it.
+
+Whether any given ACoS is good depends on your margin, which is a longer conversation than this post. Our guide to [what a good ACoS looks like](/blog/what-is-a-good-acos-on-amazon) covers break-even and how to work out your own target.
+
+## What TACoS measures
+
+TACoS — Total Advertising Cost of Sales — keeps the same numerator and uses a bigger denominator:
+
+**TACoS = ad spend ÷ total revenue × 100**
+
+Total revenue means everything the product earned: advertised sales and organic sales together. That single change turns an efficiency ratio into a dependency ratio.
+
+ACoS asks whether your ads are efficient. TACoS asks how much of your total business advertising is paying for. That is the real distinction in the TACoS vs ACoS argument, and it is why the two can tell opposite stories about the same month.
+
+As an illustration only: a product takes £10,000 of total sales in a month, £4,000 of which Amazon attributes to ads, on £1,000 of ad spend. ACoS is 25% — £1,000 divided by £4,000. TACoS is 10% — £1,000 divided by £10,000. Same spend, same month, two very different-looking numbers, both correct. Those figures are there to show the arithmetic, not as targets.
+
+## Why the two numbers move differently
+
+The useful cases are the ones where they diverge.
+
+**ACoS flat, TACoS falling.** This is what you want to see. Campaigns are running at the same efficiency, but total sales are growing faster than ad spend, which means the extra revenue is organic. Usually that is advertising doing its second job: driving sales that improve ranking, which brings traffic you do not pay for. Advertising is building something rather than renting it.
+
+**ACoS flat, TACoS rising.** The uncomfortable one. Campaigns look as efficient as ever, so nothing in the ad console raises an alarm, yet a growing share of revenue depends on paid traffic. That can mean organic ranking is slipping, a competitor has moved above you, or added spend is cannibalising sales you were already getting for free. A seller watching ACoS alone sees no problem at all.
+
+**ACoS rising, TACoS flat or falling.** Often fine, particularly during a launch or an expansion into new keywords. You are paying more per advertised sale while the wider business absorbs it comfortably.
+
+The pattern worth remembering: ACoS is a dial on the machine, and TACoS tells you whether the machine is getting stronger.
+
+## Which one to use when
+
+They answer different questions, so they belong at different levels.
+
+**Use ACoS for decisions inside the ad account.** Which keywords to bid up or down, which search terms to make negative, whether a campaign structure is working, whether one product's advertising is profitable against its margin. ACoS is the right number at keyword, ad group and campaign level, because that is where you can act on it directly.
+
+**Use TACoS for decisions about the product and the account.** Whether advertising is worth the overall spend, whether a launch is working, whether organic ranking is improving, whether to put more budget behind a product or hold steady. TACoS is a product-level and account-level number.
+
+One way to hold both: ACoS tells you whether you are spending well, and TACoS whether you should be spending at all.
+
+## What a healthy TACoS looks like
+
+There is no universal figure, and anyone quoting one as an industry standard is guessing. It varies by category, by margin, and above all by where a product sits in its life.
+
+**During a launch**, TACoS is normally high, because almost every sale is coming from advertising. There is no organic ranking yet, and buying those first sales is the point of the exercise.
+
+**As a product establishes itself**, TACoS should trend downwards. Organic sales grow, the denominator grows, and the ratio falls even if ad spend stays flat. That downward trend is the most useful thing the number tells you.
+
+**For a mature product with solid ranking**, TACoS settles wherever it keeps that ranking defended without overspending — a level you find from your own history, not from a blog post.
+
+What matters is the direction of travel and whether it suits the stage. A high TACoS on a six-week-old listing is expected. The same figure two years later means advertising is propping up a product that never built organic demand.
+
+## Tracking both without drowning in data
+
+Neither number is worth reading daily. Amazon's attribution lags by days, and a single week can be thrown off by a payday, a bank holiday, a stock-out or one bulk order.
+
+**Weekly, look at ACoS** at search-term and keyword level, because that is the cadence at which bid and negative-keyword decisions get made. You are hunting for terms that spend without converting, not studying the headline figure.
+
+**Monthly, look at TACoS** per product, against the previous two or three months rather than only against last month. One month is noise; a quarter is information.
+
+**Keep both in one plain view.** Ad spend, ad sales, total sales, ACoS and TACoS per product, month by month. A spreadsheet is enough — the aim is to see the trend, not to build a dashboard.
+
+**Annotate anything unusual.** A stock-out, a price change, a competitor's sale, a Prime event. Six weeks later you will not remember why a month looked strange, and the note stops you drawing the wrong lesson.
+
+## The short version
+
+ACoS for the campaigns, TACoS for the business, and neither on its own.
+
+If you would rather have someone watching both and acting on them, our [Amazon PPC management service](/amazon-ppc-management) covers the weekly search-term and bid work with monthly reporting on both numbers, for sellers in the UK and US. And if you have not yet worked out your break-even figure, start with [our guide to a good ACoS](/blog/what-is-a-good-acos-on-amazon), because the target matters more than the number.
+`,
+  },
 ];
 
 export default posts;
