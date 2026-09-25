@@ -1221,6 +1221,97 @@ Work out your break-even ACoS product by product, set a target above or below it
 If you would rather not do the weekly search term and bid work yourself, our [Amazon PPC management service](/amazon-ppc-management) covers campaign structure, keyword research, negatives, bids and plain-English reporting for UK and US sellers. It starts with a free audit of your current campaigns, so you can see where the spend is going before you decide anything.
 `,
   },
+  {
+    slug: "best-ai-agents-for-customer-support",
+    topic: "web",
+    title: "Best AI Agents for Customer Support in the UK (2026 Guide)",
+    description:
+      "What AI support agents handle, where they work well and fall short, and what UK businesses should check before choosing one.",
+    date: "2026-09-25",
+    excerpt:
+      "AI support agents answer the questions that repeat, at any hour — here is what they handle, where they fail, and how to work out whether one fits your business.",
+    content: `
+Every software company now sells something described as an AI agent for customer support, and most of the marketing sounds identical. Underneath, the products differ enormously: in what they can resolve, in how they behave when unsure, and in how much of your own information they have been given.
+
+This guide does not rank products. Vendors change constantly, and the right choice depends on your helpdesk, your order system and what your customers ask. Instead it explains what these agents do, where they help, where they cause damage, and what to check before committing.
+
+## What an AI customer support agent actually does
+
+Most businesses have met the older kind: a scripted chatbot with a menu of buttons. You click "Where is my order?", it asks for an order number, and it either finds it or tells you to email support. It cannot cope with anything outside its script, which is why customers learned to click straight past it.
+
+An AI agent works differently. It reads what the customer wrote in their own words, works out what they are asking, and holds the thread of the conversation. If someone writes "it hasn't turned up and I want to send it back anyway", it understands there are two things happening. It can ask a clarifying question, look something up, and answer that customer rather than a category.
+
+"Handling a ticket end to end" is the phrase vendors use. At its best it means the agent understands the question, retrieves the relevant fact — the tracking status, the returns window, whether that size is back in stock — applies your policy, replies in your tone, and closes the conversation without anyone reading it. The customer gets an answer at two in the morning and your inbox never sees it.
+
+In practice, good AI agents for customer support resolve a portion of enquiries that way and pass the rest on with a summary attached. What portion depends on what your customers ask and how well the agent has been given your own information.
+
+## Where AI support works well
+
+The pattern is consistent: questions that repeat, have a definite answer, and need no judgement.
+
+**Order status.** The most common enquiry most retailers get, and the most mechanical. Given access to your order system, an agent answers it instantly.
+
+**Returns and refunds policy.** How long do I have, who pays the postage, what condition does it need to be in, when does the money arrive. Fixed answers to fixed questions.
+
+**Product questions.** Sizing, materials, compatibility, what is in the box, how to care for it. If the information exists on your site or in your product data, the agent finds it faster than a person.
+
+**Opening hours, delivery times and stock.** Facts that change often but are always looked up in the same place.
+
+**Repeat enquiries after a mailshot or a delay.** When something goes out to your whole list, or a courier has a bad week, the same question arrives fifty times in an afternoon. This is where automation earns its place most obviously.
+
+**Triage before a person picks up.** Even where the agent should not answer, it can read the message, ask for the order number up front, tag the ticket and route it with a summary attached. Your team opens a prepared case instead of a cold one.
+
+## Where it falls short
+
+Be sceptical of anyone who tells you an agent handles everything.
+
+**Complaints.** An angry customer does not want efficiency, they want to be heard, and an instant well-structured reply often makes it worse. Complaints should be detected and escalated, not answered.
+
+**Edge cases.** The parcel that went to the old address, the item damaged inside intact packaging, the two orders that should have been one. These need somebody to look, think and decide.
+
+**Anything needing an exception.** Goodwill gestures, refunds outside policy, a replacement sent before the return arrives. Exceptions are judgements about a particular customer, and an agent should not make them on your behalf.
+
+**Anything with money or weight behind it.** Disputes, chargebacks and anything framed as a formal complaint belong with a person from the first message.
+
+**Customers who simply want a human.** Some ask immediately. The right behaviour is to get them one quickly, not to make them argue with software first. An agent that hides the escalation route to protect its resolution rate is working against you.
+
+## What to look for when choosing one
+
+**Does it connect to the systems you already have?** An agent that cannot see your helpdesk and your order data is a search box with better manners. Ask which helpdesk, ecommerce platform and shipping tools it reads from, and whether it can write back — tag a ticket, update a status, start a return.
+
+**Can it hand off to a person cleanly?** Watch that in a demo rather than taking it on trust. The customer should not repeat themselves, the history should arrive with the ticket, and you should control what triggers it: certain topics, an unhappy tone, a direct request, or two failed attempts.
+
+**How is it trained on your own policies?** The answers are only as good as what it has been given. Ask how your returns policy, delivery terms and product information get in, who updates them, and how long that takes. If training is a one-off at setup, your answers drift out of date the first time a policy changes.
+
+**What happens when it does not know?** The only acceptable answer is that it says so and passes the conversation on. Ask to see that too. An agent that gives a confident, plausible, wrong answer about your returns window costs more than the inbox time it saved.
+
+**Where does the customer data go?** Ask which countries conversations are processed and stored in, how long they are kept, whether your customers' messages train anything beyond your own setup, and what happens to the data if you leave. Get it in writing.
+
+**How does the pricing work?** Per conversation, per resolution, per seat and flat subscription all exist, and they behave very differently as you grow. Work out the cost in a bad month — a delivery failure, a recall, a mailshot gone wrong — rather than an average one, because that is when volume spikes.
+
+## UK-specific considerations
+
+Three things matter more for a UK business than the generic sales material suggests.
+
+**Where the data sits.** Customers ask, and your own obligations depend on the answer. You do not need to be an expert, but you do need to know which regions your provider processes and stores conversations in, written down. If your business handles anything sensitive, take proper professional advice rather than relying on a vendor's assurance or a guide like this one.
+
+**Tone and language.** Most agents are trained predominantly on American English and default to it. It shows in the spelling, in "reach out" and "shipping" where a British customer expects "get in touch" and "delivery", and in an enthusiasm that reads as insincere here. Check whether you can set tone and spelling, then read twenty real replies before letting it loose.
+
+**Hours and holidays.** The agent runs continuously; your team does not. Decide what happens to an escalated conversation at eleven on a Saturday or during the August bank holiday: the customer should be told honestly when a person will reply, not left waiting for an answer that was never coming. Make sure the working calendar it uses is yours, bank holidays included.
+
+## Do you need an agent, or just better automation?
+
+Worth asking before you spend anything, because for plenty of businesses the honest answer is no.
+
+A conversational agent suits you if customers arrive at all hours, in volume, asking questions that vary in wording. If that is not you — if enquiries come by email, in manageable numbers, in four or five recognisable types — then what you need is workflow automation rather than a chatbot: enquiries sorted and routed automatically, replies drafted from templates and your order data for somebody to check and send, follow-ups that chase themselves, and an alert when something has gone unanswered too long.
+
+That is cheaper, simpler, easier to change, and carries none of the risk of software talking to customers unsupervised. It also saves more time than people expect, because most support load is not the conversation itself — it is looking things up, copying between systems, and remembering to follow up.
+
+The same logic applies to the messages you send rather than receive. Order updates, review requests and post-purchase email sequences are a scheduling problem rather than an intelligence one, and belong with your [marketing automation](/marketing-automation) rather than with a support agent.
+
+If you would like help working out which of the two you actually need, our [AI automation](/ai-automation) work starts by looking at what your team repeats each week and saying plainly where automation pays and where it does not. Sometimes the answer is a support agent. More often it is something smaller.
+`,
+  },
 ];
 
 export default posts;
