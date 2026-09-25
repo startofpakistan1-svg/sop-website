@@ -1200,7 +1200,7 @@ If break-even is 30% and you are running at 8%, you have room. Raising bids on t
 
 ## How to bring ACoS down
 
-When ACoS genuinely does need to come down, the work is unglamorous and repetitive.
+When you genuinely need to lower your ACoS, the work is unglamorous and repetitive.
 
 **Read the search term report.** It shows the queries that actually triggered your ads, rather than the keywords you bid on. Wasted spend is visible here and almost nowhere else.
 
@@ -1213,6 +1213,16 @@ When ACoS genuinely does need to come down, the work is unglamorous and repetiti
 **Fix the listing.** The step most often skipped. ACoS is a function of conversion rate: if two sellers pay the same per click and one converts twice as often, their ACoS is half. Images, title, bullets, price, reviews and A+ content all decide what a click is worth, which is why ad performance depends on the listing as much as the campaign. Our guide to [optimising an Amazon listing](/blog/how-to-optimize-amazon-listing) works through the page section by section.
 
 **Give changes time.** Attribution lags by days. Judging a bid change after twenty-four hours leads to reversing decisions that were working.
+
+## Frequently asked questions
+
+**What is ACoS?** ACoS, or Advertising Cost of Sales, is your ad spend divided by the revenue Amazon attributes to those ads, shown as a percentage. It tells you what you paid in advertising for every pound of advertised sales. Because the denominator counts only sales traced to an ad click, organic sales sit outside it entirely.
+
+**What is a good ACoS on Amazon?** A good ACoS is one below your break-even figure — the percentage of the selling price left as profit before any advertising. That makes the answer specific to each product rather than a number anyone can quote at you. The same figure can be comfortable for a high-margin product and loss-making for a thin-margin one.
+
+**What is a good ACoS for Amazon ads?** It depends on what the campaign is there to do. For campaigns meant to be profitable today, aim below the break-even figure for that product. For a launch, a keyword test, clearing stock or defending your own brand name, running above break-even can be the right call, provided it is deliberate and has an end date.
+
+**How do I lower my ACoS?** Start with the search term report and add negative keywords for anything spending without selling, then adjust bids on evidence rather than instinct. Moving converting search terms into their own exact-match campaigns makes their bids controllable. And look at the listing, because ACoS is a function of conversion rate: a page that converts better lowers ACoS without any change to a bid.
 
 ## The short version
 
