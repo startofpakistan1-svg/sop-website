@@ -218,11 +218,11 @@ If you would rather hand the whole thing over, listing optimization and Amazon S
     content: `
 Scroll down a listing from a well-run brand and you will usually find large images, comparison charts and short blocks of text where the plain description would normally be. That is A+ Content. It is free to brand owners, and many sellers still leave it empty.
 
-This guide covers what A+ Content is, who can use it, the module types, some example layouts, and the mistakes that make it work against you.
+This guide covers what A+ Content is, who can use it, the module types, some A+ Content examples described module by module, and the mistakes that make it work against you.
 
 ## What A+ Content is
 
-A+ Content (formerly Enhanced Brand Content) is a set of image and text modules that appear in the product description section of a listing. You build it from templates in Seller Central and attach it to one or more ASINs.
+A+ Content (formerly Enhanced Brand Content, and often written out as Amazon A Plus content) is a set of image and text modules that appear in the product description section of a listing. You build it from templates in Seller Central and attach it to one or more ASINs.
 
 It does not replace the title, bullets or image gallery, which still do the heavy lifting for search and first impressions. A+ Content is for the shopper who has scrolled past the bullets and wants to be convinced.
 
@@ -290,6 +290,16 @@ Some products need a "how it works" section before the shopper is confident enou
 **Low-resolution images.** Each module has a minimum image size. Stretched images look blurry and undermine the whole page.
 
 **Building it once and forgetting it.** If the product, packaging or range changes, update the A+ Content too.
+
+## Frequently asked questions
+
+**What is A+ content on Amazon?** It is a set of image and text modules that replace the plain product description on a listing. You build it from templates in Seller Central and attach it to one or more ASINs. It does not replace the title, bullets or image gallery — it is there for the shopper who has scrolled past those and wants to be convinced.
+
+**Who is eligible for A+ content?** Brand owners enrolled in Amazon Brand Registry, which requires a registered trademark or, in some regions, a pending application. Once you are enrolled, the A+ Content Manager appears in Seller Central under Advertising. Basic A+ Content is free; Premium has its own eligibility rules that Amazon changes from time to time, so check the current terms there.
+
+**What makes a good A+ content example?** One that adds something the bullet points could not — comparison, context, detail or reassurance. The layouts that work pair short text with images that carry the point, keep the important words in the text fields rather than baked into pictures, and read as well on a phone as on a desktop. Repeating the bullets is the most common way to waste the space.
+
+**Does A+ content help with conversions?** It is designed to, and it is why most brands build it, but measure it on your own listings rather than trusting a figure from a blog. Publish it, check it on a phone, and watch your conversion rate in your business reports over the following weeks. If nothing moves, the content is probably repeating the bullets rather than answering a question a shopper actually had.
 
 ## A practical way to start
 
@@ -568,7 +578,7 @@ Every Shopify store runs on a theme. The choice is between using one as it comes
 
 **A custom design.** A layout designed around your products and brand, then built as a theme. It is the most expensive option and rarely necessary for a first store, but it is the right choice for brands where the look is the product.
 
-The general rule: the further from the theme's defaults you want to be, the more it costs.
+The general rule: the further from the theme's defaults you want to be, the more it costs, which makes this one of the biggest levers on Shopify store development cost.
 
 ## Apps
 
@@ -607,6 +617,16 @@ You can build a Shopify store yourself. The platform is designed for it, and for
 Hiring makes sense when the catalogue is large, when the theme needs real changes, when you have specific requirements for shipping, tax or integrations, or when your own time is better spent on the products and the marketing. A good Shopify developer will also make decisions you do not know you need to make, about structure, speed and what to leave out.
 
 We handled the full Shopify store setup for a motorsport gear brand selling karting suits and gloves: the store build, product catalogue and checkout, then supported the launch. You can see it, along with our other work, on the [portfolio page](/portfolio).
+
+## Frequently asked questions
+
+**How much does it cost to create a Shopify store?** There is no single figure, which is why this guide breaks the cost into parts rather than quoting one. The plan fee is fixed and published by Shopify; everything after it depends on how many products you have, how far from a stock theme the design needs to go, which apps you genuinely need, and who does the work. A store for a handful of products is a different job from a catalogue of hundreds.
+
+**How much does it cost to set up a Shopify store with a developer?** It depends on the scope you agree, and the only sensible way to find out is to list what you need and ask for a fixed price against that list. A developer's time goes on theme customisation, product setup, payments, shipping and tax configuration, and testing, so the number moves with how much of each there is. Treat any quote given before anyone has asked how many products you sell as a price for a generic package.
+
+**What affects Shopify store development cost the most?** The number of products, and how far you want to move from the theme's defaults. Product setup is the most underestimated task in any build, because every item needs copy, images, variants and inventory data. After those two come the number of marketplaces or regions you sell in, the apps or custom features you need, and the state of any existing store that has to be cleaned up or migrated first.
+
+**What are the ongoing costs after launch?** The Shopify plan fee, any paid app subscriptions and payment processing fees on each sale, every month. On top of those, budget for the work a store needs to stay current: theme updates when Shopify changes the platform, new products and seasonal changes, and occasional fixes when an app update breaks something. Launch is not the finish line.
 
 ## Getting a number
 
@@ -1215,6 +1235,8 @@ When you genuinely need to lower your ACoS, the work is unglamorous and repetiti
 **Give changes time.** Attribution lags by days. Judging a bid change after twenty-four hours leads to reversing decisions that were working.
 
 ## Frequently asked questions
+
+**What does ACoS mean?** ACoS stands for Advertising Cost of Sales — the share of your advertised revenue that went on the advertising which produced it. In figures, that is ad spend divided by ad revenue, multiplied by 100. Sellers use it as a quick read on whether a campaign is paying for itself, although whether any particular figure is healthy depends on the product's margin.
 
 **What is ACoS?** ACoS, or Advertising Cost of Sales, is your ad spend divided by the revenue Amazon attributes to those ads, shown as a percentage. It tells you what you paid in advertising for every pound of advertised sales. Because the denominator counts only sales traced to an ad click, organic sales sit outside it entirely.
 
