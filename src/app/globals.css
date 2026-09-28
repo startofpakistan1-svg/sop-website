@@ -1325,4 +1325,14 @@ footer{padding:40px 0 36px;border-top:1px solid var(--hair);background:var(--mis
   .hub::before,
   .hub::after,
   .hub-pulse{animation:none;opacity:0}
+  /* Paint cost: no backdrop snapshot behind the sticky nav and no blurred
+     layers inside the hero. Desktop keeps both. */
+  .nav{backdrop-filter:none;background:rgba(255,255,255,.96)}
+  .blob{filter:none;will-change:auto}
+  /* The gradient line is painted through background-clip:text, so the LCP
+     heading cannot appear until that layer rasterises. Solid colour instead. */
+  .grad{
+    background:none;-webkit-background-clip:border-box;background-clip:border-box;
+    color:var(--blue);animation:none;
+  }
 }

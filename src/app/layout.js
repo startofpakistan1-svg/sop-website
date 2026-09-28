@@ -14,7 +14,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollReveal from "@/components/ScrollReveal";
 import LinkTracker from "@/components/LinkTracker";
-import ChatWidget from "@/components/ChatWidget";
+import ChatWidgetLazy from "@/components/ChatWidgetLazy";
 
 export const metadata = {
   metadataBase: new URL("https://www.startofpakistan.com"),
@@ -71,7 +71,7 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <Footer />
         <WhatsAppButton />
-        <ChatWidget />
+        <ChatWidgetLazy />
         <ScrollReveal />
         <LinkTracker />
       </body>
