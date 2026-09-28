@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import PriceList from "@/components/PriceList";
 
 export const metadata = {
   title: "Marketing Automation Agency UK | SOP",
@@ -491,6 +492,17 @@ export default function MarketingAutomation() {
           </div>
         </div>
       </section>
+
+      {/* PRICING */}
+      <PriceList
+        title="Marketing automation pricing"
+        items={[
+          {
+            label: "Marketing automation (CRM, email sequences)",
+            price: "from $300 setup + $150 /month",
+          },
+        ]}
+      />
 
       {/* FAQ */}
       <section>

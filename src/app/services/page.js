@@ -13,6 +13,7 @@ const categories = [
     groups: [
       {
         name: "Amazon",
+        price: "Account management from $600/month. Setup from $300.",
         items: [
           "Seller Central account setup",
           "Brand Registry and brand store",
@@ -28,6 +29,7 @@ const categories = [
       },
       {
         name: "Amazon SEO services",
+        price: "From $40 per listing, or $350/month for a catalogue.",
         lead:
           "Getting found inside Amazon search. As an Amazon SEO agency we work on the listing and the catalogue rather than chasing rank tricks, and you deal directly with the Amazon SEO expert doing the work.",
         items: [
@@ -44,6 +46,7 @@ const categories = [
       },
       {
         name: "Marketplace management",
+        price: "From $800/month across Amazon, Shopify and Walmart.",
         lead:
           "Ongoing ecommerce marketplace management for the channels you already sell on — Amazon, Shopify and Walmart — run by one team with one report, not three people who never speak to each other.",
         items: [
@@ -58,6 +61,7 @@ const categories = [
       },
       {
         name: "Other marketplaces",
+        price: "Setup from $200 per marketplace, ongoing from $400/month.",
         items: [
           "eBay store setup and listings",
           "Walmart Marketplace onboarding",
@@ -68,6 +72,7 @@ const categories = [
       },
       {
         name: "Own-store ecommerce",
+        price: "Shopify from $500, WooCommerce from $600.",
         items: [
           "Shopify store build and theme work",
           "WooCommerce store build",
@@ -84,6 +89,7 @@ const categories = [
     id: "web",
     kicker: "02",
     title: "Web development",
+    price: "Websites from $800. Maintenance from $50/month.",
     img: "/icons/web.svg",
     intro:
       "Sites built to be fast, readable on a phone, and findable in search. Shopify and WordPress when that fits, hand-coded when it doesn't.",
@@ -124,6 +130,7 @@ const categories = [
     id: "ai",
     kicker: "03",
     title: "AI agents & automation",
+    price: "From $400 setup + $150/month.",
     img: "/icons/ai.svg",
     intro:
       "The part most agencies don't do. Systems that keep working after everyone goes home — answering, sorting, publishing, following up.",
@@ -168,6 +175,7 @@ const categories = [
     id: "digital",
     kicker: "04",
     title: "Digital solutions",
+    price: "SEO from $350/month. Branding from $150. Google Business setup $100.",
     img: "/icons/digital.svg",
     intro:
       "Everything around the build — the work that gets you found, keeps you looking credible, and stops things quietly breaking.",
@@ -213,7 +221,7 @@ const steps = [
 ];
 
 const faqs = [
-  { q: "How much does a project cost?", a: "It depends on what you need — a simple store is very different from a full marketplace setup or a custom AI system. Tell us what you're building and we'll send a fixed price with the plan, usually within a day. No hourly billing, no surprises halfway through." },
+  { q: "How much does a project cost?", a: "Most services have a starting price shown on each service page, for example Amazon account management from $600 per month and Shopify stores from $500. Tell us what you need and we'll send a fixed price with a written plan, usually within a day. No hourly billing, no surprises halfway through." },
   { q: "How long does it take?", a: "A Shopify or WordPress store typically takes one to three weeks depending on how many products and how much custom work is involved. Amazon account setup is faster. AI agent systems take longer because they need testing against real cases. You'll get a timeline in writing before we start." },
   { q: "Do you work with clients outside Pakistan?", a: "Most of our work is international. We run Amazon seller accounts for clients in the UK and US, and we've built systems for clients in India. Time zones haven't been a problem — we work around yours." },
   { q: "Can you manage my Amazon account, not just set it up?", a: "Yes. Ongoing account management is a large part of what we do — listings, optimisation and day-to-day operations. Some clients hand over the whole account, others keep control and bring us in for specific parts." },
@@ -268,6 +276,9 @@ export default function Services() {
                 <div className="cat-kicker">{c.kicker}</div>
                 <h2>{c.title}</h2>
                 <p>{c.intro}</p>
+                {c.price && (
+                  <p className="group-lead" style={{ margin: "12px 0 0" }}>{c.price}</p>
+                )}
               </div>
             </div>
 
@@ -309,6 +320,9 @@ export default function Services() {
                 <div className="group" key={g.name}>
                   <h3>{g.name}</h3>
                   {g.lead && <p className="group-lead">{g.lead}</p>}
+                  {g.price && (
+                    <p className="group-lead" style={{ margin: "0 0 16px" }}>{g.price}</p>
+                  )}
                   <ul>
                     {g.items.map((it) => (
                       <li key={it}>{it}</li>

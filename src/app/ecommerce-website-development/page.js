@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import PriceList from "@/components/PriceList";
 import Testimonials from "@/components/Testimonials";
 import testimonials from "@/data/testimonials";
 
@@ -432,6 +433,16 @@ export default function EcommerceWebsiteDevelopment() {
           </div>
         </div>
       </section>
+
+      {/* PRICING */}
+      <PriceList
+        title="Ecommerce website pricing"
+        items={[
+          { label: "Ecommerce website (WordPress / custom)", price: "from $800" },
+          { label: "WooCommerce store build", price: "from $600" },
+          { label: "Ongoing maintenance", price: "from $50 to $150 /month" },
+        ]}
+      />
 
       {/* FAQ */}
       <section className="process-band">

@@ -387,6 +387,12 @@ export default function Home() {
               </a>
             </div>
           </div>
+          <p className="group-lead" style={{ margin: "20px 0 0" }}>
+            Fixed-price plans from $350.{" "}
+            <Link href="/services" style={{ color: "var(--blue)", fontWeight: 600 }}>
+              See services and pricing
+            </Link>
+          </p>
         </div>
       </section>
     </>

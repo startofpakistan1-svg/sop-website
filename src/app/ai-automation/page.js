@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import PriceList from "@/components/PriceList";
 import Testimonials from "@/components/Testimonials";
 import testimonials from "@/data/testimonials";
 
@@ -521,6 +522,17 @@ export default function AIAutomation() {
           </div>
         </div>
       </section>
+
+      {/* PRICING */}
+      <PriceList
+        title="AI automation pricing"
+        items={[
+          {
+            label: "AI automation (chatbots, agents, workflows)",
+            price: "from $400 setup + $150 /month",
+          },
+        ]}
+      />
 
       {/* FAQ */}
       <section className="process-band">

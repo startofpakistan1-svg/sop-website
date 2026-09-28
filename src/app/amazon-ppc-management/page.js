@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import PriceList from "@/components/PriceList";
 
 export const metadata = {
   title: "Amazon Advertising Agency for UK & US Sellers | SOP",
@@ -325,6 +326,21 @@ export default function AmazonPPC() {
           </div>
         </div>
       </section>
+
+      {/* PRICING */}
+      <PriceList
+        title="Amazon PPC management pricing"
+        adSpend
+        items={[
+          {
+            label: "Amazon PPC management",
+            price: "$350 /month or 10% of ad spend, whichever is higher",
+          },
+          {
+            label: "Free audit of your current campaigns (keep it whether or not you hire us)",
+          },
+        ]}
+      />
 
       {/* FAQ */}
       <section className="process-band">

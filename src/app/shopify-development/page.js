@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import PriceList from "@/components/PriceList";
 import Testimonials from "@/components/Testimonials";
 import testimonials from "@/data/testimonials";
 
@@ -435,6 +436,16 @@ export default function ShopifyDevelopment() {
           </div>
         </div>
       </section>
+
+      {/* PRICING */}
+      <PriceList
+        title="Shopify development pricing"
+        items={[
+          { label: "Shopify store build", price: "from $500" },
+          { label: "Store migration between platforms", price: "from $300" },
+          { label: "Abandoned cart and email flows", price: "from $150" },
+        ]}
+      />
 
       {/* FAQ */}
       <section className="process-band">
