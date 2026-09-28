@@ -32,8 +32,8 @@ export function TestimonialCard({ t }) {
         <span className="quote-avatar">{initials(t.name)}</span>
         <span>
           <strong>{t.name}</strong>
-          <em>{t.role}, {t.company}</em>
-          <em>{t.country} · {t.service}</em>
+          <em>{t.role ? `${t.role}, ${t.company}` : t.company}</em>
+          <em>{t.country ? `${t.country} · ${t.service}` : t.service}</em>
         </span>
       </figcaption>
     </figure>
@@ -51,7 +51,10 @@ export function TestimonialInline({ company }) {
       <figcaption>
         <span>
           <strong>{t.name}</strong>
-          <em>{t.role}, {t.company} · {t.country}</em>
+          <em>
+            {t.role ? `${t.role}, ${t.company}` : t.company}
+            {t.country ? ` · ${t.country}` : ""}
+          </em>
         </span>
       </figcaption>
     </figure>

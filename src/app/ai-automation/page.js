@@ -1,5 +1,7 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
+import Testimonials from "@/components/Testimonials";
+import testimonials from "@/data/testimonials";
 
 export const metadata = {
   title: "AI Automation Agency UK | SOP",
@@ -539,6 +541,12 @@ export default function AIAutomation() {
           </div>
         </div>
       </section>
+
+      <Testimonials
+        heading="What automation clients say"
+        intro="From work we built and still look after. In their words, not ours."
+        items={testimonials.filter((t) => t.service.includes("AI automation"))}
+      />
 
       <BlogLinks
         slugs={["ai-social-media-automation"]}
