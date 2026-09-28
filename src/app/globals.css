@@ -569,17 +569,23 @@ section{padding:104px 0}
 .nf-actions{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
 
 /* ============ FOOTER ============ */
-footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mist)}
-.foot{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+footer{padding:40px 0 36px;border-top:1px solid var(--hair);background:var(--mist)}
+.foot{display:flex;justify-content:space-between;gap:28px 40px;flex-wrap:wrap}
 .foot p{color:var(--ash);font-size:14.5px;margin-top:14px;max-width:300px}
-.foot-links{display:flex;gap:48px;flex-wrap:wrap}
-.foot-col h4{font-size:13px;font-weight:800;letter-spacing:.04em;margin-bottom:14px}
-.foot-col a,.foot-col span{display:block;color:var(--ash);font-size:14.5px;margin-bottom:9px;transition:color .3s ease,transform .35s var(--e)}
+/* one column on phones, two from sm, three from md, a single row from lg */
+.foot-links{display:grid;grid-template-columns:1fr;gap:24px 40px}
+@media (min-width:640px){.foot-links{grid-template-columns:repeat(2,auto)}}
+@media (min-width:768px){.foot-links{grid-template-columns:repeat(3,auto)}}
+@media (min-width:1024px){.foot-links{grid-template-columns:repeat(5,auto);gap:24px 30px}}
+.foot-col h4{font-size:13px;font-weight:800;letter-spacing:.04em;margin-bottom:12px}
+.foot-col a,.foot-col span{display:block;color:var(--ash);font-size:14px;margin-bottom:8px;transition:color .3s ease,transform .35s var(--e)}
 .foot-col a:hover{color:var(--ink);transform:translateX(3px)}
 .foot-col a.foot-social{display:flex;align-items:center;gap:9px}
 .foot-col a.foot-social .ico{opacity:.65;transition:opacity .3s ease}
 .foot-col a.foot-social:hover .ico{opacity:1}
-.copy{margin-top:46px;padding-top:26px;border-top:1px solid var(--hair);color:var(--ash);font-size:13.5px}
+.copy{margin-top:28px;padding-top:20px;border-top:1px solid var(--hair);color:var(--ash);font-size:13.5px}
+/* clear the fixed WhatsApp / chat buttons so they never sit over footer text */
+@media (max-width:600px){footer{padding-bottom:120px}}
 
 /* ============ REDUCED MOTION ============ */
 @media (prefers-reduced-motion:reduce){
