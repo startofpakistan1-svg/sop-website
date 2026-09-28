@@ -19,6 +19,8 @@ export default function HeroFlow() {
 
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    // phones: skip the live counter, the static figures are already painted
+    if (window.matchMedia("(max-width: 600px)").matches) return;
     const id = setInterval(() => {
       setSales((s) => s + Math.floor(Math.random() * 90) + 20);
       setOrder((o) => o + 1);

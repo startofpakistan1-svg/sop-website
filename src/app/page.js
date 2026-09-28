@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import HeroFlow from "@/components/HeroFlow";
 import Schema from "@/components/Schema";
 import Testimonials from "@/components/Testimonials";
@@ -255,7 +256,13 @@ export default function Home() {
             {work.map((w) => (
               <article className="case" key={w.name}>
                 <div className="case-visual">
-                  <img className="shot active" src={w.img} alt={`${w.name} screenshot`} />
+                  <Image
+                    className="shot active"
+                    src={w.img}
+                    alt={`${w.name} screenshot`}
+                    fill
+                    sizes="(max-width: 980px) 100vw, 50vw"
+                  />
                   <span className="case-tag">{w.type.split(" · ")[0]}</span>
                 </div>
                 <div className="case-body">

@@ -1294,3 +1294,20 @@ footer{padding:64px 0 44px;border-top:1px solid var(--hair);background:var(--mis
 .ico-instagram{--ico:url(/icons/instagram.svg)}
 .ico-tiktok{--ico:url(/icons/tiktok.svg)}
 .member-li .ico{width:16px;height:16px}
+
+/* ============ MOBILE: DECORATIVE MOTION OFF ============ */
+/* Infinite hero animations cost paint and compositor time on phones during
+   the period that decides LCP. The blobs, nodes and cards keep their exact
+   position and colour; only the movement stops. The two overlay pulses are
+   hidden the same way the reduced-motion block already hides .hub-pulse. */
+@media (max-width:600px){
+  .b1,.b2,
+  .node,
+  .order-card,
+  .ticker-card,
+  .live-dot{animation:none}
+  .wire .live,
+  .hub::before,
+  .hub::after,
+  .hub-pulse{animation:none;opacity:0}
+}
