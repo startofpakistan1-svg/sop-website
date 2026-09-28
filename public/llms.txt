@@ -1,34 +1,51 @@
-# SOP – Start of Pakistan
+# Start of Pakistan (SOP)
 
-> SOP is an eCommerce and AI company based in Jhelum, Pakistan. We run Amazon seller accounts, manage Amazon PPC, build Shopify stores and custom websites, and design AI automation for brands selling in the UK and US.
+> SOP is an eCommerce and automation studio in Jhelum, Pakistan that runs Amazon seller accounts, builds Shopify and custom-coded online stores, and sets up AI and marketing automation for brands selling in the UK and US.
 
-## What we do
+Work is scoped in writing with a fixed price before it starts. Accounts, code and data stay in the client's name. The team works a few hours ahead of the UK, so daily account work is usually done before the client's morning.
 
-- Amazon account management: listings, optimisation, inventory, customer service, account health and Brand Registry, handled end to end.
-- Amazon PPC management: campaign structure, keyword research, bid management, negative keywords, budget pacing and weekly reporting. Fixed monthly fee, no percentage of ad spend.
-- Shopify stores: store design, product catalogue and checkout setup, plus ongoing maintenance.
-- Custom websites: hand-coded and WordPress/WooCommerce storefronts.
-- AI automation: AI agents for content, customer support and repetitive operations.
+## Services
 
-## Who we serve
+- [Services overview](https://www.startofpakistan.com/services): every service SOP offers, grouped by marketplace, web development, AI automation and digital.
+- [Amazon Account Management](https://www.startofpakistan.com/amazon-account-management): full-service Amazon agency work for UK and US sellers — Seller Central and Vendor Central account management, listings and catalogue support.
+- [Amazon PPC Management](https://www.startofpakistan.com/amazon-ppc-management): Amazon ads management covering Sponsored Products, Sponsored Brands and Sponsored Display, with weekly search-term and bid work.
+- [Shopify Development](https://www.startofpakistan.com/shopify-development): Shopify store builds, migrations from WooCommerce and other platforms, custom theme work and Shopify SEO.
+- [Ecommerce Website Development](https://www.startofpakistan.com/ecommerce-website-development): bespoke ecommerce sites coded by hand in HTML, CSS and JavaScript, plus redesigns and conversion rate optimisation.
+- [AI Automation](https://www.startofpakistan.com/ai-automation): AI agents and business automation for customer replies, reporting, admin work and content, with human review built in.
+- [Marketing Automation](https://www.startofpakistan.com/marketing-automation): CRM setup, segmentation, email sequences and lead nurturing built around the tools a team already uses.
 
-Amazon and Shopify sellers in the United Kingdom and the United States. We work to the client's time zone from Jhelum, Pakistan.
+## Blog
 
-## Location
-
-Rizwan Heights, Satellite Town, Jhelum 49600, Pakistan.
-
-## Pages
-
-- Home: https://www.startofpakistan.com/
-- Services: https://www.startofpakistan.com/services
-- Amazon account management: https://www.startofpakistan.com/amazon-account-management
-- Amazon PPC management: https://www.startofpakistan.com/amazon-ppc-management
-- Our work: https://www.startofpakistan.com/portfolio
-- About: https://www.startofpakistan.com/about
-- Contact: https://www.startofpakistan.com/contact
+- [What Is a Good ACoS on Amazon? A Practical Guide for Sellers](https://www.startofpakistan.com/blog/what-is-a-good-acos-on-amazon): what ACoS measures, how to work out a break-even target from product margins, and when a high ACoS is acceptable.
+- [What Is a Good ACoS on Amazon? (And How to Lower It)](https://www.startofpakistan.com/blog/what-is-a-good-acos): how ACoS is calculated, why a good figure depends on margin, and practical ways to bring it down.
+- [TACoS vs ACoS: Which One Should Amazon Sellers Track?](https://www.startofpakistan.com/blog/tacos-vs-acos-amazon): the difference between the two metrics, what each one tells a seller, and which to use when.
+- [How to Optimize an Amazon Listing: Step-by-Step Guide](https://www.startofpakistan.com/blog/how-to-optimize-amazon-listing): keywords, title, bullet points, description, backend search terms, images, A+ Content and reviews.
+- [Amazon A+ Content Examples That Help Listings Sell](https://www.startofpakistan.com/blog/amazon-a-plus-content-examples): what A+ Content is, who is eligible, the common module types, example layouts and mistakes to avoid.
+- [How Much Does Amazon Account Management Cost in the UK?](https://www.startofpakistan.com/blog/amazon-account-management-cost): common pricing models, what is usually included, what moves the price, and what to ask before signing.
+- [Amazon PPC Agency vs Managing Ads Yourself](https://www.startofpakistan.com/blog/amazon-ppc-agency-vs-diy): what running ads yourself involves, when an agency makes sense, and how to judge the results.
+- [How to Choose an Amazon Agency: 10 Questions to Ask](https://www.startofpakistan.com/blog/how-to-choose-an-amazon-agency): ten questions on reporting, contracts, account access, category experience and communication, plus red flags.
+- [How Much Does a Shopify Store Cost to Build?](https://www.startofpakistan.com/blog/shopify-store-cost): plan fees against build costs, theme versus custom design, apps, product setup and ongoing costs.
+- [How to Choose a Shopify Development Partner](https://www.startofpakistan.com/blog/how-to-choose-shopify-development-partner): what a development partner should do, questions to ask, time zones, contracts and store ownership.
+- [Shopify SEO Checklist for UK & US Stores](https://www.startofpakistan.com/blog/shopify-seo-checklist): store structure, product titles, meta titles, alt text, duplicate content, speed, schema and internal links.
+- [WooCommerce to Shopify Migration: Step-by-Step Guide](https://www.startofpakistan.com/blog/woocommerce-to-shopify-migration): planning, moving products, customers and orders, 301 redirects to keep rankings, testing and launch.
+- [Custom Website vs Shopify Theme: Which Is Right for You?](https://www.startofpakistan.com/blog/custom-website-vs-shopify): what each option gives you on design control, speed, cost and maintenance, and when each fits.
+- [Does Your Online Store Need a Redesign? 7 Signs](https://www.startofpakistan.com/blog/online-store-redesign-signs): seven signs a store has outgrown its site, and what a redesign involves.
+- [How AI Agents Automate Social Media Content for Businesses](https://www.startofpakistan.com/blog/ai-social-media-automation): what AI agents are, how they plan, draft and schedule posts, and where people still review.
+- [Best AI Agents for Customer Support in the UK (2026 Guide)](https://www.startofpakistan.com/blog/best-ai-agents-for-customer-support): what AI support agents handle, where they fall short, and what to check before choosing one.
+- [All guides](https://www.startofpakistan.com/blog): index of every article.
 
 ## Contact
 
+- [Contact](https://www.startofpakistan.com/contact): enquiry form, WhatsApp, email, phone and office address.
 - Email: support@startofpakistan.com
 - WhatsApp: +92 310 1375475
+- Office: Rizwan Heights, Satellite Town, Jhelum 49600, Pakistan
+
+## Optional
+
+- [Home](https://www.startofpakistan.com/): overview of what SOP does and who it works with.
+- [Our work](https://www.startofpakistan.com/portfolio): the projects SOP has permission to show.
+- [About](https://www.startofpakistan.com/about): who runs SOP and how the team works.
+- [Leave a review](https://www.startofpakistan.com/review): review form for existing clients.
+- [Privacy Policy](https://www.startofpakistan.com/privacy)
+- [Terms of Service](https://www.startofpakistan.com/terms)
