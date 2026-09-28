@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <footer>
       <div className="wrap foot">
-        <div>
+        <div className="foot-brand">
           <img className="logo-img" src="/logo.png" alt="SOP logo" />
           <p>
             Start of Pakistan — eCommerce, web and AI solutions from Jhelum for

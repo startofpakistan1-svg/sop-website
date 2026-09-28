@@ -570,13 +570,22 @@ section{padding:104px 0}
 
 /* ============ FOOTER ============ */
 footer{padding:40px 0 36px;border-top:1px solid var(--hair);background:var(--mist)}
-.foot{display:flex;justify-content:space-between;gap:28px 40px;flex-wrap:wrap}
-.foot p{color:var(--ash);font-size:14.5px;margin-top:14px;max-width:300px}
-/* one column on phones, two from sm, three from md, a single row from lg */
-.foot-links{display:grid;grid-template-columns:1fr;gap:24px 40px}
+.foot{display:grid;grid-template-columns:1fr;gap:28px 30px}
+.foot-brand{max-width:260px}
+.foot p{color:var(--ash);font-size:14px;margin-top:12px;max-width:100%}
+/* one column on phones, two from sm, three from md */
+.foot-links{display:grid;grid-template-columns:1fr;gap:24px 30px}
 @media (min-width:640px){.foot-links{grid-template-columns:repeat(2,auto)}}
 @media (min-width:768px){.foot-links{grid-template-columns:repeat(3,auto)}}
-@media (min-width:1024px){.foot-links{grid-template-columns:repeat(5,auto);gap:24px 30px}}
+/* From 1180px the brand and all five columns share one row. 1180 rather than
+   1024 because the five content-sized columns plus the brand only genuinely
+   fit from there; below it the 3-column grid above applies. */
+@media (min-width:1180px){
+  .foot{grid-template-columns:minmax(200px,220px) 1fr;align-items:start}
+  .foot-links{grid-template-columns:repeat(5,auto);justify-content:space-between}
+}
+/* long unbreakable strings wrap rather than forcing the row to break */
+.foot-col a,.foot-col span{overflow-wrap:anywhere}
 .foot-col h4{font-size:13px;font-weight:800;letter-spacing:.04em;margin-bottom:12px}
 .foot-col a,.foot-col span{display:block;color:var(--ash);font-size:14px;margin-bottom:8px;transition:color .3s ease,transform .35s var(--e)}
 .foot-col a:hover{color:var(--ink);transform:translateX(3px)}
