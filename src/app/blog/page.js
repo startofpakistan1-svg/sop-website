@@ -25,11 +25,12 @@ export default function Blog() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/blog.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">Blog · Amazon sellers</div>
-          <h1>Guides for Amazon sellers</h1>
+          <div className="svc-kicker">Blog · eCommerce, web &amp; AI</div>
+          <h1>Guides for running and growing an online business</h1>
           <p>
-            Plain-English guides on PPC, listing optimization and account
-            management, written for sellers in the UK and US.
+            Plain-English guides on Amazon selling, Shopify and custom store
+            builds, AI and marketing automation, written for owners selling in
+            the UK and US.
           </p>
         </div>
       </section>
