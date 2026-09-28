@@ -16,7 +16,6 @@ Work is scoped in writing with a fixed price before it starts. Accounts, code an
 
 ## Blog
 
-- [What Is a Good ACoS on Amazon? A Practical Guide for Sellers](https://www.startofpakistan.com/blog/what-is-a-good-acos-on-amazon): what ACoS measures, how to work out a break-even target from product margins, and when a high ACoS is acceptable.
 - [What Is a Good ACoS on Amazon? (And How to Lower It)](https://www.startofpakistan.com/blog/what-is-a-good-acos): how ACoS is calculated, why a good figure depends on margin, and practical ways to bring it down.
 - [TACoS vs ACoS: Which One Should Amazon Sellers Track?](https://www.startofpakistan.com/blog/tacos-vs-acos-amazon): the difference between the two metrics, what each one tells a seller, and which to use when.
 - [How to Optimize an Amazon Listing: Step-by-Step Guide](https://www.startofpakistan.com/blog/how-to-optimize-amazon-listing): keywords, title, bullet points, description, backend search terms, images, A+ Content and reviews.

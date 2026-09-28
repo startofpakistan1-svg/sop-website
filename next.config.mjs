@@ -36,6 +36,18 @@ const securityHeaders = [
 const nextConfig = {
   poweredByHeader: false,
 
+  async redirects() {
+    return [
+      {
+        // Consolidated into /blog/what-is-a-good-acos, which holds the
+        // ranking history for this query.
+        source: "/blog/what-is-a-good-acos-on-amazon",
+        destination: "/blog/what-is-a-good-acos",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {
