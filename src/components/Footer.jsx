@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const socials = [
   { label: "LinkedIn",  icon: "linkedin",  href: "https://www.linkedin.com/company/start-of-pakistan/" },
@@ -12,7 +13,7 @@ export default function Footer() {
     <footer>
       <div className="wrap foot">
         <div className="foot-brand">
-          <img className="logo-img" src="/logo.png" alt="SOP logo" />
+          <Image className="logo-img" src="/logo.png" alt="SOP logo" width={94} height={38} />
           <p>
             Start of Pakistan — eCommerce, web and AI solutions from Jhelum for
             clients everywhere.

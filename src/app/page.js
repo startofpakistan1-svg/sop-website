@@ -143,7 +143,7 @@ export default function Home() {
               <span className="live-dot" aria-hidden="true" />
               9 accounts running right now
             </div>
-            <h1 className="rev d2">
+            <h1>
               Your store never sleeps.
               <br />
               <span className="grad">Neither do we.</span>

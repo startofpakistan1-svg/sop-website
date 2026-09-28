@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
@@ -21,7 +22,14 @@ export default function Navbar() {
     <header className="nav">
       <div className="wrap nav-in">
         <Link href="/" aria-label="SOP home">
-          <img className="logo-img" src="/logo.png" alt="SOP — eCommerce & Digital Solutions" />
+          <Image
+            className="logo-img"
+            src="/logo.png"
+            alt="SOP — eCommerce & Digital Solutions"
+            width={94}
+            height={38}
+            priority
+          />
         </Link>
 
         {/* One nav for every width: a row on desktop, a dropdown panel on mobile (CSS) */}

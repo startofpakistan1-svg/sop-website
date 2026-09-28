@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const NODES = [
   { name: "Amazon", cls: "n1" },
@@ -47,7 +48,7 @@ export default function HeroFlow() {
         ))}
 
         <div className="hub" aria-hidden="true">
-          <img src="/logo.png" alt="" />
+          <Image src="/logo.png" alt="" width={76} height={31} loading="eager" />
         </div>
 
         <div className="order-card">
