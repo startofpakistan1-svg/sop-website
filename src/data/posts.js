@@ -19,6 +19,72 @@
 
 const posts = [
   {
+    slug: "how-to-get-amazon-brand-approval",
+    topic: "amazon",
+    title: "How to Get Amazon Brand Approval (A Real Case Study)",
+    description:
+      "How we got a gated Beauty & Health brand approved for a UK wholesale seller — and the 607 orders and £32,928 in organic revenue that followed.",
+    date: "2026-09-29",
+    excerpt:
+      "A UK wholesale account was locked out of a high-demand Beauty & Health brand because it was gated. Here is exactly how we got it approved, and what happened after.",
+    content: `
+Some of the most in-demand products on Amazon are also the hardest to sell. Beauty & Health is one of the strictest gated categories on the platform — Amazon requires sellers to prove they are an authorised, authentic source before a single listing goes live. Get that approval and a whole category opens up. Without it, the product simply isn't available to you, no matter how strong your account is.
+
+This is the story of one account where that exact block was the only thing standing between an established seller and a brand that went on to generate £32,928 in six months.
+
+## The starting point: a working account, a locked category
+
+The client was not new to Amazon. Their account was active and already selling in ungated categories with no issues — established history, no account health problems, no listing violations. What they did not have was access to a specific Beauty & Health brand they wanted to add to their catalogue.
+
+That brand was gated. Amazon's gating system exists to stop counterfeit and unauthorised stock from reaching buyers in categories where safety and authenticity matter most — Beauty & Health sits firmly in that bracket alongside categories like supplements, medical devices and certain electronics. Sellers who want in have to prove, with documentation, that they have a genuine right to sell that specific brand.
+
+The client had tried and been unable to get through it on their own. This is common — gating approval is not a form you fill in once, it is a documentation process Amazon's team scrutinises closely, and a single weak or mismatched invoice is often enough for a rejection.
+
+## What "getting approval" actually involves
+
+At a high level, Amazon brand approval for a wholesale account usually comes down to proving a genuine supply chain:
+
+1. **Confirming the exact brand and category requirements.** Gating rules differ by brand and sub-category, so the first step is establishing exactly what Amazon will ask for on this specific listing.
+2. **Sourcing valid invoices.** Amazon wants invoices from an authorised distributor or manufacturer, in the seller's name, showing enough volume and recency to look like a genuine ongoing supply relationship — not a one-off purchase.
+3. **Matching every detail.** Business name, address and VAT details on the invoice have to line up exactly with the seller's Amazon account. Mismatches are one of the most common reasons approval requests get rejected.
+4. **Submitting through Seller Central's approval flow** and responding to any follow-up requests from Amazon's review team, which can come back asking for additional documentation.
+
+For this client, we handled the process end-to-end: identifying the right documentation route, working with the invoice chain until it met Amazon's bar, and submitting until approval came through.
+
+## What happened after approval
+
+Once the brand was approved, the products were listed on the existing account. No relaunch was needed, no new account, no waiting period beyond the approval itself.
+
+Over the following six months, that listing brought in:
+
+- **607 orders**
+- **£32,928 in revenue**
+- All of it **organic** — no advertising spend
+
+That last point is worth explaining, because it surprises people who assume every Amazon growth story involves PPC. This was a **wholesale** account, and wholesale doesn't run ads the way private label does — PPC is a private label lever, built around bidding for keywords on your own listings. A wholesale seller is usually reselling existing, already-indexed listings, so the growth here came entirely from organic demand meeting a newly-unlocked, in-demand brand. The approval itself was the growth driver, not a marketing campaign layered on top of it.
+
+## Why this matters for other sellers
+
+The lesson here isn't really about this one brand. It's that **the biggest constraint on a wholesale account's growth is often access, not marketing.** A seller can have a clean account, good supplier relationships and real demand waiting, and still be shut out of a category purely because the approval paperwork wasn't put together in a way Amazon accepts.
+
+If you're sitting on a brand you can't get approved, or a category that keeps rejecting your application, that's usually a documentation and process problem — not a sign the brand is permanently out of reach.
+
+## FAQ
+
+**How long does Amazon brand approval usually take?**
+It varies by brand and category. Straightforward cases with clean invoices can clear in days; cases requiring back-and-forth with Amazon's review team, or invoice corrections, can take several weeks.
+
+**Can a seller with no account history get brand approval?**
+Yes, account age isn't the main factor — the invoice documentation and its match to the seller's business details is. That said, an account with no health issues makes the review smoother.
+
+**Does getting approved guarantee sales?**
+No. Approval only unlocks the ability to list the brand — how well it sells still depends on demand, pricing and competition on that listing, same as any other product.
+
+**Is brand approval a one-time process?**
+It's typically per-brand, sometimes per-category. Approval for one brand doesn't automatically extend to a different gated brand, even within the same category.
+`,
+  },
+  {
     slug: "what-is-a-good-acos",
     topic: "amazon",
     title: "What Is a Good ACoS on Amazon? (And How to Lower It)",

@@ -31,10 +31,10 @@ const projects = [
     name: "Amazon seller account management",
     type: "Marketplace management",
     tag: "Marketplace",
-    body: "End-to-end Amazon account management for international clients — listings, optimisation and day-to-day operations for brands selling into the UK and US markets.",
+    body: "End-to-end Amazon account management for international clients — including getting a gated Beauty & Health brand approved for a UK wholesale seller, a process most sellers get stuck on. Once approved, the listing generated £32,928 across 607 orders in six months, entirely organic.",
     stack: ["Amazon Seller Central", "Listing optimisation", "Account operations"],
     result: "£32,928 in sales across 607 orders on one UK seller account",
-    link: null,
+    link: "/blog/how-to-get-amazon-brand-approval",
     images: ["/work/amazon.jpeg", "/work/amazon-2.jpeg"],
   },
   {
@@ -121,11 +121,18 @@ export default function Portfolio() {
                   <ul className="case-stack">
                     {p.stack.map((s) => <li key={s}>{s}</li>)}
                   </ul>
-                  {p.link && (
-                    <a className="case-link" href={p.link} target="_blank" rel="noreferrer">
-                      Visit the store <span aria-hidden="true">→</span>
-                    </a>
-                  )}
+                  {/* Internal links point at a case study on this site, so they
+                      stay in the tab and get their own label. */}
+                  {p.link &&
+                    (p.link.startsWith("/") ? (
+                      <Link className="case-link" href={p.link}>
+                        Read the case study <span aria-hidden="true">→</span>
+                      </Link>
+                    ) : (
+                      <a className="case-link" href={p.link} target="_blank" rel="noreferrer">
+                        Visit the store <span aria-hidden="true">→</span>
+                      </a>
+                    ))}
                   {p.testimonial && <TestimonialInline company={p.testimonial} />}
                 </div>
               </article>

@@ -398,7 +398,11 @@ export default function AmazonAccountManagement() {
             the account as a whole rather than a list of tasks: listings and
             catalogue, advertising, inventory, pricing, customer messages,
             account health and reporting, run by one team that sees how each
-            part affects the others.
+            part affects the others. That includes the approvals that stand
+            between a product and a live listing — our{" "}
+            <Link href="/blog/how-to-get-amazon-brand-approval">Amazon brand approval case study</Link>{" "}
+            walks through getting a gated Beauty &amp; Health brand unlocked for
+            a UK wholesale seller.
           </p>
           <p>
             That is the difference from hiring piecemeal. A freelancer can
