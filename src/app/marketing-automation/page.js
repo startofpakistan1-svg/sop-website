@@ -335,7 +335,11 @@ export default function MarketingAutomation() {
             welcome that explains who you are, a follow-up that answers what
             buyers always ask, a re-engagement for contacts who have gone
             quiet, and an alert to a human being at the point it stops being
-            marketing and starts being a conversation.
+            marketing and starts being a conversation. Where those
+            conversations are the same questions arriving again and again, they
+            belong with support rather than a sequence — our guide to{" "}
+            <Link href="/blog/best-ai-agents-for-customer-support">AI agents for customer support</Link>{" "}
+            explains what can be answered automatically and what should not be.
           </p>
           <p>
             Having a marketing automation agency UK businesses can reach during

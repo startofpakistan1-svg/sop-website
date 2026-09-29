@@ -414,7 +414,11 @@ export default function AIAutomation() {
             services do their work: customer replies that repeat, reporting
             assembled from your own numbers, the admin that moves information
             and drafts documents, and content planned and published on a
-            rhythm.
+            rhythm. If customer replies are the part you are weighing up, our
+            guide to{" "}
+            <Link href="/blog/best-ai-agents-for-customer-support">AI agents for customer support</Link>{" "}
+            sets out what they resolve well and when they should hand over to a
+            person.
           </p>
           <p>
             Smaller teams often feel the difference sooner, because there is no

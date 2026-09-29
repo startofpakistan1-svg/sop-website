@@ -804,7 +804,7 @@ AI agents are good at volume and consistency. They are not good at judgement abo
 
 **Approving drafts.** Someone reads posts before they go out, or at least samples them. This catches factual errors, awkward tone and anything that could embarrass the business. Over time, as trust builds, the review can become lighter, but it should not disappear for anything public-facing.
 
-**Handling replies.** Comments and messages from real customers should reach a real person. An agent can flag and summarise them, but it should not answer on the company's behalf without oversight.
+**Handling replies.** Comments and messages from real customers should reach a real person. An agent can flag and summarise them, but it should not answer on the company's behalf without oversight. Where those messages turn out to be the same handful of questions over and over, that is a support problem rather than a content one, and [AI agents for customer support](/blog/best-ai-agents-for-customer-support) covers what can safely be answered without a person and what cannot.
 
 ## Benefits and limits
 
@@ -1192,7 +1192,7 @@ One sign can usually be fixed in place. Three or more, and the fixes start to co
     excerpt:
       "AI support agents answer the questions that repeat, at any hour — here is what they handle, where they fail, and how to work out whether one fits your business.",
     content: `
-Every software company now sells something described as an AI agent for customer support, and most of the marketing sounds identical. Underneath, the products differ enormously: in what they can resolve, in how they behave when unsure, and in how much of your own information they have been given.
+Every software company now sells something described as an AI agent for customer support — or for customer service, depending on the vendor's house style — and most of the marketing sounds identical. Underneath, the products differ enormously: in what they can resolve, in how they behave when unsure, and in how much of your own information they have been given.
 
 This guide does not rank products. Vendors change constantly, and the right choice depends on your helpdesk, your order system and what your customers ask. Instead it explains what these agents do, where they help, where they cause damage, and what to check before committing.
 
@@ -1224,7 +1224,7 @@ The pattern is consistent: questions that repeat, have a definite answer, and ne
 
 ## Where it falls short
 
-Be sceptical of anyone who tells you an agent handles everything.
+Be sceptical of anyone who tells you an agent handles all of your customer service.
 
 **Complaints.** An angry customer does not want efficiency, they want to be heard, and an instant well-structured reply often makes it worse. Complaints should be detected and escalated, not answered.
 
@@ -1252,7 +1252,7 @@ Be sceptical of anyone who tells you an agent handles everything.
 
 ## UK-specific considerations
 
-Three things matter more for a UK business than the generic sales material suggests.
+Three things matter more for a UK customer service team than the generic sales material suggests.
 
 **Where the data sits.** Customers ask, and your own obligations depend on the answer. You do not need to be an expert, but you do need to know which regions your provider processes and stores conversations in, written down. If your business handles anything sensitive, take proper professional advice rather than relying on a vendor's assurance or a guide like this one.
 
@@ -1269,6 +1269,16 @@ A conversational agent suits you if customers arrive at all hours, in volume, as
 That is cheaper, simpler, easier to change, and carries none of the risk of software talking to customers unsupervised. It also saves more time than people expect, because most support load is not the conversation itself — it is looking things up, copying between systems, and remembering to follow up.
 
 The same logic applies to the messages you send rather than receive. Order updates, review requests and post-purchase email sequences are a scheduling problem rather than an intelligence one, and belong with your [marketing automation](/marketing-automation) rather than with a support agent.
+
+## Frequently asked questions
+
+**What is the difference between AI customer support and AI customer service?** In practice there is none — the two phrases describe the same thing, and which one appears in the marketing is usually a matter of the vendor's house style. "Customer service" is the more common wording in the UK and tends to suggest the whole relationship with a customer, while "customer support" leans towards fixing problems and answering questions. When you are comparing tools, judge them on what they connect to and how they behave when unsure, not on which of the two words they use.
+
+**Are AI agents suitable for UK customer service teams?** Yes, provided you check the three things the generic sales material tends to skip: which regions your conversations are processed and stored in, whether you can set British spelling and tone, and whether the working calendar the agent follows is yours, bank holidays included. Most agents default to American English, so read a batch of real replies before letting one loose on customers. Suitability also depends on volume — if enquiries arrive by email in manageable numbers and in a few recognisable types, workflow automation usually fits better than a conversational agent.
+
+**Can an AI agent handle customer service outside business hours?** Yes, and answering at two in the morning is one of the clearest reasons to use one: the questions that repeat and have a definite answer — order status, returns policy, delivery times — get resolved without anyone reading them. What it cannot do is cover the conversations it escalates, because your team is not there to take them. Decide in advance what happens to an out-of-hours escalation, so the customer is told honestly when a person will reply.
+
+**What happens when the AI agent cannot answer?** It should say so plainly and pass the conversation to a person, with the history attached so the customer does not have to start again. Ask to see that in a demo rather than taking it on trust, and check that you control what triggers it: certain topics, an unhappy tone, a direct request for a human, or two failed attempts. An agent that guesses instead, or that hides the escalation route to protect its resolution rate, costs more than the inbox time it saves.
 
 If you would like help working out which of the two you actually need, our [AI automation](/ai-automation) work starts by looking at what your team repeats each week and saying plainly where automation pays and where it does not. Sometimes the answer is a support agent. More often it is something smaller.
 `,
