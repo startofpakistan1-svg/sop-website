@@ -67,7 +67,7 @@ That last point is worth explaining, because it surprises people who assume ever
 
 The lesson here isn't really about this one brand. It's that **the biggest constraint on a wholesale account's growth is often access, not marketing.** A seller can have a clean account, good supplier relationships and real demand waiting, and still be shut out of a category purely because the approval paperwork wasn't put together in a way Amazon accepts.
 
-If you're sitting on a brand you can't get approved, or a category that keeps rejecting your application, that's usually a documentation and process problem — not a sign the brand is permanently out of reach.
+If you're sitting on a brand you can't get approved, or a category that keeps rejecting your application, that's usually a documentation and process problem — not a sign the brand is permanently out of reach. If you're stuck on something similar, [get in touch](/contact) and we'll walk through what your specific brand needs.
 
 ## FAQ
 
