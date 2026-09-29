@@ -42,9 +42,9 @@ export default function Blog() {
             {sorted.map((p) => (
               <article className="card post-card" key={p.slug}>
                 <time className="post-date" dateTime={p.date}>{formatDate(p.date)}</time>
-                <h3>
+                <h2>
                   <Link href={`/blog/${p.slug}`}>{p.title}</Link>
-                </h3>
+                </h2>
                 <p>{p.excerpt}</p>
                 <Link className="case-link" href={`/blog/${p.slug}`}>
                   Read more <span aria-hidden="true">→</span>

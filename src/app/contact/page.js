@@ -118,7 +118,7 @@ export default function Contact() {
           <div>
             {status === "sent" ? (
               <div className="form-success">
-                <h3>Thanks — we&apos;ve got your message.</h3>
+                <h2>Thanks — we&apos;ve got your message.</h2>
                 <p>
                   We&apos;ll get back to you at{" "}
                   <strong>{form.email || form.phone}</strong>, usually the same
@@ -237,7 +237,7 @@ export default function Contact() {
 
           {/* INFO */}
           <div className="info-card">
-            <h3>Reach us directly</h3>
+            <h2>Reach us directly</h2>
 
             <div className="info-row">
               <div className="lbl">WhatsApp</div>

@@ -100,7 +100,7 @@ export default function Review() {
         <section>
           <div className="wrap prose">
             <div className="form-success">
-              <h3>Your review has been sent.</h3>
+              <h2>Your review has been sent.</h2>
               <p>
                 We read every one. If we publish it on the site, it&apos;ll
                 appear with your name and company exactly as you wrote them.
@@ -257,7 +257,7 @@ export default function Review() {
           </div>
 
           <div className="info-card">
-            <h3>Rather just tell us?</h3>
+            <h2>Rather just tell us?</h2>
             <p style={{ color: "var(--muted)", fontSize: 15.5, marginBottom: 20 }}>
               A WhatsApp message works just as well. Send it however is easiest.
             </p>

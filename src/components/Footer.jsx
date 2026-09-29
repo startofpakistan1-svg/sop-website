@@ -22,7 +22,7 @@ export default function Footer() {
 
         <div className="foot-links">
           <div className="foot-col">
-            <h4>Services</h4>
+            <h2>Services</h2>
             <Link href="/services">Services</Link>
             <Link href="/amazon-account-management">Amazon Management</Link>
             <Link href="/amazon-ppc-management">Amazon PPC</Link>
@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Company</h4>
+            <h2>Company</h2>
             <Link href="/portfolio">Work</Link>
             <Link href="/about">About</Link>
             <Link href="/blog">Blog</Link>
@@ -42,7 +42,7 @@ export default function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Contact</h4>
+            <h2>Contact</h2>
             <a href="https://api.whatsapp.com/send?phone=923101375475" target="_blank" rel="noreferrer">WhatsApp</a>
             <a href="mailto:support@startofpakistan.com">support@startofpakistan.com</a>
             <a href="tel:+92544584447">0544-584447</a>
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Follow</h4>
+            <h2>Follow</h2>
             {socials.map((s) => (
               <a
                 key={s.label}
@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
 
           <div className="foot-col">
-            <h4>Legal</h4>
+            <h2>Legal</h2>
             <Link href="/privacy">Privacy Policy</Link>
             <Link href="/terms">Terms of Service</Link>
             <a
