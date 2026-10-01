@@ -179,11 +179,12 @@ export default function Home() {
         <div className="wrap prose">
           <h2>What we do, and who we do it for</h2>
           <p>
-            SOP is an ecommerce and automation studio. We run Amazon seller
-            accounts, build and look after online stores, and put automation
-            behind the repetitive work that quietly eats a week. Three things,
-            done by the same small team, because for most of our clients they
-            are the same problem wearing different clothes.
+            Start of Pakistan — SOP for short — is an ecommerce and automation
+            studio. We run Amazon seller accounts, build and look after online
+            stores, and put automation behind the repetitive work that quietly
+            eats a week. Three things, done by the same small team, because for
+            most of our clients they are the same problem wearing different
+            clothes.
           </p>
           <p>
             Most of the people we work with are Amazon sellers and online

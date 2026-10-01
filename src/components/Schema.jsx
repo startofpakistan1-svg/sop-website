@@ -7,7 +7,7 @@ export default function Schema() {
     "@type": "ProfessionalService",
     "@id": "https://www.startofpakistan.com/#organization",
     name: "Start of Pakistan",
-    alternateName: "SOP",
+    alternateName: ["SOP", "startofpakistan", "Start of Pakistan (SOP)"],
     description:
       "eCommerce and digital solutions studio building Shopify, WordPress and custom stores, managing Amazon seller accounts, and designing AI agent systems for clients worldwide.",
     url: "https://www.startofpakistan.com",
@@ -40,9 +40,9 @@ export default function Schema() {
     ],
     priceRange: "$$",
     sameAs: [
-      "https://www.linkedin.com/company/start-of-pakistan/",
+      "https://www.linkedin.com/company/start-of-pakistan",
       "https://www.facebook.com/profile.php?id=61594490571515",
-      "https://www.instagram.com/startofpakistan1/",
+      "https://www.instagram.com/startofpakistan1",
       "https://www.tiktok.com/@startofpakistan1",
       "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
     ],
