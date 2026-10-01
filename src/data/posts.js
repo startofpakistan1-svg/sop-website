@@ -23,14 +23,14 @@ const posts = [
     topic: "amazon",
     title: "How to Get Amazon Brand Approval (A Real Case Study)",
     description:
-      "How we got a gated Beauty & Health brand approved for a UK wholesale seller — and the 607 orders and £32,928 in organic revenue that followed.",
+      "What Amazon brand and category approval involves, and the 11 approvals we have secured for clients.",
     date: "2026-09-29",
     excerpt:
-      "A UK wholesale account was locked out of a high-demand Beauty & Health brand because it was gated. Here is exactly how we got it approved, and what happened after.",
+      "Gated brands and categories shut out sellers who have the demand but not the paperwork. Here is what approval involves, and the 11 we have secured for clients — including the ones declined first time.",
     content: `
 Some of the most in-demand products on Amazon are also the hardest to sell. Beauty & Health is one of the strictest gated categories on the platform — Amazon requires sellers to prove they are an authorised, authentic source before a single listing goes live. Get that approval and a whole category opens up. Without it, the product simply isn't available to you, no matter how strong your account is.
 
-This is the story of one account where that exact block was the only thing standing between an established seller and a brand that went on to generate £32,928 in six months.
+This is what that process actually involves, and what it has looked like in practice across the approvals we have secured for clients — including the applications that came back declined the first time.
 
 ## The starting point: a working account, a locked category
 
@@ -46,7 +46,7 @@ At a high level, Amazon brand approval for a wholesale account usually comes dow
 
 1. **Confirming the exact brand and category requirements.** Gating rules differ by brand and sub-category, so the first step is establishing exactly what Amazon will ask for on this specific listing.
 2. **Sourcing valid invoices.** Amazon wants invoices from an authorised distributor or manufacturer, in the seller's name, showing enough volume and recency to look like a genuine ongoing supply relationship — not a one-off purchase.
-3. **Matching every detail.** Business name, address and VAT details on the invoice have to line up exactly with the seller's Amazon account. Mismatches are one of the most common reasons approval requests get rejected.
+3. **Matching every detail.** Business name, address and tax details on the invoice have to line up exactly with the seller's Amazon account. Mismatches are one of the most common reasons approval requests get rejected.
 4. **Submitting through Seller Central's approval flow** and responding to any follow-up requests from Amazon's review team, which can come back asking for additional documentation.
 
 For this client, we handled the process end-to-end: identifying the right documentation route, working with the invoice chain until it met Amazon's bar, and submitting until approval came through.
@@ -55,19 +55,23 @@ For this client, we handled the process end-to-end: identifying the right docume
 
 Once the brand was approved, the products were listed on the existing account. No relaunch was needed, no new account, no waiting period beyond the approval itself.
 
-Over the following six months, that listing brought in:
+That is worth spelling out, because it surprises people who assume every Amazon growth story involves PPC. Wholesale doesn't run ads the way private label does — PPC is a private label lever, built around bidding for keywords on your own listings. A wholesale seller is usually reselling existing, already-indexed listings, so for that kind of account access to the brand is the lever, and the approval is what opens it.
 
-- **607 orders**
-- **£32,928 in revenue**
-- All of it **organic** — no advertising spend
+## 11 brand and category approvals
 
-That last point is worth explaining, because it surprises people who assume every Amazon growth story involves PPC. This was a **wholesale** account, and wholesale doesn't run ads the way private label does — PPC is a private label lever, built around bidding for keywords on your own listings. A wholesale seller is usually reselling existing, already-indexed listings, so the growth here came entirely from organic demand meeting a newly-unlocked, in-demand brand. The approval itself was the growth driver, not a marketing campaign layered on top of it.
+Across client work we have secured 11 brand and category approvals in total, on the marketplaces where those accounts sell. The brands approved so far: Estée Lauder, Clinique, CeraVe, RYOBI, STANLEY, MOPAR, PowerA and Forever. Alongside those, one sub-category approval: Figurines. Estée Lauder was approved on three separate seller accounts. These came up inside the [Amazon account management](/amazon-account-management) work we already do for clients, rather than as a standalone service.
+
+**On timing.** Amazon's stated decision window on these applications was 7 days. Several decisions came back faster than that — one submitted on 10 Oct was approved on 12 Oct, against an expected decision date of 17 Oct. That is what happened on those applications, not a turnaround to plan around; the stated window is the number to budget against.
+
+**On declines.** Not every application was approved first time. Some came back declined and had to be resubmitted with corrected invoices and additional supplier documentation. That is the part most accounts of this process leave out, and it is the part that matters if you are planning for it: a decline is usually a document problem, and the second attempt is where the work actually sits.
+
+Approval is confirmed at ASIN level. Once it comes through, the gated product becomes listable on that account.
 
 ## Why this matters for other sellers
 
-The lesson here isn't really about this one brand. It's that **the biggest constraint on a wholesale account's growth is often access, not marketing.** A seller can have a clean account, good supplier relationships and real demand waiting, and still be shut out of a category purely because the approval paperwork wasn't put together in a way Amazon accepts.
+The lesson isn't really about any one brand. It's that **the biggest constraint on a wholesale account's growth is often access, not marketing.** A seller can have a clean account, good supplier relationships and real demand waiting, and still be shut out of a category purely because the approval paperwork wasn't put together in a way Amazon accepts.
 
-If you're sitting on a brand you can't get approved, or a category that keeps rejecting your application, that's usually a documentation and process problem — not a sign the brand is permanently out of reach. If you're stuck on something similar, [get in touch](/contact) and we'll walk through what your specific brand needs.
+If you're sitting on a brand you can't get approved, or a category that keeps rejecting your application, that's usually a documentation and process problem — not a sign the brand is permanently out of reach. Getting a gated product listable is one piece of a much larger job, and the day-to-day of it — listings, catalogue, advertising, inventory and account health — is our [Amazon account management](/amazon-account-management) work.
 
 ## FAQ
 
