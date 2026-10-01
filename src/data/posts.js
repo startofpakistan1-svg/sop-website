@@ -202,6 +202,12 @@ Small, regular changes beat big, occasional ones. Amazon can take several days t
 
 **How do I lower my ACoS?** Start with the search term report and add negative keywords for anything spending without selling, then adjust bids on evidence rather than instinct. Moving converting search terms into their own exact-match campaigns makes their bids controllable. And look at the listing, because ACoS is a function of conversion rate: a page that converts better lowers ACoS without any change to a bid.
 
+**How do I get a good ACoS on Amazon?** Start by working out your break-even ACoS, because "good" means below that figure and nothing else — there is no benchmark that transfers between products. Then set a target per campaign based on what it is for: below break-even for campaigns meant to be profitable now, deliberately above it for a launch or a keyword test. The tactics for closing the gap are the same ones that lower ACoS generally — cut non-converting spend, bid from the search term report, and improve the listing's conversion rate.
+
+**Why is my ACoS so high?** Usually one of three things: you are paying for search terms that do not convert, your bids are above what the keyword can return, or the listing converts too poorly to carry the clicks it is buying. The search term report tells you which — look first at spend with no sales, then at what the converting terms actually cost. And a high figure is only a problem relative to your break-even ACoS, so check that before acting on it.
+
+**What is the difference between TACoS and ROAS?** They measure different things and move in opposite directions. TACoS is ad spend divided by your total revenue, so it includes organic sales and tells you how dependent the whole product is on advertising — lower is generally better. ROAS is ad revenue divided by ad spend, the inverse of ACoS, and counts only sales traced to an ad — higher is better. Use TACoS to judge the product, ROAS or ACoS to judge the campaign.
+
 ## The short version
 
 - ACoS is ad spend divided by ad sales.
@@ -405,6 +411,10 @@ Some products need a "how it works" section before the shopper is confident enou
 **What makes a good A+ content example?** One that adds something the bullet points could not — comparison, context, detail or reassurance. The layouts that work pair short text with images that carry the point, keep the important words in the text fields rather than baked into pictures, and read as well on a phone as on a desktop. Repeating the bullets is the most common way to waste the space.
 
 **Does A+ content help with conversions?** It is designed to, and it is why most brands build it, but measure it on your own listings rather than trusting a figure from a blog. Publish it, check it on a phone, and watch your conversion rate in your business reports over the following weeks. If nothing moves, the content is probably repeating the bullets rather than answering a question a shopper actually had.
+
+**What do A+ Content examples look like?** Most fall into a handful of shapes: a single product led by its features, a range presented with a comparison chart, or a product that needs explaining before it sells. Each is built from the same template set — image header, image-and-text rows, a single image with a sidebar, comparison chart, technical specifications — arranged differently depending on what the shopper still needs to know. The three example layouts above walk through each shape in full.
+
+**What is the difference between A+ Content and an A+ page?** In practice people use the two to mean the same thing. A+ Content is the set of modules you build and attach to an ASIN; an "A+ page" is usually just how people describe a product detail page once that content is on it. If someone is drawing a real distinction, it is worth asking which they mean — the content you build in Seller Central, or the listing the shopper sees.
 
 ## A practical way to start
 
