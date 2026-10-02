@@ -19,6 +19,307 @@
 
 const posts = [
   {
+    slug: "how-long-should-a-product-video-be",
+    topic: "web",
+    title: "How Long Should a Product Video Be?",
+    description:
+      "How long should a product video be? Sensible lengths by placement, what actually decides it, and why most product videos run too long.",
+    date: "2026-10-05",
+    excerpt:
+      "There is no single right length — it depends on where the video sits and what the shopper still does not know. Here are workable lengths by placement, and how to cut a long one down.",
+    content: `
+Short answer: shorter than you think, and the right number depends entirely on where it sits. A video doing a job on a product page has a different length from one introducing a brand on a home page, and neither has much to do with how long you spent making it.
+
+## How long should a product video be?
+
+There is no universal figure, but there are sensible ranges by placement:
+
+- **Product page or listing video.** Fifteen to thirty seconds. The shopper is already interested; the video exists to settle one remaining doubt — scale, material, how it assembles, what is in the box.
+- **Home page hero.** Ten to twenty seconds, looping. It is scene-setting, not explanation, and it competes with the visitor's reason for arriving.
+- **Paid social.** Under fifteen seconds, with the point made in the first three. Attention is rented here, not given.
+- **How-it-works or assembly.** As long as the task takes, and no longer. This is the one case where sixty seconds can be correct.
+
+The twenty-second piece we made — described in our [guide to making product videos with AI](/blog/can-you-make-amazon-product-videos-with-ai) — was built for the top of a page, and twenty seconds was about right for a loop that had to introduce a brand rather than explain a product.
+
+## What actually decides the length
+
+Not the format, and not a best-practice number. Two things:
+
+**What the shopper still does not know.** Write that down first. If it is one thing, you need fifteen seconds. If it is four things, you need either a longer video or — usually better — four shorter ones.
+
+**Whether anything has to be demonstrated.** Showing a thing working takes the time it takes. Everything else compresses.
+
+If you cannot say in a sentence what the video is for, length is not your problem yet.
+
+## The first three seconds
+
+Most product video is abandoned in the opening moments, so the opening cannot be a logo animation or a slow push onto a blank backdrop. Lead with the product, in use or in context, and let the branding arrive later.
+
+This is also where the length argument usually resolves itself: a video that earns the first three seconds gets twenty, and one that does not would not have been watched at ten.
+
+## Muted viewing changes the answer
+
+Most of this is watched with no sound, which means the message travels as on-screen text — and text needs dwell time. A caption nobody can finish reading is worse than no caption.
+
+Practically, that sets a floor: each line needs long enough to read comfortably, so the number of things you want to say sets a minimum length whether you like it or not. It is another argument for saying fewer things.
+
+## How to cut a long one down
+
+1. **Delete the intro.** Whatever it is, it is not earning its seconds.
+2. **Cut to one message.** Anything secondary becomes its own video.
+3. **Trim the holds**, not the content. Most overlong videos are correctly structured and too slow.
+4. **Lose the outro.** The call to action is the page the video sits on, not a closing card.
+5. **Watch it muted on a phone** and cut anything you skipped past.
+
+## Frequently asked questions
+
+**How long should an Amazon product video be?** Fifteen to thirty seconds suits most listing videos, because the shopper is already on the page and looking to resolve one specific doubt. Longer is defensible when the product genuinely needs demonstrating — assembly, installation, a technique — but Amazon has its own length limits per placement, so check the current specification before you edit to a target.
+
+**How long should a Shopify product video be?** Similar for the product page: fifteen to thirty seconds. A home page hero works better shorter, around ten to twenty on a loop, partly for attention and partly because a hero video carries a page speed cost worth keeping small.
+
+**Is a 60-second product video too long?** For a product page, usually yes, unless the whole minute is demonstration. For a how-it-works video it can be exactly right. Judge it by whether anything in the minute could be removed without losing the point.
+
+**Does video length affect conversion?** It plausibly does, but we have no measurement of our own to offer and will not quote someone else's. If it matters to your store, test two lengths of the same video on the same page and watch your own numbers.
+
+If you are working out which parts of your creative process are worth automating and which are not, that is where our [AI automation](/ai-automation) work starts — looking at what your team repeats each week and saying plainly where automation pays and where it does not.
+`,
+  },
+  {
+    slug: "add-product-video-to-shopify-home-page",
+    topic: "web",
+    title: "How to Add a Product Video to a Shopify Home Page",
+    description:
+      "How to add a product video to a Shopify home page: file size and format, how the theme handles it, mobile playback and page speed.",
+    date: "2026-10-04",
+    excerpt:
+      "Putting a video on a Shopify home page is a theme and performance decision as much as a creative one. Here is what to check before you publish it, and what to check afterwards.",
+    content: `
+A video on the home page is the easiest thing in the world to add badly. The creative is the part people worry about; the part that causes trouble is file size, how the theme wraps it, and what happens on a phone on mobile data.
+
+This is a practical checklist, not a case for video: we have no conversion measurement to offer and will not pretend otherwise.
+
+## How to add a product video to a Shopify home page
+
+We placed a twenty-second motion-graphics video — the AI-made piece described in our [guide to making product videos](/blog/can-you-make-amazon-product-videos-with-ai) — in the home page hero section of a motorsport gear store we work with, running on Shopify.
+
+Broadly there are three routes, and they behave differently:
+
+- **The theme's own video section.** Simplest, and the theme handles responsive sizing and the poster image for you. Your options are whatever the theme exposes.
+- **A video block inside another section.** Useful when the video belongs beside copy rather than full-width.
+- **Custom code or an embed.** Most control, most ways to hurt performance, and it stops being the theme's problem when something breaks.
+
+Start with the native section unless it genuinely cannot do what you need.
+
+## File size and format
+
+Keep it boring: **MP4 with H.264** plays everywhere, and that matters more than squeezing out the last few per cent with a newer codec.
+
+- **Strip the audio track** if it will play muted. It is dead weight on every load.
+- **Cut the length before you cut the quality.** Twenty seconds compressed lightly beats ninety seconds compressed hard.
+- **Export at the size it will display**, not at 4K for a slot that renders a few hundred pixels wide.
+- **Check Shopify's current upload limit** before you build to a size it will reject.
+
+We are deliberately not quoting a target file size: the right number depends on the slot, and a figure from a blog is a worse guide than your own speed test.
+
+## How the theme handles it
+
+Themes crop. A piece composed for a wide hero loses its edges in a square or tall container, and anything near the frame edge — a logo, a callout — is what goes. Check the rendered result at several widths rather than trusting the preview.
+
+Also check what the theme does *before* the video is ready: a blank box, a colour block and a poster image are very different first impressions.
+
+## Mobile behaviour
+
+This is where most home page videos go wrong.
+
+- **Autoplay requires muted.** Browsers block sound-on autoplay, so design for silence and carry the message in on-screen text.
+- **iOS needs the inline playback attribute**, or the video takes over the screen in a fullscreen player. Good themes handle it; custom embeds often do not.
+- **Set a poster frame.** It is what people see while the video loads, and on a slow connection it may be all they see.
+- **Consider a static image on mobile instead.** A still that loads instantly can serve the visitor better than a video that arrives late.
+
+## What it does to page speed
+
+If the video sits in the hero, it is competing with your largest contentful paint, because the hero is almost always where LCP lives.
+
+Worth being blunt about what we measured. After publishing, PageSpeed Insights reported a mobile Performance score of 43, with LCP at 14.1 seconds and FCP at 4.7 seconds. Desktop Performance came in at 57.
+
+Two caveats matter. We did not record the scores before the video went on, so this is not a before-and-after and we are not claiming the video caused those figures — a Shopify home page carries plenty of other weight. And we have not yet confirmed whether the video is the LCP element, which is the first thing to establish before changing anything.
+
+What it does show is that a hero video can sit alongside a real speed problem, and that "it looks fine on my laptop" is not a test.
+
+- **Identify the LCP element first.** PageSpeed names it. Until you know, you are guessing.
+- **Do not preload the video.** Let the poster image carry the first paint.
+- **Lazy-load anything below the fold**, including video.
+- **Test on a throttled mobile connection**, not on your desktop.
+
+For the rest of the home page, our [Shopify SEO checklist](/blog/shopify-seo-checklist) covers the speed items that often matter more than the video does.
+
+## What to check after publishing
+
+1. **On a real phone, on mobile data** — not desktop, not wifi.
+2. **Muted.** Does it still make sense with no sound?
+3. **At three widths**, for cropping.
+4. **Page speed, and which element is the LCP**, so you know what the video is actually costing you.
+
+## Frequently asked questions
+
+**Can you add a video to a Shopify home page without an app?** Yes. Most current themes include a video section or block, so an app is usually unnecessary for a single home page video. Apps earn their place for galleries, shoppable video or playback analytics.
+
+**Should a Shopify home page video autoplay?** If it autoplays it must be muted, so it only works when the message survives silence. A poster frame with a play control is often the better choice, especially on mobile.
+
+**Will a home page video slow down my Shopify store?** It can, particularly in the hero where it competes with the largest contentful paint. Keeping it short, not preloading it and using a light poster image are what keep the cost down — and the only way to know what it costs on your store is to measure, ideally before and after.
+
+If you are working out which parts of your store work are worth automating and which need a person, that is where our [AI automation](/ai-automation) work starts — looking at what your team repeats each week and saying plainly where automation pays and where it does not.
+`,
+  },
+  {
+    slug: "what-can-ai-do-for-product-photography",
+    topic: "amazon",
+    title: "What Can AI Do for Product Photography?",
+    description:
+      "What can AI do for product photography? Where Amazon's main image rules stop it, and which jobs still need a real camera.",
+    date: "2026-10-03",
+    excerpt:
+      "AI can clean up a product shot, swap a background and give you twenty variants. What it cannot do is invent a product you are selling. Here is where the line sits.",
+    content: `
+AI will do more for your product photography than most sellers expect, and less than the tools advertising it imply. The line between the two is not about quality — it is about whether the image still represents the thing in the box.
+
+## What can AI do for product photography?
+
+As with video, two different jobs get the same name.
+
+**Editing photographs you took.** Removing a background, cleaning dust and scuffs, straightening, matching colour across a set, placing a cut-out product into a plausible scene. The product pixels came from your camera.
+
+**Generating the product.** Describing the item and letting the model draw it. Convincing on screen, and for anything you are actually selling, the wrong tool — what it produces is a likeness, not a record.
+
+Everything useful sits in the first category, and that choice is also why our own run of this went smoothly. Because we supplied the product images rather than generating them, the usual failure modes never appeared: no chewed background edges, no colour drift, nothing rendered upside down or garbled. Colour held up well. Against doing the same work by hand it was far faster — and the reason is the input, not the tool.
+
+## Where Amazon's rules stop you
+
+The main image is the strictest surface on the listing, and the rules are unforgiving of generated content:
+
+- **Pure white background**, product filling most of the frame.
+- **Nothing that is not in the box** — no props, no accessories you do not ship.
+- **No text, logos, badges or borders** added to the image.
+- **The product as it actually is.** Colour, finish and proportions have to match what arrives.
+
+A generated main image fails the last point almost by definition. A background removal on your own photograph passes comfortably. That is the whole distinction, and it matters, because main-image violations suppress listings rather than merely annoying buyers.
+
+Secondary slots allow more — lifestyle scenes, infographics, dimension callouts — but the honesty requirement does not relax. Our [listing optimisation guide](/blog/how-to-optimize-amazon-listing) covers what each slot is for.
+
+## Where it genuinely helps
+
+- **Background removal and replacement.** The most reliable win. One good shot becomes a compliant white-background main plus several scene variants.
+- **Cleanup.** Dust, fingerprints, reflections, a scuffed corner on a sample unit.
+- **Consistency across a range.** Matching lighting, angle and colour temperature across a catalogue shot over months.
+- **Infographic assembly.** Dimension lines, callouts and benefit panels built around your own photograph.
+
+## Where it still falls short
+
+- **Texture and material.** Weave, grain, brushed metal, matte against glossy. Generated or heavily processed texture reads as plastic.
+- **Colour accuracy.** The thing shoppers return products over. Ours held, because the colour came from a photograph — push the processing far enough and it will not.
+- **Scale.** How big it is in a hand. Models guess, and guess wrong, and scale complaints are common in reviews.
+- **Anything demonstrating the product.** If the image has to prove it works or fits, a real photograph does and a generated one does not.
+
+## A workflow that stays compliant
+
+1. **Shoot the product properly once.** Daylight, a plain backdrop, a phone on a tripod. Every later step depends on this file.
+2. **Keep the original.** Never let an edited version become the only copy.
+3. **Use AI for the surround, not the subject** — background, cleanup, layout, text.
+4. **Check colour against the physical item**, not just on screen. This is the step people skip.
+5. **Hold the main image to the strictest reading** of the rules, and put the creative work in the secondary slots.
+
+## Frequently asked questions
+
+**Can you use AI-generated images on Amazon?** Edited photographs of your own product are fine and routine — background removal is standard practice. Fully generated product images are a different matter: the main image must show the product as it actually is, so a drawn likeness risks a misrepresentation problem even when it looks better than the photograph.
+
+**Does AI background removal break Amazon's image rules?** No. A pure white background is what Amazon asks for on the main image, and removing the background from your own shot is the normal way to get there. What matters is that the product itself is unaltered.
+
+**Can AI make product photos look professional?** It can fix lighting, clean up blemishes and standardise a set, which closes most of the gap. It cannot compensate for a photograph that missed the detail a shopper needs — no amount of processing adds texture that was never captured.
+
+**Do I still need a photographer?** For texture-led, colour-critical or demonstration-led products, usually yes, at least for the source images. For everything else, one careful session plus AI editing covers the catalogue.
+
+If you are deciding which parts of your listing work are worth automating and which need a person, that is where our [AI automation](/ai-automation) work starts — looking at what your team repeats each week and saying plainly where automation pays and where it does not.
+`,
+  },
+  {
+    slug: "can-you-make-amazon-product-videos-with-ai",
+    topic: "amazon",
+    title: "Can You Make Amazon Product Videos With AI?",
+    description:
+      "Can you make Amazon product videos with AI? What the tools handle, where Amazon's rules bite, and when you still need a camera.",
+    date: "2026-10-02",
+    excerpt:
+      "Short answer: yes, for some kinds of video. Here is what AI handles well, what it still gets wrong, and the Amazon rules that decide whether your video is usable at all.",
+    content: `
+Yes — for some kinds of product video, and not for others. That distinction is the whole answer, and most of the tools selling you on it skip past it.
+
+## Can you make Amazon product videos with AI?
+
+It depends on which of two very different jobs you are asking software to do.
+
+**Generating footage from a prompt.** You describe the product and the software produces moving images of something resembling it. For ecommerce this is the risky end: an approximation of a product you are selling is a misrepresentation waiting to happen.
+
+**Animating assets you already own.** You supply your own product photographs, logo, colours and copy, and the software handles movement, timing, captions and the different aspect ratios. The product on screen is your actual product, because it started as a photograph of it.
+
+The second is motion graphics, and it is where AI is genuinely useful today. It is also the kind we have produced, using Claude Opus 5.5 and ChatGPT — short pieces built from a seller's existing images rather than generated from nothing.
+
+To put that in concrete terms: a twenty-second motion-graphics piece took three to four hours end to end. The first render came back wrong in a specific way — it read as cartoon-style editing rather than the product look we were after. Rewording the prompt fixed it, and it took three generations at most to reach something usable. Logo placement and timing were the parts Claude Opus 5.5 handled well, and needed the least correction.
+
+## Where Amazon lets video appear
+
+The placement decides the format, so settle it first:
+
+- **On the listing itself**, in the image block — this needs Brand Registry enrolment, the same gate as A+ Content.
+- **Inside Premium A+ Content**, which has its own eligibility rules that Amazon changes from time to time.
+- **In Sponsored Brands video ads**, which is advertising rather than the organic listing.
+
+Each has its own aspect ratio, length limit and file requirements, and they move — check the current specification in Seller Central.
+
+## The rules that decide whether AI footage is usable
+
+1. **The product shown must be the product that ships.** Colour, finish, accessories, quantity. If the video shows a bundle and the buyer receives one item, that is a problem however the video was made.
+2. **No claims you cannot support.** This catches a lot of generated video, because prompts tend to produce aspirational scenes — results, timescales, effects — that the listing itself is not allowed to claim.
+3. **No promotional furniture.** Prices, badges, "best seller", review stars, competitor references. Easy to generate accidentally and a common rejection.
+
+None of these are about AI. They apply equally to footage shot on a camera — AI just makes it easier to break them quickly.
+
+## Where AI earns its place
+
+- **Movement from stills.** Slow pushes, parallax and callouts built from photographs you have already paid for.
+- **Captions and on-screen text.** Most listing video is watched muted, so text carries the message.
+- **Scripting and sequencing.** Deciding what the thirty seconds should say and in what order — usually the part that is wrong, not the pictures.
+
+## Where it still falls short
+
+- **Hands, faces and interaction.** Anything showing a person using the product tends to look subtly wrong, and subtly wrong is worse than plain.
+- **Materials and physics.** Fabric draping, liquid pouring, steam, powders — the shots that sell certain categories are the ones generated video handles least convincingly.
+- **Demonstration.** If the point is to prove the product works, a real demonstration does that and a generated one does not.
+- **Fine detail and scale.** Stitching, texture, and how big the thing actually is in a hand.
+
+If your video's job is any of those, a camera is still the right answer — a phone, a window and an hour is often enough.
+
+## A workable process
+
+1. **Decide the placement first**, because it sets length and aspect ratio.
+2. **Write the thirty seconds as words** before anything moves. If it does not work as a script, no amount of motion rescues it.
+3. **Use your own photography wherever the product is on screen.** If those images are weak to begin with, fix them first — our [listing optimisation guide](/blog/how-to-optimize-amazon-listing) covers what Amazon expects from product images.
+4. **Check it against the policy** for that placement: claims, bundle accuracy, promotional text.
+5. **Watch it muted on a phone**, which is how most of it will be seen.
+
+## Frequently asked questions
+
+**Can you use AI-generated video on an Amazon listing?** There is no blanket prohibition on how a video was produced, but it still has to meet Amazon's content rules — the product shown must match what ships, with no unsupported claims and no promotional text. The safe route is animating your own product photography, because generated footage is where misrepresentation creeps in.
+
+**Do you need Brand Registry to add video to a listing?** Yes for video in the listing's image block, the same enrolment that unlocks A+ Content. Advertising formats such as Sponsored Brands video sit outside the listing and have their own requirements.
+
+**Is AI product video cheaper than filming?** It moves the cost rather than removing it: less on production, more on deciding what the video should say, sourcing usable stills and checking compliance. For any shot needing a real demonstration, you are filming anyway.
+
+**Will AI-made video look obviously AI-made?** Motion graphics built from your own photographs generally do not, because every frame of the product is a real photograph. Fully generated scenes involving people, hands or materials often do.
+
+If you are working out which parts of your creative process are worth automating and which are not, that is the kind of question our [AI automation](/ai-automation) work starts with — looking at what your team repeats each week and saying plainly where automation pays and where it does not.
+`,
+  },
+  {
     slug: "how-to-get-amazon-brand-approval",
     topic: "amazon",
     title: "How to Get Amazon Brand Approval (A Real Case Study)",
@@ -287,7 +588,7 @@ The main image must show the product on a pure white background, filling most of
 - An image with dimensions marked clearly.
 - A simple graphic listing the main benefits.
 
-Upload at high resolution so zoom works. If your category allows video, a short clip is worth adding.
+Upload at high resolution so zoom works. If your category allows video, a short clip is worth adding. If you are weighing that up, our guide to [making Amazon product videos with AI](/blog/can-you-make-amazon-product-videos-with-ai) covers what the tools handle and what Amazon's rules allow.
 
 ## Step 7: A+ Content
 
@@ -419,6 +720,8 @@ Some products need a "how it works" section before the shopper is confident enou
 ## A practical way to start
 
 If you have never built A+ Content before, do not try to fill every slot. Start with layout 1: a header image, a three-image feature row and a specifications module. Publish it, check it on your phone, and watch conversion for a few weeks. Then add a comparison chart if you have a range, or a how-it-works sequence if your product needs one.
+
+Images do the work in A+ Content, so it is worth knowing what AI can and cannot do to them — our guide to [what AI can do for product photography](/blog/what-can-ai-do-for-product-photography) covers where editing your own shots is safe and where generated imagery is not.
 
 A+ Content is one part of a complete listing. If you want the whole page looked at, from keywords and copy to images and A+ modules, listing optimization is part of our [Amazon and marketplace services](/services). Tell us the ASIN and we will tell you what we would change.
 `,
@@ -866,7 +1169,7 @@ From that it produces a content calendar: a list of post ideas spread over the c
 
 ## How agents create posts
 
-Once the plan is approved, a writing agent turns each idea into a draft. It writes in the tone it was given, keeps to the platform's length and style, and can produce variations for different channels from one idea. Some systems also generate or select images, or produce short scripts for video.
+Once the plan is approved, a writing agent turns each idea into a draft. It writes in the tone it was given, keeps to the platform's length and style, and can produce variations for different channels from one idea. Some systems also generate or select images, or produce short scripts for video. Length is the decision people get wrong most often — our guide to [how long a product video should be](/blog/how-long-should-a-product-video-be) sets out workable lengths by placement.
 
 The important word is draft. A good system does not post straight from the writing agent. It writes into a queue.
 
@@ -1057,6 +1360,7 @@ Speed is a ranking factor and a conversion factor, and Shopify stores are slower
 - Choose a lean theme, or have unused sections and scripts removed from the one you have.
 - Compress images and let the theme lazy-load them.
 - Check Core Web Vitals in Google Search Console and test on a real phone, not just a desktop.
+- Adding video to the home page? Our guide to [adding a product video to a Shopify home page](/blog/add-product-video-to-shopify-home-page) covers what to check before and after publishing.
 
 ## Schema markup
 
