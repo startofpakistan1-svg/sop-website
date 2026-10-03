@@ -100,7 +100,7 @@ This is a practical checklist, not a case for video: we have no conversion measu
 
 ## How to add a product video to a Shopify home page
 
-We placed a twenty-second motion-graphics video — the AI-made piece described in our [guide to making product videos](/blog/can-you-make-amazon-product-videos-with-ai) — in the home page hero section of a motorsport gear store we work with, running on Shopify.
+We placed a twenty-second motion-graphics video — the AI-made piece described in our [guide to making product videos](/blog/can-you-make-amazon-product-videos-with-ai) — in the home page hero section of AWEX (awex.shop), a motorsport gear store on Shopify.
 
 Broadly there are three routes, and they behave differently:
 
@@ -140,7 +140,7 @@ This is where most home page videos go wrong.
 
 If the video sits in the hero, it is competing with your largest contentful paint, because the hero is almost always where LCP lives.
 
-Worth being blunt about what we measured. After publishing, PageSpeed Insights reported a mobile Performance score of 43, with LCP at 14.1 seconds and FCP at 4.7 seconds. Desktop Performance came in at 57.
+Worth being blunt about what we measured. After publishing on awex.shop, PageSpeed Insights reported a mobile Performance score of 43, with LCP at 14.1 seconds and FCP at 4.7 seconds. Desktop Performance came in at 57.
 
 Two caveats matter. We did not record the scores before the video went on, so this is not a before-and-after and we are not claiming the video caused those figures — a Shopify home page carries plenty of other weight. And we have not yet confirmed whether the video is the LCP element, which is the first thing to establish before changing anything.
 
