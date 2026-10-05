@@ -1399,7 +1399,7 @@ Fixed monthly retainer, percentage of sales, percentage of ad spend, or a mix. E
 
 ## 8. How will we communicate, and how quickly do you respond?
 
-Ask which channel, who replies, and what the expected turnaround is for a normal question and for an emergency such as a suspended listing. If the agency is in a different time zone, ask when your working hours overlap. Some of the best Amazon consultant UK sellers use are overseas; the ones that work well are clear about when you can reach them.
+Ask which channel, who replies, and what the expected turnaround is for a normal question and for an emergency such as a suspended listing. It is worth knowing what that emergency involves before you are in one — our guide to [what to do when an Amazon seller account is suspended](/blog/amazon-seller-account-suspended-what-to-do) sets out the process and what the outcome depends on. If the agency is in a different time zone, ask when your working hours overlap. Some of the best Amazon consultant UK sellers use are overseas; the ones that work well are clear about when you can reach them.
 
 ## 9. What happens to my listings, images and campaigns if I leave?
 
@@ -1976,7 +1976,7 @@ Here are the seven signs we look for when a store owner asks whether a redesign 
 
 Speed is the first thing to check, because it affects everything else: rankings, bounce rate, conversion. Open your store on a phone using mobile data, not office Wi-Fi, and count. If the product grid takes more than a few seconds to appear, visitors are leaving before they see it.
 
-Slowness usually comes from accumulation: a theme patched with apps, oversized images, scripts left behind by tools you stopped using. Sometimes it can be cleaned up in place. Often the cheaper fix is to rebuild without the weight.
+Slowness usually comes from accumulation: a theme patched with apps, oversized images, scripts left behind by tools you stopped using. Sometimes it can be cleaned up in place. Often the cheaper fix is to rebuild without the weight. If the symptom is speed rather than appearance, start with [why a Shopify store is slow on mobile](/blog/why-is-my-shopify-store-slow-on-mobile) — a slow theme is sometimes a redesign decision and sometimes just an app audit.
 
 ## 2. It is hard to use on a phone
 
