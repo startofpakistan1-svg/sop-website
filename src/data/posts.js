@@ -19,6 +19,469 @@
 
 const posts = [
   {
+    slug: "why-is-my-shopify-store-slow-on-mobile",
+    topic: "web",
+    title: "Why Is My Shopify Store Slow on Mobile?",
+    description:
+      "Why is my Shopify store slow on mobile? The usual causes, how to find which one is yours, and what to fix before paying anyone to fix it.",
+    date: "2026-10-11",
+    excerpt:
+      "Desktop looks fine, mobile does not, and the score keeps dropping. Here are the usual causes, in the order worth checking, with a real set of figures from a store we work on.",
+    content: `
+Most Shopify stores are slower on mobile than their owners realise, because the person checking is on a desktop with good broadband and a warm cache. The customer is on a phone, on mobile data, arriving cold.
+
+The gap is not a rounding error either. Mobile runs on less CPU, over a slower connection, and every script has to be parsed on that weaker device.
+
+## Why is my Shopify store slow on mobile?
+
+Five causes account for most of it, roughly in order of how often they turn out to be the problem:
+
+1. **Apps injecting scripts into every page**, including apps you no longer use.
+2. **Images that are larger than the slot they render into.**
+3. **A heavy hero** — a video or a large banner competing with your largest contentful paint.
+4. **Theme bloat**, from unused sections, sliders and fonts.
+5. **Third-party tags** — chat widgets, review widgets, analytics, pixels.
+
+Notice what is not on that list: Shopify's own hosting. It is rarely the constraint, which is why "move platform" is almost never the answer to this question.
+
+## What the numbers can look like
+
+Worth showing a real set rather than a hypothetical. On AWEX (awex.shop), a motorsport gear store on Shopify where we placed a hero video on the home page, PageSpeed Insights reported a mobile Performance score of 43, with LCP at 14.1 seconds. Desktop Performance came in at 57 on the same page.
+
+Two things that figure does not tell you. We have not confirmed which element is the LCP, so we are not attributing the score to the video or to anything else. And we have no before-and-after, so this is a snapshot rather than a measurement of cause.
+
+What it does illustrate is the gap between desktop and mobile on the same page, and that a store can look perfectly healthy to its owner while scoring like that on a phone. Our guide to [adding a product video to a Shopify home page](/blog/add-product-video-to-shopify-home-page) covers what to check before and after publishing one.
+
+## Find out which cause is yours
+
+Guessing is expensive here. Three steps, cheapest first:
+
+**Run PageSpeed Insights on mobile, not desktop.** Use a real product page and the home page, not just the home page. Note the LCP element it names — that single line tells you more than the score does.
+
+**Open the network panel on a throttled connection.** Sort by size. The culprits are usually obvious and usually not what you expected.
+
+**Audit your apps.** List everything installed, then everything you actually use. The difference is dead weight, and uninstalling does not always remove the injected code — check the theme for leftover snippets.
+
+## What to fix, in order
+
+1. **Remove apps you do not use**, and clear their leftover snippets from the theme.
+2. **Fix the LCP element** — whatever PageSpeed named. Usually that means serving a correctly sized image, not preloading a video, and letting a light poster image carry the first paint.
+3. **Resize images to their rendered size.** A 2000px image in a 600px slot is the most common single waste on a Shopify store.
+4. **Defer what is not needed for first paint.** Chat widgets and review carousels do not need to load before the page is usable.
+5. **Cut unused theme sections and fonts.** Two weights of one typeface is usually enough.
+6. **Re-measure after each change**, so you learn which ones mattered.
+
+Our [Shopify SEO checklist](/blog/shopify-seo-checklist) covers the speed items alongside the rest of the on-page work, since the two overlap more than people expect.
+
+## When it is the theme rather than the content
+
+Sometimes the honest answer is that the theme is the problem: an older or heavily customised one carrying years of additions, where every fix fights the template. At that point a lean rebuild costs less than another six months of patching — and [the signs a store needs a redesign](/blog/online-store-redesign-signs) are usually visible before the speed scores are.
+
+## Frequently asked questions
+
+**Why is my Shopify store slow on mobile but fine on desktop?** Mobile devices have less processing power and usually a slower connection, so the same JavaScript that parses instantly on a laptop takes far longer on a phone. Script-heavy stores show the widest gap, which is why an app audit is the first thing worth doing.
+
+**Does Shopify hosting make stores slow?** Rarely. Shopify's infrastructure is not usually the constraint — the weight of apps, images and third-party scripts loaded onto the page is. Changing platform to fix a speed problem almost always moves the same weight somewhere else.
+
+**Do Shopify speed apps work?** Be sceptical. Adding another script to solve a script problem is a strange trade, and most of what these apps do — lazy loading, deferring, preloading — a good theme already does or can be configured to do. Measure before and after if you try one.
+
+**Does mobile speed affect Shopify SEO?** Core Web Vitals are a ranking signal and Google assesses mobile, so a slow mobile experience works against you twice: in ranking and in the conversion rate of the traffic you already have.
+
+If your store is slow and you would rather someone found out why than guessed, that diagnosis is part of our [Shopify development](/shopify-development) work.
+`,
+  },
+  {
+    slug: "why-is-my-amazon-listing-suppressed",
+    topic: "amazon",
+    title: "Why Is My Amazon Listing Suppressed?",
+    description:
+      "Why is my Amazon listing suppressed? The usual causes, where to find the real reason in Seller Central, and what to fix in which order.",
+    date: "2026-10-10",
+    excerpt:
+      "A suppressed listing vanishes from search while its page still loads, which is why sellers miss it for weeks. Here is how to find the reason and what to fix first.",
+    content: `
+A suppressed listing is the quietest expensive problem on Amazon. It disappears from search results while its page still loads perfectly on a direct link — so the seller checks the URL, sees the product, concludes everything is fine, and wonders why sales stopped.
+
+We work on listing suspensions and suppressions for clients, and the first job is almost never fixing the listing. It is finding out what Amazon actually objected to, because the status message and the real cause are often two different things.
+
+## Why is my Amazon listing suppressed?
+
+It helps to separate three states that sellers all call "suppressed", because they have different causes and different fixes.
+
+**Search suppressed.** The listing exists and is buyable by direct link, but Amazon has withdrawn it from search results. This is almost always a completeness or quality problem with the listing data itself.
+
+**Inactive.** The listing is not buyable at all. Common reasons are a pricing error, an out-of-stock condition, or a policy issue.
+
+**Blocked or removed.** Amazon has taken the listing down over a policy, safety or intellectual property matter. This is the most serious of the three and needs a different response.
+
+Work out which one you have before changing anything. Editing your bullet points will not help a listing that is blocked for a compliance document.
+
+## Where to find the real reason
+
+Three places, in this order:
+
+1. **Manage Inventory, Suppressed tab.** Amazon lists the affected ASINs and names the field it is unhappy with — often a missing image or attribute.
+2. **The Listing Quality Dashboard.** Broader than the suppressed tab, and it surfaces quality alerts that have not yet tipped into suppression.
+3. **Account Health.** If the cause is a policy matter rather than listing data, this is where it appears, and the problem is bigger than one ASIN.
+
+If the suppressed tab names a field, you have a content problem and it is usually quick. If Account Health is showing something, start there instead.
+
+## The usual causes of search suppression
+
+- **The main image.** The most common single cause. A background that is not pure white, the product not filling enough of the frame, added text or props, or an image below the minimum resolution.
+- **A missing required attribute.** Product type, variation theme, a category-specific field. These vary by category and change without announcement.
+- **Title problems.** Too long for the category, or missing the elements Amazon expects for that product type.
+- **Missing bullet points or description.** A listing with empty key fields can be treated as incomplete.
+- **A pricing error.** Amazon compares your price against its own references, and a price it considers implausible can deactivate the offer.
+
+Our [listing optimisation guide](/blog/how-to-optimize-amazon-listing) covers what each field should contain once you know which one is at fault. For the main image specifically, the rules are strict enough that generated or heavily edited imagery is a common trigger — we go through that in [what AI can do for product photography](/blog/what-can-ai-do-for-product-photography).
+
+## When it is a compliance problem instead
+
+Some listings are blocked rather than suppressed, and no amount of editing fixes them. Typical triggers are a category that requires documentation you have not supplied, a safety or certification requirement, a restricted claim in the copy, or a brand you are not authorised to list.
+
+That last one is the inverse of the approval process in our [guide to getting a brand approved](/blog/how-to-get-amazon-brand-approval) — the same documentation chain, examined after the listing went up rather than before. If the block is a policy matter, it follows the appeal route rather than the edit route, and our guide to [what to do when an account is suspended](/blog/amazon-seller-account-suspended-what-to-do) covers how that works.
+
+## What to fix first
+
+1. **Identify the state** — search suppressed, inactive, or blocked.
+2. **Read the named field**, if there is one. Fix exactly that, not everything.
+3. **Fix the main image first** where images are involved, because it affects search and conversion at once.
+4. **Change one thing, then wait.** Reindexing is not instant, and changing six fields at once means you will not know which mattered.
+5. **Check the rest of the catalogue** for the same fault. Suppression caused by a category attribute rarely affects only one ASIN.
+
+## Frequently asked questions
+
+**How long does it take for a suppressed Amazon listing to come back?** There is no published timeframe. Once the underlying field is corrected the listing usually returns to search on its own, but it is a reindexing process rather than a switch, so allow for a delay before assuming the fix did not work.
+
+**Can a suppressed listing still get sales?** Yes, which is part of why it goes unnoticed. The page remains reachable by direct link, so existing traffic, advertising and repeat customers can still buy — but the organic search traffic that normally finds it is gone.
+
+**How do I tell a suppressed listing from lost ranking?** Search your exact product title while signed out. If the listing does not appear anywhere but its direct URL loads normally, it is suppressed. If it appears further down than it used to, that is a ranking problem and a different piece of work.
+
+**Does suppression affect my account health?** Search suppression on its own is a listing quality matter rather than a policy breach, so it does not usually show in Account Health. Blocked or removed listings are different — those are policy matters and they do appear there.
+
+If suppressions keep appearing and nobody has time to work out why, catalogue and listing health are part of our [Amazon account management](/amazon-account-management) work.
+`,
+  },
+  {
+    slug: "when-to-add-negative-keywords-amazon-ppc",
+    topic: "amazon",
+    title: "When to Add Negative Keywords on Amazon PPC",
+    description:
+      "When to add negative keywords on Amazon PPC: the evidence threshold to wait for, which match type to use, and when a negative does more harm than good.",
+    date: "2026-10-09",
+    excerpt:
+      "Every guide tells you what negative keywords are. The harder question is when — too early and you block terms that would have converted, too late and you have paid for the lesson twice.",
+    content: `
+Every guide on this subject explains what a negative keyword is and how to add one. Almost none answers the question sellers actually have, which is when. Add them too early and you block search terms that would have converted on their fourth click. Add them too late and you have already paid for the lesson twice.
+
+## When to add negative keywords on Amazon PPC
+
+A negative keyword is a permanent decision made on temporary data, so the question is really: how much evidence is enough?
+
+There is no universal click count, because the right threshold depends on your conversion rate and your break-even figure. But the logic is the same for everyone.
+
+**Work out how many clicks you would normally expect before a sale.** If your listing converts at roughly one in ten, a search term with four clicks and no sale has told you nothing — that is a normal run of bad luck. The same term at forty clicks and no sale has told you something definite.
+
+**Compare the spend against your break-even.** A term that has spent more than one unit of profit without a sale is losing money, and that figure comes from your break-even ACoS — our guide to [what a good ACoS looks like](/blog/what-is-a-good-acos) covers how to work it out.
+
+Those two together give you a threshold that is specific to your product rather than borrowed from a blog.
+
+## The four situations that justify a negative
+
+**1. Spend with no sales, past your threshold.** The straightforward case. Enough clicks to be meaningful, no orders, money gone.
+
+**2. Irrelevant traffic.** The search term describes a different product. These deserve a negative on the first sighting — no amount of clicks will make "dog shampoo" relevant to a car wax listing, and waiting for evidence is just paying for certainty you already have.
+
+**3. Converting, but far above break-even.** Harder, and often mishandled. A term that converts at three times your break-even ACoS is not useless — it may be worth a lower bid in its own campaign rather than a negative. Only negate it if you have already tried the bid.
+
+**4. Cannibalising your own exact-match campaign.** When a broad campaign keeps winning a term you already target exactly elsewhere, negating it in the broad campaign stops the two bidding against each other.
+
+## When a negative does more harm than good
+
+- **Before you have the clicks.** The most common error. Negating on two or three clicks throws away terms on the strength of noise.
+- **On a term that converted once.** One sale is weak evidence, but it is evidence, and a negative is harder to undo than a bid reduction.
+- **During a launch.** Early campaigns exist to discover terms. Aggressive negatives at that stage narrow the funnel before you know what is in it.
+- **On a brand term that looks expensive.** Defending your own name often looks like waste in the report and is not.
+- **Too broadly.** A negative phrase can silently block dozens of variants, including the ones that were working.
+
+A negative removes a possibility permanently. A bid reduction tests the same idea reversibly. When in doubt, lower the bid first.
+
+## Phrase or exact?
+
+The match type matters more than the decision to negate.
+
+**Negative exact** blocks precisely that search term and nothing else. Use it when the term is specifically unprofitable but its relatives may not be.
+
+**Negative phrase** blocks anything containing that sequence of words. Powerful, and the usual cause of accidental damage — negating a phrase can take out variants you never checked.
+
+Default to exact. Reach for phrase only when you have seen a whole family of terms behave the same way, and check what else contains that phrase before you commit.
+
+## A sustainable rhythm
+
+Weekly is enough for most accounts. The search term report over the last fourteen to thirty days, sorted by spend, descending. Look at the top spenders with no orders, apply the threshold, and act on that list only.
+
+The temptation is to work the whole report. Do not — the long tail of one-click terms is where you do the most damage for the least gain.
+
+## Frequently asked questions
+
+**How many clicks before adding a negative keyword on Amazon?** There is no fixed number, because it depends on your conversion rate. Work out roughly how many clicks you normally need for a sale, and treat something comfortably above that with no orders as evidence. A term with a handful of clicks and no sale is usually noise, not a signal.
+
+**Should negative keywords be phrase or exact match?** Exact by default, because it blocks only the term you have evidence about. Phrase match is for when a whole family of related terms is behaving the same way — it is more powerful and much easier to over-apply.
+
+**Can negative keywords hurt Amazon PPC performance?** Yes, when applied too early or too broadly. Negatives are near-permanent, so a hasty one removes a term you might never think to test again, and a broad negative phrase can block variants that were converting.
+
+**Do negative keywords lower ACoS?** They can, by removing spend that produces no sales, but they do not increase sales — so expect the ratio to improve while revenue stays flat. If you want ACoS down and volume up, the listing's conversion rate matters more than the negative list.
+
+If weekly search-term work is the thing that never gets done, it is part of our [Amazon PPC management](/amazon-ppc-management).
+`,
+  },
+  {
+    slug: "why-have-my-amazon-sales-dropped",
+    topic: "amazon",
+    title: "Why Have My Amazon Sales Dropped Suddenly?",
+    description:
+      "Why have my Amazon sales dropped suddenly? The five causes to check, in the order worth checking them, before you touch a bid or a price.",
+    date: "2026-10-08",
+    excerpt:
+      "Sales fall off a cliff and the instinct is to cut prices or raise bids. Almost always it is one of five things, and four of them are not about advertising at all.",
+    content: `
+Sales fall off a cliff overnight and the instinct is to do something — drop the price, raise bids, launch a coupon. That instinct is usually wrong, because it treats a symptom you have not diagnosed yet, and because four of the five common causes have nothing to do with advertising.
+
+## Why have my Amazon sales dropped suddenly?
+
+When we look at a sudden drop on a client account, we work through the same five things in the same order. The order matters: it runs cheapest-to-check and most-likely first, and each step rules something out before you spend money on the next.
+
+1. **Have you lost the Buy Box?**
+2. **Is a listing suppressed?**
+3. **Is stock out, or stuck?**
+4. **Have the ads stopped?**
+5. **Is there an account health issue?**
+
+Work down it before changing anything. A price cut applied to a suppressed listing achieves nothing except a smaller margin when the listing comes back.
+
+## 1. The Buy Box
+
+The most common cause, and the easiest to miss, because the listing still looks fine. If you are not winning the Buy Box, traffic arrives and converts to someone else.
+
+Two things typically take it:
+
+- **A competitor undercutting you**, including Amazon itself on some ASINs.
+- **Going out of stock**, which can cost the Buy Box even after stock returns.
+
+Check the listing while signed out, on the ASINs that actually matter rather than the whole catalogue. If the Buy Box has moved, nothing further down this list is your problem yet.
+
+## 2. A suppressed listing
+
+A listing can be suppressed without any notification a busy seller would notice, and the effect is immediate — it stops appearing in search while still being reachable by direct link, which is why sellers check the URL, see the page, and conclude the listing is fine.
+
+Common triggers are a main image that breaks the rules, a missing required attribute, a restricted word, or a pricing error. Our guide to [why an Amazon listing gets suppressed](/blog/why-is-my-amazon-listing-suppressed) goes through each, and where to find the real reason in Seller Central.
+
+## 3. Stock
+
+Two distinct failures here, and the second catches people out.
+
+**Out of stock** is obvious once you look, though the ranking damage outlasts the stockout.
+
+**Stuck in FBA** is the quieter one — inventory received but not yet available, or held at a fulfilment centre, or reserved. The dashboard shows units you cannot actually sell.
+
+## 4. The ads
+
+Only now is it worth looking at advertising, and the first questions are not about bids:
+
+- **Has a campaign been paused?** By someone, or by Amazon.
+- **Has the daily budget run out early?** Spend that stops at midday means no sales for half the day.
+- **Has the payment method failed?** It stops everything at once, which is exactly what a sudden drop looks like.
+
+If the ads are genuinely running and spend is flat, then bids and ACoS are worth examining — our guide to [what a good ACoS looks like](/blog/what-is-a-good-acos) covers that, and the break-even figure is what tells you whether to raise bids or hold.
+
+## 5. Account health
+
+Last, because it is least common, and because the symptoms are usually broader than one ASIN. Open Account Health and look for policy warnings, metric breaches or restricted ASINs. If something there is live, that is the problem, and it needs resolving before anything else is worth doing.
+
+## What to do once you have found it
+
+Change one thing. The temptation after a drop is to fix everything at once — new price, new bids, new images, a coupon — and the result is that a week later you have no idea which change mattered or whether the original cause ever went away.
+
+Note the date the drop started, too. Lining it up against what changed that day on your account, on your competitors' listings, or in the calendar answers the question faster than any amount of analysis.
+
+## Frequently asked questions
+
+**Why did my Amazon sales drop overnight?** An overnight fall usually points at something binary rather than gradual: the Buy Box moving, a listing being suppressed, a campaign pausing or a payment method failing. Gradual declines are more often ranking, seasonality or competitive pressure. The shape of the drop tells you where to look first.
+
+**Can losing the Buy Box stop sales completely?** On a shared listing, close to it. The Buy Box is where the overwhelming majority of orders come from, so losing it on a competitive ASIN can look identical to the listing being removed.
+
+**Is a sales drop always something I have done?** No. Seasonality, a competitor's promotion, a new entrant on your ASIN or an Amazon change can all do it with nothing wrong on your side. That is exactly why diagnosing before acting matters.
+
+**How do I tell a suppressed listing from lost ranking?** A suppressed listing disappears from search results but still loads on its direct URL. Lost ranking means the listing is findable, just further down. Searching your own exact product title while signed out distinguishes them in a few seconds.
+
+If a drop like this is eating your week and you would rather someone else worked through it, diagnosis is part of our [Amazon account management](/amazon-account-management) work.
+`,
+  },
+  {
+    slug: "amazon-plan-of-action-template",
+    topic: "amazon",
+    title: "Amazon Plan of Action Template for UK Sellers",
+    description:
+      "An Amazon plan of action template for UK sellers: the three sections Amazon expects, what belongs in each, and what gets appeals rejected.",
+    date: "2026-10-07",
+    excerpt:
+      "A plan of action is the whole appeal. Here are the three sections Amazon expects, a skeleton to work from, and the mistakes that get plans sent back.",
+    content: `
+A plan of action is not a covering letter for your appeal. It is the appeal. Amazon's reviewers are looking for three specific things, and a plan that does not supply them in a recognisable shape is sent back regardless of how reasonable it sounds.
+
+This is a structural guide, not a case study. We are not publishing a client's plan of action — the documents are confidential, and a borrowed root cause is worse than none, because the one thing a reviewer can spot instantly is a plan describing someone else's business. If you have not read the notification carefully yet, start with [what to do when an Amazon account is suspended](/blog/amazon-seller-account-suspended-what-to-do).
+
+## Amazon plan of action template
+
+Every plan of action does three jobs, in this order.
+
+**1. Root cause.** The [policy or metric] issue occurred because of [specific operational failure]. Specifically, [what happened, with dates or ASINs].
+
+**2. Corrective actions — what we have already done.**
+
+- [Completed action], done on [date].
+- [Completed action], done on [date].
+- [Evidence attached for each].
+
+**3. Preventive measures — what stops this recurring.**
+
+- [Process change], owned by [role], checked [frequency].
+- [Process change], owned by [role], checked [frequency].
+
+That is the whole template. The difficulty is never the format — it is filling it in without hedging.
+
+## Section 1: Root cause
+
+One specific operational failure. Not "a misunderstanding", not "an oversight by a team member", and not a description of the symptom.
+
+"Our listing was flagged for a safety claim" is the symptom. "We copied supplier marketing copy into the bullet points without checking it against Amazon's restricted claims list" is a root cause — it names the process that failed, which is the only thing a preventive measure can attach to.
+
+If your root cause does not explain why the process allowed it, you have not found it yet.
+
+## Section 2: Corrective actions
+
+Past tense, completed, specific. Each line should be something a reviewer could verify:
+
+- What you removed, edited, withdrew or refunded.
+- When you did it.
+- What evidence you are attaching for it.
+
+Anything still in progress belongs in section 3, not here. Listing a corrective action you have not finished is one of the quickest ways to lose credibility.
+
+## Section 3: Preventive measures
+
+This is where most plans fail, because sellers write intentions instead of processes. "We will be more careful with product copy" is an intention. A preventive measure has a mechanism:
+
+- **A check that exists** — a step in a documented process, not a resolution.
+- **A person or role that owns it.**
+- **A frequency** — per listing, weekly, at onboarding.
+
+If a measure would still be true when nobody does anything, it is not a measure.
+
+## What to attach
+
+Evidence does more than prose. Depending on the reason, that usually means invoices from an authorised source in your business name, supplier correspondence, screenshots of the changed listing or the new internal process, and the relevant Amazon case IDs.
+
+Make sure the business name, address and tax details on every document match your Seller Central account exactly. Mismatched paperwork is one of the most common reasons submissions fail — the same problem that sinks brand approval applications, as covered in our [guide to getting a brand approved](/blog/how-to-get-amazon-brand-approval).
+
+## What gets a plan of action rejected
+
+- **Arguing the decision.** The plan is not the venue, even when you have a point.
+- **A generic template left generic.** A plan that could describe any seller describes none.
+- **Length instead of substance.** Reviewers read a lot of these. Three clear sections beat six pages.
+- **Mixing the sections.** Preventive measures in the root cause, intentions in the corrective actions.
+- **No evidence.** A plan with nothing attached is an assertion.
+
+## Frequently asked questions
+
+**What is a plan of action on Amazon?** It is the document Amazon asks for when appealing a suspension, a listing removal or an account health issue. It has to state the root cause of what happened, the corrective actions you have already completed, and the preventive measures that stop it recurring. Those three elements are what the reviewer is looking for.
+
+**How long should an Amazon plan of action be?** Shorter than most sellers expect. One page covering the three sections clearly, with evidence attached, is usually stronger than several pages of context — the reviewer is checking whether the three elements are present and specific, not reading an essay.
+
+**Can I use a plan of action template I found online?** Use one for the structure, never for the content. A template tells you what shape the document takes; the root cause and preventive measures have to describe your actual operation, and a reviewer can spot generic text immediately.
+
+**Do I need someone to write it for me?** Not necessarily — the structure is public and the facts are yours. Help is worth it when you cannot identify the root cause, when the evidence chain is complicated, or when a previous submission has already been rejected and you are not sure why.
+
+We work on suspension and listing cases as part of our [Amazon account management](/amazon-account-management) work. If you are in one, send us the notification and the documentation you hold, and we will tell you plainly what we think is possible — including when we think it is not.
+`,
+  },
+  {
+    slug: "amazon-seller-account-suspended-what-to-do",
+    topic: "amazon",
+    title: "Amazon Seller Account Suspended? What to Do First",
+    description:
+      "Amazon seller account suspended? What to do first, what Amazon is actually asking for, and what the outcome of an appeal depends on.",
+    date: "2026-10-06",
+    excerpt:
+      "A suspension notice is alarming and deliberately vague. Here is how to read it, what Amazon is actually asking for, and the mistakes that make an appeal harder than it needs to be.",
+    content: `
+The first hour after a suspension notice is when most of the damage gets done — not by Amazon, but by the seller. Multiple cases opened at once, an emotional reply, a second account created "just to keep trading". All of it makes the position worse.
+
+This is what the process actually involves and what the outcome depends on. It is not a promise of reinstatement, from us or anyone else.
+
+## Amazon seller account suspended: what to do first
+
+1. **Read the notification properly.** It names a reason, and the reason determines everything that follows. A performance suspension and an authenticity suspension need completely different responses.
+2. **Open Account Health.** It shows what Amazon is measuring, which policy it says you breached, and which ASINs or metrics are involved.
+3. **Open one case, not five.** Several open cases on the same issue get merged or closed, and a thread that reads as panic does not help.
+4. **Do not create another account.** Operating a second selling account while suspended is itself a policy breach, and it turns a recoverable situation into a harder one.
+5. **Stop and gather before you write.** The first submission matters more than the second. Everything you need — invoices, supplier details, correspondence — should be in hand before you reply.
+
+## Three different things get suspended
+
+Sellers use "suspended" for all of them, but they are distinct problems, and we work on all three for clients.
+
+**The account.** Selling privileges are gone, funds are usually held, and the notice points at a policy or a performance metric.
+
+**A listing.** The account trades on, but one ASIN is blocked or removed. Often an image, a claim, a restricted word or a safety requirement.
+
+**A brand.** Your right to list a particular brand is withdrawn, commonly over authenticity or authorisation. This is the inverse of the problem in our [guide to getting a brand approved](/blog/how-to-get-amazon-brand-approval) — the same documentation chain, examined after the fact rather than before.
+
+Work out which one you have before doing anything else. The three are addressed in different places with different evidence.
+
+## What Amazon is actually asking for
+
+Almost every appeal comes down to three things, whether or not the notice says so:
+
+- **A root cause.** What actually happened, specifically. Not "a misunderstanding".
+- **What you have already done about it.** Past tense, completed.
+- **What stops it happening again.** A process change, not an intention.
+
+Evidence carries this, not tone. Invoices from an authorised source, in your business name, with details matching your account. Correspondence showing what you did. Screenshots of the process you have changed.
+
+Those three elements are the plan of action Amazon wants — our [Amazon plan of action template](/blog/amazon-plan-of-action-template) sets out what belongs in each section.
+
+## What makes an appeal weaker
+
+- **Arguing that Amazon is wrong.** Even where you have a case, the appeal is not the venue.
+- **A vague root cause.** If the cause is not specific, nothing downstream is credible.
+- **Mismatched paperwork.** A name, address or tax detail that does not match the account is one of the most common reasons submissions fail.
+- **Promising rather than proving.** "We will be more careful" is not a preventive measure.
+- **Volume.** A long appeal is not a strong appeal.
+
+## What the outcome depends on
+
+Being honest about this matters more than reassurance.
+
+It depends on **the reason** — a metric breach you can document is a different proposition from an authenticity complaint. It depends on **the evidence you can actually produce**, which is often the real constraint. It depends on **your account history**. And it depends on **whether the underlying problem is fixed**, because a reinstated account that repeats the issue gets suspended again.
+
+Some cases are not recoverable. Anyone telling you otherwise before reading your notification and your documentation is guessing.
+
+## Frequently asked questions
+
+**How long does an Amazon suspension last?** There is no published timeframe, and it varies by reason and by how complete the first submission is. Amazon does not commit to a decision window on appeals the way it does on some other reviews, so plan for the possibility of several rounds rather than a date.
+
+**Can you get a suspended Amazon seller account back?** Often, yes — but it depends entirely on the reason and the evidence, and some cases are not recoverable. Treat any specific success rate you are quoted with suspicion, including ours: we do not publish one, because the figure would say more about which cases were taken on than about the work.
+
+**What is the difference between suspended and deactivated?** Amazon's wording has shifted over time, and "deactivated" now appears in many notices where sellers would say "suspended". What matters is the stated reason and what is being asked for, not which word is used.
+
+**Should I open a new account while I appeal?** No. Operating a second selling account while one is suspended breaches policy on its own and can affect related accounts. It is one of the few steps that reliably makes things worse.
+
+We work on suspension and listing cases as part of our [Amazon account management](/amazon-account-management) work. If you are in one, send us the notification and the documentation you hold, and we will tell you plainly what we think is possible — including when we think it is not.
+`,
+  },
+  {
     slug: "how-long-should-a-product-video-be",
     topic: "web",
     title: "How Long Should a Product Video Be?",
@@ -611,6 +1074,8 @@ Never pay for reviews or offer incentives. Amazon's enforcement is strict and th
 
 Listing optimization is not a one-off task. After you make changes, watch sessions and conversion rate in your business reports for a few weeks. If sessions rose but conversion fell, the keywords are bringing the wrong traffic. If conversion rose, apply the same change to your other listings.
 
+And if sales have fallen rather than never arrived, work through [why Amazon sales drop suddenly](/blog/why-have-my-amazon-sales-dropped) before rewriting anything — a suppressed listing or a lost Buy Box looks like a copy problem and is not one.
+
 ## Where to start if you are short on time
 
 If you can only do three things: fix the main image, rewrite the title around your most important keyword, and rewrite the bullets to lead with benefits.
@@ -840,7 +1305,7 @@ For a small catalogue, a few products with modest spend, the weekly routine can 
 
 As the catalogue grows, the time grows faster than you expect. Twenty products in two marketplaces is not twice the work of ten in one; it is closer to four times, because every campaign type multiplies across products and countries.
 
-The honest test is this: look at your search term report right now. If you cannot remember the last time you added negative keywords, the routine is already slipping, and the ads are costing more than they should.
+The honest test is this: look at your search term report right now. If you cannot remember the last time you added negative keywords, the routine is already slipping, and the ads are costing more than they should. Knowing [when to add negative keywords](/blog/when-to-add-negative-keywords-amazon-ppc) matters more than knowing how, and it is the task that quietly stops happening when nobody owns it.
 
 ## When an Amazon PPC agency makes sense
 
