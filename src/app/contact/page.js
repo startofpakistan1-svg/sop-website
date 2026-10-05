@@ -33,6 +33,7 @@ export default function Contact() {
     name: "",
     email: "",
     phone: "",
+    website: "",
     service: "Marketplace & ecommerce",
     message: "",
     company: "", // honeypot — real people leave this empty
@@ -70,6 +71,7 @@ export default function Contact() {
           name: form.name,
           email: form.email,
           phone: form.phone,
+          website: form.website,
           service: form.service,
           message: form.message,
           botcheck: form.company,
@@ -163,6 +165,16 @@ export default function Contact() {
                     value={form.phone}
                     onChange={set("phone")}
                     placeholder="+92 300 0000000"
+                  />
+                </div>
+
+                <div className="field">
+                  <label htmlFor="website">Your website (optional)</label>
+                  <input
+                    id="website"
+                    value={form.website}
+                    onChange={set("website")}
+                    placeholder="yourstore.com"
                   />
                 </div>
 
