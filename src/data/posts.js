@@ -972,6 +972,8 @@ Small, regular changes beat big, occasional ones. Amazon can take several days t
 
 **What is the difference between TACoS and ROAS?** They measure different things and move in opposite directions. TACoS is ad spend divided by your total revenue, so it includes organic sales and tells you how dependent the whole product is on advertising — lower is generally better. ROAS is ad revenue divided by ad spend, the inverse of ACoS, and counts only sales traced to an ad — higher is better. Use TACoS to judge the product, ROAS or ACoS to judge the campaign.
 
+**What is the average ACoS on Amazon?** There is no reliable average worth planning around. Figures get quoted, but they mix categories, margins, campaign types and account maturity, so any single number describes nobody in particular — and a figure that is comfortable for one product is loss-making for another. The number you actually need is your own break-even ACoS, which the section above shows how to work out from your selling price, costs and fees.
+
 ## The short version
 
 - ACoS is ad spend divided by ad sales.
@@ -1510,6 +1512,14 @@ We handled the full Shopify store setup for a motorsport gear brand selling kart
 **What affects Shopify store development cost the most?** The number of products, and how far you want to move from the theme's defaults. Product setup is the most underestimated task in any build, because every item needs copy, images, variants and inventory data. After those two come the number of marketplaces or regions you sell in, the apps or custom features you need, and the state of any existing store that has to be cleaned up or migrated first.
 
 **What are the ongoing costs after launch?** The Shopify plan fee, any paid app subscriptions and payment processing fees on each sale, every month. On top of those, budget for the work a store needs to stay current: theme updates when Shopify changes the platform, new products and seasonal changes, and occasional fixes when an app update breaks something. Launch is not the finish line.
+
+**How much does it cost to build a Shopify app?** A custom app is a software project rather than a store task, so it is priced like one — the cost follows how much it has to do, what it integrates with, and whether it needs maintaining after launch. Get a quote against a written spec of what the app must do, and ask separately what ongoing maintenance costs, because an app nobody updates breaks when Shopify changes. Before commissioning one, check the app store: a monthly subscription is almost always cheaper than building the same thing.
+
+**How much does Shopify theme development cost?** It depends which of three things you mean. Buying a paid theme is a fixed one-off from the theme store; customising one costs the developer time the changes actually take; building a theme from scratch is a full development project and the most expensive of the three. The theme-versus-custom section above sets out what you get for each, and for most stores a paid theme plus some customisation covers it.
+
+**How much does Shopify design work cost compared with the build?** Design and build are separate lines even when the same person does both. Design is how the store looks and how the pages are laid out; the build is turning that into a working store with products, payments, shipping and testing. Ask for the two quoted separately — it shows you where the money is going, and makes it obvious if you are paying for design work you do not need on a store that sits on a good paid theme.
+
+**Is Shopify's monthly plan the same as the cost of building the store?** No, and treating them as one thing is the most common budgeting mistake. The plan fee goes to Shopify every month for hosting, the checkout and the admin; the build cost is the one-off work of turning an empty account into a store ready to sell. A cheap plan does not make a cheap store, and in the first year the build is usually the bigger of the two.
 
 ## Getting a number
 
