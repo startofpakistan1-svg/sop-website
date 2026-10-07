@@ -1,13 +1,23 @@
 import Link from "next/link";
 import BlogLinks from "@/components/BlogLinks";
-import PriceList from "@/components/PriceList";
 
 export const metadata = {
-  title: "Amazon Advertising Agency for UK & US Sellers | SOP",
+  title: "Amazon PPC Management for UK & US Sellers | SOP",
   description:
     "Amazon ads management for UK and US sellers: Sponsored Products, Brands and Display, managed by an Amazon PPC specialist.",
   alternates: { canonical: "/amazon-ppc-management" },
 };
+
+/* What the weekly work actually covers. Sits in the hero as a plain card —
+   we do not give clients a dashboard to log into, so nothing here imitates
+   one, and there are no figures. */
+const cadence = [
+  { t: "Search term report reviewed", w: "every week" },
+  { t: "Bids set against real performance", w: "every week" },
+  { t: "Negative keywords added", w: "every week" },
+  { t: "Budget pacing checked", w: "every month" },
+  { t: "A report written in plain English", w: "monthly" },
+];
 
 const whatWeDo = [
   {
@@ -38,9 +48,9 @@ const whatWeDo = [
 
 const steps = [
   { n: "01", t: "Account audit", d: "We look at your current campaigns — or your listings if you're starting fresh — and show you where the money is going. Free, and yours to keep whether you hire us or not." },
-  { n: "02", t: "Plan and fixed price", d: "A written plan: campaign structure, target ACoS, and a fixed monthly fee. No percentage-of-spend surprises." },
+  { n: "02", t: "Plan and price", d: "A written plan: campaign structure, your break-even ACoS worked out from your own margins, and what it will cost. Nothing starts until you've agreed it." },
   { n: "03", t: "Launch or rebuild", d: "New campaigns go live, or existing ones get restructured. Usually within the first week." },
-  { n: "04", t: "Weekly optimisation", d: "Bids, negatives and budgets reviewed every week. The first month is where most of the waste comes out." },
+  { n: "04", t: "Weekly optimisation", d: "Bids, negatives and budgets reviewed every week. Cutting spend on searches that never convert is the part that shows up first." },
   { n: "05", t: "Report and repeat", d: "A short weekly update and a fuller monthly review. You always know what your ad spend is doing." },
 ];
 
@@ -52,95 +62,54 @@ const terms = [
   { k: "CPC", n: "Cost per click", d: "What you pay each time a shopper clicks your ad. Set by auction, so bids and competition decide it." },
 ];
 
-const faqs = [
-  { q: "How do you charge for Amazon PPC management?", a: "A fixed monthly fee, agreed before we start and based on how many products and campaigns you run. We don't take a percentage of your ad spend — that model rewards an agency for spending more of your money, which is the wrong incentive." },
-  { q: "Do I need to give you my Seller Central password?", a: "No. Amazon lets you add us as a user with only the permissions we need — advertising access, not your payments or account settings. You stay the owner and can remove us in one click." },
-  { q: "Will this put my account at risk?", a: "Advertising changes don't touch your account health. We never change listings, pricing or anything outside advertising without asking you first, and we follow Amazon's policies on every change." },
-  { q: "How quickly will I see results?", a: "Wasted spend usually drops in the first two to three weeks, as negatives and bid cuts take effect. Sales growth takes longer — typically six to eight weeks for campaigns to gather enough data to scale properly." },
-  { q: "Is there a minimum contract?", a: "No long contract. Month to month, with notice at the end of any month. We'd rather keep you because it's working." },
-  { q: "Which marketplaces do you cover?", a: "Amazon UK and Amazon US most often, and the wider EU marketplaces too. We work to your time zone, not ours." },
-  { q: "Do you work with sellers on Amazon.co.uk as well as Amazon.com?", a: "Yes, and often both for the same brand. Each marketplace has its own advertising console, its own search terms and its own competitors, so campaigns are built and managed per marketplace rather than copied across and hoped for. We report on them separately too, so you can see which marketplace is carrying the account and where the next product should launch." },
-  { q: "What's the difference between an Amazon ads agency and a PPC specialist?", a: "Mostly scale, and who does the work. A specialist is one person running your campaigns, which is direct but limited to what one person can cover. An agency brings a team and a wider scope, with the risk that the person on the sales call isn't the person in your account. We sit deliberately in between: you talk to the person managing your campaigns, with campaign builds, weekly optimisation, reporting and the listing side behind them." },
-  { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. That means optimisation work is usually done before your working day starts, and we overlap with your afternoon for calls." },
+/* Cases where we would tell a seller this is not what their account needs. */
+const notFor = [
+  {
+    t: "Your listing does not convert yet.",
+    d: "Advertising a page that does not sell buys expensive proof that it does not sell. Fix the page first.",
+    link: { href: "/blog/how-to-optimize-amazon-listing", label: "our listing optimisation guide" },
+  },
+  {
+    t: "You are reselling rather than building a brand.",
+    d: "Wholesale accounts resell listings that are already indexed, and advertising is more a private-label lever than a wholesale one. Sometimes the honest answer is that this is not what your account needs.",
+  },
+  {
+    t: "You want a target ACoS before anyone has seen your margins.",
+    d: "A good ACoS is defined by your break-even figure and nothing else, so a number promised up front is a number invented.",
+  },
+  {
+    t: "Your ad spend is small enough that the fee outweighs the saving.",
+    d: "We will tell you if we think that is where you are.",
+  },
 ];
 
-/* Mock dashboard. All figures are illustrative — not client data. */
-const BARS = [42, 50, 58, 70, 82, 92, 102, 110];
-const ACOS_LINE = "M27 30 L75 34 L123 38 L171 54 L219 64 L267 72 L315 78 L363 82";
-
-function Dashboard() {
-  return (
-    <div className="dash" aria-label="Illustrative Amazon PPC dashboard">
-      <div className="dash-top">
-        <div className="dash-title">
-          Sponsored Products
-          <span>Last 8 weeks · illustrative</span>
-        </div>
-        <div className="dash-pill">Weekly review</div>
-      </div>
-
-      <div className="kpis">
-        <div className="kpi">
-          <div className="kpi-l">Ad spend</div>
-          <div className="kpi-v">£1,240</div>
-          <div className="kpi-d good">▼ 18%</div>
-        </div>
-        <div className="kpi">
-          <div className="kpi-l">Sales</div>
-          <div className="kpi-v">£6,180</div>
-          <div className="kpi-d good">▲ 31%</div>
-        </div>
-        <div className="kpi">
-          <div className="kpi-l">ACoS</div>
-          <div className="kpi-v">20.1%</div>
-          <div className="kpi-d good">▼ from 34%</div>
-        </div>
-      </div>
-
-      <div className="chart">
-        <svg viewBox="0 0 400 130" role="img" aria-label="Bar chart of weekly sales rising while the ACoS line falls">
-          <g className="grid">
-            <path d="M12 30H388" /><path d="M12 60H388" /><path d="M12 90H388" />
-          </g>
-          {BARS.map((h, i) => (
-            <rect
-              key={i}
-              className={i < 3 ? "bar dim" : "bar"}
-              x={12 + i * 48}
-              y={118 - h}
-              width="30"
-              height={h}
-              rx="6"
-              style={{ animationDelay: `${i * 0.08}s` }}
-            />
-          ))}
-          <path className="line" d={ACOS_LINE} />
-          <path d="M12 118H388" className="axis" />
-        </svg>
-        <div className="chart-legend">
-          <span><i className="sw sw-sales" />Sales</span>
-          <span><i className="sw sw-acos" />ACoS</span>
-          <span><i className="sw sw-before" />Before we started</span>
-        </div>
-      </div>
-      <div className="dash-note">Illustrative figures to show the layout — not a real client account.</div>
-    </div>
-  );
-}
+/* ---------------------------------------------------------------- */
+/*  FAQ — taken from the questions the pages ranking for this term   */
+/*  actually answer, not invented. Marketplace and contract          */
+/*  questions now live in the body sections instead.                 */
+/* ---------------------------------------------------------------- */
+const faqs = [
+  { q: "What is Amazon PPC management?", a: "The ongoing work of running your Amazon advertising rather than setting it up: campaign structure across Sponsored Products, Brands and Display, choosing and excluding keywords, setting bids, pacing budget, and revising all of it as results come in. The managing is the point — the decisions that were right at launch stop being right within weeks." },
+  { q: "How much does Amazon PPC management cost?", a: "Across the market you will see two models: a flat monthly fee, or a percentage of ad spend, usually quoted somewhere between 10% and 20%. The question worth asking any provider is what happens to their fee when your spend goes up, because that tells you whose interest the recommendation to spend more is serving. Our own fee depends on the size of the account and the scope we agree, and we quote it after we have looked at the account." },
+  { q: "Is Amazon PPC management worth paying for?", a: "It comes down to one comparison: does the margin you recover from better management exceed what the management costs, including any increase in spend it recommends? If your campaigns have gone months without a search-term review, there is usually recoverable waste. If your ad spend is small, the fee may not clear that bar — and we will say so rather than take the account." },
+  { q: "Should I run Amazon PPC myself or hire an agency?", a: "Doing it yourself is entirely possible, and the weekly search-term and bid work is the part that decides whether it goes well. The honest test is whether that hour or two a week actually happens, because unmanaged campaigns do not hold their position — they drift. Our guide on PPC agency versus doing it yourself sets out both sides." },
+  { q: "Do I have to give an agency access to my Seller Central account?", a: "You never share a password. Amazon lets you add a user with only the permissions needed — advertising access, not payments or account settings. You stay the owner and can remove the access in one click. Advertising changes do not touch account health, and we do not change listings or pricing without asking first." },
+  { q: "How quickly will I see results from Amazon PPC?", a: "We will not give you a number, and you should be wary of anyone who does — it depends on your spend, your category, your conversion rate and how much waste is in the account to begin with. What we can tell you is what to watch rather than when: spend moving off search terms that never convert, and your ACoS measured against your own break-even figure instead of a benchmark. Amazon also attributes sales to clicks over a window, so any judgement made in the first few days is being made on incomplete data." },
+];
 
 export default function AmazonPPC() {
   return (
     <>
-      {/* HERO — light, with dashboard */}
+      {/* HERO */}
       <section className="ppc-hero">
         <div className="wrap">
           <div>
             <div className="svc-kicker">Amazon · UK &amp; US</div>
-            <h1>The Amazon Advertising Agency that stops the waste first.</h1>
+            <h1>Amazon PPC Management that stops the waste first.</h1>
             <p>
               Amazon PPC management for sellers in the UK and US: campaign
-              setup, keyword research, bid management and weekly reporting. Fixed monthly fee.
-              No long contracts. Part of our{" "}
+              setup, keyword research, bid management and weekly reporting.
+              Part of our{" "}
               <Link href="/amazon-account-management">full Amazon account management</Link>
               , or on its own.
             </p>
@@ -153,7 +122,49 @@ export default function AmazonPPC() {
               </a>
             </div>
           </div>
-          <Dashboard />
+          <div className="leak-card">
+            {cadence.map((c) => (
+              <div className="leak-row" key={c.t}>
+                <span>{c.t}</span><b>{c.w}</b>
+              </div>
+            ))}
+            <div className="leak-row good">
+              <span>Drift caught before it costs you</span><b>covered</b>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* DEFINITION */}
+      <section>
+        <div className="wrap prose">
+          <h2>What Amazon PPC management is</h2>
+          <p>
+            Amazon PPC management is the ongoing work of building and running
+            your Sponsored Products, Sponsored Brands and Sponsored Display
+            campaigns: deciding what to bid on, what to bid, what to exclude,
+            and how the budget is spread across the month — then adjusting all
+            four as the data comes in.
+          </p>
+          <p>
+            PPC stands for pay-per-click. You are charged when a shopper
+            clicks, not when the ad is shown, and an auction decides what that
+            click costs — which is why bids and competition matter more than
+            the size of the budget.
+          </p>
+          <p>
+            The reason it needs managing rather than setting up is that none of
+            those four decisions stays correct. A keyword that converted last
+            month stops. A competitor raises bids on your best term. A search
+            term you never chose starts collecting clicks because a broad match
+            let it in. Left alone a campaign does not hold steady, it drifts,
+            and the drift is quiet.
+          </p>
+          <p>
+            On Amazon there is a second reason. Advertised sales feed organic
+            ranking, so advertising that works builds something beyond the
+            ads — and advertising that wastes money costs you twice.
+          </p>
         </div>
       </section>
 
@@ -161,7 +172,7 @@ export default function AmazonPPC() {
       <section>
         <div className="wrap">
           <div className="sec-head">
-            <h2>Most Amazon ad budgets leak before they sell.</h2>
+            <h2>Why Amazon ad budgets leak before they sell</h2>
             <p>
               Broad-match keywords that pull in the wrong searches. Bids that
               haven&apos;t moved in months. Campaigns that burn through the
@@ -176,7 +187,7 @@ export default function AmazonPPC() {
           </div>
           <div className="ba">
             <div className="ba-col before">
-              <div className="ba-h">Before</div>
+              <div className="ba-h">Left unmanaged</div>
               <ul>
                 <li>Clicks on irrelevant searches — wasted spend</li>
                 <li>Stale bids on keywords that stopped converting</li>
@@ -186,7 +197,7 @@ export default function AmazonPPC() {
             </div>
             <div className="ba-arrow" aria-hidden="true">→</div>
             <div className="ba-col after">
-              <div className="ba-h">After the first month</div>
+              <div className="ba-h">Managed weekly</div>
               <ul>
                 <li>Irrelevant search terms cut, spend back on buyers</li>
                 <li>Bids reviewed weekly against real performance</li>
@@ -198,12 +209,16 @@ export default function AmazonPPC() {
         </div>
       </section>
 
-      {/* WHAT WE DO — numbered list */}
+      {/* WHAT WE HANDLE */}
       <section className="process-band">
         <div className="wrap">
           <div className="sec-head">
-            <h2>What&apos;s included</h2>
-            <p>Everything it takes to run Amazon advertising properly — not just the setup.</p>
+            <h2>What we handle every week</h2>
+            <p>
+              Taking money out of the searches that never convert and putting
+              it behind the ones that do. All six run continuously rather than
+              once at setup.
+            </p>
           </div>
           <ol className="numlist">
             {whatWeDo.map((w, i) => (
@@ -219,10 +234,10 @@ export default function AmazonPPC() {
         </div>
       </section>
 
-      {/* ADS MANAGEMENT */}
+      {/* AD TYPES */}
       <section>
         <div className="wrap prose">
-          <h2>Amazon ads management</h2>
+          <h2>The three Amazon ad types, and what each is for</h2>
           <p>
             Amazon gives you three main ad types, and they do different jobs.
             Run together with a plan for each, they support one another. Run as
@@ -262,8 +277,8 @@ export default function AmazonPPC() {
       <section>
         <div className="wrap">
           <div className="sec-head">
-            <h2>PPC terms explained</h2>
-            <p>The five numbers you&apos;ll see in every report, in plain English.</p>
+            <h2>The five PPC numbers in every report</h2>
+            <p>The ones you&apos;ll see every month, in plain English.</p>
           </div>
           <dl className="terms">
             {terms.map((t) => (
@@ -276,11 +291,11 @@ export default function AmazonPPC() {
         </div>
       </section>
 
-      {/* HOW — vertical steps */}
+      {/* HOW */}
       <section className="process-band" id="how">
         <div className="wrap">
           <div className="sec-head">
-            <h2>How it works</h2>
+            <h2>How we take over your campaigns</h2>
             <p>From first look to weekly optimisation.</p>
           </div>
           <ol className="steps">
@@ -297,6 +312,43 @@ export default function AmazonPPC() {
         </div>
       </section>
 
+      {/* WHO IT SUITS */}
+      <section>
+        <div className="wrap prose">
+          <h2>Who Amazon PPC management suits — and who it doesn&apos;t</h2>
+          <p>
+            It suits sellers already spending enough that a week of drift costs
+            real money, and sellers whose listings convert but whose campaigns
+            were built once and never revisited. It also suits private-label
+            sellers launching a product, where advertising is how the first
+            sales — and the organic ranking those sales build — get bought.
+          </p>
+          <p>It does not suit everyone, and these are the cases where we would say so:</p>
+          <ul className="why-list">
+            {notFor.map((n) => (
+              <li key={n.t}>
+                <b>{n.t}</b> {n.d}
+                {n.link && (
+                  <>
+                    {" "}
+                    <Link href={n.link.href}>{n.link.label}</Link> goes through
+                    it section by section.
+                  </>
+                )}
+              </li>
+            ))}
+          </ul>
+          <p style={{ marginTop: 26 }}>
+            On marketplaces: most often Amazon UK and Amazon US, and frequently
+            both for the same brand. Each marketplace has its own console, its
+            own search terms and its own competitors, so campaigns are built
+            and managed per marketplace rather than copied across and hoped
+            for. We report on them separately, so you can see which one is
+            carrying the account and where the next product should launch.
+          </p>
+        </div>
+      </section>
+
       {/* WHY */}
       <section>
         <div className="wrap">
@@ -306,7 +358,7 @@ export default function AmazonPPC() {
           <ul className="why-list why-wide">
             <li><b>One point of contact.</b> You talk to the person running your campaigns, not an account manager relaying messages.</li>
             <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK, so optimisation is usually finished by the time you log in.</li>
-            <li><b>Fixed fee, not a cut of your spend.</b> We&apos;re paid to make your ads profitable, not to make them bigger.</li>
+            <li><b>Weekly, not monthly.</b> Search-term and bid work happens every week, because that is the cadence those decisions need.</li>
             <li><b>Same standard, lower overhead.</b> The quality you&apos;d expect from an Amazon PPC agency UK sellers already use, without UK office costs.</li>
           </ul>
         </div>
@@ -327,23 +379,48 @@ export default function AmazonPPC() {
         </div>
       </section>
 
-      {/* PRICING */}
-      <PriceList
-        title="Amazon PPC management pricing"
-        adSpend
-        items={[
-          {
-            label: "Amazon PPC management",
-            price: "$350 /month or 10% of ad spend, whichever is higher",
-          },
-          {
-            label: "Free audit of your current campaigns (keep it whether or not you hire us)",
-          },
-        ]}
-      />
+      {/* PROOF */}
+      <section className="process-band">
+        <div className="wrap prose">
+          <h2>What we will and won&apos;t claim about PPC results</h2>
+          <p>
+            We have no published Amazon PPC case figures, and we are not going
+            to borrow anyone else&apos;s. Most pages in this market lead with
+            an ACoS that fell from one number to another. We do not have a
+            client result we can evidence that way, so there is none on this
+            page.
+          </p>
+          <p>
+            What we can evidence is Amazon account work.{" "}
+            <b>We have secured 11 brand and category approvals for clients</b> —
+            Estée Lauder, Clinique, CeraVe, RYOBI, STANLEY, MOPAR, PowerA and
+            Forever, plus one sub-category, Figurines, with Estée Lauder
+            approved on three separate seller accounts. Not every application
+            was approved first time; some came back declined and had to be
+            resubmitted with corrected invoices and supplier documentation.
+            That is approvals work rather than advertising work, and it is
+            worth saying which is which — the{" "}
+            <Link href="/blog/how-to-get-amazon-brand-approval">full account is here</Link>.
+          </p>
+          <p>
+            On advertising, what we can show you is how we think rather than a
+            results table. When sales fall on an account, advertising is the
+            fourth thing we check, not the first — a paused campaign, a daily
+            budget that ran out early, a failed payment method — because three
+            more likely causes sit above it. That order is in our guide to{" "}
+            <Link href="/blog/why-have-my-amazon-sales-dropped">why Amazon sales drop</Link>.
+          </p>
+          <p>
+            The number we will not give you is a target ACoS before we have
+            seen your margins, and the timeframe we will not give you is a date
+            by which your ads will be profitable. Both get quoted freely in
+            this market. Neither is knowable from the outside.
+          </p>
+        </div>
+      </section>
 
       {/* FAQ */}
-      <section className="process-band">
+      <section>
         <div className="wrap">
           <div className="sec-head">
             <h2>Amazon PPC questions</h2>
