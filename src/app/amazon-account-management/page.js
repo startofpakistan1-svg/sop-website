@@ -11,12 +11,14 @@ export const metadata = {
 
 /* ---------------------------------------------------------------- */
 /*  THE WHOLE ACCOUNT — grouped into four phases                     */
+/*  Each heading reads on its own, and each lead opens with what the  */
+/*  seller gets rather than what the phase is called.                */
 /* ---------------------------------------------------------------- */
 const phases = [
   {
     no: "01",
-    name: "Set up & foundations",
-    lead: "Getting the account right before anything is sold — the part most problems trace back to.",
+    name: "Getting the account set up correctly",
+    lead: "Most account problems trace back to a setting nobody checked at the start, and this is the part that stops them happening. It includes Brand Registry end to end: the trademark requirements, the application itself, then the Brand Store and A+ content once you are approved.",
     areas: [
       {
         t: "Seller Central setup",
@@ -41,8 +43,8 @@ const phases = [
   },
   {
     no: "02",
-    name: "Listings that sell",
-    lead: "Product pages built to rank in Amazon search and convert the people who land on them.",
+    name: "Listings built to rank and convert",
+    lead: "A listing has two jobs — get found, and convert the people who find it. Both are fixable, and on most accounts both are leaving money on the table.",
     areas: [
       {
         t: "Listing creation",
@@ -76,8 +78,8 @@ const phases = [
   },
   {
     no: "03",
-    name: "Daily operations",
-    lead: "The day-to-day running that keeps an account healthy and selling — the work that never stops.",
+    name: "The daily work of running the account",
+    lead: "This is the work that never stops, and the work that quietly costs you money the moment nobody is doing it.",
     areas: [
       {
         t: "Advertising",
@@ -121,8 +123,8 @@ const phases = [
   },
   {
     no: "04",
-    name: "Protect & grow",
-    lead: "Keeping the account safe, and pushing it forward month after month.",
+    name: "Protecting account health and growing month on month",
+    lead: "An account can be profitable and one metric away from a suspension. This is the half of the job that protects what the other half built.",
     areas: [
       {
         t: "Account health",
@@ -193,6 +195,32 @@ const rhythm = [
 ];
 
 /* ---------------------------------------------------------------- */
+/*  WHO IT SUITS — and the cases where we say no                      */
+/* ---------------------------------------------------------------- */
+const notFor = [
+  {
+    t: "You want one thing fixed.",
+    d: "A suppressed listing, a catalogue clean-up, a round of listing optimisation — those are projects, not a monthly service. Ask us for the project.",
+  },
+  {
+    t: "The real problem is the product or the margin.",
+    d: "No amount of management makes a product people do not want sell, and management cannot create a margin that was never there.",
+  },
+  {
+    t: "You want a guaranteed outcome.",
+    d: "We do not promise a ranking, a reinstatement or a sales figure, and anyone who does is telling you something about themselves.",
+  },
+  {
+    t: "The fee is a large share of your sales.",
+    d: "Below a certain volume this does not pay for itself, and we will tell you if we think that is where you are.",
+  },
+  {
+    t: "You want to approve every change.",
+    d: "Some sellers do, and that is reasonable — but it is consultancy rather than management. We offer that too; it is a different arrangement.",
+  },
+];
+
+/* ---------------------------------------------------------------- */
 /*  COMPARISON                                                        */
 /* ---------------------------------------------------------------- */
 const compare = [
@@ -214,19 +242,18 @@ const steps = [
   { n: "05", t: "Monthly review", d: "A plain-English report: sales, ad spend, what changed, and what we're doing next month." },
 ];
 
+/* ---------------------------------------------------------------- */
+/*  FAQ — questions taken from the pages ranking for this keyword,    */
+/*  not invented. Everything else they used to answer now lives in    */
+/*  the body sections above.                                          */
+/* ---------------------------------------------------------------- */
 const faqs = [
-  { q: "What do Amazon account management services include?", a: "Everything it takes to run a seller account: Seller Central setup, listings, listing optimisation, images and A+ content, PPC, inventory and FBA, pricing and the Buy Box, customer service, reviews, account health and monthly reporting. We handle it A to Z, so you're not stitching together a listings freelancer, a PPC specialist and a VA who never talk to each other." },
-  { q: "What does an Amazon account manager actually do?", a: "Day to day, an Amazon account manager answers buyer messages, watches Account Health, keeps stock from running out and fixes broken listings. Weekly, they optimise advertising and plan FBA shipments. Monthly, they report on performance and plan what's next. The rhythm section above shows it in full." },
-  { q: "Is an agency better than an Amazon virtual assistant?", a: "It depends on what you need. A virtual assistant is good for set tasks you define — uploading listings, answering messages. An agency brings the strategy as well: deciding what to optimise, how to spend on ads, and how to grow. We sit in between on cost, with the full scope of an agency." },
-  { q: "Do I have to give you my Seller Central password?", a: "No. Amazon lets you add us as a user with only the permissions we need. You stay the account owner, your payment details stay locked, and you can remove our access in one click." },
-  { q: "Can you help with Seller Central problems?", a: "Yes — suppressed listings, stranded inventory, listing errors, category approvals and performance notifications are routine work for us. If something unusual comes up, we'll tell you honestly what we can do about it." },
-  { q: "Do you help with Amazon Brand Registry?", a: "Yes. We guide you through the trademark requirements, handle the Brand Registry application, and once you're approved we build your Brand Store and A+ content." },
-  { q: "How much does Amazon account management cost?", a: "A fixed monthly fee based on how many products and marketplaces you run. We send the exact figure with the plan, usually within a day of looking at your account — no percentage of your sales and no hourly billing." },
-  { q: "Which Amazon marketplaces do you manage?", a: "Amazon UK and Amazon US most often. Tell us where else you sell and we'll say honestly whether we can take it on." },
-  { q: "Do you act as our Amazon account manager or work alongside our team?", a: "Either, and we will be clear about which. Some sellers hand over the account entirely and we act as the account manager, which is what most of this page describes. Others already have staff and want us on specific parts — advertising, listings, or a catalogue clean-up — reporting in to their own manager. We agree in writing which parts are ours and which stay with your team, so nothing falls between the two." },
-  { q: "Do you support Vendor Central as well as Seller Central?", a: "Yes, though most sellers we work with are on Seller Central, and that is where our daily routine sits. On Vendor Central we cover the catalogue and listing side and the reporting. The two consoles behave differently, so tell us which you are on and what you need covered, and we will say plainly what we would take on rather than working it out on your account." },
-  { q: "How much of my time will it take?", a: "Very little once we're set up. We'll need you for product decisions, supplier questions and approving major changes. Everything else we handle." },
-  { q: "What time zone do you work in?", a: "We're in Pakistan, four to five hours ahead of the UK. Most day-to-day work is finished before your morning, and we overlap with your afternoon for calls." },
+  { q: "What are Amazon account management services?", a: "Ongoing services that run a seller account day to day rather than fixing one part of it: Seller Central setup, listings and catalogue, images and A+ content, PPC, inventory and FBA, pricing and the Buy Box, buyer messages, reviews, account health and monthly reporting. Scope varies a lot between providers, so the useful question to ask any of them is which of those they are not covering." },
+  { q: "What does an Amazon account manager do daily?", a: "Day to day: answer buyer messages inside Amazon's time limit, check Account Health for new warnings, watch stock on the best sellers, catch suppressed or broken listings, and monitor the Buy Box and pricing. Weekly work is advertising bids, budgets, negatives and FBA shipments. Monthly is reporting and planning. The rhythm section above sets out all three in full." },
+  { q: "How much do Amazon account management services cost?", a: "Ours is a fixed monthly fee based on how many products and marketplaces you run — the tiers are on this page, and we send the exact figure with a written plan, usually within a day of looking at your account. No percentage of your sales and no hourly billing. Across the market, be wary of any quote given before someone has looked at the account." },
+  { q: "Does Amazon provide account managers?", a: "Amazon runs a paid programme of its own for eligible sellers, Strategic Account Services. It is not the same thing as hiring an agency, and what it covers and who qualifies are Amazon's to state rather than ours, so check it in Seller Central. The practical difference is that Amazon's people advise you on your account; an agency operates it." },
+  { q: "Do I have to give an agency access to my Seller Central account?", a: "You never share a password. Amazon lets you add a user with only the permissions they need, so you stay the account owner, your payment and bank details stay locked, and you can remove the access in one click with no notice." },
+  { q: "Can you help recover a suspended Amazon account?", a: "Routine Seller Central problems — suppressed listings, stranded inventory, listing errors, category approvals, performance notifications — are everyday work. Suspensions are different. We work on wholesale account suspensions, listing suspensions and brand suspensions, and we will tell you plainly what we think is possible, including when we think it is not. What we will not do is promise reinstatement: the outcome depends entirely on the reason and the evidence, and some cases are not recoverable." },
 ];
 
 export default function AmazonAccountManagement() {
@@ -238,10 +265,10 @@ export default function AmazonAccountManagement() {
           <div className="svc-kicker">Amazon · UK &amp; US</div>
           <h1>Amazon Account Management Services, handled A to Z.</h1>
           <p>
-            Full-service Amazon seller account management for UK and US brands —
-            from Seller Central setup and listing optimisation to PPC, inventory,
-            customer service and account health. One dedicated Amazon account
-            manager running the whole account.
+            Amazon account management services for UK and US sellers — Seller
+            Central setup, listings, PPC, inventory, customer messages and
+            account health, run by one team. One Amazon account manager, the
+            whole account.
           </p>
           <div className="acts" style={{ marginTop: 28 }}>
             <Link className="btn btn-acc" href="/contact">
@@ -254,14 +281,44 @@ export default function AmazonAccountManagement() {
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* DEFINITION — the direct answer, first thing after the hero */}
+      <section>
+        <div className="wrap prose">
+          <h2>What Amazon account management covers</h2>
+          <p>
+            Amazon account management is the ongoing work of running a seller
+            account day to day: listings and catalogue, advertising, inventory
+            and FBA, pricing and the Buy Box, buyer messages, and account
+            health — handled as one continuous job rather than a set of
+            separate tasks.
+          </p>
+          <p>
+            It is not a one-off project. Setting up a Seller Central account,
+            rewriting a batch of listings or building A+ content are jobs with
+            an end. Account management is the part that does not end: the Buy
+            Box you can lose on a Tuesday, the listing that gets suppressed
+            without a notification, the ad budget that runs out at midday, the
+            health metric that slips.
+          </p>
+          <p>
+            That is why it is usually structured as a monthly service rather
+            than a project fee. What varies between providers is scope — some
+            cover advertising only, some cover listings only, and some cover
+            the account. Ours covers the account, and the four sections below
+            set out exactly what that includes.
+          </p>
+        </div>
+      </section>
+
+      {/* WHY ACCOUNTS DRIFT */}
       <section>
         <div className="wrap svc-split">
           <div>
-            <h2>An Amazon account is fifteen jobs pretending to be one.</h2>
+            <h2>Why accounts drift when nobody owns them</h2>
             <p>
-              Listings that need rewriting. Ads that need watching every week.
-              Stock that runs out on your best seller. Buyer messages on a 24-hour
+              An Amazon account is fifteen jobs pretending to be one. Listings
+              that need rewriting. Ads that need watching every week. Stock
+              that runs out on your best seller. Buyer messages on a 24-hour
               clock. Health metrics that can suspend you if one slips.
             </p>
             <p>
@@ -339,7 +396,14 @@ export default function AmazonAccountManagement() {
         <div className="wrap">
           <div className="sec-head">
             <h2>Agency, virtual assistant, or do it yourself?</h2>
-            <p>An honest comparison of the ways sellers run their Amazon accounts.</p>
+            <p>
+              An honest comparison of the ways sellers run their Amazon
+              accounts. A virtual assistant is good for set tasks you define —
+              uploading listings, answering messages. An agency brings the
+              decisions as well: what to optimise, how to spend on ads, where
+              to grow next. We sit between the two on cost, with the full scope
+              of an agency.
+            </p>
           </div>
           <div className="cmp-wrap">
             <table className="cmp">
@@ -368,23 +432,41 @@ export default function AmazonAccountManagement() {
         </div>
       </section>
 
-      {/* CONSULTANT */}
+      {/* WHO IT SUITS */}
       <section>
-        <div className="wrap">
-          <div className="sec-head">
-            <h2>Need an Amazon consultant UK sellers can actually reach?</h2>
-            <p>
-              If you sell on Amazon.co.uk, you can work with us as your Amazon
-              consultant and account manager in one: advice on strategy,
-              pricing and where to expand next, plus the day-to-day
-              work of running the account: listings, PPC, inventory, customer
-              messages and account health. We&apos;re a few hours ahead of the UK,
-              so most work is done before your day starts, you talk to the
-              person doing it, and you get a written plan and a fixed monthly
-              fee before anything begins. It suits new sellers finding their
-              feet and established brands that want a second pair of eyes.
-            </p>
-          </div>
+        <div className="wrap prose">
+          <h2>Who Amazon account management suits — and who it doesn&apos;t</h2>
+          <p>
+            It suits sellers for whom the daily work has become a real job:
+            enough volume that messages, stock, ads and health checks fill a
+            slot every day, and enough margin that paying someone to do it
+            properly costs less than doing it badly. It also suits brands with
+            strong products and supplier relationships but nobody who knows
+            Amazon, and sellers who have been running it themselves and can
+            feel it slipping.
+          </p>
+          <p>It does not suit everyone, and these are the cases where we would say so:</p>
+          <ul className="why-list">
+            {notFor.map((n) => (
+              <li key={n.t}><b>{n.t}</b> {n.d}</li>
+            ))}
+          </ul>
+          <p style={{ marginTop: 26 }}>
+            On scope, there are two ways in. Some sellers hand over the account
+            entirely and we act as the account manager. Others have their own
+            staff and want us on specific parts — advertising, listings, a
+            catalogue clean-up — reporting to their own manager. We agree in
+            writing which parts are ours and which stay with your team, so
+            nothing falls between the two.
+          </p>
+          <p>
+            On consoles and marketplaces: most sellers we work with are on
+            Seller Central, Amazon UK and Amazon US, and that is where the
+            daily routine sits. On Vendor Central we cover the catalogue,
+            listing side and reporting. The two consoles behave differently, so
+            tell us which you are on and we will say plainly what we would take
+            on rather than working it out on your account.
+          </p>
         </div>
       </section>
 
@@ -402,7 +484,7 @@ export default function AmazonAccountManagement() {
             between a product and a live listing — our{" "}
             <Link href="/blog/how-to-get-amazon-brand-approval">Amazon brand approval case study</Link>{" "}
             walks through getting a gated Beauty &amp; Health brand unlocked for
-            a UK wholesale seller.
+            a wholesale seller.
           </p>
           <p>
             That is the difference from hiring piecemeal. A freelancer can
@@ -431,7 +513,11 @@ export default function AmazonAccountManagement() {
         <div className="wrap">
           <div className="sec-head">
             <h2>How it works</h2>
-            <p>From first look to running the account day to day.</p>
+            <p>
+              From first look to running the account day to day. Once it is
+              running we need you for product decisions, supplier questions and
+              approving anything significant — everything else sits with us.
+            </p>
           </div>
           <ol className="steps">
             {steps.map((s) => (
@@ -463,7 +549,49 @@ export default function AmazonAccountManagement() {
         </div>
       </section>
 
-      {/* WHY + PROOF */}
+      {/* PROOF */}
+      <section>
+        <div className="wrap prose">
+          <h2>What we have done, and what we will not promise</h2>
+          <p>
+            The strongest thing we can show on this page is approvals, because
+            they are the part most sellers get stuck on.
+          </p>
+          <p>
+            <b>11 brand and category approvals secured for clients.</b> The
+            brands approved so far: Estée Lauder, Clinique, CeraVe, RYOBI,
+            STANLEY, MOPAR, PowerA and Forever. Alongside those, one
+            sub-category approval: Figurines. Estée Lauder was approved on
+            three separate seller accounts. All of it came up inside account
+            management work we were already doing, rather than as a standalone
+            service.
+          </p>
+          <p>
+            <b>Not every application was approved first time.</b> Some came
+            back declined and had to be resubmitted with corrected invoices and
+            additional supplier documentation. That is the part most accounts
+            of this process leave out, and it is the part that matters if you
+            are planning for it. Amazon&apos;s stated decision window on these
+            applications was 7 days; several came back faster, and one
+            submitted on 10 Oct was approved on 12 Oct against an expected
+            decision date of 17 Oct. That is what happened on those
+            applications, not a turnaround to plan around.
+          </p>
+          <p>
+            The full story is in our{" "}
+            <Link href="/blog/how-to-get-amazon-brand-approval">Amazon brand approval guide</Link>.
+          </p>
+          <p>
+            <b>On suspensions,</b> we work on wholesale account suspensions,
+            listing suspensions and brand suspensions for clients. We do not
+            publish a reinstatement success rate, and the reason is worth
+            saying plainly: the figure would tell you more about which cases a
+            provider accepted than about the work they do.
+          </p>
+        </div>
+      </section>
+
+      {/* WHY + PROOF CARD */}
       <section>
         <div className="wrap svc-split">
           <div>
@@ -473,13 +601,13 @@ export default function AmazonAccountManagement() {
               <li><b>Work done before your day starts.</b> We&apos;re four to five hours ahead of the UK.</li>
               <li><b>One point of contact.</b> You talk to the person running your account, not someone relaying messages.</li>
               <li><b>Agency scope, lower overhead.</b> What a UK Amazon agency covers, without UK office costs.</li>
-              <li><b>We stay.</b> One of our clients has been with us for four years.</li>
+              <li><b>We stay.</b> We have run one client&apos;s store since launch — four years, through every update, redesign and product expansion.</li>
             </ul>
           </div>
           <div className="proof-card">
-            <div className="proof-lbl">Amazon UK seller account</div>
+            <div className="proof-lbl">One seller account</div>
             <div className="proof-num">£32,928</div>
-            <div className="proof-sub">in sales across 607 orders on one account we manage</div>
+            <div className="proof-sub">in sales across 607 orders in six months, entirely organic</div>
             <Link className="case-link" href="/portfolio">See the work <span aria-hidden="true">→</span></Link>
           </div>
         </div>
