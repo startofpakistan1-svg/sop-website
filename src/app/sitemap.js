@@ -17,7 +17,7 @@ export default function sitemap() {
     { url: `${base}/blog`,       lastModified: now, changeFrequency: "weekly",  priority: 0.8 },
     ...posts.map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      lastModified: new Date(p.date),
+      lastModified: new Date(p.updated || p.date),
       changeFrequency: "monthly",
       priority: 0.7,
     })),

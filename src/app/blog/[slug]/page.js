@@ -99,7 +99,9 @@ export default async function Post({ params }) {
     headline: post.title,
     description: post.description,
     datePublished: post.date,
-    dateModified: post.date,
+    // Posts carry an optional `updated` date for substantial revisions;
+    // the published date and the date shown on the page stay put.
+    dateModified: post.updated || post.date,
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
     author: {
       "@type": "Organization",
