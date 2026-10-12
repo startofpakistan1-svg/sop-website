@@ -247,6 +247,26 @@ const steps = [
 /*  not invented. Everything else they used to answer now lives in    */
 /*  the body sections above.                                          */
 /* ---------------------------------------------------------------- */
+const SITE = "https://www.startofpakistan.com";
+
+/* Service node only. The organisation it points at is defined once on the home
+   page, so this references it by @id rather than repeating it. No FAQPage. */
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE}/amazon-account-management#service`,
+  name: "Amazon Account Management Services",
+  serviceType: "Amazon seller account management",
+  description:
+    "Ongoing management of an Amazon seller account: listings and catalogue, advertising, inventory and FBA, pricing and the Buy Box, buyer messages, and account health.",
+  url: `${SITE}/amazon-account-management`,
+  provider: { "@id": `${SITE}/#organization` },
+  areaServed: [
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "United States" },
+  ],
+};
+
 const faqs = [
   { q: "What are Amazon account management services?", a: "Ongoing services that run a seller account day to day rather than fixing one part of it: Seller Central setup, listings and catalogue, images and A+ content, PPC, inventory and FBA, pricing and the Buy Box, buyer messages, reviews, account health and monthly reporting. Scope varies a lot between providers, so the useful question to ask any of them is which of those they are not covering." },
   { q: "What does an Amazon account manager do daily?", a: "Day to day: answer buyer messages inside Amazon's time limit, check Account Health for new warnings, watch stock on the best sellers, catch suppressed or broken listings, and monitor the Buy Box and pricing. Weekly work is advertising bids, budgets, negatives and FBA shipments. Monthly is reporting and planning. The rhythm section above sets out all three in full." },
@@ -259,6 +279,13 @@ const faqs = [
 export default function AmazonAccountManagement() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/account.svg)" }}>
         <div className="wrap">

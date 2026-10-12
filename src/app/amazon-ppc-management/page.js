@@ -83,6 +83,26 @@ const notFor = [
   },
 ];
 
+const SITE = "https://www.startofpakistan.com";
+
+/* Service node only — no offers block, because this page deliberately states
+   no price, and no FAQPage. The organisation is defined once on the home page. */
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": `${SITE}/amazon-ppc-management#service`,
+  name: "Amazon PPC Management",
+  serviceType: "Amazon PPC management",
+  description:
+    "Ongoing management of Amazon advertising: campaign structure across Sponsored Products, Brands and Display, keyword and negative-keyword work, bids, budget pacing and reporting.",
+  url: `${SITE}/amazon-ppc-management`,
+  provider: { "@id": `${SITE}/#organization` },
+  areaServed: [
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "United States" },
+  ],
+};
+
 /* ---------------------------------------------------------------- */
 /*  FAQ — taken from the questions the pages ranking for this term   */
 /*  actually answer, not invented. Marketplace and contract          */
@@ -100,6 +120,13 @@ const faqs = [
 export default function AmazonPPC() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       {/* HERO */}
       <section className="ppc-hero">
         <div className="wrap">

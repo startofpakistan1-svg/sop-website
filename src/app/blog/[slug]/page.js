@@ -4,6 +4,11 @@ import posts, { getPost, getRelated } from "@/data/posts";
 
 const SITE = "https://www.startofpakistan.com";
 
+const AUTHOR = {
+  name: "Qamar Shahzad",
+  linkedin: "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
+};
+
 export function generateStaticParams() {
   return posts.map((p) => ({ slug: p.slug }));
 }
@@ -103,14 +108,22 @@ export default async function Post({ params }) {
     // the published date and the date shown on the page stay put.
     dateModified: post.updated || post.date,
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+    // Both nodes carry the same @id as the ones in components/Schema.jsx so
+    // Google merges them instead of treating each page as a new entity.
     author: {
-      "@type": "Organization",
-      name: "SOP – Start of Pakistan",
-      url: SITE,
+      "@type": "Person",
+      "@id": `${SITE}/#qamar-shahzad`,
+      name: AUTHOR.name,
+      url: `${SITE}/about`,
+      sameAs: AUTHOR.linkedin,
+      jobTitle: "Founder",
+      worksFor: { "@id": `${SITE}/#organization` },
     },
     publisher: {
       "@type": "Organization",
-      name: "SOP – Start of Pakistan",
+      "@id": `${SITE}/#organization`,
+      name: "Start of Pakistan",
+      url: SITE,
       logo: {
         "@type": "ImageObject",
         url: `${SITE}/logo.png`,
@@ -131,7 +144,11 @@ export default async function Post({ params }) {
       <section className="page-head" style={{ "--cover": "url(/covers/blog.svg)" }}>
         <div className="wrap">
           <div className="svc-kicker">
-            <Link href="/blog">Blog</Link> · <time dateTime={post.date}>{formatDate(post.date)}</time>
+            <Link href="/blog">Blog</Link> ·{" "}
+            <time dateTime={post.date}>{formatDate(post.date)}</time> ·{" "}
+            <a href={AUTHOR.linkedin} target="_blank" rel="author noreferrer">
+              {AUTHOR.name}
+            </a>
           </div>
           <h1>{post.title}</h1>
           <p>{post.description}</p>

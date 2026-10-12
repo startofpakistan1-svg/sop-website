@@ -1,6 +1,45 @@
 // Structured data (JSON-LD) — tells Google what SOP is, where it is,
 // and what it offers. Shows up as richer search results over time.
 
+const SERVICES = [
+  {
+    name: "Amazon account management",
+    path: "/amazon-account-management",
+    description:
+      "Seller Central and Vendor Central account management: listings, catalogue, inventory and FBA, pricing, buyer messages and account health.",
+  },
+  {
+    name: "Amazon PPC management",
+    path: "/amazon-ppc-management",
+    description:
+      "Sponsored Products, Sponsored Brands and Sponsored Display, with weekly search-term, bid and negative-keyword work.",
+  },
+  {
+    name: "Shopify development",
+    path: "/shopify-development",
+    description:
+      "Shopify store builds, migrations from other platforms, custom theme work and Shopify SEO.",
+  },
+  {
+    name: "Ecommerce website development",
+    path: "/ecommerce-website-development",
+    description:
+      "Custom-coded ecommerce sites, redesigns and conversion rate optimisation.",
+  },
+  {
+    name: "AI automation",
+    path: "/ai-automation",
+    description:
+      "AI agents and business automation for customer replies, reporting, admin work and content, with human review built in.",
+  },
+  {
+    name: "Marketing automation",
+    path: "/marketing-automation",
+    description:
+      "CRM setup, segmentation, email sequences and lead nurturing built around the tools a team already uses.",
+  },
+];
+
 export default function Schema() {
   const data = {
     "@context": "https://schema.org",
@@ -9,7 +48,7 @@ export default function Schema() {
     name: "Start of Pakistan",
     alternateName: ["SOP", "startofpakistan", "Start of Pakistan (SOP)"],
     description:
-      "eCommerce and digital solutions studio building Shopify, WordPress and custom stores, managing Amazon seller accounts, and designing AI agent systems for clients worldwide.",
+      "Start of Pakistan (SOP) runs Amazon seller accounts and PPC, builds Shopify and custom-coded online stores, and sets up AI and marketing automation. Based in Jhelum, Pakistan.",
     url: "https://www.startofpakistan.com",
     logo: "https://www.startofpakistan.com/logo.png",
     image: "https://www.startofpakistan.com/og-image.png",
@@ -39,17 +78,21 @@ export default function Schema() {
       { "@type": "Country", name: "India" },
     ],
     priceRange: "$$",
+    // Company profiles only. A person's profile belongs on the Person node,
+    // not here — sameAs means "other profiles of this same entity".
     sameAs: [
       "https://www.linkedin.com/company/start-of-pakistan",
       "https://www.facebook.com/profile.php?id=61594490571515",
       "https://www.instagram.com/startofpakistan1",
       "https://www.tiktok.com/@startofpakistan1",
-      "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
     ],
     founder: {
       "@type": "Person",
+      "@id": "https://www.startofpakistan.com/#qamar-shahzad",
       name: "Qamar Shahzad",
       jobTitle: "Founder",
+      url: "https://www.startofpakistan.com/about",
+      sameAs: "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
     },
     employee: [
       {
@@ -66,47 +109,21 @@ export default function Schema() {
       email: "support@startofpakistan.com",
       availableLanguage: ["English", "Urdu"],
     },
+    // One entry per service that has its own page, so the catalogue and the
+    // site navigation describe the same six things.
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Services",
-      itemListElement: [
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Marketplace & ecommerce",
-            description:
-              "Amazon, eBay, Walmart, Etsy and Shopify store setup and account management.",
-          },
+      itemListElement: SERVICES.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          description: s.description,
+          url: `https://www.startofpakistan.com${s.path}`,
+          provider: { "@id": "https://www.startofpakistan.com/#organization" },
         },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Web development",
-            description:
-              "Custom websites, WordPress and web applications built from scratch.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "AI bots & agents",
-            description:
-              "Chatbots and AI agent systems for customer support, lead handling and content automation.",
-          },
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: "Digital solutions",
-            description:
-              "Branding, SEO, Google Business Profile setup and ongoing maintenance.",
-          },
-        },
-      ],
+      })),
     },
   };
 

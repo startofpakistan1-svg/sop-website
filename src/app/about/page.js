@@ -22,6 +22,42 @@ const team = [
   },
 ];
 
+const SITE = "https://www.startofpakistan.com";
+
+/* The organisation itself is described once on the home page; this page points
+   at it and adds the two people. Roles and profile links only — the bios above
+   stay prose and are deliberately not restated as structured claims. */
+const aboutSchema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": `${SITE}/about#webpage`,
+    url: `${SITE}/about`,
+    name: "About Start of Pakistan (SOP)",
+    mainEntity: { "@id": `${SITE}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE}/#qamar-shahzad`,
+    name: "Qamar Shahzad",
+    jobTitle: "Founder",
+    url: `${SITE}/about`,
+    sameAs: "https://www.linkedin.com/in/qamar-shahzad-37b566132/",
+    worksFor: { "@id": `${SITE}/#organization` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE}/#shahzaib-ali`,
+    name: "Shahzaib Ali",
+    jobTitle: "Chief Executive Officer & Co-Founder",
+    url: `${SITE}/about`,
+    sameAs: "https://www.linkedin.com/in/alidar-ecommerce",
+    worksFor: { "@id": `${SITE}/#organization` },
+  },
+];
+
 function Avatar({ member }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -38,6 +74,16 @@ function Avatar({ member }) {
 export default function About() {
   return (
     <>
+      {aboutSchema.map((node) => (
+        <script
+          key={node["@id"]}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(node).replace(/</g, "\\u003c"),
+          }}
+        />
+      ))}
+
       <section className="page-head" style={{ "--cover": "url(/covers/about.svg)" }}>
         <div className="wrap">
           <h1>About SOP</h1>

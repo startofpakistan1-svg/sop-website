@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Audit reports — analysis output, not part of the site
+GEO-ANALYSIS.md
