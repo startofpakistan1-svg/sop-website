@@ -4,6 +4,7 @@ export const metadata = {
   title: "Privacy Policy — SOP | Start of Pakistan",
   description:
     "How Start of Pakistan collects, uses and protects the information you share through startofpakistan.com.",
+  alternates: { canonical: "/privacy" },
 };
 
 export default function Privacy() {

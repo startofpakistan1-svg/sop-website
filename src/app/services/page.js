@@ -236,6 +236,7 @@ export const metadata = {
   title: "Services — SOP | eCommerce, Marketplaces, Web & AI",
   description:
     "Amazon SEO service and listing optimization, eBay, Walmart, Etsy and Shopify management, web development, AI agents and branding — SOP, Pakistan.",
+  alternates: { canonical: "/services" },
 };
 
 export default function Services() {

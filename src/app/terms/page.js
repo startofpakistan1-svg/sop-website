@@ -4,6 +4,7 @@ export const metadata = {
   title: "Terms of Service — SOP | Start of Pakistan",
   description:
     "The terms that apply when you use startofpakistan.com or work with Start of Pakistan.",
+  alternates: { canonical: "/terms" },
 };
 
 export default function Terms() {
