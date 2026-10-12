@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { TestimonialInline } from "@/components/Testimonials";
 import { useState } from "react";
 
@@ -59,7 +60,11 @@ const projects = [
   },
 ];
 
-function CaseVisual({ project }) {
+// `first` is only true for the top card, whose opening screenshot is the LCP
+// candidate. Everything else stays lazy, which is next/image's default — the
+// inactive carousel slides are only opacity:0, so without that they would all
+// download on load.
+function CaseVisual({ project, first }) {
   const [active, setActive] = useState(0);
   const [broken, setBroken] = useState({});
   const live = project.images.filter((_, i) => !broken[i]);
@@ -67,10 +72,14 @@ function CaseVisual({ project }) {
   return (
     <div className="case-visual">
       {project.images.map((src, i) => (
-        <img
+        <Image
           key={src}
           src={src}
           alt={`${project.name} screenshot ${i + 1}`}
+          fill
+          // The visual column is a fixed 480px until the grid collapses at 980px.
+          sizes="(max-width: 980px) 100vw, 480px"
+          priority={first && i === 0}
           className={i === active ? "shot active" : "shot"}
           onError={() => setBroken((b) => ({ ...b, [i]: true }))}
         />
@@ -111,7 +120,7 @@ export default function Portfolio() {
           <div className="case-list">
             {projects.map((p, i) => (
               <article className="case" key={i}>
-                <CaseVisual project={p} />
+                <CaseVisual project={p} first={i === 0} />
                 <div className="case-body">
                   <div className="case-no">{String(i + 1).padStart(2, "0")} / {String(projects.length).padStart(2, "0")}</div>
                   <div className="case-type">{p.type}</div>
