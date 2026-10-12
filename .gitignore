@@ -42,3 +42,6 @@ next-env.d.ts
 
 # Audit reports — analysis output, not part of the site
 GEO-ANALYSIS.md
+cluster-map.html
+cluster-plan.json
+cluster-plan.md
