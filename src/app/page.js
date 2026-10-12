@@ -144,7 +144,7 @@ export default function Home() {
               9 accounts running right now
             </div>
             <h1>
-              Your store never sleeps.
+              Your store never sleeps.{" "}
               <br />
               <span className="grad">Neither do we.</span>
             </h1>
