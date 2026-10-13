@@ -28,10 +28,11 @@ const pages = [
 
 export default function sitemap() {
   return [
-    // The home page is listed as the bare origin so it matches the canonical
-    // Next renders for "/", rather than differing by a trailing slash.
+    // The home page keeps its trailing slash — `${base}/`, not `${base}`.
+    // Semrush flags the bare origin as an orphaned page, which is why it was
+    // written this way originally. Do not "tidy" it to match the canonical.
     ...pages.map((p) => ({
-      url: p.path === "/" ? base : `${base}${p.path}`,
+      url: `${base}${p.path}`,
       changeFrequency: p.changeFrequency,
       priority: p.priority,
     })),
