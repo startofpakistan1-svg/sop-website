@@ -191,9 +191,30 @@ const faqSchema = {
   })),
 };
 
+const SITE = "https://www.startofpakistan.com";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/ai-automation#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "AI agents" },
+  ],
+};
+
 export default function AIAutomation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -204,7 +225,10 @@ export default function AIAutomation() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/ai.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">AI agents · UK &amp; US</div>
+          <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · AI agents
+          </div>
           <h1>The AI Automation Agency for work you keep doing by hand.</h1>
           <p>
             AI automation that UK and US owners can actually use:

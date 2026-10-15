@@ -98,6 +98,18 @@ export default async function Post({ params }) {
 
   const related = getRelated(slug, 3);
 
+  const breadcrumb = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${SITE}/blog/${post.slug}#breadcrumb`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
+      // Last crumb is the current page, so it carries no `item`.
+      { "@type": "ListItem", position: 3, name: post.title },
+    ],
+  };
+
   const article = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -108,6 +120,7 @@ export default async function Post({ params }) {
     // the published date and the date shown on the page stay put.
     dateModified: post.updated || post.date,
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
+    breadcrumb: { "@id": `${SITE}/blog/${post.slug}#breadcrumb` },
     // Both nodes carry the same @id as the ones in components/Schema.jsx so
     // Google merges them instead of treating each page as a new entity.
     author: {
@@ -136,6 +149,13 @@ export default async function Post({ params }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumb).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
           __html: JSON.stringify(article).replace(/</g, "\\u003c"),
         }}
       />
@@ -144,6 +164,7 @@ export default async function Post({ params }) {
       <section className="page-head" style={{ "--cover": "url(/covers/blog.svg)" }}>
         <div className="wrap">
           <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
             <Link href="/blog">Blog</Link> ·{" "}
             <time dateTime={post.date}>{formatDate(post.date)}</time> ·{" "}
             <a href={AUTHOR.linkedin} target="_blank" rel="author noreferrer">

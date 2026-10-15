@@ -177,9 +177,30 @@ const faqSchema = {
   })),
 };
 
+const SITE = "https://www.startofpakistan.com";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/marketing-automation#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "Marketing automation" },
+  ],
+};
+
 export default function MarketingAutomation() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -190,7 +211,10 @@ export default function MarketingAutomation() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/marketing.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">Marketing automation · UK &amp; US</div>
+          <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · Marketing automation
+          </div>
           <h1>The Marketing Automation Agency for follow-up that never happens.</h1>
           <p>
             Email sequences, CRM setup, segmentation and lead nurturing for UK

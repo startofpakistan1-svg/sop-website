@@ -197,9 +197,30 @@ const faqSchema = {
   })),
 };
 
+const SITE = "https://www.startofpakistan.com";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/shopify-development#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "Shopify" },
+  ],
+};
+
 export default function ShopifyDevelopment() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -210,7 +231,10 @@ export default function ShopifyDevelopment() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/shopify.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">Shopify · UK &amp; US</div>
+          <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · Shopify
+          </div>
           <h1>The Shopify Development Agency that builds stores to keep selling.</h1>
           <p>
             Shopify web development for UK and US brands — store builds, custom

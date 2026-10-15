@@ -175,9 +175,30 @@ const faqSchema = {
   })),
 };
 
+const SITE = "https://www.startofpakistan.com";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/ecommerce-website-development#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "Custom build" },
+  ],
+};
+
 export default function EcommerceWebsiteDevelopment() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -188,7 +209,10 @@ export default function EcommerceWebsiteDevelopment() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/ecommerce.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">Custom build · UK &amp; US</div>
+          <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · Custom build
+          </div>
           <h1>A Bespoke Ecommerce Website, coded around what you sell.</h1>
           <p>
             An ecommerce web development company for UK and US businesses that

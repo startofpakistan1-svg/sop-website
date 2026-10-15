@@ -261,6 +261,7 @@ const serviceSchema = {
     "Ongoing management of an Amazon seller account: listings and catalogue, advertising, inventory and FBA, pricing and the Buy Box, buyer messages, and account health.",
   url: `${SITE}/amazon-account-management`,
   provider: { "@id": `${SITE}/#organization` },
+  breadcrumb: { "@id": `${SITE}/amazon-account-management#breadcrumb` },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "Country", name: "United States" },
@@ -276,9 +277,28 @@ const faqs = [
   { q: "Can you help recover a suspended Amazon account?", a: "Routine Seller Central problems — suppressed listings, stranded inventory, listing errors, category approvals, performance notifications — are everyday work. Suspensions are different. We work on wholesale account suspensions, listing suspensions and brand suspensions, and we will tell you plainly what we think is possible, including when we think it is not. What we will not do is promise reinstatement: the outcome depends entirely on the reason and the evidence, and some cases are not recoverable." },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/amazon-account-management#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "Amazon" },
+  ],
+};
+
 export default function AmazonAccountManagement() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -289,7 +309,10 @@ export default function AmazonAccountManagement() {
       {/* HERO */}
       <section className="page-head" style={{ "--cover": "url(/covers/account.svg)" }}>
         <div className="wrap">
-          <div className="svc-kicker">Amazon · UK &amp; US</div>
+          <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · Amazon
+          </div>
           <h1>Amazon Account Management Services, handled A to Z.</h1>
           <p>
             Amazon account management services for UK and US sellers — Seller

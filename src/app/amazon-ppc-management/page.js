@@ -97,6 +97,7 @@ const serviceSchema = {
     "Ongoing management of Amazon advertising: campaign structure across Sponsored Products, Brands and Display, keyword and negative-keyword work, bids, budget pacing and reporting.",
   url: `${SITE}/amazon-ppc-management`,
   provider: { "@id": `${SITE}/#organization` },
+  breadcrumb: { "@id": `${SITE}/amazon-ppc-management#breadcrumb` },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "Country", name: "United States" },
@@ -117,9 +118,28 @@ const faqs = [
   { q: "How quickly will I see results from Amazon PPC?", a: "We will not give you a number, and you should be wary of anyone who does — it depends on your spend, your category, your conversion rate and how much waste is in the account to begin with. What we can tell you is what to watch rather than when: spend moving off search terms that never convert, and your ACoS measured against your own break-even figure instead of a benchmark. Amazon also attributes sales to clicks over a window, so any judgement made in the first few days is being made on incomplete data." },
 ];
 
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": `${SITE}/amazon-ppc-management#breadcrumb`,
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE },
+    { "@type": "ListItem", position: 2, name: "Services", item: `${SITE}/services` },
+    // Last crumb is the current page, so it carries no `item`.
+    { "@type": "ListItem", position: 3, name: "Amazon" },
+  ],
+};
+
 export default function AmazonPPC() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema).replace(/</g, "\\u003c"),
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -131,7 +151,10 @@ export default function AmazonPPC() {
       <section className="ppc-hero">
         <div className="wrap">
           <div>
-            <div className="svc-kicker">Amazon · UK &amp; US</div>
+            <div className="svc-kicker">
+            <Link href="/">Home</Link> ·{" "}
+            <Link href="/services">Services</Link> · Amazon
+          </div>
             <h1>Amazon PPC Management that stops the waste first.</h1>
             <p>
               Amazon PPC management for sellers in the UK and US: campaign
