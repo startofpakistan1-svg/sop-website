@@ -1312,19 +1312,33 @@ footer{padding:40px 0 36px;border-top:1px solid var(--hair);background:var(--mis
 
 /* ============ MOBILE: DECORATIVE MOTION OFF ============ */
 /* Infinite hero animations cost paint and compositor time on phones during
-   the period that decides LCP. The blobs, nodes and cards keep their exact
-   position and colour; only the movement stops. The two overlay pulses are
-   hidden the same way the reduced-motion block already hides .hub-pulse. */
+   the period that decides LCP — so they are held until after load rather than
+   switched off. layout.js adds .motion-ready to <html> on lazyOnload, which
+   fires during idle once every resource has been fetched; until then these
+   rules keep the blobs, nodes and cards exactly where they are.
+   The paint optimisations further down are not animations and stay
+   unconditional. */
 @media (max-width:600px){
-  .b1,.b2,
-  .node,
-  .order-card,
-  .ticker-card,
-  .live-dot{animation:none}
-  .wire .live,
-  .hub::before,
-  .hub::after,
-  .hub-pulse{animation:none;opacity:0}
+  :root:not(.motion-ready) .b1,
+  :root:not(.motion-ready) .b2,
+  :root:not(.motion-ready) .node,
+  :root:not(.motion-ready) .order-card,
+  :root:not(.motion-ready) .ticker-card,
+  :root:not(.motion-ready) .live-dot{animation:none}
+  :root:not(.motion-ready) .wire .live,
+  :root:not(.motion-ready) .hub::before,
+  :root:not(.motion-ready) .hub::after,
+  :root:not(.motion-ready) .hub-pulse{animation:none;opacity:0}
+  /* These three are hidden nowhere else, so without this they would become
+     static-but-visible for reduced-motion users once .motion-ready lands.
+     (.hub-pulse is already covered by the block at ~line 1193.)
+     animation:none is needed as well as opacity:0 because the blanket
+     *{animation:none!important} rule at ~line 601 uses the universal
+     selector, which does not match pseudo-elements — so .hub::before and
+     .hub::after keep animating under reduced motion without this. */
+  @media (prefers-reduced-motion:reduce){
+    .wire .live,.hub::before,.hub::after{animation:none;opacity:0}
+  }
   /* Paint cost: no backdrop snapshot behind the sticky nav and no blurred
      layers inside the hero. Desktop keeps both. */
   .nav{backdrop-filter:none;background:rgba(255,255,255,.96)}

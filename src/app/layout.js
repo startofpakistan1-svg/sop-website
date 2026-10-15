@@ -66,6 +66,11 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-23QJE9T2F2');
           `}
         </Script>
+        {/* Releases the held hero animations on phones. lazyOnload runs during
+            idle after all resources are fetched, so it cannot affect LCP. */}
+        <Script id="motion-ready" strategy="lazyOnload">
+          {`document.documentElement.classList.add('motion-ready')`}
+        </Script>
         <Navbar />
         <Ticker />
         <main>{children}</main>
