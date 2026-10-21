@@ -261,7 +261,6 @@ const serviceSchema = {
     "Ongoing management of an Amazon seller account: listings and catalogue, advertising, inventory and FBA, pricing and the Buy Box, buyer messages, and account health.",
   url: `${SITE}/amazon-account-management`,
   provider: { "@id": `${SITE}/#organization` },
-  breadcrumb: { "@id": `${SITE}/amazon-account-management#breadcrumb` },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "Country", name: "United States" },

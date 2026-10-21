@@ -120,7 +120,6 @@ export default async function Post({ params }) {
     // the published date and the date shown on the page stay put.
     dateModified: post.updated || post.date,
     mainEntityOfPage: `${SITE}/blog/${post.slug}`,
-    breadcrumb: { "@id": `${SITE}/blog/${post.slug}#breadcrumb` },
     // Both nodes carry the same @id as the ones in components/Schema.jsx so
     // Google merges them instead of treating each page as a new entity.
     author: {

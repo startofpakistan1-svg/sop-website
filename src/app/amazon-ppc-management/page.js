@@ -97,7 +97,6 @@ const serviceSchema = {
     "Ongoing management of Amazon advertising: campaign structure across Sponsored Products, Brands and Display, keyword and negative-keyword work, bids, budget pacing and reporting.",
   url: `${SITE}/amazon-ppc-management`,
   provider: { "@id": `${SITE}/#organization` },
-  breadcrumb: { "@id": `${SITE}/amazon-ppc-management#breadcrumb` },
   areaServed: [
     { "@type": "Country", name: "United Kingdom" },
     { "@type": "Country", name: "United States" },
