@@ -43,3 +43,10 @@ next-env.d.ts
 # Audit reports — analysis output, not part of the site
 GEO-ANALYSIS.md
 seo-clusters/
+
+# Cached schema.org vocabulary — refetched on demand, not source
+scripts/schemaorg.jsonld
+
+# Python bytecode from scripts/
+__pycache__/
+*.pyc
