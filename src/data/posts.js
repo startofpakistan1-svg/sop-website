@@ -102,7 +102,7 @@ If your store is slow and you would rather someone found out why than guessed, t
     content: `
 A suppressed listing is the quietest expensive problem on Amazon. It disappears from search results while its page still loads perfectly on a direct link — so the seller checks the URL, sees the product, concludes everything is fine, and wonders why sales stopped.
 
-We work on listing suspensions and suppressions for clients, and the first job is almost never fixing the listing. It is finding out what Amazon actually objected to, because the status message and the real cause are often two different things.
+We work on [listing suspensions and suppressions](/services) for clients, and the first job is almost never fixing the listing. It is finding out what Amazon actually objected to, because the status message and the real cause are often two different things.
 
 ## Why is my Amazon listing suppressed?
 
@@ -1267,7 +1267,7 @@ A good agency will answer all of these without hesitation. If any answer is vagu
 
 The useful question is not "what does it cost?" but "what does it cost compared with the alternatives?" The alternatives are your own time, a freelancer, or an in-house hire. Each has a real cost, even if it does not appear on an invoice.
 
-Work out roughly how many hours a week the account takes you now, and what those hours are worth to the rest of your business. Then compare the quotes against that, not against each other. An agency that costs more but frees you to develop new products or open a second channel may be the cheaper option overall.
+Work out roughly how many hours a week the account takes you now, and what those hours are worth to the rest of your business. Then compare the quotes against that, not against each other. An agency that costs more but frees you to develop new products or [open a second channel](/services) may be the cheaper option overall.
 
 ## Getting a quote from us
 
@@ -1511,7 +1511,7 @@ We handled the full Shopify store setup for a motorsport gear brand selling kart
 
 **What affects Shopify store development cost the most?** The number of products, and how far you want to move from the theme's defaults. Product setup is the most underestimated task in any build, because every item needs copy, images, variants and inventory data. After those two come the number of marketplaces or regions you sell in, the apps or custom features you need, and the state of any existing store that has to be cleaned up or migrated first.
 
-**What are the ongoing costs after launch?** The Shopify plan fee, any paid app subscriptions and payment processing fees on each sale, every month. On top of those, budget for the work a store needs to stay current: theme updates when Shopify changes the platform, new products and seasonal changes, and occasional fixes when an app update breaks something. Launch is not the finish line.
+**What are the ongoing costs after launch?** The Shopify plan fee, any paid app subscriptions and payment processing fees on each sale, every month. On top of those, budget for [the work a store needs to stay current](/services): theme updates when Shopify changes the platform, new products and seasonal changes, and occasional fixes when an app update breaks something. Launch is not the finish line.
 
 **How much does it cost to build a Shopify app?** A custom app is a software project rather than a store task, so it is priced like one — the cost follows how much it has to do, what it integrates with, and whether it needs maintaining after launch. Get a quote against a written spec of what the app must do, and ask separately what ongoing maintenance costs, because an app nobody updates breaks when Shopify changes. Before commissioning one, check the app store: a monthly subscription is almost always cheaper than building the same thing.
 
@@ -1708,7 +1708,7 @@ The word "partner" is used loosely, so it is worth being precise. A Shopify deve
 - Set up payments, shipping, tax and checkout properly and test them on a phone.
 - Build search into the store from the start: titles, structure, speed, schema.
 - Hand over a store you own outright, with a walkthrough of how to run it.
-- Be available afterwards, whether on a retainer or for one-off changes.
+- Be available afterwards, whether [on a retainer or for one-off changes](/services).
 
 If a proposal covers only design and product upload, the rest is either extra or missing.
 
