@@ -13,7 +13,7 @@ const categories = [
     groups: [
       {
         name: "Amazon",
-        price: "Account management from $600/month. Setup from $300.",
+        price: "Account management from $700/month. Setup from $300.",
         items: [
           "Seller Central account setup",
           "Brand Registry and brand store",
@@ -221,7 +221,7 @@ const steps = [
 ];
 
 const faqs = [
-  { q: "How much does a project cost?", a: "Most services have a starting price shown on each service page, for example Amazon account management from $600 per month and Shopify stores from $500. Tell us what you need and we'll send a fixed price with a written plan, usually within a day. No hourly billing, no surprises halfway through." },
+  { q: "How much does a project cost?", a: "Most services have a starting price shown on each service page, for example Amazon account management from $700 per month and Shopify stores from $500. Tell us what you need and we'll send a fixed price with a written plan, usually within a day. No hourly billing, no surprises halfway through." },
   { q: "How long does it take?", a: "A Shopify or WordPress store typically takes one to three weeks depending on how many products and how much custom work is involved. Amazon account setup is faster. AI agent systems take longer because they need testing against real cases. You'll get a timeline in writing before we start." },
   { q: "Do you work with clients outside Pakistan?", a: "Most of our work is international. We run Amazon seller accounts for clients in the UK and US, and we've built systems for clients in India. Time zones haven't been a problem — we work around yours." },
   { q: "Can you manage my Amazon account, not just set it up?", a: "Yes. Ongoing account management is a large part of what we do — listings, optimisation and day-to-day operations. Some clients hand over the whole account, others keep control and bring us in for specific parts." },

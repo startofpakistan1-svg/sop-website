@@ -672,7 +672,7 @@ export default function AmazonAccountManagement() {
             name: "Starter",
             price: "$700",
             period: "/month",
-            note: "Up to £5,000 monthly Amazon sales",
+            note: "Up to $6,000 monthly Amazon sales",
             features: [
               "Listings and A+ upkeep",
               "PPC management",
@@ -685,7 +685,7 @@ export default function AmazonAccountManagement() {
             name: "Growth",
             price: "$1,200",
             period: "/month",
-            note: "£5,000 to £20,000 monthly sales",
+            note: "$6,000 to $25,000 monthly sales",
             highlight: true,
             features: [
               "Everything in Starter",
@@ -697,7 +697,7 @@ export default function AmazonAccountManagement() {
             name: "Scale",
             price: "$1,800",
             period: "/month",
-            note: "Over £20,000 monthly sales (or 5% of sales, whichever is higher)",
+            note: "Over $25,000 monthly sales",
             features: [
               "Everything in Growth",
               "Dedicated point of contact",
