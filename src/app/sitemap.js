@@ -17,6 +17,7 @@ const pages = [
   { path: "/shopify-development", changeFrequency: "monthly", priority: 0.9 },
   { path: "/ecommerce-website-development", changeFrequency: "monthly", priority: 0.9 },
   { path: "/ai-automation", changeFrequency: "monthly", priority: 0.9 },
+  { path: "/ai-customer-support", changeFrequency: "monthly", priority: 0.9 },
   { path: "/marketing-automation", changeFrequency: "monthly", priority: 0.9 },
   { path: "/portfolio", changeFrequency: "monthly", priority: 0.8 },
   { path: "/blog", changeFrequency: "weekly", priority: 0.8 },

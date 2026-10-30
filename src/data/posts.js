@@ -1682,7 +1682,7 @@ We built a system of AI agents for an international client serving accounting fi
 4. **Review everything for the first month.** Note what you change, and feed it back into the brief.
 5. **Add scheduling once the drafts need few edits.** Then consider a second channel.
 
-If you would rather have the system designed and built for you, our [AI automation services](/ai-automation) cover content systems like the one above, as well as customer replies, admin and reporting, for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
+If you would rather have the system designed and built for you, our [AI automation services](/ai-automation) cover content systems like the one above, as well as [customer replies](/ai-customer-support), admin and reporting, for businesses in the UK and US. Tell us what you want to stop doing by hand and we will come back with a plan and a fixed price.
 `,
   },
   {
@@ -2139,7 +2139,7 @@ The same logic applies to the messages you send rather than receive. Order updat
 
 **What happens when the AI agent cannot answer?** It should say so plainly and pass the conversation to a person, with the history attached so the customer does not have to start again. Ask to see that in a demo rather than taking it on trust, and check that you control what triggers it: certain topics, an unhappy tone, a direct request for a human, or two failed attempts. An agent that guesses instead, or that hides the escalation route to protect its resolution rate, costs more than the inbox time it saves.
 
-If you would like help working out which of the two you actually need, our [AI automation](/ai-automation) work starts by looking at what your team repeats each week and saying plainly where automation pays and where it does not. Sometimes the answer is a support agent. More often it is something smaller.
+If you would like help working out which of the two you actually need, our [AI automation](/ai-automation) work starts by looking at what your team repeats each week and saying plainly where automation pays and where it does not. Sometimes the answer is [a support agent on WhatsApp or your own site](/ai-customer-support). More often it is something smaller.
 `,
   },
   {

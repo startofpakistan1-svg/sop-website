@@ -25,6 +25,7 @@ const SERVICES = `## Services
 - [Shopify Development](${SITE}/shopify-development): Shopify store builds, migrations from WooCommerce and other platforms, custom theme work and Shopify SEO.
 - [Ecommerce Website Development](${SITE}/ecommerce-website-development): bespoke ecommerce sites coded by hand in HTML, CSS and JavaScript, plus redesigns and conversion rate optimisation.
 - [AI Automation](${SITE}/ai-automation): AI agents and business automation for customer replies, reporting, admin work and content, with human review built in.
+- [AI Customer Support](${SITE}/ai-customer-support): agents that answer on WhatsApp, on Facebook and Instagram, and on a store's own site, built on n8n so the client owns them.
 - [Marketing Automation](${SITE}/marketing-automation): CRM setup, segmentation, email sequences and lead nurturing built around the tools a team already uses.
 `;
 

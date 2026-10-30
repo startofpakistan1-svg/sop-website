@@ -310,6 +310,9 @@ export default function Services() {
                 <Link className="cat-link" href="/ai-automation">
                   AI automation for business <span aria-hidden="true">→</span>
                 </Link>
+                <Link className="cat-link" href="/ai-customer-support">
+                  AI customer support agents <span aria-hidden="true">→</span>
+                </Link>
                 <Link className="cat-link" href="/marketing-automation">
                   Marketing automation <span aria-hidden="true">→</span>
                 </Link>
